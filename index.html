@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TM LINK | 명함은 종이였습니다. 이제는 자산입니다.</title>
+<meta name="description" content="BNI 멤버카드, 디지털 명함, 링크 페이지 전문 제작. 부산 T.M Link 송승훈 대표."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "inverse-surface": "#e2e2e2",
+        "surface-container-lowest": "#0e0e0e",
+        "on-tertiary-container": "#454544",
+        "on-secondary-fixed-variant": "#584400",
+        "tertiary-fixed-dim": "#c8c6c5",
+        "on-primary-fixed": "#241a00",
+        "on-surface": "#e2e2e2",
+        "outline": "#99907c",
+        "primary": "#f2ca50",
+        "primary-fixed": "#ffe088",
+        "on-secondary": "#3d2f00",
+        "on-secondary-fixed": "#241a00",
+        "on-primary-container": "#554300",
+        "secondary": "#eac249",
+        "on-error": "#690005",
+        "surface-container-high": "#2a2a2a",
+        "background": "#131313",
+        "error": "#ffb4ab",
+        "on-primary-fixed-variant": "#574500",
+        "on-error-container": "#ffdad6",
+        "surface-bright": "#393939",
+        "outline-variant": "#4d4635",
+        "surface-dim": "#131313",
+        "on-secondary-container": "#352800",
+        "inverse-primary": "#735c00",
+        "on-tertiary-fixed-variant": "#474746",
+        "on-background": "#e2e2e2",
+        "surface-container-highest": "#353535",
+        "secondary-fixed-dim": "#eac249",
+        "surface-tint": "#e9c349",
+        "on-primary": "#3c2f00",
+        "surface-container-low": "#1b1b1b",
+        "tertiary-container": "#b4b2b2",
+        "surface-container": "#1f1f1f",
+        "on-surface-variant": "#d0c5af",
+        "error-container": "#93000a",
+        "on-tertiary": "#313030",
+        "primary-fixed-dim": "#e9c349",
+        "on-tertiary-fixed": "#1c1b1b",
+        "tertiary-fixed": "#e5e2e1",
+        "surface": "#131313",
+        "primary-container": "#d4af37",
+        "inverse-on-surface": "#303030",
+        "secondary-container": "#b08c10",
+        "surface-variant": "#353535",
+        "tertiary": "#d0cdcd",
+        "secondary-fixed": "#ffe08b"
+      },
+      borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      spacing: {
+        "container-max": "1280px", "margin-desktop": "64px",
+        "base": "8px", "margin-mobile": "16px", "gutter": "24px"
+      },
+      fontFamily: {
+        "body-md": ["Inter"], "headline-md": ["Montserrat"],
+        "display-lg": ["Montserrat"], "label-sm": ["Inter"],
+        "body-lg": ["Inter"], "headline-lg": ["Montserrat"],
+        "headline-lg-mobile": ["Montserrat"]
+      },
+      fontSize: {
+        "body-md": ["16px", {"lineHeight":"24px","fontWeight":"400"}],
+        "headline-md": ["24px", {"lineHeight":"32px","fontWeight":"600"}],
+        "display-lg": ["64px", {"lineHeight":"72px","letterSpacing":"-0.02em","fontWeight":"700"}],
+        "label-sm": ["12px", {"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
+        "body-lg": ["18px", {"lineHeight":"28px","fontWeight":"400"}],
+        "headline-lg": ["40px", {"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],
+        "headline-lg-mobile": ["32px", {"lineHeight":"40px","fontWeight":"600"}]
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { background-color: #000000; color: #e2e2e2; overflow-x: hidden; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block; vertical-align: middle;
+  }
+  .glass-card {
+    background: rgba(26,26,26,0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid #2d2d2d;
+    transition: all 0.3s ease;
+  }
+  .glass-card:hover {
+    border-color: #f2ca50;
+    box-shadow: 0 0 30px rgba(242,202,80,0.1);
+  }
+  .gold-glow { box-shadow: 0 0 20px rgba(212,175,55,0.15); }
+  .network-lines {
+    background-image: radial-gradient(circle at 2px 2px, rgba(212,175,55,0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f2ca50 0%, #b08c10 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link { position: relative; transition: color 0.3s ease; }
+  .nav-link::after {
+    content: ''; position: absolute;
+    width: 0; height: 2px; bottom: -4px; left: 0;
+    background-color: #f2ca50; transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+
+  /* Hero card animation */
+  @keyframes float {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+  .card-float { animation: float 5s ease-in-out infinite; }
+  .card-float-delay { animation: float 5s ease-in-out infinite; animation-delay: -2.5s; }
+
+  /* Cursor glow - optimized */
+  .cursor-glow {
+    position: fixed; width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 70%);
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: left 0.15s ease, top 0.15s ease;
+  }
+</style>
+<script>
+function setLang(lang) {
+  var d = window.i18n && window.i18n[lang];
+  if (!d) { setTimeout(function(){ setLang(lang); }, 150); return; }
+  // 버튼 활성화
+  [].forEach.call(document.querySelectorAll('.lang-btn'), function(b){
+    b.style.background='transparent'; b.style.color='rgba(208,197,175,0.7)'; b.style.fontWeight='500';
+  });
+  var ab=document.getElementById('lang-'+lang);
+  if(ab){ab.style.background='rgba(242,202,80,0.15)';ab.style.color='#f2ca50';ab.style.fontWeight='700';}
+  // Hero 전용 (innerHTML)
+  var g=function(id){return document.getElementById(id);};
+  if(g('i18n-tag'))g('i18n-tag').textContent=d.tag;
+  if(g('i18n-hero-h'))g('i18n-hero-h').innerHTML=d.h;
+  if(g('i18n-hero-sub'))g('i18n-hero-sub').innerHTML=d.sub;
+  if(g('i18n-btn1'))g('i18n-btn1').textContent=d.btn1;
+  if(g('i18n-btn2'))g('i18n-btn2').textContent=d.btn2;
+  if(g('i18n-hbtn'))g('i18n-hbtn').textContent=d.hbtn;
+  // data-i18n 전체 (innerHTML로 줄바꿈 지원)
+  [].forEach.call(document.querySelectorAll('[data-i18n]'), function(e){
+    var k=e.getAttribute('data-i18n');
+    if(d[k]!==undefined) e.innerHTML=d[k];
+  });
+}
+</script>
+</head>
+<body class="font-body-md text-body-md min-h-screen">
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<!-- ── HEADER ── -->
+<header class="bg-surface/80 backdrop-blur-xl top-0 sticky z-50 border-b border-outline-variant/20 flex justify-center w-full">
+  <div class="max-w-container-max w-full px-margin-desktop py-5 flex items-center justify-between">
+    <div class="flex items-center gap-12">
+      <h1 class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">TM LINK</h1>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#why" data-i18n="nav_why">Why TM LINK</a>
+        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#digital-card" data-i18n="nav_card">Digital Card</a>
+        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#ecosystem" data-i18n="nav_eco">Ecosystem</a>
+        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#pricing" data-i18n="nav_price">Pricing</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-4">
+      <button id="i18n-hbtn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})"
+        class="hidden lg:block border border-primary/50 text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all">
+        상담 신청
+      </button>
+      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
+        class="hidden lg:block bg-[#FEE500] text-[#3c1e1e] px-6 py-2 rounded-lg font-bold text-sm hover:brightness-95 transition-all">
+        MANDU
+      </a>
+      <!-- 언어 선택기 -->
+      <div class="hidden lg:flex gap-1 ml-2 bg-surface-container rounded-lg p-1">
+        <button onclick="setLang('ko')" id="lang-ko" class="lang-btn bg-surface-container-high text-primary px-3 py-1 rounded text-xs font-bold transition-all">한국어</button>
+        <button onclick="setLang('en')" id="lang-en" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">EN</button>
+        <button onclick="setLang('zh')" id="lang-zh" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">中文</button>
+        <button onclick="setLang('ja')" id="lang-ja" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">日本語</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ── HERO ── -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background:#000000;">
+  <!-- 왼쪽 블랙 → 오른쪽 밝은 하늘색 그라디언트 오버레이 -->
+  <div class="absolute inset-0 z-0 pointer-events-none" style="background:linear-gradient(to right, #000000 0%, #000000 35%, #0d2a4a 55%, #1a5080 70%, #2e7ab8 82%, #c8e8f8 100%);"></div>
+  <!-- 오른쪽 파란 빛 글로우 -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="absolute top-0 right-0 w-[600px] h-full" style="background:radial-gradient(ellipse at right center, rgba(180,220,255,0.25) 0%, transparent 65%);"></div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-20">
+    <div class="space-y-8">
+      <div class="inline-block px-4 py-1 border border-blue-400/30 rounded-full bg-white/5">
+        <span id="i18n-tag" class="text-blue-300 font-label-sm text-label-sm tracking-widest uppercase">BNI 파이오니어 · 부산 디지털 아이덴티티</span>
+      </div>
+      <h2 id="i18n-hero-h" class="font-display-lg text-display-lg font-bold leading-[1.1]" style="color:#ffffff;">
+        명함은<br/>종이였습니다.<br/><span class="text-gradient-gold">이제는 자산입니다.</span>
+      </h2>
+      <p id="i18n-hero-sub" class="font-body-lg text-body-lg leading-relaxed max-w-lg" style="color:rgba(255,255,255,0.75);">
+        디지털 명함 · BNI 멤버카드 · 실시간 통번역 메신저 MANDU.<br/>
+        TM LINK로 귀하의 비즈니스 가치를 격상시키십시오.
+      </p>
+      <div class="flex flex-row gap-4 pt-4 flex-wrap">
+        <button id="i18n-btn1" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})"
+          class="w-48 py-4 bg-primary text-on-primary font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/30 text-sm">
+          무료 상담 신청
+        </button>
+        <button id="i18n-btn2" onclick="document.getElementById('digital-card').scrollIntoView({behavior:'smooth'})"
+          class="w-48 py-4 border-2 border-white/50 text-white font-bold rounded-lg active:scale-95 transition-all hover:bg-white/10 text-sm">
+          포트폴리오 감상
+        </button>
+      </div>
+      <!-- Stats -->
+      <div class="flex gap-10 pt-4">
+        <div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">10개</div>
+          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat1">MANDU<br/>지원 언어</div>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">4개국어</div>
+          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat2">기본 지원<br/>한·영·중·일</div>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">3~5일</div>
+          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat3">평균 완성<br/>기간</div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Visual: Globe Network Animation -->
+    <div class="relative h-[520px] flex items-center justify-center">
+      <canvas id="globe-canvas" width="480" height="480" style="width:480px;height:480px;max-width:100%;"></canvas>
+    </div>
+    <div style="display:none">
+      <div class="absolute w-[340px] h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl border border-primary/20 p-6 shadow-2xl card-float-delay rotate-[-8deg] translate-x-[-40px] translate-y-[60px] opacity-50">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">이</div>
+          <div>
+            <div class="font-bold text-sm">이화춘</div>
+            <div class="text-xs text-primary">이화춘 뷰티랩 원장</div>
+          </div>
+        </div>
+        <div class="text-xs text-on-surface-variant">KR · EN · JP · CN</div>
+      </div>
+      <!-- Main card -->
+      <div class="relative z-10 w-[320px] rounded-2xl overflow-hidden border border-primary/30 shadow-2xl card-float gold-glow">
+        <div class="h-28 bg-gradient-to-br from-[#1a1400] via-[#2a2000] to-[#1a1a1a] relative overflow-hidden">
+          <div class="absolute inset-0 network-lines opacity-50"></div>
+          <div class="absolute top-4 right-4 text-primary/30 font-bold text-6xl font-headline-lg tracking-tighter">TM</div>
+        </div>
+        <div class="bg-[#111] p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-primary/20 border-2 border-primary/40 flex items-center justify-center text-primary text-xl font-bold -mt-10 ring-4 ring-black">宋</div>
+            <div>
+              <div class="font-bold text-lg">송승훈</div>
+              <div class="text-xs text-primary tracking-widest uppercase">T.M Link</div>
+            </div>
+          </div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">
+            물리치료사 15년 · 외식업 10년<br/>BNI 파이오니어 챕터 의장 역임
+          </div>
+          <div class="flex gap-2 pt-2">
+            <div class="flex-1 py-2 border border-outline-variant/40 rounded-lg text-center text-xs text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">웹사이트</div>
+            <div class="flex-1 py-2 border border-outline-variant/40 rounded-lg text-center text-xs text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">SNS</div>
+            <div class="flex-1 py-2 bg-primary text-on-primary rounded-lg text-center text-xs font-bold cursor-pointer">저장</div>
+          </div>
+          <div class="flex gap-1 pt-1">
+            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">KR</span>
+            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">EN</span>
+            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">JP</span>
+            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">CN</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- end hidden -->
+  </div>
+</section>
+
+<!-- ── WHY TM LINK ── -->
+<section id="why" class="py-32 px-margin-desktop bg-surface-container-low border-y border-outline-variant/10">
+  <div class="max-w-container-max mx-auto">
+    <div class="text-center space-y-6 mb-20">
+      <h3 class="font-headline-lg text-headline-lg font-bold">
+        <span data-i18n="why_h1">명함의 문제는 디자인이 아닙니다.</span><br/>
+        <span class="text-primary" data-i18n="why_h2">관리되지 않는 인맥은 사라집니다.</span>
+      </h3>
+      <p class="text-on-surface-variant max-w-2xl mx-auto">
+        <span data-i18n="why_sub">전통적인 종이 명함을 디지털 자산 관리 시스템으로 혁신합니다.</span>
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card p-10 rounded-2xl space-y-6 border-l-4 border-l-primary">
+        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-4xl">badge</span>
+        </div>
+        <h4 class="font-headline-md text-headline-md" data-i18n="why_c1_title">Digital Card</h4>
+        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          <span data-i18n="why_c1_desc">단순한 연락처 교환을 넘어 전문가의 권위와 신뢰를 담은 프리미엄 디지털 명함. BNI 멤버카드 4개국어 지원.</span>
+        </p>
+      </div>
+      <div class="glass-card p-10 rounded-2xl space-y-6">
+        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-4xl">translate</span>
+        </div>
+        <h4 class="font-headline-md text-headline-md" data-i18n="why_c2_title">MANDU 메신저</h4>
+        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          <span data-i18n="why_c2_desc">10개국어 실시간 자동번역 지원 메신저. 외국어 없이도 전 세계 BNI 멤버와 즉시 소통.</span>
+        </p>
+      </div>
+      <div class="glass-card p-10 rounded-2xl space-y-6">
+        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-4xl">account_balance_wallet</span>
+        </div>
+        <h4 class="font-headline-md text-headline-md" data-i18n="why_c3_title">CardBook</h4>
+        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          <span data-i18n="why_c3_desc">개인의 인맥을 영구적인 디지털 자산으로 전환. BNI 파이오니어 챕터 31명 전체 통합 관리.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIGITAL CARD FOCUS ── -->
+<section id="digital-card" class="py-32 px-margin-desktop max-w-container-max mx-auto space-y-16">
+  <div class="flex items-center gap-8">
+    <h3 class="font-headline-lg text-headline-lg text-primary shrink-0">DIGITAL BRANDING</h3>
+    <div class="h-px w-full bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <!-- Portfolio showcase: 6 cards -->
+    <div class="space-y-4">
+      <div class="grid grid-cols-3 gap-3">
+        <!-- 1. 김지현 -->
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#1a1000] to-[#2a1800] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">感</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">김지현</div>
+            <div class="text-[10px] text-primary mt-0.5">감성온도 대표</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+        <!-- 2. 송승훈 -->
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#1a1400] to-[#2a2000] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">宋</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">송승훈</div>
+            <div class="text-[10px] text-primary mt-0.5">T.M링크 대표</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+        <!-- 3. 이화춘 -->
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#0d1a1a] to-[#1a2a2a] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">美</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">이화춘</div>
+            <div class="text-[10px] text-primary mt-0.5">뷰티랩 원장</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+        <!-- 4. 이서원 -->
+        <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#1a0d1a] to-[#2a1a2a] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">健</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">이서원</div>
+            <div class="text-[10px] text-primary mt-0.5">웰슨트서원</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+        <!-- 5. 박성준 -->
+        <a href="https://jinjjabg-hub.github.io/bni-giants/%EB%B0%95%EC%84%B1%EC%A4%80/index.html" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#0d1520] to-[#1a2535] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">媒</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">박성준</div>
+            <div class="text-[10px] text-primary mt-0.5">엘로이미디어 대표</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+        <!-- 6. 김준래 -->
+        <a href="https://jinjjabg-hub.github.io/bni-giants/%EA%B9%80%EC%A4%80%EB%9E%98/index.html" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
+          <div class="h-16 bg-gradient-to-br from-[#1a1020] to-[#2a1830] relative overflow-hidden">
+            <div class="absolute inset-0 network-lines opacity-30"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">紋</div>
+          </div>
+          <div class="p-3">
+            <div class="font-bold text-xs">김준래</div>
+            <div class="text-[10px] text-primary mt-0.5">무늬디자인 대표</div>
+            <div class="flex gap-1 mt-1.5">
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
+              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="flex items-center justify-between pt-2">
+        <p class="text-xs text-on-surface-variant" data-i18n="port_hint">클릭하면 실제 디지털 명함으로 이동합니다 →</p>
+        <button onclick="document.getElementById('sample-modal').style.display='flex'"
+          class="flex items-center gap-2 px-5 py-2.5 border border-primary/50 text-primary rounded-lg text-sm font-bold hover:bg-primary/10 transition-all">
+          <span class="material-symbols-outlined text-[18px]">preview</span>
+          <span data-i18n="sample_btn">샘플 이미지 보기</span>
+        </button>
+      </div>
+    </div>
+    <!-- Features -->
+    <div class="space-y-10 lg:pl-12">
+      <h4 class="text-3xl font-bold font-headline-lg">Elite Digital Identity<br/><span class="text-gradient-gold">Features</span></h4>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-body-md">
+        <li class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">language</span>
+          <div>
+            <p class="font-bold mb-1" data-i18n="feat1_t">4개국어 지원</p>
+            <p class="text-on-surface-variant text-sm" data-i18n="feat1_d">한·영·일·중 자동 전환. 글로벌 네트워킹 최적화.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">qr_code_2</span>
+          <div>
+            <p class="font-bold mb-1" data-i18n="feat2_t">QR 자동 생성</p>
+            <p class="text-on-surface-variant text-sm" data-i18n="feat2_d">QR 하나로 언제 어디서든 공유 가능.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">download</span>
+          <div>
+            <p class="font-bold mb-1" data-i18n="feat3_t">vCard 저장</p>
+            <p class="text-on-surface-variant text-sm" data-i18n="feat3_d">한 번 탭으로 연락처 즉시 저장. iOS·Android 지원.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">share</span>
+          <div>
+            <p class="font-bold mb-1" data-i18n="feat4_t">카카오톡 최적화</p>
+            <p class="text-on-surface-variant text-sm" data-i18n="feat4_d">OG 이미지 설정으로 카카오 공유 시 프리미엄 미리보기.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── ECOSYSTEM FLOW ── -->
+<section id="ecosystem" class="py-32 px-margin-desktop bg-black relative">
+  <div class="max-w-container-max mx-auto">
+    <div class="text-center mb-20">
+      <h3 class="font-headline-lg text-headline-lg mb-4">TM LINK Ecosystem</h3>
+      <p class="text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase" data-i18n="eco_sub">From Local Trust to Global Scale</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+      <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden md:block"></div>
+      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-on-primary text-3xl">badge</span>
+        </div>
+        <div>
+          <h5 class="font-headline-md text-primary mb-2">Digital Card</h5>
+          <p class="text-on-surface-variant text-sm" data-i18n="eco1_d">권위 있는 첫인상의 시작. QR·4개국어.</p>
+        </div>
+      </div>
+      <div class="glass-card p-4 rounded-2xl relative z-10 flex flex-col items-center text-center gap-2 overflow-hidden">
+        <canvas id="network-canvas" width="220" height="130" style="width:100%;height:130px;"></canvas>
+        <div>
+          <h5 class="font-headline-md text-primary mb-1">BNI CardBook</h5>
+          <p class="text-on-surface-variant text-xs" data-i18n="eco2_d">멤버들이 서로 연결·연결·연결</p>
+        </div>
+      </div>
+      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-3xl">translate</span>
+        </div>
+        <div>
+          <h5 class="font-headline-md text-primary mb-2">MANDU</h5>
+          <p class="text-on-surface-variant text-sm" data-i18n="eco3_d">10개국어 실시간 자동번역 메신저.</p>
+        </div>
+      </div>
+      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+        </div>
+        <div>
+          <h5 class="font-headline-md text-primary mb-2">Global Scale</h5>
+          <p class="text-on-surface-variant text-sm" data-i18n="eco4_d">국경 없는 비즈니스 네트워크 확장.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing" class="py-32 px-margin-desktop bg-surface-container-lowest">
+  <div class="max-w-container-max mx-auto">
+    <h3 class="font-headline-lg text-headline-lg text-center mb-4" data-i18n="pricing_title">Elite Membership</h3>
+    <p class="text-on-surface-variant text-center mb-4 max-w-xl mx-auto" data-i18n="pricing_sub">투명한 가격. 필요한 플랜만 선택하세요.</p>
+    <p class="text-center mb-16"><span class="text-xs border border-primary/30 text-primary/70 px-3 py-1 rounded-full" data-i18n="vat_note">※ 모든 가격은 부가세(VAT 10%) 별도입니다</span></p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+
+      <!-- BASIC -->
+      <div class="glass-card p-10 rounded-3xl border border-outline-variant/30 flex flex-col">
+        <div class="mb-8">
+          <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">BASIC</span>
+          <h4 class="font-headline-lg text-headline-lg mt-3">70,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
+          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_basic_desc">디지털 명함 입문. 기본 기능으로 시작하세요.</p>
+        </div>
+        <div class="flex-grow space-y-3 mb-8 text-sm">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b1">컬러 선택 (브랜드 색상 적용)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b2">커버 이미지</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b3">연락처 한 번 탭으로 저장 (vCard)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b4">3개국어 (한/영/중)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b5">MANDU 메신저 연동</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b6">무료 도메인 제공 (GitHub Pages)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b7">1회 수정 포함</span></div>
+        </div>
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <button onclick="pickPlan('베이직 (70,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_basic">Get Started</span></button>
+      </div>
+
+      <!-- STANDARD (featured) -->
+      <div class="glass-card p-10 rounded-3xl border-2 border-primary relative overflow-hidden flex flex-col gold-glow">
+        <div class="absolute top-0 right-0 bg-primary text-on-primary px-5 py-2 text-label-sm font-bold rounded-bl-2xl text-xs">MOST POPULAR</div>
+        <div class="mb-8">
+          <span class="font-label-sm text-label-sm text-primary tracking-widest">STANDARD</span>
+          <h4 class="font-headline-lg text-headline-lg mt-3">110,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
+          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_std_desc">BNI Member에게 가장 많이 선택되는 플랜.</p>
+        </div>
+        <div class="flex-grow space-y-3 mb-8 text-sm">
+          <div class="flex items-center gap-2 mb-3 pb-3 border-b border-primary/20">
+            <span class="material-symbols-outlined text-primary text-sm">layers</span>
+            <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_basic">베이직 전체 포함</span>
+          </div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s1">4개국어 (한/영/중/일)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s2">프로필 사진</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s3">소개글 + 경력 섹션</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s4">리퍼럴 섹션 (BNI 전용)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s5">이미지 슬라이드 (2~4장)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s6">카카오톡 공유 시 프리뷰 최적화</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s7">2회 수정 포함</span></div>
+        </div>
+        <p class="text-primary/50 text-[10px] mb-4" data-i18n="kakao_note">* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.</p>
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-primary/30 rounded-xl text-sm text-primary hover:bg-primary/10 transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <button onclick="pickPlan('스탠다드 (110,000원)')" class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/30 hover:brightness-110 transition-all"><span data-i18n="btn_std">Select Standard</span></button>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="glass-card p-10 rounded-3xl border border-outline-variant/30 flex flex-col">
+        <div class="mb-8">
+          <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">PREMIUM</span>
+          <h4 class="font-headline-lg text-headline-lg mt-3">150,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
+          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_prem_desc">글로벌 네트워킹이 필요한 리더를 위한 플랜.</p>
+        </div>
+        <div class="flex-grow space-y-3 mb-8 text-sm">
+          <div class="flex items-center gap-2 mb-3 pb-3 border-b border-outline-variant/30">
+            <span class="material-symbols-outlined text-primary text-sm">layers</span>
+            <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_std">스탠다드 전체 포함</span>
+          </div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="prem_lang">4개 언어 선택 가능 (10개 언어 중 직접 선택 — 불어·아랍어·러시아어·스페인어 등)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p1">이미지 슬라이드 (2~8장)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p2">동영상 삽입 (1개)</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p3">서비스/제품 소개 섹션</span></div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p4">예약·문의 폼 연결</span></div>
+        </div>
+        <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <button onclick="pickPlan('프리미엄 (150,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_prem">Go Premium</span></button>
+      </div>
+
+    </div>
+
+    <!-- FREE PRO + 기업단체: 가로 배너형 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- FREE PRO -->
+      <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">FREE PRO</span>
+            <h4 class="font-headline-lg text-headline-lg mt-2">250,000<span class="text-body-md font-body-md text-on-surface-variant">원~</span></h4>
+            <p class="text-on-surface-variant mt-2 text-sm" data-i18n="plan_free_desc" data-i18n="plan_free_desc">원하는 디자인 100% 반영. 미니 웹사이트 구조.</p>
+          </div>
+          <div class="text-primary/10 font-bold text-6xl font-headline-lg">∞</div>
+        </div>
+        <div class="flex items-center gap-2 mb-4 pb-4 border-b border-outline-variant/30">
+          <span class="material-symbols-outlined text-primary text-sm">layers</span>
+          <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_prem">프리미엄 전체 포함</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-sm flex-grow mb-6">
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f1">원하는 디자인</span></div>
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f2">포트폴리오 갤러리</span></div>
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f3">도메인 연결 지원 (무료 도메인도 가능)</span></div>
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f4">수정 10회 (2주간)</span></div>
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f5">MANDU 연동</span></div>
+          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f6">무료 도메인 제공</span></div>
+        </div>
+        <button onclick="pickPlan('프리 (250,000원~)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_free">Go Free Pro</span></button>
+      </div>
+
+      <!-- 기업·단체 -->
+      <div class="relative rounded-3xl overflow-hidden border border-primary/30 p-8 flex flex-col" style="background:linear-gradient(135deg,#1a1400 0%,#2a2000 50%,#1a1a1a 100%);">
+        <div class="absolute inset-0 network-lines opacity-20"></div>
+        <div class="relative z-10">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary tracking-widest">ENTERPRISE</span>
+              <h4 class="font-headline-lg text-headline-lg mt-2 text-on-surface" data-i18n="ent_title">기업 · 단체</h4>
+              <p class="text-on-surface-variant mt-2 text-sm" data-i18n="ent_desc">별도 협의 · 규모에 따른 맞춤 견적</p>
+            </div>
+            <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-3xl">business</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3 text-sm mb-6">
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e1">기업 고유 로고 적용</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e2">브랜드 컬러 시스템</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e3">임직원 단체 제작</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e4">기업 카드북 통합</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e5">MANDU 단체 연동</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e6">전담 관리 지원</span></div>
+          </div>
+          <button onclick="pickPlan('기업·단체 (별도 협의)')"
+            class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/20 hover:brightness-110 transition-all">
+            <span data-i18n="btn_ent">기업 상담 신청</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO IS TM LINK FOR ── -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <div>
+      <h3 class="font-headline-lg text-headline-lg mb-8"><span data-i18n="who_title">TM LINK는 누구를 위한 서비스인가요?</span></h3>
+      <div class="flex flex-wrap gap-4 mb-12">
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who1">기업체 임직원</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who2">BNI Member</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who3">소상공인 대표</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who4">프리랜서</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who5">뷰티·헬스 원장</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who6">외식업 창업자</span>
+        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who7">글로벌 비즈니스</span>
+      </div>
+    </div>
+    <!-- Process steps -->
+    <div class="space-y-6">
+      <h4 class="font-headline-md text-headline-md mb-8"><span data-i18n="process_title">제작 과정</span> <span class="text-primary" data-i18n="process_steps">4단계</span></h4>
+      <div class="space-y-4">
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shrink-0">01</div>
+          <div><p class="font-bold mb-1" data-i18n="p1_title">상담 & 의뢰</p><p class="text-sm text-on-surface-variant" data-i18n="p1_desc">폼 또는 카카오톡으로 연락. 목적·업종·예산 간단 공유.</p></div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">02</div>
+          <div><p class="font-bold mb-1"><span data-i18n="p2_title">정보 수집</span></p><p class="text-sm text-on-surface-variant" data-i18n="p2_desc">이름·직함·사진·링크를 템플릿으로 전달받습니다.</p></div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">03</div>
+          <div><p class="font-bold mb-1" data-i18n="p3_title">디자인 & 개발</p><p class="text-sm text-on-surface-variant" data-i18n="p3_desc">브랜드 맞춤 디자인. 초안 공유 후 피드백 반영.</p></div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
+          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">04</div>
+          <div><p class="font-bold mb-1" data-i18n="p4_title">배포 & 전달</p><p class="text-sm text-on-surface-variant" data-i18n="p4_desc">GitHub Pages 배포. QR 코드 + 공유 링크 전달. 평균 3~5 영업일.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta" class="py-32 px-margin-desktop text-center relative overflow-hidden bg-surface-container-low">
+  <div class="absolute inset-0 bg-primary/5 -z-10 network-lines"></div>
+  <div class="max-w-2xl mx-auto space-y-10">
+    <h3 class="font-headline-lg text-headline-lg font-bold leading-tight" style="word-break:keep-all;letter-spacing:-0.01em;">
+      <span data-i18n="cta_h1">명함 한 장이 비즈니스의 미래를 바꿉니다.</span><br/>
+      <span class="text-primary"><span data-i18n="cta_h2">지금 바로 귀하의 디지털 자산을 확보하십시오.</span></span>
+    </h3>
+    <!-- Quick form -->
+    <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 text-left max-w-lg mx-auto">
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_name">성함</span></label>
+          <input id="f-name" type="text" placeholder="홍길동"
+            class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+        </div>
+        <div>
+          <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_phone">연락처</span></label>
+          <input id="f-phone" type="tel" placeholder="010-0000-0000"
+            class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_plan">플랜 선택</span></label>
+        <select id="f-plan" class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all">
+          <option value="">플랜을 선택하세요</option>
+          <option value="베이직 (70,000원)">베이직 · 70,000원</option>
+          <option value="스탠다드 (110,000원)" selected>스탠다드 · 110,000원 ★ 인기</option>
+          <option value="프리미엄 (150,000원)">프리미엄 · 150,000원</option>
+          <option value="프리 (250,000원)">프리 · 250,000원</option>
+        </select>
+      </div>
+      <div class="mb-6">
+        <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_job">업종 / 직함</span></label>
+        <input id="f-job" type="text" placeholder="예: BNI 멤버, 뷰티 원장, 외식업 대표"
+          class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+      </div>
+      <button onclick="submitForm()"
+        class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] hover:brightness-110 transition-all">
+        <span data-i18n="form_submit">상담 신청</span> <span class="material-symbols-outlined">arrow_forward</span>
+      </button>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4 pt-4">
+      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
+        class="px-8 py-4 bg-[#FEE500] text-[#3c1e1e] rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-all">
+        <span class="material-symbols-outlined text-[20px]">chat</span> <span data-i18n="mandu_cta">MANDU 메신저 체험</span>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/" target="_blank"
+        class="px-8 py-4 border border-primary text-primary rounded-xl font-bold flex items-center gap-2 hover:bg-primary/5 hover:scale-105 transition-all">
+        <span class="material-symbols-outlined text-[20px]">style</span><span data-i18n="cardbook_btn"> BNI 카드북 보기</span>
+      </a>
+    </div>
+    <p class="text-on-surface-variant text-sm opacity-60"><span data-i18n="footer_note">부산 · 전국 원격 제작 가능 · 접수 후 1영업일 내 회신</span></p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="bg-surface-container-lowest py-24 px-margin-desktop border-t border-outline-variant/30">
+  <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+    <div class="space-y-6">
+      <h2 class="font-headline-md text-headline-md text-primary font-bold">TM LINK</h2>
+      <p class="text-on-surface-variant text-sm leading-relaxed">
+        Digital Identity & Elite Networking Solutions.<br/>
+        <span data-i18n="footer_by">송승훈 대표 · T.M Link · BNI 파이오니어</span>
+      </p>
+      <div class="flex gap-4">
+        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER/" target="_blank"
+          class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer transition-colors">
+          <span class="material-symbols-outlined text-sm">groups</span>
+        </a>
+        <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
+          class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer transition-colors">
+          <span class="material-symbols-outlined text-sm">translate</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs">Solutions</h4>
+      <ul class="space-y-4 text-on-surface-variant text-sm">
+        <li><a class="hover:text-primary transition-colors" href="#digital-card" data-i18n="footer_l1">디지털 명함</a></li>
+        <li><a class="hover:text-primary transition-colors" href="#ecosystem">BNI CardBook</a></li>
+        <li><a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" class="hover:text-primary transition-colors" data-i18n="footer_l3">MANDU 메신저</a></li>
+        <li><a class="hover:text-primary transition-colors" href="#pricing" data-i18n="footer_l4">가격 안내</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs" data-i18n="footer_h2">제작과정</h4>
+      <ul class="space-y-4 text-on-surface-variant text-sm">
+        <li data-i18n="footer_p1">01 · 상담 & 의뢰</li>
+        <li data-i18n="footer_p2">02 · 정보 수집</li>
+        <li data-i18n="footer_p3">03 · 디자인 & 개발</li>
+        <li data-i18n="footer_p4">04 · 배포 & 전달</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs">Base</h4>
+      <ul class="space-y-4 text-on-surface-variant text-sm">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span data-i18n="footer_b1"> 부산, KR (본사)</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span data-i18n="footer_b2"> 전국 원격 제작</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span data-i18n="footer_b3"> BNI 글로벌 네트워크</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center">
+    <p class="text-on-surface-variant text-sm opacity-60"><span data-i18n="footer_copy">© 2025 TM LINK · 송승훈 대표 · T.M Link · ALL RIGHTS RESERVED.</span></p>
+  </div>
+</footer>
+
+<script>
+// ── Globe Network Animation (Blue Earth) ──
+(function() {
+  const canvas = document.getElementById('globe-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2, R = 185;
+  let t = 0;
+  const cities = [
+    { lat: 37.5,  lon: 127,   name: '서울' },
+    { lat: 35.7,  lon: 139.7, name: '도쿄' },
+    { lat: 31.2,  lon: 121.5, name: '상하이' },
+    { lat: 1.3,   lon: 103.8, name: '싱가포르' },
+    { lat: 40.7,  lon: -74,   name: 'New York' },
+    { lat: 51.5,  lon: -0.1,  name: 'London' },
+    { lat: -33.9, lon: 151.2, name: 'Sydney' },
+    { lat: 48.9,  lon: 2.3,   name: 'Paris' },
+    { lat: 55.7,  lon: 37.6,  name: 'Moscow' },
+    { lat: 25.2,  lon: 55.3,  name: 'Dubai' },
+    { lat: -23.5, lon: -46.6, name: 'SP' },
+    { lat: 19.4,  lon: -99.1, name: 'Mexico' },
+  ];
+  const conns = [[0,1],[0,2],[0,3],[0,4],[1,2],[1,6],[2,3],[3,9],[4,5],[4,7],[5,7],[5,8],[6,3],[7,8],[9,3],[10,4],[11,4]];
+  const packets = conns.map(c => ({ from: c[0], to: c[1], p: Math.random(), speed: 0.003 + Math.random()*0.003 }));
+  function latLonToXY(lat, lon, rotY) {
+    const phi = (90 - lat) * Math.PI / 180;
+    const theta = (lon + rotY) * Math.PI / 180;
+    const x3 = R * Math.sin(phi) * Math.cos(theta);
+    const y3 = R * Math.cos(phi);
+    const z3 = R * Math.sin(phi) * Math.sin(theta);
+    return { x: cx + x3, y: cy - y3, z: z3, visible: z3 > -30 };
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const rotY = t * 10;
+    // Ocean gradient
+    const grad = ctx.createRadialGradient(cx-50, cy-50, 10, cx, cy, R);
+    grad.addColorStop(0, '#6ab4e8');
+    grad.addColorStop(0.5, '#2676b8');
+    grad.addColorStop(1, '#0d3d6e');
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
+    ctx.fillStyle = grad; ctx.fill();
+    // Atmosphere
+    const atmo = ctx.createRadialGradient(cx, cy, R-8, cx, cy, R+20);
+    atmo.addColorStop(0, 'rgba(120,190,255,0.35)');
+    atmo.addColorStop(1, 'rgba(120,190,255,0)');
+    ctx.beginPath(); ctx.arc(cx, cy, R+20, 0, Math.PI*2);
+    ctx.fillStyle = atmo; ctx.fill();
+    // Clip
+    ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2); ctx.clip();
+    // Grid
+    for (let lat = -60; lat <= 60; lat += 30) {
+      ctx.beginPath(); let first = true;
+      for (let lon = -180; lon <= 180; lon += 4) {
+        const p = latLonToXY(lat, lon, rotY);
+        if (p.z > -50) { if (first) { ctx.moveTo(p.x, p.y); first = false; } else ctx.lineTo(p.x, p.y); } else first = true;
+      }
+      ctx.strokeStyle = 'rgba(255,255,255,0.13)'; ctx.lineWidth = 0.6; ctx.stroke();
+    }
+    for (let lon = 0; lon < 360; lon += 30) {
+      ctx.beginPath(); let first = true;
+      for (let lat = -90; lat <= 90; lat += 4) {
+        const p = latLonToXY(lat, lon, rotY);
+        if (p.z > -50) { if (first) { ctx.moveTo(p.x, p.y); first = false; } else ctx.lineTo(p.x, p.y); } else first = true;
+      }
+      ctx.strokeStyle = 'rgba(255,255,255,0.08)'; ctx.lineWidth = 0.6; ctx.stroke();
+    }
+    const pos = cities.map(c => latLonToXY(c.lat, c.lon, rotY));
+    // Connections (gold)
+    conns.forEach(([a, b]) => {
+      const pa = pos[a], pb = pos[b];
+      if (pa.visible && pb.visible && pa.z > 0 && pb.z > 0) {
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y);
+        ctx.strokeStyle = 'rgba(242,202,80,0.4)'; ctx.lineWidth = 1; ctx.stroke();
+      }
+    });
+    // Packets
+    packets.forEach(pk => {
+      pk.p += pk.speed; if (pk.p > 1) pk.p = 0;
+      const pa = pos[pk.from], pb = pos[pk.to];
+      if (pa.visible && pb.visible && pa.z > 0 && pb.z > 0) {
+        const px = pa.x + (pb.x - pa.x) * pk.p, py = pa.y + (pb.y - pa.y) * pk.p;
+        ctx.beginPath(); ctx.arc(px, py, 3.5, 0, Math.PI*2);
+        ctx.fillStyle = '#f2ca50'; ctx.shadowColor = '#f2ca50'; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+      }
+    });
+    // City dots
+    pos.forEach((p, i) => {
+      if (!p.visible || p.z < 0) return;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.z > 80 ? 5 : 3.5, 0, Math.PI*2);
+      ctx.fillStyle = '#fff'; ctx.shadowColor = '#f2ca50'; ctx.shadowBlur = p.z > 80 ? 10 : 4; ctx.fill(); ctx.shadowBlur = 0;
+      if (p.z > 60) { ctx.font = '10px Inter,sans-serif'; ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.fillText(cities[i].name, p.x+7, p.y+4); }
+    });
+    // Specular
+    const spec = ctx.createRadialGradient(cx-60, cy-60, 5, cx-40, cy-40, 110);
+    spec.addColorStop(0, 'rgba(255,255,255,0.2)'); spec.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2); ctx.fillStyle = spec; ctx.fill();
+    ctx.restore();
+    // Border
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(20,80,160,0.5)'; ctx.lineWidth = 2; ctx.stroke();
+    // Label
+    ctx.font = 'bold 12px Montserrat,sans-serif'; ctx.fillStyle = 'rgba(10,40,100,0.4)';
+    ctx.textAlign = 'center'; ctx.fillText('TM LINK', cx, cy + R + 22); ctx.textAlign = 'left';
+    t += 0.004; requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── Language Switcher ──
+window.i18n = {
+  ko: {
+    tag:'BNI 파이오니어 · 부산 디지털 아이덴티티',
+    h:'명함은<br/>종이였습니다.<br/><span class="text-gradient-gold">이제는 자산입니다.</span>',
+    sub:'디지털 명함 · BNI 멤버카드 · 실시간 통번역 메신저 MANDU.<br/>TM LINK로 귀하의 비즈니스 가치를 격상시키십시오.',
+    btn1:'무료 상담 신청', btn2:'포트폴리오 감상', hbtn:'상담 신청',
+    nav_why:'WHY TM LINK', nav_card:'DIGITAL CARD', nav_eco:'ECOSYSTEM', nav_price:'PRICING',
+    why_sub:'전통적인 종이 명함을 디지털 자산 관리 시스템으로 혁신합니다.',
+    why_h1:'명함의 문제는 디자인이 아닙니다.',
+    why_h2:'관리되지 않는 인맥은 사라집니다.',
+    why_c1_title:'Digital Card', why_c2_title:'MANDU 메신저', why_c3_title:'CardBook',
+    why_c1_desc:'단순한 연락처 교환을 넘어 전문가의 권위와 신뢰를 담은 프리미엄 디지털 명함. BNI 멤버카드 4개국어 지원.',
+    why_c2_desc:'10개국어 실시간 자동번역 메신저. 외국어 없이도 전 세계 BNI 멤버와 즉시 소통.',
+    why_c3_desc:'개인의 인맥을 영구적인 디지털 자산으로 전환. BNI 챕터 전체 통합 관리.',
+    pricing_title:'Elite Membership',
+    btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'기업 상담 신청',
+    sample_btn:'샘플 보기',
+    sample_title:'제작 샘플 보기',
+    who_title:'TM LINK는 누구를 위한 서비스인가요?',
+    process_title:'제작 과정', process_steps:'4단계',
+    p1_title:'상담 & 의뢰', p2_title:'정보 수집', p3_title:'디자인 & 개발', p4_title:'배포 & 전달',
+    cta_h1:'명함 한 장이 비즈니스의 미래를 바꿉니다.',
+    cta_h2:'지금 바로 귀하의 디지털 자산을 확보하십시오.',
+    form_name:'성함', form_phone:'연락처', form_plan:'플랜 선택', form_job:'업종 / 직함',
+    form_submit:'상담 신청',
+    mandu_cta:'MANDU 메신저 체험',
+    footer_note:'부산 · 전국 원격 제작 가능 · 접수 후 1영업일 내 회신',
+    footer_by:'송승훈 대표 · T.M Link · BNI 파이오니어',
+    footer_l1:'디지털 명함',
+    footer_l3:'MANDU 메신저',
+    footer_l4:'가격 안내',
+    footer_h2:'제작과정',
+    footer_p1:'01 · 상담 & 의뢰',
+    footer_p2:'02 · 정보 수집',
+    footer_p3:'03 · 디자인 & 개발',
+    footer_p4:'04 · 배포 & 전달',
+    footer_b1:'부산, KR (본사)',
+    footer_b2:'전국 원격 제작',
+    footer_b3:'BNI 글로벌 네트워크',
+    footer_copy:'© 2025 TM LINK · 송승훈 대표 · T.M Link · ALL RIGHTS RESERVED.',
+    modal_note:'각 카드를 클릭하면 실제 디지털 명함이 새 탭에서 열립니다.',
+    stat1:'MANDU<br/>지원 언어',
+    stat2:'기본 지원<br/>한·영·중·일',
+    stat3:'평균 완성<br/>기간',
+    port_hint:'클릭하면 실제 디지털 명함으로 이동합니다 →',
+    feat1_t:'4개국어 지원',
+    feat1_d:'한·영·일·중 자동 전환. 글로벌 네트워킹 최적화.',
+    feat2_t:'QR 자동 생성',
+    feat2_d:'QR 하나로 언제 어디서든 공유 가능.',
+    feat3_t:'vCard 저장',
+    feat3_d:'한 번 탭으로 연락처 즉시 저장. iOS·Android 지원.',
+    feat4_t:'카카오톡 최적화',
+    feat4_d:'OG 이미지 설정으로 카카오 공유 시 프리미엄 미리보기.',
+    eco_sub:'From Local Trust to Global Scale',
+    eco1_d:'권위 있는 첫인상의 시작. QR·4개국어.',
+    eco2_d:'멤버들이 서로 연결·연결·연결',
+    eco3_d:'10개국어 실시간 자동번역 메신저.',
+    eco4_d:'국경 없는 비즈니스 네트워크 확장.',
+    pricing_sub:'투명한 가격. 필요한 플랜만 선택하세요.',
+    vat_note:'※ 모든 가격은 부가세(VAT 10%) 별도입니다',
+    inc_basic:'베이직 전체 포함',
+    inc_std:'스탠다드 전체 포함',
+    inc_prem:'프리미엄 전체 포함',
+    prem_lang:'4개 언어 선택 가능 (10개 언어 중 직접 선택 — 불어·아랍어·러시아어·스페인어 등)',
+    ent_title:'기업 · 단체',
+    kakao_note:'* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.',
+    cardbook_btn:' BNI 카드북 보기',
+    footer_desc:'디지털 명함 · BNI 네트워킹 · 글로벌 아이덴티티 솔루션.',
+    plan_basic_desc:'디지털 명함 입문. 기본 기능으로 시작하세요.',
+    plan_std_desc:'BNI Member에게 가장 많이 선택되는 플랜.',
+    plan_prem_desc:'글로벌 네트워킹이 필요한 리더를 위한 플랜.',
+    plan_free_desc:'원하는 디자인 100% 반영. 미니 웹사이트 구조.',
+    ent_desc:'별도 협의 · 규모에 따른 맞춤 견적',
+    b1:'컬러 선택 (브랜드 색상 적용)', b2:'커버 이미지', b3:'연락처 한 번 탭으로 저장 (vCard)',
+    b4:'3개국어 (한/영/중)', b5:'MANDU 메신저 연동', b6:'무료 도메인 제공 (GitHub Pages)', b7:'1회 수정 포함',
+    s1:'4개국어 (한/영/중/일)', s2:'프로필 사진', s3:'소개글 + 경력 섹션',
+    s4:'리퍼럴 섹션 (BNI 전용)', s5:'이미지 슬라이드 (2~4장)', s6:'카카오톡 공유 시 프리뷰 최적화', s7:'2회 수정 포함',
+    p1:'이미지 슬라이드 (2~8장)', p2:'동영상 삽입 (1개)', p3:'서비스/제품 소개 섹션', p4:'예약·문의 폼 연결',
+    f1:'원하는 디자인', f2:'포트폴리오 갤러리', f3:'도메인 연결 지원 (무료 도메인도 가능)',
+    f4:'수정 10회 (2주간)', f5:'MANDU 연동', f6:'무료 도메인 제공',
+    e1:'기업 고유 로고 적용', e2:'브랜드 컬러 시스템', e3:'임직원 단체 제작',
+    e4:'기업 카드북 통합', e5:'MANDU 단체 연동', e6:'전담 관리 지원',
+    who1:'기업체 임직원', who2:'BNI Member', who3:'소상공인 대표', who4:'프리랜서',
+    who5:'뷰티·헬스 원장', who6:'외식업 창업자', who7:'글로벌 비즈니스',
+    p1_desc:'폼 또는 카카오톡으로 연락. 목적·업종·예산 간단 공유.',
+    p2_desc:'이름·직함·사진·링크를 템플릿으로 전달받습니다.',
+    p3_desc:'브랜드 맞춤 디자인. 초안 공유 후 피드백 반영.',
+    p4_desc:'GitHub Pages 배포. QR 코드 + 공유 링크 전달. 평균 3~5 영업일.',
+  },
+  en: {
+    tag:'BNI PIONEER · BUSAN DIGITAL IDENTITY',
+    h:'Cards Were<br/>Paper.<br/><span class="text-gradient-gold">Now They Are Assets.</span>',
+    sub:'Digital Cards · BNI Member Cards · Real-time 10-language Messenger MANDU.<br/>Elevate your business with TM LINK.',
+    btn1:'Free Consultation', btn2:'View Portfolio', hbtn:'Consult',
+    nav_why:'WHY TM LINK', nav_card:'DIGITAL CARD', nav_eco:'ECOSYSTEM', nav_price:'PRICING',
+    why_sub:'Transforming traditional paper cards into a digital asset management system.',
+    why_h1:'The problem is not design.',
+    why_h2:'Unmanaged networks disappear.',
+    why_c1_title:'Digital Card', why_c2_title:'MANDU Messenger', why_c3_title:'CardBook',
+    why_c1_desc:'Beyond simple contact exchange — a premium digital card that carries authority and trust. BNI member cards with 4-language support.',
+    why_c2_desc:'Real-time 10-language auto-translation messenger. Connect instantly with BNI members worldwide without language barriers.',
+    why_c3_desc:'Transform personal networks into permanent digital assets. Integrated management for entire BNI chapters.',
+    pricing_title:'Elite Membership',
+    btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'Enterprise Inquiry',
+    sample_btn:'View Sample',
+    sample_title:'Sample Cards',
+    who_title:'Who is TM LINK for?',
+    process_title:'How It Works', process_steps:'4 Steps',
+    p1_title:'Consult & Order', p2_title:'Collect Info', p3_title:'Design & Build', p4_title:'Deploy & Deliver',
+    cta_h1:'One card can change your business future.',
+    cta_h2:'Secure your digital identity right now.',
+    form_name:'Full Name', form_phone:'Phone', form_plan:'Select Plan', form_job:'Industry / Title',
+    form_submit:'Submit',
+    mandu_cta:'Try MANDU Messenger',
+    footer_note:'Busan · Remote production available · Reply within 1 business day',
+    footer_by:'CEO Song Seung-hun · T.M Link · BNI Pioneer',
+    footer_l1:'Digital Card',
+    footer_l3:'MANDU Messenger',
+    footer_l4:'Pricing',
+    footer_h2:'Process',
+    footer_p1:'01 · Consult & Order',
+    footer_p2:'02 · Collect Info',
+    footer_p3:'03 · Design & Build',
+    footer_p4:'04 · Deploy & Deliver',
+    footer_b1:'Busan, KR (HQ)',
+    footer_b2:'Remote nationwide',
+    footer_b3:'BNI Global Network',
+    footer_copy:'© 2025 TM LINK · ALL RIGHTS RESERVED.',
+    modal_note:'Click each card to open the actual digital card in a new tab.',
+    stat1:'MANDU<br/>languages',
+    stat2:'Core support<br/>KR·EN·CN·JP',
+    stat3:'Avg completion<br/>days',
+    port_hint:'Click each card to view the actual digital card →',
+    feat1_t:'4 Languages',
+    feat1_d:'Auto-switch between KR/EN/JP/CN. Global networking ready.',
+    feat2_t:'Auto QR Code',
+    feat2_d:'Share anytime via QR. Link is permanent.',
+    feat3_t:'vCard Save',
+    feat3_d:'One tap to save contact. iOS & Android supported.',
+    feat4_t:'KakaoTalk Ready',
+    feat4_d:'Premium preview card when shared via KakaoTalk.',
+    eco_sub:'From Local Trust to Global Scale',
+    eco1_d:'The start of an authoritative first impression. QR & 4 languages.',
+    eco2_d:'Members connecting · connecting · connecting',
+    eco3_d:'Real-time 10-language auto-translation messenger.',
+    eco4_d:'Borderless business network expansion.',
+    pricing_sub:'Transparent pricing. No hidden fees. Choose what you need.',
+    vat_note:'※ All prices exclude VAT (10%)',
+    inc_basic:'Includes all Basic features',
+    inc_std:'Includes all Standard features',
+    inc_prem:'Includes all Premium features',
+    prem_lang:'Choose 4 languages (from 10 available — French, Arabic, Russian, Spanish, etc.)',
+    ent_title:'Enterprise · Group',
+    kakao_note:'* Name, photo, and title appear as preview when sharing via KakaoTalk.',
+    cardbook_btn:' BNI CardBook',
+    footer_desc:'Digital Cards · BNI Networking · Global Identity Solutions.',
+    plan_basic_desc:'Digital card basics. Start with essential features.',
+    plan_std_desc:'The most popular plan for BNI Members.',
+    plan_prem_desc:'For leaders who need global networking.',
+    plan_free_desc:'100% custom design. Mini website structure.',
+    ent_desc:'Custom pricing · consultation required',
+    b1:'Color selection (brand color)', b2:'Cover image', b3:'One-tap contact save (vCard)',
+    b4:'3 languages (KR/EN/CN)', b5:'MANDU messenger integration', b6:'Free domain (GitHub Pages)', b7:'1 revision included',
+    s1:'4 languages (KR/EN/CN/JP)', s2:'Profile photo', s3:'Bio + career section',
+    s4:'Referral section (BNI only)', s5:'Image slideshow (2~4)', s6:'KakaoTalk share preview optimized', s7:'2 revisions included',
+    p1:'Image slideshow (2~8)', p2:'Video embed (1)', p3:'Service/product intro section', p4:'Booking/inquiry form',
+    f1:'Custom design', f2:'Portfolio gallery', f3:'Domain connection (free domain available)',
+    f4:'10 revisions (within 2 weeks)', f5:'MANDU integration', f6:'Free domain',
+    e1:'Corporate logo applied', e2:'Brand color system', e3:'Group card production',
+    e4:'Corporate CardBook', e5:'MANDU group integration', e6:'Dedicated support',
+    who1:'Corporate employees', who2:'BNI Member', who3:'Small business owner', who4:'Freelancer',
+    who5:'Beauty/health professional', who6:'Restaurant/food industry', who7:'Global business',
+    p1_desc:'Contact us via form or KakaoTalk. Share your goals and budget.',
+    p2_desc:'We collect your name, title, photo, and links via template.',
+    p3_desc:'Custom brand design. Preview shared, feedback applied.',
+    p4_desc:'Deployed to GitHub Pages. QR code + link delivered. Avg 3~5 business days.',
+  },
+  zh: {
+    tag:'BNI先锋 · 釜山数字身份',
+    h:'名片曾是<br/>纸张。<br/><span class="text-gradient-gold">现在是资产。</span>',
+    sub:'数字名片 · BNI会员卡 · 实时10语言翻译 MANDU。<br/>用TM LINK提升您的商业价值。',
+    btn1:'免费咨询', btn2:'查看作品集', hbtn:'咨询',
+    nav_why:'为什么选TM', nav_card:'数字名片', nav_eco:'生态系统', nav_price:'价格',
+    why_sub:'将传统纸质名片转变为数字资产管理系统。',
+    why_h1:'名片的问题不在于设计。',
+    why_h2:'没有管理的人脉会消失。',
+    why_c1_title:'数字名片', why_c2_title:'MANDU 信使', why_c3_title:'名片册',
+    why_c1_desc:'超越简单的联系方式交换——承载专业权威与信任的高端数字名片。BNI会员卡支持4种语言。',
+    why_c2_desc:'实时10语言自动翻译信使。无需外语即可与全球BNI成员即时沟通。',
+    why_c3_desc:'将个人人脉转化为永久数字资产。整合管理整个BNI分会。',
+    pricing_title:'精英会员',
+    btn_basic:'立即开始', btn_std:'选择标准版', btn_prem:'选择高级版', btn_free:'选择自由版', btn_ent:'企业咨询',
+    sample_btn:'查看样品',
+    sample_title:'样品展示',
+    who_title:'TM LINK适合谁？',
+    process_title:'制作流程', process_steps:'4个步骤',
+    p1_title:'咨询与委托', p2_title:'收集信息', p3_title:'设计与开发', p4_title:'部署与交付',
+    cta_h1:'一张名片能改变您的商业未来。',
+    cta_h2:'立即确保您的数字身份。',
+    form_name:'姓名', form_phone:'电话', form_plan:'选择方案', form_job:'行业 / 职位',
+    form_submit:'提交咨询',
+    mandu_cta:'体验MANDU信使',
+    footer_note:'釜山 · 支持远程制作 · 1个工作日内回复',
+    footer_by:'宋承勋 代表 · T.M Link · BNI先锋',
+    footer_l1:'数字名片',
+    footer_l3:'MANDU信使',
+    footer_l4:'价格',
+    footer_h2:'制作流程',
+    footer_p1:'01 · 咨询与委托',
+    footer_p2:'02 · 收集信息',
+    footer_p3:'03 · 设计与开发',
+    footer_p4:'04 · 部署与交付',
+    footer_b1:'釜山, KR (总部)',
+    footer_b2:'全国远程制作',
+    footer_b3:'BNI全球网络',
+    footer_copy:'© 2025 TM LINK · 版权所有。',
+    modal_note:'点击每张卡片即可在新标签页中打开实际数字名片。',
+    stat1:'MANDU<br/>支持语言',
+    stat2:'基础支持<br/>韩·英·中·日',
+    stat3:'平均完成<br/>天数',
+    port_hint:'点击即可查看实际数字名片 →',
+    feat1_t:'4种语言',
+    feat1_d:'韩/英/日/中自动切换。全球网络就绪。',
+    feat2_t:'自动QR码',
+    feat2_d:'随时随地通过QR分享。链接永久有效。',
+    feat3_t:'vCard保存',
+    feat3_d:'一键保存联系方式。支持iOS和Android。',
+    feat4_t:'KakaoTalk优化',
+    feat4_d:'通过KakaoTalk分享时显示精美预览。',
+    eco_sub:'从本地信任到全球规模',
+    eco1_d:'权威第一印象的开始。QR码·4种语言。',
+    eco2_d:'会员们相互连接·连接·连接',
+    eco3_d:'实时10语言自动翻译信使。',
+    eco4_d:'无国界商业网络扩张。',
+    pricing_sub:'透明定价。无隐藏费用。按需选择。',
+    vat_note:'※ 所有价格均不含增值税（10%）',
+    inc_basic:'包含所有基础功能',
+    inc_std:'包含所有标准功能',
+    inc_prem:'包含所有高级功能',
+    prem_lang:'可选4种语言（10种语言中选择 — 法语·阿拉伯语·俄语·西班牙语等）',
+    ent_title:'企业 · 团体',
+    kakao_note:'* 通过KakaoTalk分享链接时，姓名·照片·职称将显示为预览。',
+    cardbook_btn:' BNI名片册',
+    footer_desc:'数字名片 · BNI网络 · 全球身份解决方案。',
+    plan_basic_desc:'数字名片入门。从基本功能开始。',
+    plan_std_desc:'BNI会员最常选择的方案。',
+    plan_prem_desc:'适合需要全球网络的领导者。',
+    plan_free_desc:'100%定制设计。微型网站结构。',
+    ent_desc:'另行协商 · 根据规模定制报价',
+    b1:'颜色选择（品牌色彩）', b2:'封面图片', b3:'一键保存联系方式 (vCard)',
+    b4:'3种语言（韩/英/中）', b5:'MANDU信使集成', b6:'免费域名（GitHub Pages）', b7:'含1次修改',
+    s1:'4种语言（韩/英/中/日）', s2:'个人照片', s3:'简介+经历板块',
+    s4:'推荐板块（BNI专用）', s5:'图片轮播（2~4张）', s6:'KakaoTalk分享预览优化', s7:'含2次修改',
+    p1:'图片轮播（2~8张）', p2:'嵌入视频（1个）', p3:'服务/产品介绍板块', p4:'预约/咨询表单',
+    f1:'定制设计', f2:'作品集画廊', f3:'域名连接（可用免费域名）',
+    f4:'10次修改（2周内）', f5:'MANDU集成', f6:'免费域名',
+    e1:'企业专属Logo', e2:'品牌色彩系统', e3:'员工团体制作',
+    e4:'企业名片册', e5:'MANDU团体集成', e6:'专属管理支持',
+    who1:'企业员工', who2:'BNI会员', who3:'小企业主', who4:'自由职业者',
+    who5:'美容健康从业者', who6:'餐饮创业者', who7:'全球商业',
+    p1_desc:'通过表单或KakaoTalk联系。分享您的目标和预算。',
+    p2_desc:'通过模板收集您的姓名、职称、照片和链接。',
+    p3_desc:'品牌定制设计。分享初稿后应用反馈。',
+    p4_desc:'部署到GitHub Pages。交付QR码+分享链接。平均3~5个工作日。',
+  },
+  ja: {
+    tag:'BNIパイオニア · 釜山デジタルアイデンティティ',
+    h:'名刺は<br/>紙でした。<br/><span class="text-gradient-gold">今は資産です。</span>',
+    sub:'デジタル名刺 · BNIメンバーカード · リアルタイム10言語翻訳 MANDU。<br/>TM LINKでビジネスの価値を高めてください。',
+    btn1:'無料相談申込', btn2:'ポートフォリオ', hbtn:'相談',
+    nav_why:'WHY TM LINK', nav_card:'デジタルカード', nav_eco:'エコシステム', nav_price:'料金',
+    why_sub:'従来の紙名刺をデジタル資産管理システムに革新します。',
+    why_h1:'名刺の問題はデザインではありません。',
+    why_h2:'管理されない人脈は消えていきます。',
+    why_c1_title:'デジタルカード', why_c2_title:'MANDUメッセンジャー', why_c3_title:'カードブック',
+    why_c1_desc:'単なる連絡先交換を超えた、権威と信頼を込めたプレミアムデジタル名刺。BNIメンバーカード4言語対応。',
+    why_c2_desc:'リアルタイム10言語自動翻訳メッセンジャー。外国語なしで世界中のBNIメンバーと即座に繋がる。',
+    why_c3_desc:'個人の人脈を永続的なデジタル資産へ転換。BNIチャプター全体の統合管理。',
+    pricing_title:'エリート会員',
+    btn_basic:'始める', btn_std:'スタンダード選択', btn_prem:'プレミアム選択', btn_free:'フリープロ選択', btn_ent:'企業相談',
+    sample_btn:'サンプルを見る',
+    sample_title:'サンプルカード',
+    who_title:'TM LINKは誰のためのサービスですか？',
+    process_title:'制作プロセス', process_steps:'4ステップ',
+    p1_title:'相談・依頼', p2_title:'情報収集', p3_title:'デザイン・開発', p4_title:'配布・納品',
+    cta_h1:'一枚の名刺がビジネスの未来を変えます。',
+    cta_h2:'今すぐデジタル資産を確保してください。',
+    form_name:'お名前', form_phone:'電話番号', form_plan:'プラン選択', form_job:'業種 / 肩書き',
+    form_submit:'相談申込',
+    mandu_cta:'MANDUメッセンジャーを体験',
+    footer_note:'釜山 · 全国リモート制作対応 · 1営業日以内に返信',
+    footer_by:'ソン・スンフン 代表 · T.M Link · BNIパイオニア',
+    footer_l1:'デジタル名刺',
+    footer_l3:'MANDUメッセンジャー',
+    footer_l4:'料金',
+    footer_h2:'制作プロセス',
+    footer_p1:'01 · 相談・依頼',
+    footer_p2:'02 · 情報収集',
+    footer_p3:'03 · デザイン・開発',
+    footer_p4:'04 · 配布・納品',
+    footer_b1:'釜山, KR (本社)',
+    footer_b2:'全国リモート制作',
+    footer_b3:'BNIグローバルネットワーク',
+    footer_copy:'© 2025 TM LINK · 全著作権所有。',
+    modal_note:'各カードをクリックすると実際のデジタル名刺が新しいタブで開きます。',
+    stat1:'MANDU<br/>対応言語',
+    stat2:'基本対応<br/>韓·英·中·日',
+    stat3:'平均完成<br/>日数',
+    port_hint:'クリックで実際のデジタル名刺を表示 →',
+    feat1_t:'4言語対応',
+    feat1_d:'韓/英/日/中の自動切替。グローバルネットワークに最適。',
+    feat2_t:'QRコード自動生成',
+    feat2_d:'QR一つでいつでもどこでも共有可能。',
+    feat3_t:'vCard保存',
+    feat3_d:'ワンタップで連絡先を即時保存。iOS・Android対応。',
+    feat4_t:'KakaoTalk最適化',
+    feat4_d:'KakaoTalkで共有時にプレミアムプレビュー表示。',
+    eco_sub:'地元の信頼からグローバルへ',
+    eco1_d:'権威ある第一印象の始まり。QR・4言語。',
+    eco2_d:'メンバーたちが繋がる·繋がる·繋がる',
+    eco3_d:'リアルタイム10言語自動翻訳メッセンジャー。',
+    eco4_d:'国境のないビジネスネットワーク拡張。',
+    pricing_sub:'透明な価格。追加費用なし。必要なプランのみ選択。',
+    vat_note:'※ 全ての価格は消費税（10%）別途です',
+    inc_basic:'ベーシック全機能含む',
+    inc_std:'スタンダード全機能含む',
+    inc_prem:'プレミアム全機能含む',
+    prem_lang:'4言語を選択可能（10言語から選択 — フランス語·アラビア語·ロシア語·スペイン語等）',
+    ent_title:'企業 · 団体',
+    kakao_note:'* KakaoTalkでリンク共有時、名前・写真・肩書きがプレビューに表示されます。',
+    cardbook_btn:' BNIカードブック',
+    footer_desc:'デジタル名刺 · BNIネットワーキング · グローバルアイデンティティソリューション。',
+    plan_basic_desc:'デジタル名刺の入門。基本機能から始めましょう。',
+    plan_std_desc:'BNIメンバーに最も選ばれるプラン。',
+    plan_prem_desc:'グローバルネットワークが必要なリーダー向け。',
+    plan_free_desc:'100%カスタムデザイン。ミニウェブサイト構造。',
+    ent_desc:'別途協議 · 規模に応じたカスタム見積もり',
+    b1:'カラー選択（ブランドカラー）', b2:'カバー画像', b3:'ワンタップ連絡先保存 (vCard)',
+    b4:'3言語（韓/英/中）', b5:'MANDUメッセンジャー連携', b6:'無料ドメイン（GitHub Pages）', b7:'修正1回含む',
+    s1:'4言語（韓/英/中/日）', s2:'プロフィール写真', s3:'自己紹介+経歴セクション',
+    s4:'リファーラルセクション（BNI専用）', s5:'画像スライド（2~4枚）', s6:'KakaoTalkシェアプレビュー最適化', s7:'修正2回含む',
+    p1:'画像スライド（2~8枚）', p2:'動画埋め込み（1本）', p3:'サービス/商品紹介セクション', p4:'予約・問い合わせフォーム',
+    f1:'カスタムデザイン', f2:'ポートフォリオギャラリー', f3:'ドメイン接続（無料ドメインも可）',
+    f4:'修正10回（2週間以内）', f5:'MANDU連携', f6:'無料ドメイン',
+    e1:'企業ロゴ適用', e2:'ブランドカラーシステム', e3:'社員グループ制作',
+    e4:'企業カードブック', e5:'MANDUグループ連携', e6:'専任サポート',
+    who1:'企業従業員', who2:'BNIメンバー', who3:'中小事業者', who4:'フリーランサー',
+    who5:'美容・ヘルス専門家', who6:'飲食業起業家', who7:'グローバルビジネス',
+    p1_desc:'フォームまたはKakaoTalkでご連絡。目的・業種・予算を簡単にご共有ください。',
+    p2_desc:'お名前・肩書き・写真・リンクをテンプレートでお送りします。',
+    p3_desc:'ブランドに合わせたデザイン。初稿共有後フィードバックを反映。',
+    p4_desc:'GitHub Pagesに公開。QRコード+共有リンクをお届け。平均3~5営業日。',
+  }
+};
+document.addEventListener('DOMContentLoaded', function(){ setLang('ko'); });
+
+// ── Network Canvas Animation ──
+(function() {
+  const canvas = document.getElementById('network-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const GOLD = 'rgba(242,202,80,';
+  const nodes = [];
+  const COUNT = 10;
+  for (let i = 0; i < COUNT; i++) {
+    nodes.push({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      r: Math.random() * 3 + 2,
+      pulse: Math.random() * Math.PI * 2
+    });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy; n.pulse += 0.04;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+    });
+    // Lines
+    for (let i = 0; i < COUNT; i++) {
+      for (let j = i + 1; j < COUNT; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 90) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = GOLD + (1 - dist/90) * 0.5 + ')';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+    // Nodes
+    nodes.forEach(n => {
+      const glow = Math.sin(n.pulse) * 0.3 + 0.7;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = GOLD + glow + ')';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// Cursor glow (optimized - single element)
+const glow = document.getElementById('cursor-glow');
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
+
+// pickPlan from pricing cards
+function pickPlan(plan) {
+  document.getElementById('f-plan').value = plan;
+  document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Submit
+function submitForm() {
+  const name  = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const plan  = document.getElementById('f-plan').value;
+  const job   = document.getElementById('f-job').value.trim();
+  if (!name || !phone) { alert('성함과 연락처는 필수입니다.'); return; }
+  const msg = `[TM LINK 제작 의뢰]\n성함: ${name}\n연락처: ${phone}\n업종/직함: ${job||'-'}\n선택 플랜: ${plan||'미선택'}\n\n※ TM LINK 홈페이지에서 접수된 의뢰입니다.`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(msg).then(() => toast('의뢰 내용이 복사되었습니다!\n카카오톡에 붙여넣어 전송해 주세요 😊'));
+  } else { toast('접수 완료! 곧 연락드리겠습니다.'); }
+}
+
+function toast(msg) {
+  const t = document.createElement('div');
+  t.style.cssText = 'position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#f2ca50;color:#3c2f00;padding:16px 28px;border-radius:12px;font-size:13px;font-weight:700;z-index:99999;max-width:320px;text-align:center;line-height:1.7;box-shadow:0 8px 32px rgba(242,202,80,0.4);white-space:pre-line';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.transition = 'opacity 0.5s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 500); }, 3500);
+}
+
+// Nav active on scroll
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? '#f2ca50' : '';
+  });
+});
+</script>
+
+<!-- ── SAMPLE MODAL ── -->
+<div id="sample-modal" style="display:none;" class="fixed inset-0 z-[200] flex items-center justify-center p-4" onclick="if(event.target===this)this.style.display='none'">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+  <div class="relative bg-surface-container rounded-3xl border border-outline-variant/30 p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="font-headline-md text-headline-md text-primary" data-i18n="sample_title">제작 샘플 보기</h3>
+      <button onclick="document.getElementById('sample-modal').style.display='none'" class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-outline-variant/30 transition-all">
+        <span class="material-symbols-outlined text-on-surface">close</span>
+      </button>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#1a1000] to-[#2a1800] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">感</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">김지현</div>
+          <div class="text-xs text-primary mt-0.5">감성온도 대표</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#1a1400] to-[#2a2000] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">宋</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">송승훈</div>
+          <div class="text-xs text-primary mt-0.5">T.M Link 대표</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#0d1a1a] to-[#1a2a2a] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">美</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">이화춘</div>
+          <div class="text-xs text-primary mt-0.5">뷰티랩 원장</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#1a0d1a] to-[#2a1a2a] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">健</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">NAMECARD</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">이서원</div>
+          <div class="text-xs text-primary mt-0.5">웰슨트서원</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/bni-giants/%EB%B0%95%EC%84%B1%EC%A4%80/index.html" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#0d1520] to-[#1a2535] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">媒</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 자이언츠</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">박성준</div>
+          <div class="text-xs text-primary mt-0.5">엘로이미디어 대표</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+      <a href="https://jinjjabg-hub.github.io/bni-giants/%EA%B9%80%EC%A4%80%EB%9E%98/index.html" target="_blank"
+        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
+        <div class="h-32 bg-gradient-to-br from-[#1a1020] to-[#2a1830] relative flex items-end p-4">
+          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">紋</div>
+          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 자이언츠</span>
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">김준래</div>
+          <div class="text-xs text-primary mt-0.5">무늬디자인 대표</div>
+          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
+        </div>
+      </a>
+    </div>
+    <p class="text-center text-xs text-on-surface-variant mt-6 opacity-60"><span data-i18n="modal_note">각 카드를 클릭하면 실제 디지털 명함이 새 탭에서 열립니다.</span></p>
+  </div>
+</div>
+</body>
+</html>
