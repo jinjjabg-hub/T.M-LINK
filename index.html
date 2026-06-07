@@ -172,28 +172,28 @@ function setLang(lang) {
   <div class="max-w-container-max w-full px-margin-desktop py-5 flex items-center justify-between">
     <div class="flex items-center gap-6">
       <h1 class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">TM LINK</h1>
-      <nav class="hidden md:flex items-center gap-4">
-        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#why" data-i18n="nav_why">Why TM LINK</a>
-        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#digital-card" data-i18n="nav_card">Digital Card</a>
-        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#ecosystem" data-i18n="nav_eco">Ecosystem</a>
-        <a class="nav-link font-label-sm uppercase tracking-widest text-on-surface/80 hover:text-primary" href="#pricing" data-i18n="nav_price">Pricing</a>
+      <nav class="hidden md:flex items-center gap-5">
+        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#why" data-i18n="nav_why">Why TM LINK</a>
+        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#digital-card" data-i18n="nav_card">Digital Card</a>
+        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#ecosystem" data-i18n="nav_eco">Ecosystem</a>
+        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#pricing" data-i18n="nav_price">Pricing</a>
       </nav>
     </div>
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2">
       <button id="i18n-hbtn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})"
-        class="hidden lg:block border border-primary/50 text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all">
+        class="hidden lg:block border border-primary/50 text-primary px-4 py-2 rounded-lg font-bold text-xs hover:bg-primary hover:text-on-primary transition-all">
         상담 신청
       </button>
       <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
-        class="hidden lg:block bg-[#FEE500] text-[#3c1e1e] px-6 py-2 rounded-lg font-bold text-sm hover:brightness-95 transition-all">
+        class="hidden lg:block bg-[#FEE500] text-[#3c1e1e] px-4 py-2 rounded-lg font-bold text-xs hover:brightness-95 transition-all">
         MANDU
       </a>
       <!-- 언어 선택기 -->
       <div class="hidden lg:flex gap-1 ml-2 bg-surface-container rounded-lg p-1">
-        <button onclick="setLang('ko')" id="lang-ko" class="lang-btn bg-surface-container-high text-primary px-3 py-1 rounded text-xs font-bold transition-all">한국어</button>
-        <button onclick="setLang('en')" id="lang-en" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">EN</button>
-        <button onclick="setLang('zh')" id="lang-zh" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">中文</button>
-        <button onclick="setLang('ja')" id="lang-ja" class="lang-btn px-3 py-1 rounded text-xs font-bold text-on-surface-variant hover:text-primary transition-all">日本語</button>
+        <button onclick="setLang('ko')" id="lang-ko" class="lang-btn bg-surface-container-high text-primary px-2 py-1 rounded text-[10px] font-bold transition-all">한국어</button>
+        <button onclick="setLang('en')" id="lang-en" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">EN</button>
+        <button onclick="setLang('zh')" id="lang-zh" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">中文</button>
+        <button onclick="setLang('ja')" id="lang-ja" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">日本語</button>
       </div>
     </div>
   </div>
@@ -206,7 +206,7 @@ function setLang(lang) {
   <div class="absolute inset-0 z-0 pointer-events-none" style="background:linear-gradient(to right, #000000 0%, #000000 35%, #0d2a4a 55%, #1a5080 70%, #2e7ab8 82%, #c8e8f8 100%);"></div>
   <!-- 오른쪽 파란 빛 글로우 -->
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="absolute top-0 right-0 w-[600px] h-full" style="background:radial-gradient(ellipse at right center, rgba(180,220,255,0.25) 0%, transparent 65%);"></div>
+    <div class="absolute top-0 right-0 w-[600px] h-full" style="background:radial-gradient(ellipse at right center, rgba(30,80,160,0.3) 0%, transparent 65%);"></div>
   </div>
   <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-20">
     <div class="space-y-8">
@@ -217,7 +217,7 @@ function setLang(lang) {
         명함은<br/>종이였습니다.<br/><span class="text-gradient-gold">이제는 자산입니다.</span>
       </h2>
       <p id="i18n-hero-sub" class="font-body-lg text-body-lg leading-relaxed max-w-lg" style="color:rgba(255,255,255,0.75);">
-        디지털 명함 (Digital Card)<br/>
+        디지털 명함 · BNI 멤버카드 · 실시간 통번역 메신저 MANDU.<br/>
         TM LINK로 귀하의 비즈니스 가치를 격상시키십시오.
       </p>
       <div class="flex flex-row gap-4 pt-4 flex-wrap">
@@ -248,9 +248,12 @@ function setLang(lang) {
         </div>
       </div>
     </div>
-    <!-- Hero Visual: Globe Network Animation -->
+    <!-- Hero Visual: 송승훈 대표 이미지 -->
     <div class="relative h-[520px] flex items-center justify-center">
-      <canvas id="globe-canvas" width="480" height="480" style="width:480px;height:480px;max-width:100%;"></canvas>
+      <img src="송승훈.png" alt="TM LINK 디지털 명함 서비스" 
+        style="height:520px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(26,90,180,0.3));"
+        onerror="this.style.display='none';document.getElementById('globe-fallback').style.display='flex'"/>
+      <div id="globe-fallback" style="display:none;"></div>
     </div>
     <div style="display:none">
       <div class="absolute w-[340px] h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl border border-primary/20 p-6 shadow-2xl card-float-delay rotate-[-8deg] translate-x-[-40px] translate-y-[60px] opacity-50">
@@ -503,45 +506,52 @@ function setLang(lang) {
 <!-- ── ECOSYSTEM FLOW ── -->
 <section id="ecosystem" class="py-32 px-margin-desktop bg-black relative">
   <div class="max-w-container-max mx-auto">
-    <div class="text-center mb-20">
+    <div class="text-center mb-16">
       <h3 class="font-headline-lg text-headline-lg mb-4">TM LINK Ecosystem</h3>
       <p class="text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase" data-i18n="eco_sub">From Local Trust to Global Scale</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-      <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden md:block"></div>
-      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
-        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-          <span class="material-symbols-outlined text-on-primary text-3xl">badge</span>
+    <!-- 왼쪽 2x2 그리드 + 오른쪽 지구본 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- 왼쪽: 2x2 카드 그리드 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
+          <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+            <span class="material-symbols-outlined text-on-primary text-2xl">badge</span>
+          </div>
+          <div>
+            <h5 class="font-headline-md text-primary mb-1 text-lg">Digital Card</h5>
+            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco1_d">권위 있는 첫인상의 시작. QR·4개국어.</p>
+          </div>
         </div>
-        <div>
-          <h5 class="font-headline-md text-primary mb-2">Digital Card</h5>
-          <p class="text-on-surface-variant text-sm" data-i18n="eco1_d">권위 있는 첫인상의 시작. QR·4개국어.</p>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all overflow-hidden">
+          <canvas id="network-canvas" width="160" height="80" style="width:100%;height:80px;"></canvas>
+          <div>
+            <h5 class="font-headline-md text-primary mb-1 text-lg">BNI CardBook</h5>
+            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco2_d">멤버들이 서로 연결·연결·연결</p>
+          </div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
+          <div class="w-14 h-14 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-2xl">translate</span>
+          </div>
+          <div>
+            <h5 class="font-headline-md text-primary mb-1 text-lg">MANDU</h5>
+            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco3_d">10개국어 실시간 자동번역 메신저.</p>
+          </div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
+          <div class="w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+          </div>
+          <div>
+            <h5 class="font-headline-md text-primary mb-1 text-lg">Global Scale</h5>
+            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco4_d">국경 없는 비즈니스 네트워크 확장.</p>
+          </div>
         </div>
       </div>
-      <div class="glass-card p-4 rounded-2xl relative z-10 flex flex-col items-center text-center gap-2 overflow-hidden">
-        <canvas id="network-canvas" width="220" height="130" style="width:100%;height:130px;"></canvas>
-        <div>
-          <h5 class="font-headline-md text-primary mb-1">BNI CardBook</h5>
-          <p class="text-on-surface-variant text-xs" data-i18n="eco2_d">멤버들이 서로 연결·연결·연결</p>
-        </div>
-      </div>
-      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
-        <div class="w-16 h-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary text-3xl">translate</span>
-        </div>
-        <div>
-          <h5 class="font-headline-md text-primary mb-2">MANDU</h5>
-          <p class="text-on-surface-variant text-sm" data-i18n="eco3_d">10개국어 실시간 자동번역 메신저.</p>
-        </div>
-      </div>
-      <div class="glass-card p-8 rounded-2xl relative z-10 flex flex-col items-center text-center gap-6">
-        <div class="w-16 h-16 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
-        </div>
-        <div>
-          <h5 class="font-headline-md text-primary mb-2">Global Scale</h5>
-          <p class="text-on-surface-variant text-sm" data-i18n="eco4_d">국경 없는 비즈니스 네트워크 확장.</p>
-        </div>
+      <!-- 오른쪽: 지구본 -->
+      <div class="flex items-center justify-center">
+        <canvas id="globe-canvas" width="460" height="460" style="width:460px;height:460px;max-width:100%;"></canvas>
       </div>
     </div>
   </div>
@@ -571,7 +581,7 @@ function setLang(lang) {
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b6">무료 도메인 제공 (GitHub Pages)</span></div>
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b7">1회 수정 포함</span></div>
         </div>
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/BASIC/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
         <button onclick="pickPlan('베이직 (70,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_basic">Get Started</span></button>
       </div>
 
@@ -597,7 +607,7 @@ function setLang(lang) {
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s7">2회 수정 포함</span></div>
         </div>
         <p class="text-primary/50 text-[10px] mb-4" data-i18n="kakao_note">* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.</p>
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-primary/30 rounded-xl text-sm text-primary hover:bg-primary/10 transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/standard" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-primary/30 rounded-xl text-sm text-primary hover:bg-primary/10 transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
         <button onclick="pickPlan('스탠다드 (110,000원)')" class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/30 hover:brightness-110 transition-all"><span data-i18n="btn_std">Select Standard</span></button>
       </div>
 
@@ -619,7 +629,7 @@ function setLang(lang) {
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p3">서비스/제품 소개 섹션</span></div>
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p4">예약·문의 폼 연결</span></div>
         </div>
-        <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
+        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/PREMIUM" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
         <button onclick="pickPlan('프리미엄 (150,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_prem">Go Premium</span></button>
       </div>
 
@@ -841,7 +851,7 @@ function setLang(lang) {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
-  const cx = W/2, cy = H/2, R = 185;
+  const cx = W/2, cy = H/2, R = Math.min(W,H)/2 - 10;
   let t = 0;
   const cities = [
     { lat: 37.5,  lon: 127,   name: '서울' },
