@@ -137,6 +137,85 @@ tailwind.config = {
     transform: translate(-50%,-50%);
     transition: left 0.15s ease, top 0.15s ease;
   }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  /* 헤더 */
+  header { padding: 0 16px !important; }
+
+  /* 히어로 */
+  #hero { padding: 80px 20px 40px !important; min-height: auto !important; }
+  #hero .grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  #hero h2 { font-size: 36px !important; line-height: 1.2 !important; }
+  #hero p.font-body-lg { font-size: 14px !important; }
+  #hero .hero-visual-wrap { height: 280px !important; }
+  #hero img[src="송승훈.png"] { height: 280px !important; position: relative !important; right: auto !important; max-width: 100% !important; }
+
+  /* Stats */
+  .hero-stats { flex-direction: row !important; gap: 16px !important; }
+  .hero-stats .stat-num { font-size: 22px !important; }
+  .hero-stats .stat-desc { font-size: 11px !important; }
+
+  /* 버튼 */
+  #hero .flex.gap-4 { gap: 10px !important; }
+  #hero button { padding: 12px 20px !important; font-size: 13px !important; }
+
+  /* WHY 섹션 */
+  #why { padding: 60px 20px !important; }
+  #why h3 { font-size: 22px !important; }
+  #why .grid { grid-template-columns: 1fr !important; }
+
+  /* DIGITAL CARD */
+  #digital-card { padding: 60px 20px !important; }
+  #digital-card .grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  #digital-card h4 { font-size: 24px !important; }
+  #digital-card .grid.grid-cols-3 { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* ECOSYSTEM */
+  #ecosystem { padding: 60px 20px !important; }
+  #ecosystem .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  #ecosystem canvas { width: 100% !important; height: 280px !important; }
+  #ecosystem .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+  #ecosystem .glass-card.p-6 { padding: 16px !important; }
+
+  /* PRICING */
+  #pricing { padding: 60px 20px !important; }
+  #pricing .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  #pricing .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  #pricing h3 { font-size: 28px !important; }
+
+  /* WHO */
+  #who-section { padding: 60px 20px !important; }
+  .who-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* CTA */
+  #cta { padding: 60px 20px !important; }
+  #cta h3 { font-size: 22px !important; }
+  #cta .max-w-lg { max-width: 100% !important; }
+  #cta .form-grid { grid-template-columns: 1fr !important; }
+
+  /* FOOTER */
+  footer { padding: 40px 20px !important; }
+  footer .grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  /* 섹션 공통 */
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+  .max-w-container-max { padding-left: 0 !important; padding-right: 0 !important; }
+  .px-margin-desktop { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* display-lg 폰트 모바일 */
+  .font-display-lg, [class*="text-display-lg"] { font-size: 32px !important; line-height: 1.2 !important; }
+  .font-headline-lg, [class*="text-headline-lg"] { font-size: 24px !important; }
+
+  /* 지구본 모바일 */
+  #globe-canvas { width: 100% !important; height: 280px !important; }
+
+  /* Scale 제거 (pricing featured) */
+  .scale-105 { transform: none !important; }
+
+  /* 샘플 모달 */
+  #sample-modal .grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
 </style>
 <script>
 function setLang(lang) {
@@ -231,25 +310,25 @@ function setLang(lang) {
         </button>
       </div>
       <!-- Stats -->
-      <div class="flex gap-10 pt-4">
+      <div class="hero-stats flex gap-10 pt-4" style="flex-wrap:nowrap;">
         <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">10개</div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">10개</div>
           <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat1">MANDU<br/>지원 언어</div>
         </div>
         <div class="w-px bg-white/20"></div>
         <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">4개국어</div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">4개국어</div>
           <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat2">기본 지원<br/>한·영·중·일</div>
         </div>
         <div class="w-px bg-white/20"></div>
         <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;">3~5일</div>
+          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">3~5일</div>
           <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat3">평균 완성<br/>기간</div>
         </div>
       </div>
     </div>
     <!-- Hero Visual: 송승훈 대표 이미지 -->
-    <div class="relative flex items-center justify-end" style="height:640px;">
+    <div class="hero-visual-wrap relative flex items-center justify-end" style="height:640px;">
       <img src="송승훈.png" alt="TM LINK 디지털 명함 서비스" 
         style="height:640px;width:auto;max-width:115%;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(26,90,180,0.45));position:absolute;right:-20px;"
         onerror="this.style.display='none';document.getElementById('globe-fallback').style.display='flex'"/>
