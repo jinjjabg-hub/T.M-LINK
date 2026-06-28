@@ -639,107 +639,175 @@ function setLang(lang) {
 <!-- ── PRICING ── -->
 <section id="pricing" class="py-32 px-margin-desktop bg-surface-container-lowest">
   <div class="max-w-container-max mx-auto">
-    <h3 class="font-headline-lg text-headline-lg text-center mb-4" data-i18n="pricing_title">Elite Membership</h3>
-    <p class="text-on-surface-variant text-center mb-4 max-w-xl mx-auto" data-i18n="pricing_sub">투명한 가격. 필요한 플랜만 선택하세요.</p>
-    <p class="text-center mb-16"><span class="text-xs border border-primary/30 text-primary/70 px-3 py-1 rounded-full" data-i18n="vat_note">※ 모든 가격은 부가세(VAT 10%) 별도입니다</span></p>
+    <h3 class="font-headline-lg text-headline-lg text-center mb-4" data-i18n="pricing_title">DiCA 요금제</h3>
+    <p class="text-on-surface-variant text-center mb-4 max-w-xl mx-auto" data-i18n="pricing_sub">종이명함은 버려집니다. DiCA는 공유됩니다.</p>
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <span class="text-sm font-bold border border-primary/50 text-primary px-5 py-2 rounded-full" data-i18n="vat_note">💳 부가세(VAT 10%) 별도</span>
+      <span class="text-sm font-bold border border-primary/50 text-primary px-5 py-2 rounded-full" data-i18n="pay_note">✅ 결제 후 제작 시작</span>
+    </div>
+
+    <!-- C타입 골드 띠 배너 -->
+    <a href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank"
+      class="block w-full mb-10 rounded-2xl overflow-hidden group"
+      style="background:linear-gradient(90deg,#1a1200 0%,#2a1e00 30%,#3a2800 50%,#2a1e00 70%,#1a1200 100%);border:1px solid rgba(242,202,80,0.4);">
+      <div class="relative px-8 py-5 flex items-center justify-between">
+        <div class="absolute inset-0 network-lines opacity-10"></div>
+        <div class="relative flex items-center gap-4">
+          <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+          <div>
+            <div class="text-primary font-bold text-base" data-i18n="gallery_title">실제 제작된 DiCA를 직접 확인하세요</div>
+            <div class="text-on-surface-variant text-xs mt-0.5" data-i18n="gallery_sub">클릭하면 DiCA 갤러리로 이동합니다</div>
+          </div>
+        </div>
+        <div class="relative flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-bold text-sm group-hover:brightness-110 transition-all shrink-0">
+          <span data-i18n="gallery_btn">갤러리 보기</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 전 플랜 공통 혜택 -->
+    <div class="mb-8 p-5 rounded-2xl border border-primary/20 flex flex-wrap items-center gap-6" style="background:rgba(242,202,80,0.04);">
+      <span class="text-primary font-bold text-xs tracking-widest" data-i18n="common_label">✦ 전 플랜 공통 포함</span>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">style</span><span data-i18n="common_cardbook">📱 CardBook 무료 제공 (디지털 명함첩)</span></div>
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">qr_code</span><span data-i18n="common_qr">QR 자동 생성</span></div>
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">language</span><span data-i18n="common_domain">무료 도메인 제공</span></div>
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">share</span><span data-i18n="common_kakao">카카오톡 프리뷰 최적화</span></div>
+      </div>
+    </div>
+
+    <!-- 3단 플랜 카드 -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
 
       <!-- BASIC -->
-      <div class="glass-card p-10 rounded-3xl border border-outline-variant/30 flex flex-col">
-        <div class="mb-8">
+      <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
+        <div class="mb-6">
           <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">BASIC</span>
-          <h4 class="font-headline-lg text-headline-lg mt-3">70,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
-          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_basic_desc">디지털 명함 입문. 기본 기능으로 시작하세요.</p>
+          <div class="mt-3 flex items-baseline gap-2">
+            <h4 class="font-headline-lg text-headline-lg">70,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
+            <span class="text-xs text-on-surface-variant">/ $48</span>
+          </div>
+          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_basic_desc">디지털 명함, 지금 시작하세요.</span></p>
         </div>
-        <div class="flex-grow space-y-3 mb-8 text-sm">
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b1">컬러 선택 (브랜드 색상 적용)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b2">커버 이미지</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b3">연락처 한 번 탭으로 저장 (vCard)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b4">3개국어 (한/영/중)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b5">MANDU 메신저 연동</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b6">무료 도메인 제공 (GitHub Pages)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="b7">1회 수정 포함</span></div>
+
+        <!-- 기능 목록 -->
+        <div class="flex-grow space-y-2 mb-8 text-sm">
+          <!-- 되는 것 -->
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="b_cover">대문 커버 + 기본 연락처</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="b_lang">2개국어 (한/영)</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="b_rev">수정 1회 포함</span></div>
+          <!-- 안 되는 것 -->
+          <div class="mt-3 pt-3 border-t border-outline-variant/20 space-y-2">
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_photo">프로필 사진</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_bio">소개글 + 경력 섹션</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_ref">리퍼럴 섹션 (BNI 전용)</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_slide">이미지 슬라이드</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_nfc">NFC 스티커</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_video">동영상 삽입</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_service">서비스/제품 소개 섹션</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_form">예약/문의 폼 연결</span></div>
+          </div>
         </div>
-        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/BASIC/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
-        <button onclick="pickPlan('베이직 (70,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_basic">Get Started</span></button>
+
+        <button onclick="pickPlan('베이직 (70,000원)')"
+          class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all">
+          Get Started
+        </button>
       </div>
 
       <!-- STANDARD (featured) -->
-      <div class="glass-card p-10 rounded-3xl border-2 border-primary relative overflow-hidden flex flex-col gold-glow">
-        <div class="absolute top-0 right-0 bg-primary text-on-primary px-5 py-2 text-label-sm font-bold rounded-bl-2xl text-xs">MOST POPULAR</div>
-        <div class="mb-8">
+      <div class="glass-card p-8 rounded-3xl border-2 border-primary relative overflow-hidden flex flex-col gold-glow">
+        <div class="absolute top-0 right-0 bg-primary text-on-primary px-5 py-2 font-bold rounded-bl-2xl text-xs tracking-wide">MOST POPULAR</div>
+        <div class="mb-6">
           <span class="font-label-sm text-label-sm text-primary tracking-widest">STANDARD</span>
-          <h4 class="font-headline-lg text-headline-lg mt-3">110,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
-          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_std_desc">BNI Member에게 가장 많이 선택되는 플랜.</p>
-        </div>
-        <div class="flex-grow space-y-3 mb-8 text-sm">
-          <div class="flex items-center gap-2 mb-3 pb-3 border-b border-primary/20">
-            <span class="material-symbols-outlined text-primary text-sm">layers</span>
-            <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_basic">베이직 전체 포함</span>
+          <div class="mt-3 flex items-baseline gap-2">
+            <h4 class="font-headline-lg text-headline-lg">110,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
+            <span class="text-xs text-on-surface-variant">/ $78</span>
           </div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s1">4개국어 (한/영/중/일)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s2">프로필 사진</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s3">소개글 + 경력 섹션</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s4">리퍼럴 섹션 (BNI 전용)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s5">이미지 슬라이드 (2~4장)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s6">카카오톡 공유 시 프리뷰 최적화</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="s7">2회 수정 포함</span></div>
+          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_std_desc">BNI 멤버에게 가장 많이 선택되는 플랜.</span></p>
         </div>
-        <p class="text-primary/50 text-[10px] mb-4" data-i18n="kakao_note">* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.</p>
-        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/STANDARD/" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-primary/30 rounded-xl text-sm text-primary hover:bg-primary/10 transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
-        <button onclick="pickPlan('스탠다드 (110,000원)')" class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/30 hover:brightness-110 transition-all"><span data-i18n="btn_std">Select Standard</span></button>
+
+        <div class="flex-grow space-y-2 mb-8 text-sm">
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_lang">한/영/중/일 4개국어 고정</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_photo">프로필 사진</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_bio">소개글 + 경력 섹션</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span class="font-semibold text-primary" data-i18n="s_ref">리퍼럴 섹션 (BNI 전용) ⭐</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_slide">이미지 슬라이드 2~4장</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_nfc">NFC 스티커 1개 포함</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_rev">수정 2회 포함</span></div>
+          <!-- 안 되는 것 -->
+          <div class="mt-3 pt-3 border-t border-primary/20 space-y-2">
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_video">동영상 삽입</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_service">서비스/제품 소개 섹션</span></div>
+            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_form">예약/문의 폼 연결</span></div>
+          </div>
+        </div>
+
+        <button onclick="pickPlan('스탠다드 (110,000원)')"
+          class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/30 hover:brightness-110 transition-all">
+          Select Standard
+        </button>
       </div>
 
       <!-- PREMIUM -->
-      <div class="glass-card p-10 rounded-3xl border border-outline-variant/30 flex flex-col">
-        <div class="mb-8">
+      <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
+        <div class="mb-6">
           <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">PREMIUM</span>
-          <h4 class="font-headline-lg text-headline-lg mt-3">150,000 <span class="text-body-md font-body-md text-on-surface-variant">원</span></h4>
-          <p class="text-on-surface-variant mt-4 text-sm leading-relaxed" data-i18n="plan_prem_desc">글로벌 네트워킹이 필요한 리더를 위한 플랜.</p>
-        </div>
-        <div class="flex-grow space-y-3 mb-8 text-sm">
-          <div class="flex items-center gap-2 mb-3 pb-3 border-b border-outline-variant/30">
-            <span class="material-symbols-outlined text-primary text-sm">layers</span>
-            <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_std">스탠다드 전체 포함</span>
+          <div class="mt-3 flex items-baseline gap-2">
+            <h4 class="font-headline-lg text-headline-lg">150,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
+            <span class="text-xs text-on-surface-variant">/ $98</span>
           </div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="prem_lang">4개 언어 선택 가능 (10개 언어 중 직접 선택 — 불어·아랍어·러시아어·스페인어 등)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p1">이미지 슬라이드 (2~8장)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p2">동영상 삽입 (1개)</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p3">서비스/제품 소개 섹션</span></div>
-          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="p4">예약·문의 폼 연결</span></div>
+          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_prem_desc">글로벌 네트워킹이 필요한 리더를 위한 플랜.</span></p>
         </div>
-        <a href="https://jinjjabg-hub.github.io/TM-cards-sample1/PREMIUM" target="_blank" class="w-full py-3 flex items-center justify-center gap-2 border border-outline-variant/40 rounded-xl text-sm text-on-surface-variant hover:border-primary hover:text-primary transition-all mb-3"><span class="material-symbols-outlined text-[16px]">preview</span><span data-i18n="sample_btn">샘플 보기</span></a>
-        <button onclick="pickPlan('프리미엄 (150,000원)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_prem">Go Premium</span></button>
+
+        <div class="flex-grow space-y-2 mb-8 text-sm">
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_lang">10개국어 중 4개 선택</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_photo">프로필 사진</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_bio">소개글 + 경력 섹션</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_ref">리퍼럴 섹션 (BNI 전용)</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_slide">이미지 슬라이드 2~8장</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_nfc">NFC 스티커 2개 포함</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_video">동영상 삽입 (1개)</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_service">서비스/제품 소개 섹션</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_form">예약/문의 폼 연결</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_rev">수정 3회 포함</span></div>
+        </div>
+
+        <button onclick="pickPlan('프리미엄 (150,000원)')"
+          class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all">
+          Go Premium
+        </button>
       </div>
 
     </div>
 
-    <!-- FREE PRO + 기업단체: 가로 배너형 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- NFC 추가 구매 + 기업단체 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
 
-      <!-- FREE PRO -->
+      <!-- NFC 추가 구매 -->
       <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
         <div class="flex justify-between items-start mb-6">
           <div>
-            <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">FREE PRO</span>
-            <h4 class="font-headline-lg text-headline-lg mt-2">250,000<span class="text-body-md font-body-md text-on-surface-variant">원~</span></h4>
-            <p class="text-on-surface-variant mt-2 text-sm" data-i18n="plan_free_desc" data-i18n="plan_free_desc">원하는 디자인 100% 반영. 미니 웹사이트 구조.</p>
+            <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">NFC ADD-ON</span>
+            <h4 class="font-headline-md text-headline-md mt-2">NFC 스티커 추가 구매</h4>
+            <p class="text-on-surface-variant mt-2 text-sm">더 많이 나눌수록 더 많이 연결됩니다.</p>
           </div>
-          <div class="text-primary/10 font-bold text-6xl font-headline-lg">∞</div>
+          <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-3xl">nfc</span>
+          </div>
         </div>
-        <div class="flex items-center gap-2 mb-4 pb-4 border-b border-outline-variant/30">
-          <span class="material-symbols-outlined text-primary text-sm">layers</span>
-          <span class="text-primary font-bold text-xs tracking-wide" data-i18n="inc_prem">프리미엄 전체 포함</span>
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="bg-surface-container rounded-2xl p-4 text-center border border-outline-variant/20">
+            <div class="text-2xl font-bold text-primary">5,000원</div>
+            <div class="text-xs text-on-surface-variant mt-1">1개</div>
+          </div>
+          <div class="bg-surface-container rounded-2xl p-4 text-center border border-primary/30">
+            <div class="text-2xl font-bold text-primary">12,000원</div>
+            <div class="text-xs text-on-surface-variant mt-1">3개 <span class="text-primary font-bold">(20% 절약)</span></div>
+          </div>
         </div>
-        <div class="grid grid-cols-2 gap-2 text-sm flex-grow mb-6">
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f1">원하는 디자인</span></div>
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f2">포트폴리오 갤러리</span></div>
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f3">도메인 연결 지원 (무료 도메인도 가능)</span></div>
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f4">수정 10회 (2주간)</span></div>
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f5">MANDU 연동</span></div>
-          <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="f6">무료 도메인 제공</span></div>
-        </div>
-        <button onclick="pickPlan('프리 (250,000원~)')" class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all"><span data-i18n="btn_free">Go Free Pro</span></button>
+        <p class="text-xs text-on-surface-variant opacity-60">※ 국내 우편 발송 포함 · 해외 고객은 별도 문의</p>
       </div>
 
       <!-- 기업·단체 -->
@@ -749,29 +817,84 @@ function setLang(lang) {
           <div class="flex justify-between items-start mb-6">
             <div>
               <span class="font-label-sm text-label-sm text-primary tracking-widest">ENTERPRISE</span>
-              <h4 class="font-headline-lg text-headline-lg mt-2 text-on-surface" data-i18n="ent_title">기업 · 단체</h4>
-              <p class="text-on-surface-variant mt-2 text-sm" data-i18n="ent_desc">별도 협의 · 규모에 따른 맞춤 견적</p>
+              <h4 class="font-headline-md text-headline-md mt-2 text-on-surface">기업 · 단체</h4>
+              <p class="text-on-surface-variant mt-2 text-sm">별도 협의 · 규모에 따른 맞춤 견적</p>
             </div>
             <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
               <span class="material-symbols-outlined text-primary text-3xl">business</span>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-3 text-sm mb-6">
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e1">기업 고유 로고 적용</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e2">브랜드 컬러 시스템</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e3">임직원 단체 제작</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e4">기업 카드북 통합</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e5">MANDU 단체 연동</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span data-i18n="e6">전담 관리 지원</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>기업 고유 로고 적용</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>브랜드 컬러 시스템</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>임직원 단체 제작</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>기업 카드북 통합</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>MANDU 단체 연동</span></div>
+            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>전담 관리 지원</span></div>
           </div>
           <button onclick="pickPlan('기업·단체 (별도 협의)')"
             class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/20 hover:brightness-110 transition-all">
-            <span data-i18n="btn_ent">기업 상담 신청</span>
+            기업 상담 신청
           </button>
         </div>
       </div>
 
     </div>
+
+    <!-- DiCA 고객 전용 업데이트 혜택 -->
+    <div class="relative rounded-3xl overflow-hidden border border-primary/20 p-8" style="background:linear-gradient(135deg,#0e0e0e 0%,#1a1400 50%,#0e0e0e 100%);">
+      <div class="absolute inset-0 network-lines opacity-10"></div>
+      <div class="relative z-10">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+          <span class="font-label-sm text-label-sm text-primary tracking-widest">CUSTOMER BENEFIT</span>
+        </div>
+        <h4 class="font-headline-md text-headline-md mb-2" data-i18n="update_title">💛 DiCA 고객 전용 업데이트 혜택</h4>
+        <p class="text-on-surface-variant text-sm mb-8" data-i18n="update_sub">새로 만들지 마세요. 저렴하게 업데이트하세요.</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
+            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd1_label">텍스트 변경</div>
+            <div class="text-on-surface-variant line-through text-xs mb-1">70,000원~</div>
+            <div class="text-xl font-bold text-primary">10,000원</div>
+            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd1_desc">연락처·직함 등</div>
+          </div>
+          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
+            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd2_label">사진·이미지 교체</div>
+            <div class="text-on-surface-variant line-through text-xs mb-1">70,000원~</div>
+            <div class="text-xl font-bold text-primary">20,000원</div>
+            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd2_desc">프로필·커버 등</div>
+          </div>
+          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
+            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd3_label">디자인 리뉴얼</div>
+            <div class="text-on-surface-variant line-through text-xs mb-1">70,000원~</div>
+            <div class="text-xl font-bold text-primary">50% 할인</div>
+            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd3_desc">구조·레이아웃 변경</div>
+          </div>
+          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
+            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd4_label">전면 재제작</div>
+            <div class="text-on-surface-variant line-through text-xs mb-1">70,000원~</div>
+            <div class="text-xl font-bold text-primary">40% 할인</div>
+            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd4_desc">업종·브랜드 전환</div>
+          </div>
+        </div>
+        <!-- 환불 규정 -->
+        <div class="border-t border-outline-variant/20 pt-6 grid grid-cols-1 lg:grid-cols-3 gap-4 text-sm">
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-green-400 shrink-0"></span>
+            <span><span class="font-bold text-on-surface" data-i18n="ref_before">제작 시작 전</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_before_val">100% 환불</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-yellow-400 shrink-0"></span>
+            <span><span class="font-bold text-on-surface" data-i18n="ref_mid">1차 수정 전</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_mid_val">50% 환불</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-red-400 shrink-0"></span>
+            <span><span class="font-bold text-on-surface" data-i18n="ref_after">1차 수정 후</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_after_val">환불 불가</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1092,8 +1215,55 @@ window.i18n = {
     eco2_d:'멤버들이 서로 연결·연결·연결',
     eco3_d:'10개국어 실시간 자동번역 메신저.',
     eco4_d:'국경 없는 비즈니스 네트워크 확장.',
-    pricing_sub:'투명한 가격. 필요한 플랜만 선택하세요.',
-    vat_note:'※ 모든 가격은 부가세(VAT 10%) 별도입니다',
+    pricing_title:'DiCA 요금제',
+    pricing_sub:'종이명함은 버려집니다. DiCA는 공유됩니다.',
+    vat_note:'💳 부가세(VAT 10%) 별도',
+    pay_note:'✅ 결제 후 제작 시작',
+    gallery_title:'실제 제작된 DiCA를 직접 확인하세요',
+    gallery_sub:'클릭하면 DiCA 갤러리로 이동합니다',
+    gallery_btn:'갤러리 보기',
+    common_label:'✦ 전 플랜 공통 포함',
+    common_cardbook:'📱 CardBook 무료 제공 (디지털 명함첩)',
+    common_qr:'QR 자동 생성',
+    common_domain:'무료 도메인 제공',
+    common_kakao:'카카오톡 프리뷰 최적화',
+    b_cover:'대문 커버 + 기본 연락처',
+    b_lang:'2개국어 (한/영)',
+    b_rev:'수정 1회 포함',
+    s_lang:'한/영/중/일 4개국어 고정',
+    s_photo:'프로필 사진',
+    s_bio:'소개글 + 경력 섹션',
+    s_ref:'리퍼럴 섹션 (BNI 전용) ⭐',
+    s_slide:'이미지 슬라이드 2~4장',
+    s_nfc:'NFC 스티커 1개 포함',
+    s_rev:'수정 2회 포함',
+    p_lang:'10개국어 중 4개 선택',
+    p_photo:'프로필 사진',
+    p_bio:'소개글 + 경력 섹션',
+    p_ref:'리퍼럴 섹션 (BNI 전용)',
+    p_slide:'이미지 슬라이드 2~8장',
+    p_nfc:'NFC 스티커 2개 포함',
+    p_video:'동영상 삽입 (1개)',
+    p_service:'서비스/제품 소개 섹션',
+    p_form:'예약/문의 폼 연결',
+    p_rev:'수정 3회 포함',
+    no_photo:'프로필 사진',
+    no_bio:'소개글 + 경력',
+    no_ref:'리퍼럴 섹션',
+    no_slide:'이미지 슬라이드',
+    no_nfc:'NFC 스티커',
+    no_video:'동영상 삽입',
+    no_service:'서비스/제품 소개 섹션',
+    no_form:'예약/문의 폼 연결',
+    update_title:'💛 DiCA 고객 전용 업데이트 혜택',
+    update_sub:'새로 만들지 마세요. 저렴하게 업데이트하세요.',
+    upd1_label:'텍스트 변경', upd1_desc:'연락처·직함 등',
+    upd2_label:'사진·이미지 교체', upd2_desc:'프로필·커버 등',
+    upd3_label:'디자인 리뉴얼', upd3_desc:'구조·레이아웃 변경',
+    upd4_label:'전면 재제작', upd4_desc:'업종·브랜드 전환',
+    ref_before:'제작 시작 전', ref_before_val:'100% 환불',
+    ref_mid:'1차 수정 전', ref_mid_val:'50% 환불',
+    ref_after:'1차 수정 후', ref_after_val:'환불 불가',
     inc_basic:'베이직 전체 포함',
     inc_std:'스탠다드 전체 포함',
     inc_prem:'프리미엄 전체 포함',
@@ -1104,7 +1274,7 @@ window.i18n = {
     footer_desc:'디지털 명함 · BNI 네트워킹 · 글로벌 아이덴티티 솔루션.',
     plan_basic_desc:'디지털 명함 입문. 기본 기능으로 시작하세요.',
     plan_std_desc:'BNI Member에게 가장 많이 선택되는 플랜.',
-    plan_prem_desc:'글로벌 네트워킹이 필요한 리더를 위한 플랜.',
+    plan_prem_desc:'<span data-i18n="plan_prem_desc">글로벌 네트워킹이 필요한 리더를 위한 플랜.</span>',
     plan_free_desc:'원하는 디자인 100% 반영. 미니 웹사이트 구조.',
     ent_desc:'별도 협의 · 규모에 따른 맞춤 견적',
     b1:'컬러 선택 (브랜드 색상 적용)', b2:'커버 이미지', b3:'연락처 한 번 탭으로 저장 (vCard)',
@@ -1180,8 +1350,54 @@ window.i18n = {
     eco2_d:'Members connecting · connecting · connecting',
     eco3_d:'Real-time 10-language auto-translation messenger.',
     eco4_d:'Borderless business network expansion.',
-    pricing_sub:'Transparent pricing. No hidden fees. Choose what you need.',
-    vat_note:'※ All prices exclude VAT (10%)',
+    pricing_title:'DiCA Plans',
+    pricing_sub:'Paper cards get thrown away. DiCA gets shared.',
+    vat_note:'※ All prices exclude VAT (10%) · Production starts after payment',
+    gallery_title:'See real DiCA cards we\'ve made',
+    gallery_sub:'Click to visit the DiCA gallery',
+    gallery_btn:'View Gallery',
+    common_label:'✦ Included in All Plans',
+    common_cardbook:'📱 CardBook free (digital card holder)',
+    common_qr:'Auto QR code generation',
+    common_domain:'Free domain provided',
+    common_kakao:'KakaoTalk preview optimized',
+    b_cover:'Cover + Basic contact info',
+    b_lang:'2 languages (KR/EN)',
+    b_rev:'1 revision included',
+    s_lang:'4 languages fixed (KR/EN/CN/JP)',
+    s_photo:'Profile photo',
+    s_bio:'Bio + career section',
+    s_ref:'Referral section (BNI only) ⭐',
+    s_slide:'Image slideshow 2~4',
+    s_nfc:'1 NFC sticker included',
+    s_rev:'2 revisions included',
+    p_lang:'Choose 4 from 10 languages',
+    p_photo:'Profile photo',
+    p_bio:'Bio + career section',
+    p_ref:'Referral section (BNI only)',
+    p_slide:'Image slideshow 2~8',
+    p_nfc:'2 NFC stickers included',
+    p_video:'Video embed (1)',
+    p_service:'Service/product intro section',
+    p_form:'Booking/inquiry form',
+    p_rev:'3 revisions included',
+    no_photo:'Profile photo',
+    no_bio:'Bio + career section',
+    no_ref:'Referral section',
+    no_slide:'Image slideshow',
+    no_nfc:'NFC sticker',
+    no_video:'Video embed',
+    no_service:'Service/product section',
+    no_form:'Booking/inquiry form',
+    update_title:'💛 DiCA Customer Update Benefits',
+    update_sub:'Don\'t start over. Update at a fraction of the cost.',
+    upd1_label:'Text update', upd1_desc:'Contact, title, etc.',
+    upd2_label:'Photo/image swap', upd2_desc:'Profile, cover, etc.',
+    upd3_label:'Design renewal', upd3_desc:'Layout restructure',
+    upd4_label:'Full remake', upd4_desc:'Brand/industry change',
+    ref_before:'Before production', ref_before_val:'100% refund',
+    ref_mid:'Before 1st revision', ref_mid_val:'50% refund',
+    ref_after:'After 1st revision', ref_after_val:'No refund',
     inc_basic:'Includes all Basic features',
     inc_std:'Includes all Standard features',
     inc_prem:'Includes all Premium features',
@@ -1268,8 +1484,55 @@ window.i18n = {
     eco2_d:'会员们相互连接·连接·连接',
     eco3_d:'实时10语言自动翻译信使。',
     eco4_d:'无国界商业网络扩张。',
-    pricing_sub:'透明定价。无隐藏费用。按需选择。',
-    vat_note:'※ 所有价格均不含增值税（10%）',
+    pricing_title:'DiCA 套餐',
+    pricing_sub:'纸质名片会被丢弃。DiCA 会被分享。',
+    vat_note:'💳 含税（增值税10%）另计',
+    pay_note:'✅ 付款后开始制作',
+    gallery_title:'直接查看实际制作的 DiCA 名片',
+    gallery_sub:'点击即可前往 DiCA 图库',
+    gallery_btn:'查看图库',
+    common_label:'✦ 所有套餐通用',
+    common_cardbook:'📱 免费提供 CardBook（数字名片夹）',
+    common_qr:'自动生成 QR 码',
+    common_domain:'免费域名',
+    common_kakao:'KakaoTalk 分享预览优化',
+    b_cover:'封面 + 基本联系方式',
+    b_lang:'2种语言（韩/英）',
+    b_rev:'含1次修改',
+    s_lang:'固定4种语言（韩/英/中/日）',
+    s_photo:'个人照片',
+    s_bio:'简介 + 经历板块',
+    s_ref:'推荐板块（BNI 专用）⭐',
+    s_slide:'图片轮播 2~4张',
+    s_nfc:'含1个 NFC 贴纸',
+    s_rev:'含2次修改',
+    p_lang:'从10种语言中选4种',
+    p_photo:'个人照片',
+    p_bio:'简介 + 经历板块',
+    p_ref:'推荐板块（BNI 专用）',
+    p_slide:'图片轮播 2~8张',
+    p_nfc:'含2个 NFC 贴纸',
+    p_video:'嵌入视频（1个）',
+    p_service:'服务/产品介绍板块',
+    p_form:'预约/咨询表单',
+    p_rev:'含3次修改',
+    no_photo:'个人照片',
+    no_bio:'简介 + 经历',
+    no_ref:'推荐板块',
+    no_slide:'图片轮播',
+    no_nfc:'NFC 贴纸',
+    no_video:'嵌入视频',
+    no_service:'服务/产品板块',
+    no_form:'预约/咨询表单',
+    update_title:'💛 DiCA 客户专属更新优惠',
+    update_sub:'无需重新制作，以超低价格更新。',
+    upd1_label:'文字更新', upd1_desc:'联系方式·职称等',
+    upd2_label:'照片/图片替换', upd2_desc:'头像·封面等',
+    upd3_label:'设计更新', upd3_desc:'结构·布局变更',
+    upd4_label:'全面重制', upd4_desc:'行业·品牌变更',
+    ref_before:'制作开始前', ref_before_val:'全额退款',
+    ref_mid:'首次修改前', ref_mid_val:'退款50%',
+    ref_after:'首次修改后', ref_after_val:'不予退款',
     inc_basic:'包含所有基础功能',
     inc_std:'包含所有标准功能',
     inc_prem:'包含所有高级功能',
@@ -1312,10 +1575,55 @@ window.i18n = {
     why_c1_desc:'単なる連絡先交換を超えた、権威と信頼を込めたプレミアムデジタル名刺。BNIメンバーカード4言語対応。',
     why_c2_desc:'リアルタイム10言語自動翻訳メッセンジャー。外国語なしで世界中のBNIメンバーと即座に繋がる。',
     why_c3_desc:'個人の人脈を永続的なデジタル資産へ転換。BNIチャプター全体の統合管理。',
-    pricing_title:'エリート会員',
-    btn_basic:'始める', btn_std:'スタンダード選択', btn_prem:'プレミアム選択', btn_free:'フリープロ選択', btn_ent:'企業相談',
-    sample_btn:'サンプルを見る',
-    sample_title:'サンプルカード',
+    pricing_title:'DiCA プラン',
+    pricing_sub:'紙の名刺は捨てられます。DiCAはシェアされます。',
+    vat_note:'💳 消費税（10%）別途',
+    pay_note:'✅ 入金後に制作開始',
+    gallery_title:'実際に制作されたDiCAをご確認ください',
+    gallery_sub:'クリックするとDiCAギャラリーへ移動します',
+    gallery_btn:'ギャラリーを見る',
+    common_label:'✦ 全プラン共通',
+    common_cardbook:'📱 CardBook 無料提供（デジタル名刺帳）',
+    common_qr:'QRコード自動生成',
+    common_domain:'無料ドメイン提供',
+    common_kakao:'KakaoTalkプレビュー最適化',
+    b_cover:'カバー + 基本連絡先',
+    b_lang:'2言語（韓/英）',
+    b_rev:'修正1回含む',
+    s_lang:'4言語固定（韓/英/中/日）',
+    s_photo:'プロフィール写真',
+    s_bio:'自己紹介 + 経歴セクション',
+    s_ref:'紹介セクション（BNI専用）⭐',
+    s_slide:'画像スライド 2~4枚',
+    s_nfc:'NFCステッカー1枚含む',
+    s_rev:'修正2回含む',
+    p_lang:'10言語から4言語選択',
+    p_photo:'プロフィール写真',
+    p_bio:'自己紹介 + 経歴セクション',
+    p_ref:'紹介セクション（BNI専用）',
+    p_slide:'画像スライド 2~8枚',
+    p_nfc:'NFCステッカー2枚含む',
+    p_video:'動画埋め込み（1本）',
+    p_service:'サービス/製品紹介セクション',
+    p_form:'予約/お問い合わせフォーム',
+    p_rev:'修正3回含む',
+    no_photo:'プロフィール写真',
+    no_bio:'自己紹介 + 経歴',
+    no_ref:'紹介セクション',
+    no_slide:'画像スライド',
+    no_nfc:'NFCステッカー',
+    no_video:'動画埋め込み',
+    no_service:'サービス/製品セクション',
+    no_form:'予約/お問い合わせフォーム',
+    update_title:'💛 DiCAご利用者様限定アップデート特典',
+    update_sub:'作り直さなくていい。低価格でアップデートできます。',
+    upd1_label:'テキスト変更', upd1_desc:'連絡先·肩書き等',
+    upd2_label:'写真/画像交換', upd2_desc:'プロフィール·カバー等',
+    upd3_label:'デザインリニューアル', upd3_desc:'構成·レイアウト変更',
+    upd4_label:'全面リメイク', upd4_desc:'業種·ブランド変更',
+    ref_before:'制作開始前', ref_before_val:'全額返金',
+    ref_mid:'初回修正前', ref_mid_val:'50%返金',
+    ref_after:'初回修正後', ref_after_val:'返金不可',
     who_title:'TM LINKは誰のためのサービスですか？',
     process_title:'制作プロセス', process_steps:'4ステップ',
     p1_title:'相談・依頼', p2_title:'情報収集', p3_title:'デザイン・開発', p4_title:'配布・納品',
@@ -1489,92 +1797,6 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-<!-- ── SAMPLE MODAL ── -->
-<div id="sample-modal" style="display:none;" class="fixed inset-0 z-[200] flex items-center justify-center p-4" onclick="if(event.target===this)this.style.display='none'">
-  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
-  <div class="relative bg-surface-container rounded-3xl border border-outline-variant/30 p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10">
-    <div class="flex justify-between items-center mb-6">
-      <h3 class="font-headline-md text-headline-md text-primary" data-i18n="sample_title">제작 샘플 보기</h3>
-      <button onclick="document.getElementById('sample-modal').style.display='none'" class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-outline-variant/30 transition-all">
-        <span class="material-symbols-outlined text-on-surface">close</span>
-      </button>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#1a1000] to-[#2a1800] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">感</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">김지현</div>
-          <div class="text-xs text-primary mt-0.5">감성온도 대표</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#1a1400] to-[#2a2000] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">宋</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">송승훈</div>
-          <div class="text-xs text-primary mt-0.5">T.M Link 대표</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#0d1a1a] to-[#1a2a2a] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">美</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 파이오니어</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">이화춘</div>
-          <div class="text-xs text-primary mt-0.5">뷰티랩 원장</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#1a0d1a] to-[#2a1a2a] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">健</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">NAMECARD</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">이서원</div>
-          <div class="text-xs text-primary mt-0.5">웰슨트서원</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/bni-giants/%EB%B0%95%EC%84%B1%EC%A4%80/index.html" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#0d1520] to-[#1a2535] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">媒</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 자이언츠</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">박성준</div>
-          <div class="text-xs text-primary mt-0.5">엘로이미디어 대표</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/bni-giants/%EA%B9%80%EC%A4%80%EB%9E%98/index.html" target="_blank"
-        class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/50 transition-all group">
-        <div class="h-32 bg-gradient-to-br from-[#1a1020] to-[#2a1830] relative flex items-end p-4">
-          <div class="absolute inset-0 flex items-center justify-center text-primary/10 font-bold text-6xl font-headline-lg">紋</div>
-          <span class="relative z-10 text-xs text-primary/70 bg-black/40 px-2 py-1 rounded">BNI 자이언츠</span>
-        </div>
-        <div class="p-4">
-          <div class="font-bold text-sm">김준래</div>
-          <div class="text-xs text-primary mt-0.5">무늬디자인 대표</div>
-          <div class="text-xs text-on-surface-variant mt-1">→ 실제 카드 보기</div>
-        </div>
-      </a>
-    </div>
-    <p class="text-center text-xs text-on-surface-variant mt-6 opacity-60"><span data-i18n="modal_note">각 카드를 클릭하면 실제 디지털 명함이 새 탭에서 열립니다.</span></p>
-  </div>
-</div>
+
 </body>
 </html>
