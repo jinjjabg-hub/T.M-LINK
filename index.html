@@ -670,13 +670,60 @@ function setLang(lang) {
         <span class="material-symbols-outlined text-primary text-3xl">groups</span>
         <div>
           <p class="font-headline-sm text-headline-sm text-primary" data-i18n="bni_special_title">BNI 특별가</p>
-          <p class="text-on-surface-variant text-sm mt-1" data-i18n="bni_special_desc">BNI 챕터 멤버 대상 별도 할인가가 적용됩니다.</p>
+          <p class="text-on-surface-variant text-sm mt-1" data-i18n="bni_special_desc">BNI 챕터 멤버 전용 할인 가격입니다.</p>
         </div>
       </div>
-      <button onclick="pickPlan('BNI 특별가 (별도문의)')"
+      <button onclick="openBniModal()"
         class="shrink-0 px-6 py-3 rounded-xl border border-primary/60 text-primary font-bold text-sm hover:bg-primary hover:text-on-primary transition-all" data-i18n="bni_special_btn">
         특별가 문의하기
       </button>
+    </div>
+
+    <!-- BNI 확인 모달 -->
+    <div id="bni-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:20px;">
+      <div class="glass-card p-8 rounded-3xl border border-primary/30 max-w-sm w-full" style="background:#141414;">
+        <div id="bni-step-form">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="material-symbols-outlined text-primary text-2xl">groups</span>
+            <h4 class="font-headline-sm text-headline-sm text-primary">BNI 특별가 확인</h4>
+          </div>
+          <p class="text-on-surface-variant text-sm mb-5">소속 BNI 챕터 또는 소개해주신 멤버 성함을 간단히 적어주시면 특별가를 바로 안내해 드려요.</p>
+          <div class="space-y-3 mb-5">
+            <input id="bni-name" type="text" placeholder="성함"
+              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+            <input id="bni-phone" type="tel" placeholder="연락처 (010-0000-0000)"
+              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+            <input id="bni-referral" type="text" placeholder="소속 챕터 또는 소개자 성함 (예: BNI 파이오니어 / 홍길동님 소개)"
+              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
+          </div>
+          <div class="flex gap-3">
+            <button onclick="closeBniModal()" class="flex-1 py-3 border border-outline rounded-xl text-sm font-bold hover:bg-white/5 transition-all">취소</button>
+            <button onclick="submitBniInquiry()" class="flex-1 py-3 bg-primary text-on-primary rounded-xl font-bold text-sm hover:brightness-110 transition-all">가격 확인</button>
+          </div>
+        </div>
+        <div id="bni-step-result" style="display:none;">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            <h4 class="font-headline-sm text-headline-sm text-primary">BNI 특별가</h4>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mb-5 text-center">
+            <div class="bg-surface-container rounded-xl p-3">
+              <div class="text-xs text-on-surface-variant mb-1">베이직</div>
+              <div class="text-base font-bold text-primary">110,000원</div>
+            </div>
+            <div class="bg-surface-container rounded-xl p-3">
+              <div class="text-xs text-on-surface-variant mb-1">스탠다드</div>
+              <div class="text-base font-bold text-primary">150,000원</div>
+            </div>
+            <div class="bg-surface-container rounded-xl p-3">
+              <div class="text-xs text-on-surface-variant mb-1">프리미엄</div>
+              <div class="text-base font-bold text-primary">190,000원</div>
+            </div>
+          </div>
+          <p class="text-on-surface-variant text-xs mb-5">문의 내용이 정상 접수되었습니다. 빠르게 연락드릴게요 😊</p>
+          <button onclick="closeBniModal()" class="w-full py-3 border border-outline rounded-xl text-sm font-bold hover:bg-white/5 transition-all">닫기</button>
+        </div>
+      </div>
     </div>
 
     <!-- 기업·단체 -->
@@ -1145,7 +1192,7 @@ window.i18n = {
     prem_lang:'4개 언어 선택 가능 (10개 언어 중 직접 선택 — 불어·아랍어·러시아어·스페인어 등)',
     ent_title:'기업 · 단체 (10개 이상)',
     bni_special_title:'BNI 특별가',
-    bni_special_desc:'BNI 챕터 멤버 대상 별도 할인가가 적용됩니다.',
+    bni_special_desc:'BNI 챕터 멤버 전용 할인 가격입니다.',
     bni_special_btn:'특별가 문의하기',
     kakao_note:'* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.',
     cardbook_btn:' BNI 카드북 보기',
@@ -1287,7 +1334,7 @@ window.i18n = {
     prem_lang:'Choose 4 languages (from 10 available — French, Arabic, Russian, Spanish, etc.)',
     ent_title:'Enterprise · Group (10+)',
     bni_special_title:'BNI Special Rate',
-    bni_special_desc:'A special discount rate applies to BNI chapter members.',
+    bni_special_desc:'Exclusive discounted pricing for BNI chapter members.',
     bni_special_btn:'Ask about special rate',
     kakao_note:'* Name, photo, and title appear as preview when sharing via KakaoTalk.',
     cardbook_btn:' BNI CardBook',
@@ -1430,7 +1477,7 @@ window.i18n = {
     prem_lang:'可选4种语言（10种语言中选择 — 法语·阿拉伯语·俄语·西班牙语等）',
     ent_title:'企业 · 团体（10个以上）',
     bni_special_title:'BNI特惠价',
-    bni_special_desc:'BNI分会会员适用特别优惠价格。',
+    bni_special_desc:'BNI分会会员专属优惠价格。',
     bni_special_btn:'咨询特惠价',
     kakao_note:'* 通过KakaoTalk分享链接时，姓名·照片·职称将显示为预览。',
     cardbook_btn:' BNI名片册',
@@ -1573,7 +1620,7 @@ window.i18n = {
     prem_lang:'4言語を選択可能（10言語から選択 — フランス語·アラビア語·ロシア語·スペイン語等）',
     ent_title:'企業 · 団体（10件以上）',
     bni_special_title:'BNI特別価格',
-    bni_special_desc:'BNIチャプターメンバー対象の特別割引価格が適用されます。',
+    bni_special_desc:'BNIチャプターメンバー専用の割引価格です。',
     bni_special_btn:'特別価格を問い合わせる',
     kakao_note:'* KakaoTalkでリンク共有時、名前・写真・肩書きがプレビューに表示されます。',
     cardbook_btn:' BNIカードブック',
@@ -1667,6 +1714,43 @@ document.addEventListener('mousemove', e => {
 function pickPlan(plan) {
   document.getElementById('f-plan').value = plan;
   document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== BNI 특별가 모달 =====
+// ⚠️ 아래 URL을 Google Apps Script 배포 후 나온 웹앱 URL로 교체하세요.
+const BNI_WEBHOOK_URL = 'https://script.google.com/macros/s/여기에_배포_URL_붙여넣기/exec';
+
+function openBniModal() {
+  document.getElementById('bni-modal').style.display = 'flex';
+  document.getElementById('bni-step-form').style.display = 'block';
+  document.getElementById('bni-step-result').style.display = 'none';
+}
+function closeBniModal() {
+  document.getElementById('bni-modal').style.display = 'none';
+}
+function submitBniInquiry() {
+  const name     = document.getElementById('bni-name').value.trim();
+  const phone    = document.getElementById('bni-phone').value.trim();
+  const referral = document.getElementById('bni-referral').value.trim();
+  if (!name || !phone || !referral) {
+    alert('성함, 연락처, 소속 챕터(또는 소개자)를 모두 적어주세요.');
+    return;
+  }
+  const payload = {
+    type: 'BNI특별가문의',
+    name, phone, referral,
+    timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
+    page: location.href
+  };
+  // Google Apps Script 웹앱은 CORS 응답이 없어 no-cors로 전송 (fire-and-forget)
+  fetch(BNI_WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+  document.getElementById('bni-step-form').style.display = 'none';
+  document.getElementById('bni-step-result').style.display = 'block';
 }
 
 // Submit
