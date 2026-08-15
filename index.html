@@ -214,7 +214,6 @@ tailwind.config = {
   .scale-105 { transform: none !important; }
 
   /* 샘플 모달 */
-  #sample-modal .grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 </style>
 <script>
@@ -303,7 +302,7 @@ function setLang(lang) {
           class="w-48 py-4 bg-primary text-on-primary font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/30 text-sm">
           무료 상담 신청
         </button>
-        <button id="i18n-btn2" onclick="document.getElementById('digital-card').scrollIntoView({behavior:'smooth'})"
+        <button id="i18n-btn2" onclick="window.open('https://jinjjabg-hub.github.io/DiCA-gallery/', '_blank')"
           class="w-48 py-4 border-2 border-white/50 text-white font-bold rounded-lg active:scale-95 transition-all hover:bg-white/10 text-sm">
           포트폴리오 감상
         </button>
@@ -428,126 +427,11 @@ function setLang(lang) {
     <h3 class="font-headline-lg text-headline-lg text-primary shrink-0">DIGITAL BRANDING</h3>
     <div class="h-px w-full bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
   </div>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    <!-- Portfolio showcase: 6 cards -->
-    <div class="space-y-4">
-      <div class="grid grid-cols-3 gap-3">
-        <!-- 1. 김지현 -->
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#1a1000] to-[#2a1800] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">感</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">김지현</div>
-            <div class="text-[10px] text-primary mt-0.5">감성온도 대표</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-        <!-- 2. 송승훈 -->
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#1a1400] to-[#2a2000] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">宋</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">송승훈</div>
-            <div class="text-[10px] text-primary mt-0.5">T.M링크 대표</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-        <!-- 3. 이화춘 -->
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#0d1a1a] to-[#1a2a2a] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">美</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">이화춘</div>
-            <div class="text-[10px] text-primary mt-0.5">뷰티랩 원장</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-        <!-- 4. 이서원 -->
-        <a href="https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#1a0d1a] to-[#2a1a2a] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">健</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">이서원</div>
-            <div class="text-[10px] text-primary mt-0.5">웰슨트서원</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-        <!-- 5. 박성준 -->
-        <a href="https://jinjjabg-hub.github.io/bni-giants/%EB%B0%95%EC%84%B1%EC%A4%80/index.html" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#0d1520] to-[#1a2535] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">媒</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">박성준</div>
-            <div class="text-[10px] text-primary mt-0.5">엘로이미디어 대표</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-        <!-- 6. 김준래 -->
-        <a href="https://jinjjabg-hub.github.io/bni-giants/%EA%B9%80%EC%A4%80%EB%9E%98/index.html" target="_blank" class="glass-card rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group block">
-          <div class="h-16 bg-gradient-to-br from-[#1a1020] to-[#2a1830] relative overflow-hidden">
-            <div class="absolute inset-0 network-lines opacity-30"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-primary/20 font-bold text-4xl font-headline-lg">紋</div>
-          </div>
-          <div class="p-3">
-            <div class="font-bold text-xs">김준래</div>
-            <div class="text-[10px] text-primary mt-0.5">무늬디자인 대표</div>
-            <div class="flex gap-1 mt-1.5">
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">KR</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">EN</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">JP</span>
-              <span class="text-[7px] bg-primary/10 text-primary px-1 py-0.5 rounded">CN</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="flex items-center justify-between pt-2">
-        <p class="text-xs text-on-surface-variant" data-i18n="port_hint">클릭하면 실제 디지털 명함으로 이동합니다 →</p>
-        <button onclick="document.getElementById('sample-modal').style.display='flex'"
-          class="flex items-center gap-2 px-5 py-2.5 border border-primary/50 text-primary rounded-lg text-sm font-bold hover:bg-primary/10 transition-all">
-          <span class="material-symbols-outlined text-[18px]">preview</span>
-          <span data-i18n="sample_btn">샘플 이미지 보기</span>
-        </button>
-      </div>
-    </div>
+  <div class="max-w-3xl mx-auto text-center">
     <!-- Features -->
-    <div class="space-y-10 lg:pl-12">
+    <div class="space-y-10">
       <h4 class="text-3xl font-bold font-headline-lg">Elite Digital Identity<br/><span class="text-gradient-gold">Features</span></h4>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-body-md">
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-body-md text-left">
         <li class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">language</span>
           <div>
@@ -1159,8 +1043,6 @@ window.i18n = {
     why_c3_desc:'개인의 인맥을 영구적인 디지털 자산으로 전환. BNI 챕터 전체 통합 관리.',
     pricing_title:'Elite Membership',
     btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'기업 상담 신청',
-    sample_btn:'샘플 보기',
-    sample_title:'제작 샘플 보기',
     who_title:'TM LINK는 누구를 위한 서비스인가요?',
     process_title:'제작 과정', process_steps:'4단계',
     p1_title:'상담 & 의뢰', p2_title:'정보 수집', p3_title:'디자인 & 개발', p4_title:'배포 & 전달',
@@ -1187,7 +1069,6 @@ window.i18n = {
     stat1:'MANDU<br/>지원 언어',
     stat2:'기본 지원<br/>한·영·중·일',
     stat3:'평균 완성<br/>기간',
-    port_hint:'클릭하면 실제 디지털 명함으로 이동합니다 →',
     feat1_t:'4개국어 지원',
     feat1_d:'한·영·일·중 자동 전환. 글로벌 네트워킹 최적화.',
     feat2_t:'QR 자동 생성',
@@ -1305,8 +1186,6 @@ window.i18n = {
     why_c3_desc:'Transform personal networks into permanent digital assets. Integrated management for entire BNI chapters.',
     pricing_title:'Elite Membership',
     btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'Enterprise Inquiry',
-    sample_btn:'View Sample',
-    sample_title:'Sample Cards',
     who_title:'Who is TM LINK for?',
     process_title:'How It Works', process_steps:'4 Steps',
     p1_title:'Consult & Order', p2_title:'Collect Info', p3_title:'Design & Build', p4_title:'Deploy & Deliver',
@@ -1333,7 +1212,6 @@ window.i18n = {
     stat1:'MANDU<br/>languages',
     stat2:'Core support<br/>KR·EN·CN·JP',
     stat3:'Avg completion<br/>days',
-    port_hint:'Click each card to view the actual digital card →',
     feat1_t:'4 Languages',
     feat1_d:'Auto-switch between KR/EN/JP/CN. Global networking ready.',
     feat2_t:'Auto QR Code',
@@ -1450,8 +1328,6 @@ window.i18n = {
     why_c3_desc:'将个人人脉转化为永久数字资产。整合管理整个BNI分会。',
     pricing_title:'精英会员',
     btn_basic:'立即开始', btn_std:'选择标准版', btn_prem:'选择高级版', btn_free:'选择自由版', btn_ent:'企业咨询',
-    sample_btn:'查看样品',
-    sample_title:'样品展示',
     who_title:'TM LINK适合谁？',
     process_title:'制作流程', process_steps:'4个步骤',
     p1_title:'咨询与委托', p2_title:'收集信息', p3_title:'设计与开发', p4_title:'部署与交付',
@@ -1478,7 +1354,6 @@ window.i18n = {
     stat1:'MANDU<br/>支持语言',
     stat2:'基础支持<br/>韩·英·中·日',
     stat3:'平均完成<br/>天数',
-    port_hint:'点击即可查看实际数字名片 →',
     feat1_t:'4种语言',
     feat1_d:'韩/英/日/中自动切换。全球网络就绪。',
     feat2_t:'自动QR码',
@@ -1677,7 +1552,6 @@ window.i18n = {
     stat1:'MANDU<br/>対応言語',
     stat2:'基本対応<br/>韓·英·中·日',
     stat3:'平均完成<br/>日数',
-    port_hint:'クリックで実際のデジタル名刺を表示 →',
     feat1_t:'4言語対応',
     feat1_d:'韓/英/日/中の自動切替。グローバルネットワークに最適。',
     feat2_t:'QRコード自動生成',
