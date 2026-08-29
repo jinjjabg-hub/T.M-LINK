@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>DiCA 명함 신청</title>
+<style>
+  :root{
+    --navy:#0f1b3d;
+    --navy2:#1a2f5c;
+    --blue:#24408a;
+    --red:#c0392b;
+    --paper:#f6f7fb;
+    --line:#e2e4ec;
+    --text:#1a1a2e;
+    --muted:#767a8a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    font-family:'Noto Sans KR', -apple-system, sans-serif;
+    background:var(--paper);
+    color:var(--text);
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+  }
+  .app{ width:100%; max-width:460px; min-height:100vh; background:#fff; position:relative; }
+
+  /* header */
+  .head{
+    background:linear-gradient(150deg, var(--navy) 0%, var(--navy2) 60%, var(--blue) 100%);
+    color:#fff; padding:34px 24px 30px;
+  }
+  .eyebrow{
+    display:inline-block; font-size:10px; font-weight:700; letter-spacing:1.5px;
+    background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35);
+    padding:4px 12px; border-radius:20px; margin-bottom:14px;
+  }
+  .head h1{ font-size:22px; font-weight:700; line-height:1.4; }
+  .head p{ font-size:12.5px; color:#cfd8f0; margin-top:8px; line-height:1.6; }
+
+  /* body */
+  .body{ padding:26px 24px 120px; }
+  .field{ margin-bottom:22px; }
+  .field label{ display:block; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .field .hint{ font-size:11px; color:var(--muted); font-weight:400; margin-left:6px; }
+  .field input[type=text], .field input[type=tel]{
+    width:100%; padding:13px 14px; font-size:15px; font-family:inherit;
+    border:1.5px solid var(--line); border-radius:10px; background:#fbfbfd;
+    color:var(--text); outline:none; transition:border-color .15s;
+  }
+  .field input:focus{ border-color:var(--blue); background:#fff; }
+
+  .pill-group{ display:flex; gap:10px; }
+  .pill{
+    flex:1; text-align:center; padding:16px 10px; border:1.5px solid var(--line);
+    border-radius:12px; cursor:pointer; transition:all .15s; background:#fbfbfd;
+  }
+  .pill .t{ font-size:14px; font-weight:700; color:var(--navy); }
+  .pill .d{ font-size:10.5px; color:var(--muted); margin-top:4px; line-height:1.5; }
+  .pill .p{ font-size:13px; font-weight:700; color:var(--red); margin-top:6px; }
+  .pill.active{ border-color:var(--blue); background:#eef2fb; }
+  .pill.active .t{ color:var(--blue); }
+  input[type=radio]{ display:none; }
+
+  .note{
+    background:#eef2fb; border-left:4px solid var(--blue); border-radius:8px;
+    padding:12px 14px; font-size:11.5px; color:var(--navy); line-height:1.6; margin-top:20px;
+  }
+  .note b{ color:var(--red); }
+
+  .submit-wrap{
+    position:fixed; bottom:0; left:50%; transform:translateX(-50%);
+    width:100%; max-width:460px; padding:14px 20px 22px; background:#fff;
+    border-top:1px solid var(--line);
+  }
+  button.submit{
+    width:100%; padding:16px; font-size:16px; font-weight:700; color:#fff;
+    background:var(--navy); border:none; border-radius:12px; cursor:pointer;
+    font-family:inherit; transition:opacity .15s;
+  }
+  button.submit:disabled{ opacity:0.55; }
+  button.submit:active{ opacity:0.85; }
+  .err{ color:var(--red); font-size:11.5px; margin-top:6px; display:none; }
+
+  /* success screen */
+  .success{ display:none; padding:50px 26px; text-align:center; }
+  .success .icon{
+    width:64px; height:64px; border-radius:50%; background:#eef2fb; color:var(--blue);
+    font-size:30px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto;
+  }
+  .success h2{ font-size:19px; color:var(--navy); margin-bottom:10px; }
+  .success p{ font-size:13px; color:var(--muted); line-height:1.7; margin-bottom:26px; }
+  .pay-box{
+    background:var(--paper); border:1.5px solid var(--line); border-radius:12px;
+    padding:18px; text-align:left; margin-bottom:18px;
+  }
+  .pay-box .lbl{ font-size:10.5px; color:var(--muted); font-weight:700; letter-spacing:0.5px; margin-bottom:6px;}
+  .pay-box .acct{ font-size:15px; font-weight:700; color:var(--navy); }
+  .copy-btn{
+    margin-top:12px; width:100%; padding:12px; border-radius:9px; border:1.5px solid var(--blue);
+    background:#fff; color:var(--blue); font-weight:700; font-size:13px; font-family:inherit; cursor:pointer;
+  }
+  .copy-btn.copied{ background:var(--blue); color:#fff; }
+  .success .small{ font-size:11px; color:var(--muted); line-height:1.7; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <form id="applyForm">
+    <div class="head">
+      <div class="eyebrow">DiCA · T.M LINK</div>
+      <h1>설계사 명함 신청서</h1>
+      <p>아래 정보만 입력해주시면 접수 완료입니다.<br>상세 프로필(사진·경력 등)은 접수 후 별도로 안내드려요.</p>
+    </div>
+
+    <div class="body">
+      <div class="field">
+        <label>신청자 이름</label>
+        <input type="text" id="name" placeholder="예: 전미진" required>
+      </div>
+
+      <div class="field">
+        <label>연락처</label>
+        <input type="tel" id="phone" placeholder="예: 010-1234-5678" required>
+      </div>
+
+      <div class="field">
+        <label>소속 지점</label>
+        <input type="text" id="branch" placeholder="예: 라이프가디언 강남지점" required>
+      </div>
+
+      <div class="field">
+        <label>옵션 선택</label>
+        <div class="pill-group">
+          <label class="pill" id="pillA">
+            <input type="radio" name="option" value="단체" required>
+            <div class="t">단체</div>
+            <div class="d">동일 디자인<br>이름·사진만 교체</div>
+            <div class="p">7만원</div>
+          </label>
+          <label class="pill" id="pillB">
+            <input type="radio" name="option" value="커스텀">
+            <div class="t">커스텀</div>
+            <div class="d">개인 맞춤<br>디자인 개별 제작</div>
+            <div class="p">11만원</div>
+          </label>
+        </div>
+      </div>
+
+      <div class="note">오늘 신청 완료 시 <b>특별가</b>가 적용됩니다. (정상가 단체 11만원 · 커스텀 15만원)</div>
+      <div class="err" id="errMsg">옵션을 선택해주세요.</div>
+    </div>
+
+    <div class="submit-wrap">
+      <button type="submit" class="submit" id="submitBtn">신청 완료하기</button>
+    </div>
+  </form>
+
+  <div class="success" id="successScreen">
+    <div class="icon">✓</div>
+    <h2>신청이 접수되었습니다</h2>
+    <p>확인 후 프로필 정보 입력용 엑셀을 카카오톡 또는 문자로 보내드릴게요.<br>아래 계좌로 입금해주시면 바로 제작을 시작합니다.</p>
+
+    <div class="pay-box">
+      <div class="lbl">입금 계좌</div>
+      <div class="acct">카카오뱅크 3333-28-4400690</div>
+      <div style="font-size:12.5px; color:#767a8a; margin-top:2px;">예금주: 송승훈</div>
+      <button class="copy-btn" id="copyBtn" type="button">계좌번호 복사</button>
+    </div>
+
+    <div class="small">문의사항은 T.M LINK 송승훈 대표에게 연락 주세요.</div>
+  </div>
+
+</div>
+
+<script>
+// ⚠️ 아래 URL을 구글 앱스 스크립트 배포 후 나오는 웹 앱 URL로 교체하세요.
+const ENDPOINT_URL = "REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL";
+
+document.querySelectorAll('.pill').forEach(function(pill){
+  pill.addEventListener('click', function(){
+    document.querySelectorAll('.pill').forEach(function(p){ p.classList.remove('active'); });
+    pill.classList.add('active');
+    pill.querySelector('input').checked = true;
+    document.getElementById('errMsg').style.display = 'none';
+  });
+});
+
+document.getElementById('applyForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const branch = document.getElementById('branch').value.trim();
+  const optionEl = document.querySelector('input[name=option]:checked');
+
+  if(!optionEl){
+    document.getElementById('errMsg').style.display = 'block';
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '접수 중...';
+
+  const payload = { name: name, phone: phone, branch: branch, option: optionEl.value };
+
+  fetch(ENDPOINT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(payload)
+  }).then(function(){
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successScreen').style.display = 'block';
+  }).catch(function(){
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successScreen').style.display = 'block';
+  });
+});
+
+document.getElementById('copyBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText('3333-28-4400690').then(function(){
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = '복사되었습니다';
+    btn.classList.add('copied');
+    setTimeout(function(){
+      btn.textContent = '계좌번호 복사';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+});
+</script>
+</body>
+</html>
