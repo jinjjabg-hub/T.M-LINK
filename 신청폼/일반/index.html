@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>T.M LINK 명함 제작 신청</title>
+<style>
+  :root{
+    --navy:#0f1b3d;
+    --navy2:#1a2f5c;
+    --blue:#24408a;
+    --gold:#c9a24a;
+    --red:#c0392b;
+    --paper:#f6f7fb;
+    --line:#e2e4ec;
+    --text:#1a1a2e;
+    --muted:#767a8a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    font-family:'Noto Sans KR', -apple-system, sans-serif;
+    background:var(--paper);
+    color:var(--text);
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+  }
+  .app{ width:100%; max-width:460px; min-height:100vh; background:#fff; position:relative; }
+
+  .head{
+    background:linear-gradient(150deg, var(--navy) 0%, var(--navy2) 60%, var(--blue) 100%);
+    color:#fff; padding:34px 24px 30px;
+  }
+  .eyebrow{
+    display:inline-block; font-size:10px; font-weight:700; letter-spacing:1.5px;
+    background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35);
+    padding:4px 12px; border-radius:20px; margin-bottom:14px;
+  }
+  .head h1{ font-size:22px; font-weight:700; line-height:1.4; }
+  .head p{ font-size:12.5px; color:#cfd8f0; margin-top:8px; line-height:1.6; }
+
+  .body{ padding:26px 24px 120px; }
+  .field{ margin-bottom:22px; }
+  .field label{ display:block; font-size:13px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .field input[type=text], .field input[type=tel]{
+    width:100%; padding:13px 14px; font-size:15px; font-family:inherit;
+    border:1.5px solid var(--line); border-radius:10px; background:#fbfbfd;
+    color:var(--text); outline:none; transition:border-color .15s;
+  }
+  .field input:focus{ border-color:var(--blue); background:#fff; }
+
+  .plan-group{ display:flex; flex-direction:column; gap:10px; }
+  .plan{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 16px; border:1.5px solid var(--line);
+    border-radius:12px; cursor:pointer; transition:all .15s; background:#fbfbfd;
+  }
+  .plan .l{ text-align:left; }
+  .plan .t{ font-size:14px; font-weight:700; color:var(--navy); }
+  .plan .d{ font-size:10.5px; color:var(--muted); margin-top:3px; }
+  .plan .p{ font-size:13px; font-weight:700; color:var(--red); white-space:nowrap; }
+  .plan.active{ border-color:var(--blue); background:#eef2fb; }
+  .plan.active .t{ color:var(--blue); }
+  input[type=radio]{ display:none; }
+
+  .err{ color:var(--red); font-size:11.5px; margin-top:8px; display:none; }
+
+  .submit-wrap{
+    position:fixed; bottom:0; left:50%; transform:translateX(-50%);
+    width:100%; max-width:460px; padding:14px 20px 22px; background:#fff;
+    border-top:1px solid var(--line);
+  }
+  button.submit{
+    width:100%; padding:16px; font-size:16px; font-weight:700; color:#fff;
+    background:var(--navy); border:none; border-radius:12px; cursor:pointer;
+    font-family:inherit;
+  }
+  button.submit:disabled{ opacity:0.55; }
+  button.submit:active{ opacity:0.85; }
+
+  .success{ display:none; padding:60px 26px; text-align:center; }
+  .success .icon{
+    width:64px; height:64px; border-radius:50%; background:#eef2fb; color:var(--blue);
+    font-size:30px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto;
+  }
+  .success h2{ font-size:19px; color:var(--navy); margin-bottom:10px; }
+  .success p{ font-size:13px; color:var(--muted); line-height:1.7; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <form id="applyForm">
+    <div class="head">
+      <div class="eyebrow">T.M LINK</div>
+      <h1>디지털 명함 제작 신청</h1>
+      <p>아래 정보만 남겨주시면 확인 후 순서대로 연락드릴게요.</p>
+    </div>
+
+    <div class="body">
+      <div class="field">
+        <label>성명</label>
+        <input type="text" id="name" placeholder="예: 홍길동" required>
+      </div>
+
+      <div class="field">
+        <label>전화번호</label>
+        <input type="tel" id="phone" placeholder="예: 010-1234-5678" required>
+      </div>
+
+      <div class="field">
+        <label>업종</label>
+        <input type="text" id="industry" placeholder="예: 카페, 컨설팅, 병원, 뷰티 등" required>
+      </div>
+
+      <div class="field">
+        <label>플랜 선택</label>
+        <div class="plan-group">
+          <label class="plan" id="planBasic">
+            <input type="radio" name="plan" value="베이직" required>
+            <div class="l"><div class="t">베이직</div><div class="d">가장 간단한 기본형 명함</div></div>
+          </label>
+          <label class="plan" id="planStandard">
+            <input type="radio" name="plan" value="스탠다드">
+            <div class="l"><div class="t">스탠다드</div><div class="d">경력·후기 등 콘텐츠 확장형</div></div>
+          </label>
+          <label class="plan" id="planPremium">
+            <input type="radio" name="plan" value="프리미엄">
+            <div class="l"><div class="t">프리미엄</div><div class="d">완전 맞춤 디자인·구성</div></div>
+          </label>
+        </div>
+      </div>
+
+      <div class="err" id="errMsg">플랜을 선택해주세요.</div>
+    </div>
+
+    <div class="submit-wrap">
+      <button type="submit" class="submit" id="submitBtn">신청하기</button>
+    </div>
+  </form>
+
+  <div class="success" id="successScreen">
+    <div class="icon">✓</div>
+    <h2>신청이 접수되었습니다</h2>
+    <p>남겨주신 연락처로 순서대로 안내드릴게요.<br>문의사항은 T.M LINK 송승훈 대표에게 연락 주세요.</p>
+  </div>
+
+</div>
+
+<script>
+// ⚠️ 아래 URL은 기존 신청 시트에 연결된 Apps Script 웹 앱 URL과 동일한 것을 사용하세요.
+const ENDPOINT_URL = "REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL";
+
+document.querySelectorAll('.plan').forEach(function(plan){
+  plan.addEventListener('click', function(){
+    document.querySelectorAll('.plan').forEach(function(p){ p.classList.remove('active'); });
+    plan.classList.add('active');
+    plan.querySelector('input').checked = true;
+    document.getElementById('errMsg').style.display = 'none';
+  });
+});
+
+document.getElementById('applyForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const industry = document.getElementById('industry').value.trim();
+  const planEl = document.querySelector('input[name=plan]:checked');
+
+  if(!planEl){
+    document.getElementById('errMsg').style.display = 'block';
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '접수 중...';
+
+  const payload = {
+    formType: 'TM LINK 홈페이지',
+    name: name,
+    phone: phone,
+    industry: industry,
+    option: planEl.value
+  };
+
+  fetch(ENDPOINT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(payload)
+  }).then(function(){
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successScreen').style.display = 'block';
+  }).catch(function(){
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successScreen').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
