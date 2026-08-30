@@ -1760,6 +1760,18 @@ function submitForm() {
   const plan  = document.getElementById('f-plan').value;
   const job   = document.getElementById('f-job').value.trim();
   if (!name || !phone) { alert('성함과 연락처는 필수입니다.'); return; }
+  fetch('https://script.google.com/macros/s/AKfycbyYTrzN34zVxq5tYbICtHzuqpKSccDQ0ZK6lyfBZ56au-QoK7XPh-fj49hfFhPHrY2q/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({
+      formType: 'TM LINK 홈페이지',
+      name: name,
+      phone: phone,
+      option: plan,
+      industry: job
+    })
+  }).catch(() => {});
   const msg = `[TM LINK 제작 의뢰]\n성함: ${name}\n연락처: ${phone}\n업종/직함: ${job||'-'}\n선택 플랜: ${plan||'미선택'}\n\n※ TM LINK 홈페이지에서 접수된 의뢰입니다.`;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(msg).then(() => toast('의뢰 내용이 복사되었습니다!\n카카오톡에 붙여넣어 전송해 주세요 😊'));
