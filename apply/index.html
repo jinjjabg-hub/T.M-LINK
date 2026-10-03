@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>비즈홈 신청 | TM LINK</title>
+<meta name="description" content="TM LINK 비즈홈(개인 브랜드 홈페이지) 제작 신청서 — 1분이면 접수, 1영업일 내 연락드립니다."/>
+<meta property="og:title" content="비즈홈 신청 | TM LINK"/>
+<meta property="og:description" content="개인 브랜드 홈페이지 비즈홈 — 1:1 맞춤 제작 15만원 · 25만원. 1분이면 접수 완료."/>
+<meta property="og:image" content="https://jinjjabg-hub.github.io/T.M-LINK/%EC%86%A1%EC%8A%B9%ED%9B%88.png"/>
+<meta name="theme-color" content="#f7f9fc"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+/* 색상 토큰: 메인 페이지와 동일 (theme-factory "Tech Innovation" 라이트 버전) */
+:root{
+  --bg-deep:#eef3f9;--bg:#f7f9fc;--surface:#ffffff;--line:#dbe3ee;
+  --blue:#0066ff;--blue-text:#0052cc;--accent:#006e8c;--neon:#00ffff;--text:#1e1e1e;--muted:#5b6472;
+  --on-blue:#ffffff;--error:#c5221f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;background:var(--bg-deep);color:var(--text);line-height:1.6;word-break:keep-all;font-size:16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:inline-block;line-height:44px;font-family:Montserrat,sans-serif;font-weight:800;font-size:19px;text-decoration:none}
+.logo b{color:var(--blue-text)}
+.back{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:var(--muted);text-decoration:none}
+.head{padding:28px 0 8px}
+.kicker{font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--accent)}
+h1{font-size:clamp(26px,6vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.3;margin-top:8px}
+.head p{color:var(--muted);margin-top:10px}
+
+form{padding:20px 0 140px}
+fieldset{border:0;margin-bottom:28px}
+legend,.lbl{display:block;font-weight:700;font-size:15px;margin-bottom:10px}
+.req{color:var(--blue-text);margin-left:3px}
+.opt{color:var(--muted);font-weight:500;font-size:13px;margin-left:6px}
+.help{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* 플랜 선택 카드 */
+.plans{display:grid;gap:12px}
+.plan{position:relative;display:block;cursor:pointer;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:18px 18px 18px 52px;transition:border-color .18s,background .18s}
+.plan input{position:absolute;opacity:0;pointer-events:none}
+.plan::before{content:"";position:absolute;left:18px;top:21px;width:20px;height:20px;border-radius:50%;border:2px solid var(--muted)}
+.plan:has(input:checked){border-color:var(--blue);background:rgba(0,102,255,.07)}
+.plan:has(input:checked)::before{border-color:var(--blue);background:radial-gradient(circle,var(--blue) 45%,transparent 50%)}
+.plan:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
+.plan .t{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.plan .t b{font-size:17px}
+.plan .t span{font-family:Montserrat,sans-serif;font-weight:800;font-size:18px;color:var(--blue-text)}
+.plan .d{font-size:14px;color:var(--muted);margin-top:4px}
+
+.field{margin-bottom:22px}
+input[type=text],input[type=tel],input[type=url],textarea,select{
+  width:100%;min-height:50px;padding:13px 14px;font:inherit;font-size:16px;color:var(--text);
+  background:var(--surface);border:1.5px solid var(--line);border-radius:12px;outline:none;transition:border-color .15s}
+textarea{min-height:100px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+input::placeholder,textarea::placeholder{color:#8a94a3}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);font-size:14.5px;color:var(--muted);transition:all .15s}
+.chip input:checked+span{border-color:var(--accent);color:var(--text);background:rgba(0,140,170,0.09)}
+.chip input:focus-visible+span{outline:3px solid var(--blue);outline-offset:2px}
+.err{display:none;color:var(--error);font-size:13.5px;margin-top:6px}
+.invalid .err{display:block}
+.invalid input,.invalid .plans .plan,.invalid .chip span{border-color:var(--error)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);cursor:pointer}
+.agree input{width:20px;height:20px;margin-top:2px;accent-color:var(--blue);flex-shrink:0}
+.bni-ok{display:flex;gap:8px;align-items:flex-start;margin-top:10px;padding:12px 14px;border-radius:12px;background:rgba(0,102,255,.07);border:1px solid rgba(0,102,255,.25);color:var(--blue-text);font-size:14px;font-weight:700}
+.bni-ok[hidden]{display:none}
+.bni-ok svg{width:18px;height:18px;flex-shrink:0;margin-top:2px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom))}
+.bar .wrap{display:flex;align-items:center;gap:14px;padding:0}
+.sum{flex:1;font-size:13px;color:var(--muted);line-height:1.4}
+.sum b{display:block;color:var(--text);font-size:15px}
+.submit{min-height:52px;padding:0 26px;border:0;border-radius:12px;background:var(--blue);color:var(--on-blue);font:inherit;font-weight:800;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;touch-action:manipulation}
+.submit:hover{filter:brightness(1.08)}
+.submit:active{transform:scale(.97)}
+.submit:disabled{opacity:.5;cursor:wait}
+
+/* 완료 화면 */
+.done{display:none;text-align:center;padding:60px 0 80px}
+.done .ok{width:72px;height:72px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;background:rgba(0,140,170,0.108);color:var(--accent)}
+.done .ok svg{width:36px;height:36px}
+.done h2{font-size:26px;font-weight:800}
+.done p{color:var(--muted);margin-top:10px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin:28px 0 20px;text-align:left;font-size:15px}
+.box dt{font-size:13px;color:var(--muted)}
+.box dd{margin-bottom:10px;font-weight:600}
+.box dd:last-child{margin-bottom:0}
+.btns{display:grid;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:12px;font-weight:700;text-decoration:none;border:1.5px solid var(--blue);color:var(--accent);background:none;font:inherit;font-weight:700;cursor:pointer}
+@media (max-width:480px){.row2{grid-template-columns:1fr}.sum{display:none}.submit{width:100%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="../">TM <b>LINK</b></a>
+    <a class="back" href="../#pricing">← 가격 다시 보기</a>
+  </div>
+
+  <div id="formView">
+    <div class="head">
+      <span class="kicker">BIZHOME APPLY</span>
+      <h1>비즈홈 신청서</h1>
+      <p>1분이면 끝납니다. 접수되면 <b style="color:var(--text)">1영업일 안에</b> 직접 연락드려요.<br/>사진·소개글 같은 자세한 자료는 상담하면서 받습니다.</p>
+    </div>
+
+    <form id="applyForm" novalidate>
+      <fieldset id="f-plan">
+        <legend>플랜 선택<span class="req" aria-hidden="true">*</span></legend>
+        <div class="plans">
+          <label class="plan">
+            <input type="radio" name="plan" value="커스텀 (150,000원)" data-key="custom" required/>
+            <div class="t"><b>CUSTOM</b><span>150,000원</span></div>
+            <div class="d">1:1 맞춤 디자인 · 4개 국어 · 리퍼럴 섹션 · 수정 2회 · 3~5영업일</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="커스텀 프로 (250,000원)" data-key="pro"/>
+            <div class="t"><b>CUSTOM PRO</b><span>250,000원</span></div>
+            <div class="d">+ 서비스 소개 · AI 홍보영상 · 예약/문의 폼 · 우선 제작(초안 2일)</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="상담 후 결정" data-key="consult"/>
+            <div class="t"><b>아직 모르겠어요</b><span style="font-size:14px;color:var(--accent)">상담 먼저</span></div>
+            <div class="d">어떤 플랜이 맞을지 통화로 같이 정해요</div>
+          </label>
+        </div>
+        <p class="err" role="alert">플랜을 하나 선택해 주세요.</p>
+        <p class="help">부가세(10%) 별도 · 결제 확인 후 제작 시작</p>
+      </fieldset>
+
+      <div class="row2">
+        <div class="field" id="f-name">
+          <label class="lbl" for="name">성함<span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="홍길동" required/>
+          <p class="err" role="alert">성함을 적어주세요.</p>
+        </div>
+        <div class="field" id="f-phone">
+          <label class="lbl" for="phone">연락처<span class="req" aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" required/>
+          <p class="err" role="alert">연락 가능한 번호를 정확히 적어주세요.</p>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field" id="f-company">
+          <label class="lbl" for="company">업종 / 회사명<span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="예: 세무회계 · OO세무사무소" required/>
+          <p class="err" role="alert">어떤 일을 하시는지 적어주세요.</p>
+        </div>
+        <div class="field">
+          <label class="lbl" for="title">직함<span class="opt">선택</span></label>
+          <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="예: 대표, 원장"/>
+        </div>
+      </div>
+
+      <fieldset id="f-bni">
+        <legend>BNI 멤버이신가요?<span class="req" aria-hidden="true">*</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="bni" value="예"/><span>네, BNI 멤버예요</span></label>
+          <label class="chip"><input type="radio" name="bni" value="아니오"/><span>아니요</span></label>
+        </div>
+        <p class="err" role="alert">BNI 멤버 여부를 선택해 주세요.</p>
+      </fieldset>
+
+      <div class="field" id="f-chapter" hidden>
+        <label class="lbl" for="chapter">소속 챕터<span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="chapter" name="chapter" placeholder="예: BNI 파이오니어"/>
+        <p class="bni-ok" id="bniOk" hidden aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>BNI 멤버 특별가 적용 대상입니다. 상담 때 특별가로 안내해 드려요.</p>
+        <p class="err" role="alert">소속 챕터를 적어주세요.</p>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="referrer">소개해주신 분<span class="opt">선택</span></label>
+        <input type="text" id="referrer" name="referrer" placeholder="예: 홍길동 대표님"/>
+      </div>
+
+      <fieldset>
+        <legend>원하는 분위기<span class="opt">여러 개 선택 가능</span></legend>
+        <div class="chips" data-group="style">
+          <label class="chip"><input type="checkbox" value="신뢰감·전문적"/><span>신뢰감·전문적</span></label>
+          <label class="chip"><input type="checkbox" value="고급스러운"/><span>고급스러운</span></label>
+          <label class="chip"><input type="checkbox" value="따뜻하고 친근한"/><span>따뜻하고 친근한</span></label>
+          <label class="chip"><input type="checkbox" value="밝고 트렌디한"/><span>밝고 트렌디한</span></label>
+          <label class="chip"><input type="checkbox" value="심플·미니멀"/><span>심플·미니멀</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>지금 준비된 자료<span class="opt">없어도 괜찮아요</span></legend>
+        <div class="chips" data-group="materials">
+          <label class="chip"><input type="checkbox" value="프로필 사진"/><span>프로필 사진</span></label>
+          <label class="chip"><input type="checkbox" value="로고"/><span>로고</span></label>
+          <label class="chip"><input type="checkbox" value="소개글·경력"/><span>소개글·경력</span></label>
+          <label class="chip"><input type="checkbox" value="회사 소개서·브로슈어"/><span>회사 소개서·브로슈어</span></label>
+          <label class="chip"><input type="checkbox" value="기존 홈페이지·SNS"/><span>홈페이지·SNS</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label class="lbl" for="reference">참고하고 싶은 사이트<span class="opt">선택</span></label>
+        <input type="text" id="reference" name="reference" placeholder="링크나 '갤러리 ○○님 스타일'처럼 적어주세요"/>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="contactTime">연락 받기 편한 시간</label>
+        <select id="contactTime" name="contactTime">
+          <option value="언제든 가능">언제든 괜찮아요</option>
+          <option value="오전 (9~12시)">오전 (9~12시)</option>
+          <option value="오후 (12~18시)">오후 (12~18시)</option>
+          <option value="저녁 (18시 이후)">저녁 (18시 이후)</option>
+          <option value="카톡·문자 선호">통화보다 카톡·문자가 편해요</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="message">하고 싶은 말<span class="opt">선택</span></label>
+        <textarea id="message" name="message" placeholder="예: 해외 바이어에게 보낼 영문 소개가 꼭 필요해요"></textarea>
+      </div>
+
+      <!-- 스팸봇 차단용 (사람에게는 보이지 않음) -->
+      <div class="hp" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off"/></label></div>
+
+      <div class="field" id="f-agree">
+        <label class="agree"><input type="checkbox" id="agree" required/>
+          <span>상담 연락을 위해 성함·연락처·업종을 수집하며, 상담 목적 외에는 사용하지 않고 상담 종료 후 1년 내 파기합니다. 이에 동의합니다. <span class="req">*</span></span>
+        </label>
+        <p class="err" role="alert">개인정보 수집에 동의해 주셔야 접수할 수 있어요.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="done" id="doneView" tabindex="-1">
+    <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h2>신청이 접수되었습니다</h2>
+    <p>1영업일 안에 <b id="doneTime" style="color:var(--text)"></b> 연락드릴게요.<br/>그동안 실제 제작 사례를 둘러보세요.</p>
+    <dl class="box" id="doneBox"></dl>
+    <div class="btns">
+      <a class="btn" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener">비즈홈 갤러리 보기 ↗</a>
+      <a class="btn" href="../" style="border-color:var(--line);color:var(--muted)">홈으로</a>
+    </div>
+  </div>
+</div>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="sum" aria-live="polite"><b id="sumPlan">플랜을 선택하세요</b>VAT 별도 · 1영업일 내 연락</div>
+    <button class="submit" id="submitBtn" type="submit" form="applyForm">신청 완료하기</button>
+  </div>
+</div>
+
+<script>
+// ⚠️ 구글 Apps Script 웹앱 URL (BizHome-AppsScript.gs 를 배포한 뒤 나온 URL로 교체)
+//    지금 값은 기존 신청폼에서 쓰던 URL — 시트 기록은 되지만, 메일 알림은
+//    BizHome-AppsScript.gs 로 교체 배포해야 받을 수 있습니다.
+const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbyYTrzN34zVxq5tYbICtHzuqpKSccDQ0ZK6lyfBZ56au-QoK7XPh-fj49hfFhPHrY2q/exec';
+
+const form = document.getElementById('applyForm');
+const $ = (id) => document.getElementById(id);
+
+// 가격 카드에서 넘어온 플랜 미리 선택 (?plan=custom | pro)
+const preset = new URLSearchParams(location.search).get('plan');
+if (preset) {
+  const r = form.querySelector('input[name=plan][data-key="' + preset + '"]');
+  if (r) r.checked = true;
+}
+const isBni = () => (form.querySelector('input[name=bni]:checked') || {}).value === '예';
+// 특별가 문구는 BNI 멤버가 챕터까지 적었을 때만 노출 (일반 고객에게는 보이지 않음)
+const bniConfirmed = () => isBni() && $('chapter').value.trim().length > 0;
+function updateSummary() {
+  const r = form.querySelector('input[name=plan]:checked');
+  $('sumPlan').textContent = (r ? r.value : '플랜을 선택하세요') + (bniConfirmed() && r && r.dataset.key !== 'consult' ? ' · BNI 특별가' : '');
+  if (r) $('f-plan').classList.remove('invalid');
+  // BNI 멤버를 고르면 챕터 칸 표시
+  const bniPicked = form.querySelector('input[name=bni]:checked');
+  if (bniPicked) $('f-bni').classList.remove('invalid');
+  $('f-chapter').hidden = !isBni();
+  if (!isBni()) $('f-chapter').classList.remove('invalid');
+  $('bniOk').hidden = !bniConfirmed();
+}
+$('chapter').addEventListener('input', updateSummary);
+form.addEventListener('change', updateSummary);
+updateSummary();
+
+// 연락처 자동 하이픈
+$('phone').addEventListener('input', (e) => {
+  const d = e.target.value.replace(/\D/g, '').slice(0, 11);
+  e.target.value = d.length < 4 ? d : d.length < 8 ? d.slice(0,3)+'-'+d.slice(3) : d.slice(0,3)+'-'+d.slice(3, d.length-4)+'-'+d.slice(-4);
+});
+
+function checked(group) {
+  return [...document.querySelectorAll('[data-group="' + group + '"] input:checked')].map(i => i.value).join(', ');
+}
+
+function validate() {
+  const rules = [
+    ['f-plan', !!form.querySelector('input[name=plan]:checked'), form.querySelector('input[name=plan]')],
+    ['f-name', $('name').value.trim().length > 0, $('name')],
+    ['f-phone', $('phone').value.replace(/\D/g, '').length >= 9, $('phone')],
+    ['f-company', $('company').value.trim().length > 0, $('company')],
+    ['f-bni', !!form.querySelector('input[name=bni]:checked'), form.querySelector('input[name=bni]')],
+    ['f-chapter', !isBni() || $('chapter').value.trim().length > 0, $('chapter')],
+    ['f-agree', $('agree').checked, $('agree')]
+  ];
+  let first = null;
+  rules.forEach(([id, ok, el]) => {
+    $(id).classList.toggle('invalid', !ok);
+    if (!ok && !first) first = el;
+  });
+  if (first) { first.focus(); first.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  return !first;
+}
+['name', 'phone', 'company', 'chapter'].forEach(k => $(k).addEventListener('blur', () => {
+  if ($(k).value.trim()) $('f-' + k).classList.remove('invalid');
+}));
+$('agree').addEventListener('change', () => $('agree').checked && $('f-agree').classList.remove('invalid'));
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (!validate()) return;
+
+  const plan = form.querySelector('input[name=plan]:checked').value;
+  const payload = {
+    formType: '비즈홈 신청',
+    plan: plan,
+    name: $('name').value.trim(),
+    phone: $('phone').value.trim(),
+    company: $('company').value.trim(),
+    title: $('title').value.trim(),
+    bniMember: isBni() ? '예 (특별가 대상)' : '아니오',
+    chapter: isBni() ? $('chapter').value.trim() : '',
+    referrer: $('referrer').value.trim(),
+    style: checked('style'),
+    materials: checked('materials'),
+    reference: $('reference').value.trim(),
+    contactTime: $('contactTime').value,
+    message: $('message').value.trim(),
+    website: form.website.value,           // 스팸 차단용
+    page: location.href,
+    // 기존 Apps Script 호환용 키
+    option: plan,
+    industry: $('company').value.trim()
+  };
+
+  const btn = $('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '접수 중...';
+
+  // Apps Script 웹앱은 CORS 응답을 주지 않아 no-cors 로 전송합니다.
+  fetch(ENDPOINT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(() => showDone(payload))
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = '신청 완료하기';
+      alert('전송이 안 됐어요. 인터넷 연결을 확인한 뒤 다시 눌러주세요.');
+    });
+});
+
+function showDone(p) {
+  $('formView').style.display = 'none';
+  $('bar').style.display = 'none';
+  $('doneTime').textContent = p.contactTime === '언제든 가능' ? '' : p.contactTime + '에';
+  const rows = [['플랜', p.plan], ['성함', p.name], ['연락처', p.phone], ['업종 / 회사', p.company]];
+  rows.push(['BNI 멤버', p.chapter ? '예 · ' + p.chapter + ' (특별가로 안내드려요)' : '아니오']);
+  if (p.referrer) rows.push(['소개해주신 분', p.referrer]);
+  $('doneBox').innerHTML = '';
+  rows.forEach(([k, v]) => {
+    const dt = document.createElement('dt'); dt.textContent = k;
+    const dd = document.createElement('dd'); dd.textContent = v;
+    $('doneBox').append(dt, dd);
+  });
+  const done = $('doneView');
+  done.style.display = 'block';
+  window.scrollTo(0, 0);
+  done.focus();
+}
+</script>
+</body>
+</html>
