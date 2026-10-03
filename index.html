@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TM LINK | 비즈홈 — 대표님을 위한 개인 브랜드 홈페이지</title>
-<meta name="description" content="비즈홈은 대표님 한 사람을 위한 개인 브랜드 홈페이지입니다. 1:1 맞춤 제작 15만원 · 25만원, 4개 국어, 유지비 0원. 부산 T.M Link 송승훈 대표."/>
+<title>TM LINK | 비즈홈 — 명함으론 부족하고, 홈페이지는 부담될 때</title>
+<meta name="description" content="비즈홈은 명함보다 깊고 홈페이지보다 가벼운 개인 브랜드 홈페이지입니다. 1:1 맞춤 제작 15만원 · 25만원, 4개 국어, 유지비 0원. 부산 T.M Link 송승훈 대표."/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="TM LINK | 비즈홈 — 대표님을 위한 개인 브랜드 홈페이지"/>
-<meta property="og:description" content="나를 브랜드로 만드는 개인 홈페이지. 1:1 맞춤 제작 15만원 · 25만원, 유지비 0원."/>
+<meta property="og:title" content="비즈홈 — 명함으론 부족하고, 홈페이지는 부담될 때"/>
+<meta property="og:description" content="명함보다 깊고, 홈페이지보다 가볍게. 1:1 맞춤 개인 브랜드 홈페이지 15만원 · 25만원."/>
 <meta property="og:image" content="https://jinjjabg-hub.github.io/T.M-LINK/%EC%86%A1%EC%8A%B9%ED%9B%88.png"/>
 <meta name="theme-color" content="#f7f9fc"/>
 <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
@@ -87,7 +87,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--accent);border:1px solid rgba(0,140,170,0.14);padding:6px 14px;border-radius:99px;margin-bottom:22px}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block}
-h1{font-size:clamp(36px,6vw,64px);line-height:1.15;font-weight:800;letter-spacing:-.03em}
+h1{font-size:clamp(34px,5.2vw,58px);line-height:1.15;font-weight:800;letter-spacing:-.03em}
 h1 .hl{background:linear-gradient(90deg,var(--blue),#00a8c8);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{margin-top:20px;font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:540px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
@@ -97,15 +97,15 @@ h1 .hl{background:linear-gradient(90deg,var(--blue),#00a8c8);-webkit-background-
 
 /* phone mockup */
 .phone{width:300px;max-width:100%;margin:0 auto;aspect-ratio:9/18.5;border-radius:42px;padding:12px;background:#0d0d0d;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,60,160,.22),0 0 0 1px rgba(0,140,170,0.048) inset;animation:float 6s ease-in-out infinite}
-.screen{height:100%;border-radius:32px;overflow:hidden;background:linear-gradient(180deg,#dceaff 0%,#ffffff 46%);display:flex;flex-direction:column;align-items:center;padding:34px 18px 18px;text-align:center}
-.screen .mono{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;border:3px solid #fff;box-shadow:0 0 0 3px var(--blue);background:linear-gradient(135deg,var(--blue),#00c2e0);font-family:Montserrat,sans-serif;font-weight:800;font-size:28px;color:#fff}
-.screen .nm{margin-top:12px;font-weight:800;font-size:19px}
-.screen .rl{font-size:12px;color:var(--accent)}
-.screen .chips{display:flex;gap:6px;margin:12px 0 14px;flex-wrap:wrap;justify-content:center}
-.screen .chips span{font-size:10px;padding:3px 8px;border-radius:99px;background:rgba(0,140,170,0.096);color:var(--accent)}
-.screen .row{width:100%;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:12px;text-align:left}
-.screen .row i{width:26px;height:26px;border-radius:8px;background:rgba(0,140,170,0.108);flex-shrink:0;display:grid;place-items:center;color:var(--accent);font-style:normal;font-size:12px}
-.screen .save{margin-top:auto;width:100%;background:var(--blue);color:var(--on-blue);font-weight:800;font-size:12.5px;border-radius:12px;padding:11px}
+.screen{height:100%;border-radius:32px;overflow:hidden;background:#245c4f;position:relative;container-type:size}
+.scroll-shot{width:100%;height:auto;animation:shot 38s cubic-bezier(.45,0,.55,1) 1.2s infinite alternate}
+.phone:hover .scroll-shot{animation-play-state:paused}
+@keyframes shot{0%,6%{transform:translateY(0)}94%,100%{transform:translateY(calc(-100% + 100cqh))}}
+.phone{display:block}
+.phone-wrap{text-align:center}
+.live-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:700;color:var(--blue-text)}
+.live-link svg{width:15px;height:15px}
+.live-link:hover{text-decoration:underline;text-underline-offset:3px}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
 /* sections */
@@ -135,6 +135,19 @@ h2{font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:800;letter-spacin
 .app.feat .tag{color:var(--blue-text)}
 .app .badge{position:absolute;top:16px;right:16px;font-size:11px;font-weight:800;background:var(--blue);color:var(--on-blue);padding:3px 9px;border-radius:99px}
 .app::after{content:"";position:absolute;inset:0;border-radius:inherit}
+
+/* scale: 명함 ↔ 홈페이지 사이 */
+.scale{position:relative;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:center;margin-bottom:56px}
+.scale::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--line),var(--blue),var(--line));z-index:0}
+.sc{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.sc .w{font-size:12.5px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+.sc h3{font-size:19px;font-weight:800;margin:4px 0 6px}
+.sc p{font-size:14.5px;color:var(--muted)}
+.sc.on{border:2px solid var(--blue);padding:30px 26px;box-shadow:0 20px 50px rgba(0,102,255,.18)}
+.sc.on .w{color:var(--blue-text)}
+.sc.on h3{font-size:24px;color:var(--blue-text)}
+.sc.on p{color:var(--text)}
+@media (max-width:760px){.scale{grid-template-columns:1fr}.scale::before{left:50%;right:auto;top:4%;bottom:4%;width:4px;height:auto;background:linear-gradient(180deg,var(--line),var(--blue),var(--line))}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -287,9 +300,9 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><i></i><span data-i18n="hero_tag">개인 브랜드 홈페이지 · 비즈홈</span></span>
-      <h1 data-i18n="hero_h">대표님 한 사람을 위한<br/><span class="hl">브랜드 홈페이지.</span></h1>
-      <p class="lead" data-i18n="hero_sub">고객은 거래하기 전에 먼저 찾아봅니다. <b>비즈홈</b>은 대표님이 누구인지, 무엇을 잘하는지, 어떤 고객을 도왔는지를 한 곳에 담은 공식 홈페이지입니다. 주소 하나로 신뢰를 먼저 전하세요.</p>
+      <span class="eyebrow"><i></i><span data-i18n="hero_tag">명함과 홈페이지 사이 · 비즈홈</span></span>
+      <h1 data-i18n="hero_h">명함으론 부족하고,<br/>홈페이지는 부담될 때.<br/><span class="hl">비즈홈.</span></h1>
+      <p class="lead" data-i18n="hero_sub">명함 한 장엔 다 담지 못하는 이야기를, 홈페이지처럼 무겁지 않게. <b>비즈홈</b>은 대표님의 소개·경력·서비스·리퍼럴을 한 페이지에 담은 개인 브랜드 홈페이지입니다. 건넬 땐 링크 하나, 받은 사람은 대표님을 제대로 알게 됩니다.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#pricing"><span data-i18n="hero_btn1">비즈홈 가격 보기</span><svg><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener" data-i18n="hero_btn2">제작 사례 보기</a>
@@ -301,19 +314,13 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
         <div class="stat"><b>1</b><span data-i18n="st4">신청 후 회신<br/>영업일 이내</span></div>
       </div>
     </div>
-    <div aria-hidden="true">
-      <div class="phone">
+    <div class="phone-wrap">
+      <a class="phone" href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" rel="noopener" aria-label="실제 비즈홈 샘플 보기: 송승훈 대표 (새 창)">
         <div class="screen">
-          <div class="mono">TM</div>
-          <div class="nm">송승훈</div>
-          <div class="rl">T.M Link 대표 · BNI 파이오니어</div>
-          <div class="chips"><span>한국어</span><span>English</span><span>中文</span><span>日本語</span></div>
-          <div class="row"><i>◎</i>회사 소개 · 경력</div>
-          <div class="row"><i>▣</i>서비스 · 포트폴리오</div>
-          <div class="row"><i>✦</i>이런 분을 소개해 주세요</div>
-          <div class="save">상담 문의하기</div>
+          <img class="scroll-shot" src="bizhome-sample.webp" alt="송승훈 대표의 실제 비즈홈 화면 — 프로필, 소개, 왜 T.M인가, 리퍼럴, 포트폴리오, 경력, 연락처" width="540" height="7676" fetchpriority="high"/>
         </div>
-      </div>
+      </a>
+      <a class="live-link" href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" rel="noopener"><span data-i18n="live">실제 비즈홈 샘플 · 송승훈 대표</span> <svg><use href="#i-ext"/></svg></a>
     </div>
   </div>
 </section>
@@ -332,7 +339,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
         <div class="ic" style="background:rgba(0,102,255,.16);color:var(--blue-text)"><svg><use href="#i-home"/></svg></div>
         <span class="cat" data-i18n="cat1">개인 브랜드 홈페이지</span>
         <h3><span data-i18n="app1_n">비즈홈</span><small>BizHome</small></h3>
-        <p data-i18n="app1_d">대표님 한 사람을 위해 1:1로 기획·디자인하는 개인 브랜드 홈페이지. 경력·서비스·리퍼럴까지 한 곳에.</p>
+        <p data-i18n="app1_d">명함보다 깊고, 홈페이지보다 가벼운 개인 브랜드 홈페이지. 대표님 한 사람을 위해 1:1로 기획·디자인합니다.</p>
         <ul class="fh">
           <li data-i18n="fh1">1:1 맞춤 기획·디자인</li>
           <li data-i18n="fh2">4개 국어 기본</li>
@@ -378,8 +385,13 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">Why BizHome</span>
-      <h2 data-i18n="why_h">한 번 보면 신뢰가 생기는<br/>나만의 홈페이지.</h2>
-      <p data-i18n="why_sub">소개를 받은 사람이 가장 먼저 하는 일은 대표님을 찾아보는 것입니다. 그때 보여줄 공식 홈페이지가 있는지가 첫 거래를 결정합니다.</p>
+      <h2 data-i18n="why_h">명함보다 깊게,<br/>홈페이지보다 가볍게.</h2>
+      <p data-i18n="why_sub">건네는 건 명함처럼 간단하게, 보여주는 건 홈페이지처럼 충분하게. 소개받은 사람이 대표님을 찾아봤을 때 딱 필요한 만큼을 담습니다.</p>
+    </div>
+    <div class="scale" role="list">
+      <div class="sc" role="listitem"><span class="w" data-i18n="sc1_w">가볍다</span><h3 data-i18n="sc1_h">명함 한 장</h3><p data-i18n="sc1_p">이름과 연락처까지. 무엇을 잘하는지, 왜 이 사람이어야 하는지는 담기 어렵습니다.</p></div>
+      <div class="sc on" role="listitem"><span class="w" data-i18n="sc2_w">딱 맞다</span><h3 data-i18n="sc2_h">비즈홈</h3><p data-i18n="sc2_p">소개·경력·서비스·리퍼럴을 한 페이지에. 링크 하나로 건네고, 3~5영업일이면 완성됩니다.</p></div>
+      <div class="sc" role="listitem"><span class="w" data-i18n="sc3_w">무겁다</span><h3 data-i18n="sc3_h">회사 홈페이지</h3><p data-i18n="sc3_p">기획·디자인·개발·관리까지. 대표 한 사람을 소개하기엔 시간과 비용이 큽니다.</p></div>
     </div>
     <div class="benefits">
       <div class="bf"><span class="num">01</span><h3 data-i18n="b1_h">템플릿이 아닌 1:1 맞춤</h3><p data-i18n="b1_p">업종·성향·고객층을 듣고 대표가 직접 디자인합니다. 같은 업종이어도 같은 비즈홈은 없습니다.</p></div>
@@ -391,8 +403,8 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
     </div>
 
     <div class="compare-wrap">
-      <h3 data-i18n="cmp_h">같은 홈페이지, 다른 방식</h3>
-      <p data-i18n="cmp_sub">외주 플랫폼에서 개인 홈페이지를 맡기는 일반적인 경우와 비교했습니다.</p>
+      <h3 data-i18n="cmp_h">홈페이지로 맡기면 얼마일까요?</h3>
+      <p data-i18n="cmp_sub">비즈홈에 담기는 내용을 외주 플랫폼에서 개인 홈페이지로 맡기는 경우와 비교했습니다.</p>
       <div class="tbl-scroll">
         <table>
           <thead><tr><th></th><th data-i18n="c_web">일반 외주 개인 홈페이지</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
@@ -558,6 +570,16 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 // ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
 var I18N = {
 en:{
+ sc3_p:'Planning, design, development and upkeep. Too much time and cost just to introduce one leader.',
+ sc3_h:'A company website',
+ sc3_w:'Too heavy',
+ sc2_p:'Intro, career, services and referrals on one page. Shared by one link, ready in 3–5 business days.',
+ sc2_h:'BizHome',
+ sc2_w:'Just right',
+ sc1_p:'Name and contact. Hard to show what you do best or why it should be you.',
+ sc1_h:'A business card',
+ sc1_w:'Too light',
+ live:'Live BizHome sample · Seunghoon Song',
  cmp_src:'※ Market data: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong “Personal website”</a> quotes (min ₩400k · max ₩1.8M · avg ₩800k, checked Oct 2026). Varies by features and pages.',
  fh1:'1:1 planning & design',fh2:'4 languages included',fh3:'₩0 upkeep',fh4:'Done in 3–5 business days',
  r6c:'KakaoTalk preview · QR included',
@@ -570,26 +592,26 @@ en:{
  cat2:'Digital card',
  cat1:'Personal brand website',
  nav_apps:'Apps',nav_why:'BizHome',nav_price:'Pricing',nav_process:'Process',nav_cta:'Apply',
- hero_tag:'Personal brand website · BizHome',
- hero_h:'A brand website<br/><span class="hl">built for one leader: you.</span>',
- hero_sub:'Clients look you up before they buy. <b>BizHome</b> is your official website showing who you are, what you do best and whom you have helped. Let one address build trust first.',
+ hero_tag:'Between a card and a website · BizHome',
+ hero_h:'A card isn’t enough,<br/>a website feels too much.<br/><span class="hl">BizHome.</span>',
+ hero_sub:'The story a single card can’t hold, without the weight of a full website. <b>BizHome</b> puts your intro, career, services and referrals on one personal brand page. Hand over one link — they truly get to know you.',
  hero_btn1:'See BizHome pricing',hero_btn2:'See our work',
  st1:'Monthly<br/>hosting cost',st2:'Languages<br/>included',st3:'Business days<br/>to build',st4:'Business day<br/>to reply',
  apps_h:'Services by TM LINK',apps_sub:'BizHome, our flagship service, plus apps you can use separately. All built and run by TM LINK.',
- app_badge:'Flagship',app1_n:'BizHome',app1_d:'A personal brand website planned and designed one-on-one for you. Career, services and referrals in one place.',app1_t:'₩150k · ₩250k →',
+ app_badge:'Flagship',app1_n:'BizHome',app1_d:'Deeper than a card, lighter than a website. A personal brand page planned and designed one-on-one for you.',app1_t:'₩150k · ₩250k →',
  app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'From ₩5,900 ↗',
  app3_n:'CardBook',app3_d:'Keep every card you receive in one place and find people by whatever you remember.',app3_t:'Try free ↗',
  app4_n:'MANDU',app4_d:'Different languages, one conversation. A messenger with real-time translation in 14 languages.',app4_t:'Try messenger ↗',
  app5_n:'JUJUDOSA',app5_d:'AI saju (Korean fortune) counseling: daily fortune, compatibility and timely advice.',app5_t:'Start ↗',
- why_h:'A website that builds trust<br/>at first sight.',
- why_sub:'The first thing a referred client does is look you up. Whether you have an official website to show decides the first deal.',
+ why_h:'Deeper than a card,<br/>lighter than a website.',
+ why_sub:'As easy to hand over as a card, as complete as a website. Exactly what a referred client needs when they look you up.',
  b1_h:'One-on-one, not a template',b1_p:'Designed personally after hearing your industry, style and customers. No two BizHomes are alike.',
  b2_h:'One link says it all',b2_p:'Optimized KakaoTalk preview with your photo and intro. A QR code is included.',
  b3_h:'"Please introduce me to…"',b3_p:'A partner & referral section built on the BNI model, so people know exactly whom to connect you with.',
  b4_h:'4 languages built in',b4_p:'Korean, English, Chinese and Japanese switch by default — ready for overseas buyers.',
  b5_h:'₩0 upkeep',b5_p:'Runs with no server or hosting fees. No monthly maintenance bills after launch.',
  b6_h:'Changes? Just update',b6_p:'New service, award or news? Updates from ₩10,000. The same address always shows your latest.',
- cmp_h:'Same website, different approach',cmp_sub:'Compared with ordering a personal website from a typical freelance marketplace.',
+ cmp_h:'What would it cost as a website?',cmp_sub:'Compared with ordering the same content as a personal website on a freelance marketplace.',
  c_biz:'BizHome',
  
  r2:'Price',r2a:'<b class="mkt">Avg. ₩800k</b><span class="range">₩400k – ₩1.8M</span>',r2c:'<b class="our">₩150k · ₩250k</b><span class="range">Fixed price · scope published per plan</span>',
@@ -618,6 +640,16 @@ en:{
  ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
 },
 zh:{
+ sc3_p:'策划、设计、开发、维护。只为介绍一位代表，时间和成本都太高。',
+ sc3_h:'公司官网',
+ sc3_w:'太重',
+ sc2_p:'介绍·经历·服务·引荐尽在一页。一个链接即可分享，3–5 个工作日完成。',
+ sc2_h:'BizHome',
+ sc2_w:'刚刚好',
+ sc1_p:'只有姓名和联系方式，难以说明您擅长什么、为什么选您。',
+ sc1_h:'一张名片',
+ sc1_w:'太轻',
+ live:'真实 BizHome 案例 · 宋承勋',
  cmp_src:'※ 行情来源：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「个人网站制作」</a>报价数据（最低 40万 · 最高 180万 · 平均 80万韩元，2026年10月查询）。因功能和页数而异。',
  fh1:'一对一策划·设计',fh2:'默认 4 种语言',fh3:'零维护费',fh4:'3–5 个工作日完成',
  r6c:'默认提供 KakaoTalk 预览 · 二维码',
@@ -630,26 +662,26 @@ zh:{
  cat2:'数字名片',
  cat1:'个人品牌官网',
  nav_apps:'应用',nav_why:'BizHome',nav_price:'价格',nav_process:'流程',nav_cta:'申请',
- hero_tag:'个人品牌官网 · BizHome',
- hero_h:'为您一人打造的<br/><span class="hl">品牌官网。</span>',
- hero_sub:'客户在合作前会先搜索您。<b>BizHome</b> 是展示您是谁、擅长什么、帮助过哪些客户的官方网站。用一个网址先传递信任。',
+ hero_tag:'名片与官网之间 · BizHome',
+ hero_h:'名片不够用，<br/>官网又太重。<br/><span class="hl">BizHome。</span>',
+ hero_sub:'一张名片装不下的故事，不必做成沉重的官网。<b>BizHome</b> 把您的介绍、经历、服务和引荐放在一页个人品牌主页上。递出一个链接，对方就能真正了解您。',
  hero_btn1:'查看 BizHome 价格',hero_btn2:'查看案例',
  st1:'每月<br/>托管费用',st2:'默认<br/>支持语言',st3:'平均制作<br/>工作日',st4:'申请后<br/>工作日内回复',
  apps_h:'TM LINK 的服务',apps_sub:'核心服务 BizHome，以及可单独使用的应用。全部由 TM LINK 自主开发运营。',
- app_badge:'核心服务',app1_n:'BizHome',app1_d:'为您一对一策划设计的个人品牌官网。经历、服务、引荐尽在一处。',app1_t:'15万 · 25万韩元 →',
+ app_badge:'核心服务',app1_n:'BizHome',app1_d:'比名片更深入，比官网更轻巧的个人品牌主页。为您一对一策划设计。',app1_t:'15万 · 25万韩元 →',
  app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'5,900韩元起 ↗',
  app3_n:'名片册',app3_d:'把收到的名片集中保存，凭记忆片段即可快速找到。',app3_t:'免费使用 ↗',
  app4_n:'MANDU',app4_d:'语言不同，对话如一。支持 14 种语言实时翻译的聊天应用。',app4_t:'体验 ↗',
  app5_n:'JUJUDOSA',app5_d:'AI 四柱咨询：解读命盘，给出当下的建议。今日运势、合婚尽在其中。',app5_t:'开始咨询 ↗',
- why_h:'一看就产生信任的<br/>专属官网。',
- why_sub:'被引荐的人第一件事就是搜索您。有没有可展示的官网，决定了第一笔合作。',
+ why_h:'比名片更深入，<br/>比官网更轻巧。',
+ why_sub:'像名片一样容易递出，像官网一样内容充足。正好满足被引荐者搜索您时所需。',
  b1_h:'一对一定制，而非模板',b1_p:'了解您的行业、风格和客户后亲自设计。没有两个相同的 BizHome。',
  b2_h:'一个链接完成介绍',b2_p:'优化 KakaoTalk 预览，照片与简介即刻显示，并附赠二维码。',
  b3_h:'"请帮我介绍这样的人"',b3_p:'按 BNI 引荐模式设计的伙伴·推荐板块，对方立刻知道该为您连接谁。',
  b4_h:'内置 4 种语言',b4_p:'韩、英、中、日一键切换，可直接发给海外买家和外国客户。',
  b5_h:'零维护费',b5_p:'无需服务器和托管费用即可持续运营，上线后没有每月管理费。',
  b6_h:'有变化就修改',b6_p:'有新服务、获奖或消息时，1 万韩元起即可更新，同一网址始终展示最新面貌。',
- cmp_h:'同样是官网，方式不同',cmp_sub:'与在外包平台定制个人网站的一般情况比较。',
+ cmp_h:'如果做成官网要多少钱？',cmp_sub:'与在外包平台把同样内容做成个人网站的情况比较。',
  c_biz:'BizHome',
  
  r2:'价格',r2a:'<b class="mkt">平均 80万韩元</b><span class="range">40万 ~ 180万韩元</span>',r2c:'<b class="our">15万 · 25万韩元</b><span class="range">明码标价 · 各方案内容公开</span>',
@@ -678,6 +710,16 @@ zh:{
  ft_by:'宋承勋 · T.M Link · BNI Pioneer'
 },
 ja:{
+ sc3_p:'企画・デザイン・開発・管理まで。代表一人を紹介するには時間も費用も大きすぎます。',
+ sc3_h:'会社のホームページ',
+ sc3_w:'重すぎる',
+ sc2_p:'紹介・経歴・サービス・リファーラルを一ページに。リンク一つで渡せて、3〜5 営業日で完成。',
+ sc2_h:'BizHome',
+ sc2_w:'ちょうどいい',
+ sc1_p:'名前と連絡先まで。何が得意か、なぜこの人なのかは伝えにくい。',
+ sc1_h:'名刺一枚',
+ sc1_w:'軽すぎる',
+ live:'実際の BizHome サンプル · ソン・スンフン',
  cmp_src:'※ 相場の出典：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「個人ホームページ制作」</a>見積データ（最低 40万 · 最高 180万 · 平均 80万ウォン、2026年10月確認）。機能・ページ数により異なります。',
  fh1:'1:1 企画・デザイン',fh2:'4 言語標準',fh3:'維持費 0 円',fh4:'3〜5 営業日で完成',
  r6c:'カカオトークプレビュー · QR 標準',
@@ -690,26 +732,26 @@ ja:{
  cat2:'デジタル名刺',
  cat1:'パーソナルブランドサイト',
  nav_apps:'アプリ',nav_why:'BizHome',nav_price:'料金',nav_process:'制作の流れ',nav_cta:'申し込む',
- hero_tag:'パーソナルブランドサイト · BizHome',
- hero_h:'代表一人のための<br/><span class="hl">ブランドホームページ。</span>',
- hero_sub:'お客様は取引の前にまず検索します。<b>BizHome</b> は、あなたが誰で、何が得意で、どんな顧客を助けてきたかを一か所にまとめた公式ホームページです。アドレス一つで先に信頼を届けましょう。',
+ hero_tag:'名刺とホームページの間 · BizHome',
+ hero_h:'名刺では足りず、<br/>ホームページは重すぎる時。<br/><span class="hl">BizHome。</span>',
+ hero_sub:'名刺一枚には収まらない話を、ホームページほど重くなく。<b>BizHome</b> は紹介・経歴・サービス・リファーラルを一ページにまとめたパーソナルブランドサイトです。渡すのはリンク一つ、受け取った人はあなたをきちんと知ることができます。',
  hero_btn1:'BizHome の料金を見る',hero_btn2:'制作事例を見る',
  st1:'毎月の<br/>ホスティング費',st2:'標準対応<br/>言語',st3:'平均制作<br/>営業日',st4:'申込後の返信<br/>営業日以内',
  apps_h:'TM LINK のサービス',apps_sub:'代表サービスの BizHome と、必要に応じて別に使えるアプリ。すべて TM LINK が開発・運営しています。',
- app_badge:'代表サービス',app1_n:'BizHome',app1_d:'代表一人のために 1:1 で企画・デザインするパーソナルブランドサイト。経歴・サービス・紹介まで一か所に。',app1_t:'15万 · 25万ウォン →',
+ app_badge:'代表サービス',app1_n:'BizHome',app1_d:'名刺より深く、ホームページより軽いパーソナルブランドサイト。代表一人のために 1:1 で企画・デザイン。',app1_t:'15万 · 25万ウォン →',
  app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'5,900ウォンから ↗',
  app3_n:'カードブック',app3_d:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',app3_t:'無料で使う ↗',
  app4_n:'MANDU',app4_d:'言葉が違っても会話は一つに。14 言語をリアルタイム自動翻訳するメッセンジャー。',app4_t:'体験する ↗',
  app5_n:'JUJUDOSA',app5_d:'命式を読み、今の時期に合ったアドバイスを届ける AI 四柱推命相談。今日の運勢・相性も。',app5_t:'相談を始める ↗',
- why_h:'一目で信頼が生まれる<br/>自分だけのホームページ。',
- why_sub:'紹介された人が最初にすることは、あなたを検索すること。その時に見せられる公式サイトがあるかが、最初の取引を決めます。',
+ why_h:'名刺より深く、<br/>ホームページより軽く。',
+ why_sub:'渡すのは名刺のように簡単に、見せるのはホームページのように十分に。紹介された人が検索した時にちょうど必要な分だけ。',
  b1_h:'テンプレートではなく 1:1',b1_p:'業種・スタイル・顧客層を伺い代表が直接デザイン。同じ BizHome は二つとありません。',
  b2_h:'リンク一つで紹介完了',b2_p:'カカオトークのプレビューに写真と紹介がすぐ表示。QR コードもお渡しします。',
  b3_h:'「こんな方を紹介してください」',b3_p:'BNI のリファーラル構造をそのまま反映したパートナー・推薦セクション。',
  b4_h:'4 言語を標準搭載',b4_p:'韓・英・中・日の切替ボタン付き。海外バイヤーや外国人顧客にもそのまま送れます。',
  b5_h:'維持費 0 円',b5_p:'サーバー・ホスティング費用なしで運営を続けられます。公開後の月額管理費はありません。',
  b6_h:'変わったら直せばいい',b6_p:'新サービス・受賞・お知らせがあれば 1 万ウォンから更新。同じアドレスが常に最新の姿を見せます。',
- cmp_h:'同じホームページ、違う作り方',cmp_sub:'外注プラットフォームで個人ホームページを依頼する一般的なケースと比べました。',
+ cmp_h:'ホームページで依頼したらいくら？',cmp_sub:'同じ内容を外注プラットフォームで個人ホームページとして依頼する場合と比べました。',
  c_biz:'BizHome',
  
  r2:'価格',r2a:'<b class="mkt">平均 80万ウォン</b><span class="range">40万 〜 180万ウォン</span>',r2c:'<b class="our">15万 · 25万ウォン</b><span class="range">定額制 · プラン別の内容を公開</span>',
