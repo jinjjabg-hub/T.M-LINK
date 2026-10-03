@@ -71,6 +71,9 @@ input::placeholder,textarea::placeholder{color:#8a94a3}
 .invalid input,.invalid .plans .plan,.invalid .chip span{border-color:var(--error)}
 .agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);cursor:pointer}
 .agree input{width:20px;height:20px;margin-top:2px;accent-color:var(--blue);flex-shrink:0}
+.bni-ok{display:flex;gap:8px;align-items:flex-start;margin-top:10px;padding:12px 14px;border-radius:12px;background:rgba(0,102,255,.07);border:1px solid rgba(0,102,255,.25);color:var(--blue-text);font-size:14px;font-weight:700}
+.bni-ok[hidden]{display:none}
+.bni-ok svg{width:18px;height:18px;flex-shrink:0;margin-top:2px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 .bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom))}
@@ -162,7 +165,7 @@ input::placeholder,textarea::placeholder{color:#8a94a3}
       </div>
 
       <fieldset id="f-bni">
-        <legend>BNI 멤버이신가요?<span class="req" aria-hidden="true">*</span><span class="opt">BNI 멤버는 특별가 적용</span></legend>
+        <legend>BNI 멤버이신가요?<span class="req" aria-hidden="true">*</span></legend>
         <div class="chips">
           <label class="chip"><input type="radio" name="bni" value="예"/><span>네, BNI 멤버예요</span></label>
           <label class="chip"><input type="radio" name="bni" value="아니오"/><span>아니요</span></label>
@@ -173,8 +176,8 @@ input::placeholder,textarea::placeholder{color:#8a94a3}
       <div class="field" id="f-chapter" hidden>
         <label class="lbl" for="chapter">소속 챕터<span class="req" aria-hidden="true">*</span></label>
         <input type="text" id="chapter" name="chapter" placeholder="예: BNI 파이오니어"/>
-        <p class="help">확인 후 BNI 특별가로 안내해 드려요.</p>
-        <p class="err" role="alert">특별가 확인을 위해 소속 챕터를 적어주세요.</p>
+        <p class="bni-ok" id="bniOk" hidden aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>BNI 멤버 특별가 적용 대상입니다. 상담 때 특별가로 안내해 드려요.</p>
+        <p class="err" role="alert">소속 챕터를 적어주세요.</p>
       </div>
 
       <div class="field">
@@ -272,16 +275,20 @@ if (preset) {
   if (r) r.checked = true;
 }
 const isBni = () => (form.querySelector('input[name=bni]:checked') || {}).value === '예';
+// 특별가 문구는 BNI 멤버가 챕터까지 적었을 때만 노출 (일반 고객에게는 보이지 않음)
+const bniConfirmed = () => isBni() && $('chapter').value.trim().length > 0;
 function updateSummary() {
   const r = form.querySelector('input[name=plan]:checked');
-  $('sumPlan').textContent = (r ? r.value : '플랜을 선택하세요') + (isBni() && r && r.dataset.key !== 'consult' ? ' · BNI 특별가 안내' : '');
+  $('sumPlan').textContent = (r ? r.value : '플랜을 선택하세요') + (bniConfirmed() && r && r.dataset.key !== 'consult' ? ' · BNI 특별가' : '');
   if (r) $('f-plan').classList.remove('invalid');
   // BNI 멤버를 고르면 챕터 칸 표시
   const bniPicked = form.querySelector('input[name=bni]:checked');
   if (bniPicked) $('f-bni').classList.remove('invalid');
   $('f-chapter').hidden = !isBni();
   if (!isBni()) $('f-chapter').classList.remove('invalid');
+  $('bniOk').hidden = !bniConfirmed();
 }
+$('chapter').addEventListener('input', updateSummary);
 form.addEventListener('change', updateSummary);
 updateSummary();
 
