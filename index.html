@@ -233,6 +233,7 @@ td .our{font-size:19px;color:var(--blue-text)}
 .plan li.hi svg{color:var(--blue-text)}
 .plan li.sep{border-top:1px dashed var(--line);padding-top:12px;margin-top:2px;color:var(--accent);font-size:13px;font-weight:700}
 .plan .btn{width:100%}
+.beta{font-style:normal;font-size:11.5px;font-weight:800;color:var(--blue-text);background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.3);padding:2px 8px;border-radius:99px;margin-left:auto;white-space:nowrap;align-self:flex-start;flex-shrink:0;line-height:1.5}
 .price-notes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .price-notes span{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:7px 13px;border-radius:99px}
 .gallery{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;max-width:960px;padding:20px 24px;border-radius:var(--radius);border:1px solid rgba(0,140,170,0.14);background:linear-gradient(90deg,rgba(0,140,170,0.065),rgba(0,140,170,0.014))}
@@ -366,7 +367,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <div class="stats">
         <div class="stat"><b>0<small style="font-size:15px">원</small></b><span data-i18n="st1">매달 내는<br/>호스팅 유지비</span></div>
         <div class="stat"><b>4</b><span data-i18n="st2">기본 지원<br/>언어</span></div>
-        <div class="stat"><b>3~5</b><span data-i18n="st3">평균 제작<br/>영업일</span></div>
+        <div class="stat"><b>3<small style="font-size:15px">일</small></b><span data-i18n="st3">제작 기간<br/>(스탠다드)</span></div>
         <div class="stat"><b>1</b><span data-i18n="st4">신청 후 회신<br/>영업일 이내</span></div>
       </div>
     </div>
@@ -401,7 +402,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
           <li data-i18n="fh1">1:1 맞춤 기획·디자인</li>
           <li data-i18n="fh2">4개 국어 기본</li>
           <li data-i18n="fh3">유지비 0원</li>
-          <li data-i18n="fh4">3~5영업일 완성</li>
+          <li data-i18n="fh4">약 3일 완성</li>
         </ul>
         <span class="tag" data-i18n="app1_t">15만원 · 25만원 →</span>
       </a>
@@ -447,7 +448,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
     </div>
     <div class="scale" role="list">
       <div class="sc" role="listitem"><span class="w" data-i18n="sc1_w">가볍다</span><h3 data-i18n="sc1_h">명함 한 장</h3><p data-i18n="sc1_p">이름과 연락처까지. 무엇을 잘하는지, 왜 이 사람이어야 하는지는 담기 어렵습니다.</p></div>
-      <div class="sc on" role="listitem"><span class="w" data-i18n="sc2_w">딱 맞다</span><h3 data-i18n="sc2_h">비즈홈</h3><p data-i18n="sc2_p">소개·경력·서비스·리퍼럴을 한 페이지에. 링크 하나로 건네고, 3~5영업일이면 완성됩니다.</p></div>
+      <div class="sc on" role="listitem"><span class="w" data-i18n="sc2_w">딱 맞다</span><h3 data-i18n="sc2_h">비즈홈</h3><p data-i18n="sc2_p">소개·경력·서비스·리퍼럴을 한 페이지에. 링크 하나로 건네고, 약 3일이면 완성됩니다.</p></div>
       <div class="sc" role="listitem"><span class="w" data-i18n="sc3_w">무겁다</span><h3 data-i18n="sc3_h">회사 홈페이지</h3><p data-i18n="sc3_p">기획·디자인·개발·관리까지. 대표 한 사람을 소개하기엔 시간과 비용이 큽니다.</p></div>
     </div>
     <div class="benefits">
@@ -456,7 +457,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <div class="bf"><span class="num">03</span><h3 data-i18n="b3_h">"이런 분을 소개해 주세요"</h3><p data-i18n="b3_p">BNI 리퍼럴 구조를 그대로 담은 파트너·추천 섹션. 받은 사람이 누구를 연결해줘야 할지 바로 압니다.</p></div>
       <div class="bf"><span class="num">04</span><h3 data-i18n="b4_h">4개 국어 자동 지원</h3><p data-i18n="b4_p">한국어·영어·중국어·일본어 전환 버튼 기본 탑재. 해외 바이어, 외국인 고객에게도 그대로 보냅니다.</p></div>
       <div class="bf"><span class="num">05</span><h3 data-i18n="b5_h">유지비 0원</h3><p data-i18n="b5_p">서버·호스팅 비용 없이 계속 운영됩니다. 만든 뒤에 매달 나가는 관리비가 없습니다.</p></div>
-      <div class="bf"><span class="num">06</span><h3 data-i18n="b6_h">바뀌면 고치면 됩니다</h3><p data-i18n="b6_p">새 서비스·수상·소식이 생기면 1만원부터 업데이트. 같은 주소가 늘 최신 모습을 보여줍니다.</p></div>
+      <div class="bf"><span class="num">06</span><h3 data-i18n="b6_h">문구는 언제든 바로</h3><p data-i18n="b6_p">연락처·직함·소개글은 요청하고 기다릴 필요 없이 수정 버튼 하나로 바로 바뀝니다. 영·일·중은 자동 번역, 사진·디자인은 TM LINK가 맡습니다.</p></div>
     </div>
 
     <div class="compare-wrap">
@@ -467,7 +468,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
           <thead><tr><th></th><th data-i18n="c_web">일반 외주 개인 홈페이지</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
           <tbody>
             <tr><th data-i18n="r2">가격</th><td data-i18n="r2a"><b class="mkt">평균 80만원</b><span class="range">40만 ~ 180만원</span></td><td class="biz" data-i18n="r2c"><b class="our">15만원 · 25만원</b><span class="range">정찰제 · 플랜별 포함 범위 공개</span></td></tr>
-            <tr><th data-i18n="r3">진행 방식</th><td data-i18n="r3a">기획 → 디자인 → 개발 단계별 진행</td><td class="biz" data-i18n="r3c">1:1 상담 후 3~5영업일 완성 (PRO 초안 2일)</td></tr>
+            <tr><th data-i18n="r3">진행 방식</th><td data-i18n="r3a">기획 → 디자인 → 개발 단계별 진행</td><td class="biz" data-i18n="r3c">1:1 상담 후 약 3일 완성</td></tr>
             <tr><th data-i18n="r4">유지비</th><td data-i18n="r4a">호스팅·도메인·관리비 별도</td><td class="biz" data-i18n="r4c">호스팅 0원</td></tr>
             <tr><th data-i18n="r5">다국어</th><td data-i18n="r5a">언어마다 추가 작업</td><td class="biz" data-i18n="r5c">4개 국어 기본 포함</td></tr>
             <tr><th data-i18n="r6">공유</th><td data-i18n="r6a">모바일·카톡 최적화는 별도 작업</td><td class="biz" data-i18n="r6c">카톡 미리보기 · QR 기본 제공</td></tr>
@@ -485,46 +486,46 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
     <div class="sec-head">
       <span class="kicker">Pricing</span>
       <h2 data-i18n="pr_h">비즈홈 맞춤 제작, 두 가지만 고르세요.</h2>
-      <p data-i18n="pr_sub">둘 다 템플릿 없이 1:1로 만듭니다. 차이는 "얼마나 많이 보여주고, 얼마나 빨리 받느냐"입니다.</p>
+      <p data-i18n="pr_sub">둘 다 템플릿 없이 1:1로 만듭니다. 차이는 "소개에서 멈추느냐, 영업까지 하느냐"입니다.</p>
     </div>
 
     <div class="plans">
       <div class="plan">
-        <span class="pn">CUSTOM</span>
+        <span class="pn">STANDARD</span>
         <div class="price">150,000<small>원</small></div>
-        <p class="pd" data-i18n="p1_d">나를 제대로 보여주는 첫 개인 홈페이지</p>
+        <p class="pd" data-i18n="p1_d">나와 내 일을 제대로 소개하는 비즈홈</p>
         <ul>
           <li><svg><use href="#i-check"/></svg><span data-i18n="p1_1">1:1 맞춤 디자인 (템플릿 X)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_2">4개 국어 자동 번역 (한·영·중·일)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_3">AI 프로필 사진 (휴대폰 사진 1장이면 OK)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_4">소개글 + 경력 섹션</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_5">파트너·추천(리퍼럴) 섹션</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_6">이미지 슬라이드 최대 4장</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_7">QR 코드 · 카카오톡 미리보기 최적화</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_8">무료 호스팅 (유지비 0원)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_9">수정 2회 (완성 후 1주일 내)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_10">제작 기간 3~5 영업일</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_2">AI 이미지 2장 — 히어로 이미지 + 프로필 사진</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_3">소개 · Why · 차별점 · 경력 · 서비스 섹션</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_4">"이런 분을 소개해 주세요" 리퍼럴 섹션</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_5">포트폴리오 (직종에 필요한 경우)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_6">4개 국어 (한·영·일·중)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_7">연락처 저장 · 공유 · 카드북 저장 · 만두 연결 · QR</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_8">방문·클릭 통계 ("카드 현황 보기")</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_9">✏️ 언제든 바로 고치는 문구 수정 — 요청하고 기다릴 필요 없이 수정 버튼 하나로, 영·일·중은 자동 번역</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_10">사진·디자인 변경은 TM LINK가 맡아서</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_11">무료 호스팅 (유지비 0원)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_12">제작 기간 약 3일</span></li>
         </ul>
-        <a class="btn btn-line" href="apply/?plan=custom"><span data-i18n="p1_btn">15만원 플랜 신청하기</span><svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="apply/?plan=custom"><span data-i18n="p1_btn">스탠다드 신청하기</span><svg><use href="#i-arrow"/></svg></a>
       </div>
 
       <div class="plan pro">
-        <span class="best" data-i18n="p2_best">사업 홍보까지 한 번에</span>
-        <span class="pn">CUSTOM PRO</span>
+        <span class="best" data-i18n="p2_best">소개를 넘어 영업까지</span>
+        <span class="pn">PREMIUM</span>
         <div class="price">250,000<small>원</small></div>
-        <p class="pd" data-i18n="p2_d">보여주는 것을 넘어 고객이 문의까지 하는 홈페이지</p>
+        <p class="pd" data-i18n="p2_d">보여주고, 알리고, 문의까지 받는 비즈홈</p>
         <ul>
-          <li class="sep" data-i18n="p2_0">15만원 플랜 전부 포함 +</li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_1">서비스·제품 소개 섹션 (가격표·포트폴리오)</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_2">AI 홍보 영상 1개 제작</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_3">예약·문의 폼 → 내 구글시트 자동 접수</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_4">언어 10개 중 4개 선택 (추가 1개당 +1만원)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_5">이미지 슬라이드 최대 8장</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_6">MANDU 통번역 상담 버튼 연결</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_7">우선 제작 — 초안 2영업일 이내</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_8">수정 넉넉히: 1개월 내 3회 + 3개월 내 1회</span></li>
+          <li class="sep" data-i18n="p2_0">스탠다드 전부 포함 +</li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_1">🎬 히어로 AI 영상 — 열자마자 움직이는 첫 화면</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_2">📣 내 소식판 — 상품·사례·소식을 휴대폰으로 바로 올리기</span> <em class="beta" data-i18n="beta">시범 운영</em></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_3">📩 문의 폼 + 즉시 알림 — 비즈홈이 영업 도구로</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_4">📊 월간 방문 리포트 — 몇 명이 보고 무엇을 눌렀는지</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_5">🛠 1년 이미지·디자인 수정 포함 (이미지 교체 2회 + 디자인 리뉴얼 1회 · 11.5만원 상당)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_6">🌏 언어 최대 6개 + 고객 후기 섹션</span></li>
         </ul>
-        <a class="btn btn-primary" href="apply/?plan=pro"><span data-i18n="p2_btn">25만원 플랜 신청하기</span><svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-primary" href="apply/?plan=pro"><span data-i18n="p2_btn">프리미엄 신청하기</span><svg><use href="#i-arrow"/></svg></a>
       </div>
     </div>
 
@@ -532,6 +533,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <span data-i18n="n1">부가세(VAT 10%) 별도</span>
       <span data-i18n="n2">결제 확인 후 제작 시작</span>
       <span data-i18n="n4">10개 이상 단체·기업은 별도 견적</span>
+      <span data-i18n="n5">개인 도메인 연결은 별도 문의</span>
     </div>
 
     <a class="gallery" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener">
@@ -567,7 +569,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <p data-i18n="ac_sub">비즈홈 고객 전용 업데이트 요금입니다.</p>
     </div>
     <div class="care">
-      <div><small data-i18n="u1">텍스트 변경</small><b>10,000<span style="font-size:14px;color:var(--muted)">원</span></b><span data-i18n="u1d">연락처·직함 등</span></div>
+      <div><small data-i18n="u1">문구 수정</small><b data-i18n="u1v">무료</b><span data-i18n="u1d">수정 버튼으로 바로 (월 1회)</span></div>
       <div><small data-i18n="u2">사진·이미지 교체</small><b>20,000<span style="font-size:14px;color:var(--muted)">원</span></b><span data-i18n="u2d">프로필·커버 등</span></div>
       <div><small data-i18n="u3">디자인 리뉴얼</small><b data-i18n="u3v">50% 할인</b><span data-i18n="u3d">구조·레이아웃 변경</span></div>
       <div><small data-i18n="u4">전면 재제작</small><b data-i18n="u4v">30% 할인</b><span data-i18n="u4d">업종·브랜드 전환</span></div>
@@ -822,11 +824,33 @@ var curLang = 'ko', curApp = null;
 // ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
 var I18N = {
 en:{
+ u1v:'Free',
+ n5:'Custom domain: ask separately',
+ beta:'Pilot',
+ p2_6:'🌏 Up to 6 languages + customer reviews',
+ p2_5:'🛠 1 year of image & design updates (2 image swaps + 1 redesign · worth ₩115k)',
+ p2_4:'📊 Monthly visit report — who viewed and what they tapped',
+ p2_3:'📩 Inquiry form + instant alerts — your BizHome sells for you',
+ p2_2:'📣 My News Board — post products, cases and news from your phone',
+ p2_1:'🎬 Hero AI video — a first screen that moves',
+ p2_0:'Everything in Standard +',
+ p1_12:'Ready in about 3 days',
+ p1_11:'Free hosting (₩0 upkeep)',
+ p1_10:'Photo & design changes handled by TM LINK',
+ p1_9:'✏️ Edit your text anytime — no waiting on requests, one edit button; EN·JP·CN auto-translated',
+ p1_8:'Visit & click stats (“Card stats”)',
+ p1_7:'Save contact · Share · Save to CardBook · MANDU · QR',
+ p1_6:'4 languages (KR·EN·JP·CN)',
+ p1_5:'Portfolio (when your field needs it)',
+ p1_4:'“Please introduce me to…” referral section',
+ p1_3:'Intro · Why · Difference · Career · Services sections',
+ p1_2:'2 AI images — hero image + profile photo',
+ p1_1:'1:1 custom design (no templates)',
  hint:'Scroll it yourself with your mouse',
  sc3_p:'Planning, design, development and upkeep. Too much time and cost just to introduce one leader.',
  sc3_h:'A company website',
  sc3_w:'Too heavy',
- sc2_p:'Intro, career, services and referrals on one page. Shared by one link, ready in 3–5 business days.',
+ sc2_p:'Intro, career, services and referrals on one page. Shared by one link, ready in about 3 days.',
  sc2_h:'BizHome',
  sc2_w:'Just right',
  sc1_p:'Name and contact. Hard to show what you do best or why it should be you.',
@@ -834,7 +858,7 @@ en:{
  sc1_w:'Too light',
  live:'Live BizHome sample · Seunghoon Song',
  cmp_src:'※ Market data: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong “Personal website”</a> quotes (min ₩400k · max ₩1.8M · avg ₩800k, checked Oct 2026). Varies by features and pages.',
- fh1:'1:1 planning & design',fh2:'4 languages included',fh3:'₩0 upkeep',fh4:'Done in 3–5 business days',
+ fh1:'1:1 planning & design',fh2:'4 languages included',fh3:'₩0 upkeep',fh4:'Ready in ~3 days',
  r6c:'KakaoTalk preview · QR included',
  r6a:'Mobile & KakaoTalk optimization extra',
  r6:'Sharing',
@@ -849,7 +873,7 @@ en:{
  hero_h:'A card isn’t enough,<br/>a website feels too much.<br/><span class="hl">BizHome.</span>',
  hero_sub:'The story a single card can’t hold, without the weight of a full website. <b>BizHome</b> puts your intro, career, services and referrals on one personal brand page. Hand over one link — they truly get to know you.',
  hero_btn1:'See BizHome pricing',hero_btn2:'See our work',
- st1:'Monthly<br/>hosting cost',st2:'Languages<br/>included',st3:'Business days<br/>to build',st4:'Business day<br/>to reply',
+ st1:'Monthly<br/>hosting cost',st2:'Languages<br/>included',st3:'Build time<br/>(Standard)',st4:'Business day<br/>to reply',
  apps_h:'Services by TM LINK',apps_sub:'BizHome, our flagship service, plus apps you can use separately. All built and run by TM LINK.',
  app_badge:'Flagship',app1_n:'BizHome',app1_d:'Deeper than a card, lighter than a website. A personal brand page planned and designed one-on-one for you.',app1_t:'₩150k · ₩250k →',
  app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'From ₩5,900 →',
@@ -863,19 +887,19 @@ en:{
  b3_h:'"Please introduce me to…"',b3_p:'A partner & referral section built on the BNI model, so people know exactly whom to connect you with.',
  b4_h:'4 languages built in',b4_p:'Korean, English, Chinese and Japanese switch by default — ready for overseas buyers.',
  b5_h:'₩0 upkeep',b5_p:'Runs with no server or hosting fees. No monthly maintenance bills after launch.',
- b6_h:'Changes? Just update',b6_p:'New service, award or news? Updates from ₩10,000. The same address always shows your latest.',
+ b6_h:'Edit text anytime',b6_p:'Phone, title or intro — no waiting on requests, one edit button changes it instantly. EN·JP·CN auto-translated; photos and design handled by TM LINK.',
  cmp_h:'What would it cost as a website?',cmp_sub:'Compared with ordering the same content as a personal website on a freelance marketplace.',
  c_biz:'BizHome',
  
  r2:'Price',r2a:'<b class="mkt">Avg. ₩800k</b><span class="range">₩400k – ₩1.8M</span>',r2c:'<b class="our">₩150k · ₩250k</b><span class="range">Fixed price · scope published per plan</span>',
- r3:'Process',r3a:'Planning → design → development in stages',r3c:'1:1 consultation, done in 3–5 business days (PRO draft in 2)',
+ r3:'Process',r3a:'Planning → design → development in stages',r3c:'1:1 consultation, ready in about 3 days',
  r4:'Upkeep',r4a:'Hosting, domain and maintenance extra',r4c:'₩0 hosting',
  r5:'Languages',r5a:'Extra work per language',r5c:'4 languages included',
- pr_h:'Custom BizHome — just pick one of two.',pr_sub:'Both are made one-on-one without templates. The difference is how much you show and how fast you get it.',
- p1_d:'Your first personal website that shows you properly',
- p1_1:'1:1 custom design (no templates)',p1_2:'Auto-translated into 4 languages (KR·EN·CN·JP)',p1_3:'AI profile photo (one phone photo is enough)',p1_4:'Intro + career section',p1_5:'Partner & referral section',p1_6:'Image slides up to 4',p1_7:'QR code · KakaoTalk preview optimization',p1_8:'Free hosting (₩0 upkeep)',p1_9:'2 revisions (within 1 week)',p1_10:'Delivered in 3–5 business days',p1_btn:'Apply for ₩150k plan',
- p2_best:'Promotion included',p2_d:'Beyond showing — a website that brings inquiries',
- p2_0:'Everything in ₩150k plan +',p2_1:'Services & products section (price list · portfolio)',p2_2:'1 AI promo video',p2_3:'Booking/inquiry form → your Google Sheet',p2_4:'Pick 4 of 10 languages (+₩10k each extra)',p2_5:'Image slides up to 8',p2_6:'MANDU translation chat button',p2_7:'Priority — draft within 2 business days',p2_8:'Generous revisions: 3 in 1 month + 1 within 3 months',p2_btn:'Apply for ₩250k plan',
+ pr_h:'Custom BizHome — just pick one of two.',pr_sub:'Both are made one-on-one without templates. The difference: stop at introducing, or go on to selling.',
+ p1_d:'A BizHome that properly introduces you and your work',
+ p1_btn:'Apply for Standard',
+ p2_best:'Beyond intro — into sales',p2_d:'Shows, announces, and brings in inquiries',
+ p2_btn:'Apply for Premium',
  n1:'VAT (10%) not included',n2:'Production starts after payment',n4:'10+ cards for teams: custom quote',
  g_h:'See real BizHomes we have made',g_p:'Opens the gallery of finished work by industry',g_btn:'View gallery',
  ps_h:'4 steps from application to launch',ps_sub:'The form takes 1 minute. We fill in the rest together.',
@@ -884,7 +908,7 @@ en:{
  s3_h:'Design · revise',s3_p:'You get a custom draft and we refine it within your plan’s revisions.',
  s4_h:'Launch · QR',s4_p:'You receive your website address and QR. Introduce yourself with one address from today.',
  ac_h:'Don’t rebuild. Update for less.',ac_sub:'Update prices for BizHome customers.',
- u1:'Text change',u1d:'Phone, title, etc.',u2:'Photo/image swap',u2d:'Profile, cover, etc.',u3:'Design renewal',u3v:'50% off',u3d:'Structure & layout',u4:'Full rebuild',u4v:'30% off',u4d:'New industry or brand',
+ u1:'Text edits',u1d:'Edit button, instantly (once a month)',u2:'Photo/image swap',u2d:'Profile, cover, etc.',u3:'Design renewal',u3v:'50% off',u3d:'Structure & layout',u4:'Full rebuild',u4v:'30% off',u4d:'New industry or brand',
  rf1:'Before production',rf1v:'100% refund',rf2:'Before 1st revision',rf2v:'50% refund',rf3:'After 1st revision',rf3v:'No refund',
  mk_q:'"I help each leader become <em>a brand of their own</em>."',
  mk_p:'Exchanging referrals at BNI, I often saw introductions stall when someone asked, "So what exactly does this person do?" and there was nothing to show. BizHome is the website that answers that question.',
@@ -893,11 +917,33 @@ en:{
  ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
 },
 zh:{
+ u1v:'免费',
+ n5:'个人域名绑定请另行咨询',
+ beta:'试运营',
+ p2_6:'🌏 最多 6 种语言 + 客户评价板块',
+ p2_5:'🛠 1 年图片·设计修改（更换图片 2 次 + 设计翻新 1 次 · 价值 11.5 万韩元）',
+ p2_4:'📊 月度访问报告——多少人看过、点了什么',
+ p2_3:'📩 咨询表单 + 即时通知——让 BizHome 成为营销工具',
+ p2_2:'📣 我的动态板——用手机随时发布产品·案例·动态',
+ p2_1:'🎬 主视觉 AI 视频——一打开就会动的首屏',
+ p2_0:'包含标准版全部内容 +',
+ p1_12:'制作周期约 3 天',
+ p1_11:'免费托管（零维护费）',
+ p1_10:'照片·设计变更由 TM LINK 负责',
+ p1_9:'✏️ 随时修改文字——无需提出请求等待，一个按钮即可修改，英·日·中自动翻译',
+ p1_8:'访问·点击统计（"名片概况"）',
+ p1_7:'保存联系人·分享·存入名片册·MANDU·二维码',
+ p1_6:'4 种语言（韩·英·日·中）',
+ p1_5:'作品集（行业需要时）',
+ p1_4:'"请帮我介绍这样的人"引荐板块',
+ p1_3:'介绍·Why·差异·经历·服务板块',
+ p1_2:'AI 图片 2 张——主视觉图 + 头像',
+ p1_1:'一对一定制设计（无模板）',
  hint:'用鼠标滚轮自己浏览',
  sc3_p:'策划、设计、开发、维护。只为介绍一位代表，时间和成本都太高。',
  sc3_h:'公司官网',
  sc3_w:'太重',
- sc2_p:'介绍·经历·服务·引荐尽在一页。一个链接即可分享，3–5 个工作日完成。',
+ sc2_p:'介绍·经历·服务·引荐尽在一页。一个链接即可分享，约 3 天完成。',
  sc2_h:'BizHome',
  sc2_w:'刚刚好',
  sc1_p:'只有姓名和联系方式，难以说明您擅长什么、为什么选您。',
@@ -905,7 +951,7 @@ zh:{
  sc1_w:'太轻',
  live:'真实 BizHome 案例 · 宋承勋',
  cmp_src:'※ 行情来源：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「个人网站制作」</a>报价数据（最低 40万 · 最高 180万 · 平均 80万韩元，2026年10月查询）。因功能和页数而异。',
- fh1:'一对一策划·设计',fh2:'默认 4 种语言',fh3:'零维护费',fh4:'3–5 个工作日完成',
+ fh1:'一对一策划·设计',fh2:'默认 4 种语言',fh3:'零维护费',fh4:'约 3 天完成',
  r6c:'默认提供 KakaoTalk 预览 · 二维码',
  r6a:'移动端·KakaoTalk 优化另计',
  r6:'分享',
@@ -920,7 +966,7 @@ zh:{
  hero_h:'名片不够用，<br/>官网又太重。<br/><span class="hl">BizHome。</span>',
  hero_sub:'一张名片装不下的故事，不必做成沉重的官网。<b>BizHome</b> 把您的介绍、经历、服务和引荐放在一页个人品牌主页上。递出一个链接，对方就能真正了解您。',
  hero_btn1:'查看 BizHome 价格',hero_btn2:'查看案例',
- st1:'每月<br/>托管费用',st2:'默认<br/>支持语言',st3:'平均制作<br/>工作日',st4:'申请后<br/>工作日内回复',
+ st1:'每月<br/>托管费用',st2:'默认<br/>支持语言',st3:'制作周期<br/>（标准版）',st4:'申请后<br/>工作日内回复',
  apps_h:'TM LINK 的服务',apps_sub:'核心服务 BizHome，以及可单独使用的应用。全部由 TM LINK 自主开发运营。',
  app_badge:'核心服务',app1_n:'BizHome',app1_d:'比名片更深入，比官网更轻巧的个人品牌主页。为您一对一策划设计。',app1_t:'15万 · 25万韩元 →',
  app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'5,900韩元起 →',
@@ -934,19 +980,19 @@ zh:{
  b3_h:'"请帮我介绍这样的人"',b3_p:'按 BNI 引荐模式设计的伙伴·推荐板块，对方立刻知道该为您连接谁。',
  b4_h:'内置 4 种语言',b4_p:'韩、英、中、日一键切换，可直接发给海外买家和外国客户。',
  b5_h:'零维护费',b5_p:'无需服务器和托管费用即可持续运营，上线后没有每月管理费。',
- b6_h:'有变化就修改',b6_p:'有新服务、获奖或消息时，1 万韩元起即可更新，同一网址始终展示最新面貌。',
+ b6_h:'文字随时修改',b6_p:'电话、职务、介绍——无需提出请求等待，一个按钮即刻修改。英·日·中自动翻译，照片·设计由 TM LINK 负责。',
  cmp_h:'如果做成官网要多少钱？',cmp_sub:'与在外包平台把同样内容做成个人网站的情况比较。',
  c_biz:'BizHome',
  
  r2:'价格',r2a:'<b class="mkt">平均 80万韩元</b><span class="range">40万 ~ 180万韩元</span>',r2c:'<b class="our">15万 · 25万韩元</b><span class="range">明码标价 · 各方案内容公开</span>',
- r3:'进行方式',r3a:'策划 → 设计 → 开发 分阶段进行',r3c:'一对一咨询后 3–5 个工作日完成（PRO 初稿 2 天）',
+ r3:'进行方式',r3a:'策划 → 设计 → 开发 分阶段进行',r3c:'一对一咨询后约 3 天完成',
  r4:'维护费',r4a:'托管·域名·管理费另计',r4c:'托管 0 元',
  r5:'多语言',r5a:'每种语言需额外制作',r5c:'默认包含 4 种语言',
- pr_h:'BizHome 定制，二选一即可。',pr_sub:'两者都无模板、一对一制作。区别在于展示多少、交付多快。',
- p1_d:'好好展示自己的第一个个人官网',
- p1_1:'一对一定制设计（无模板）',p1_2:'4 种语言自动翻译（韩·英·中·日）',p1_3:'AI 头像照片（一张手机照片即可）',p1_4:'简介 + 经历板块',p1_5:'伙伴·推荐（引荐）板块',p1_6:'图片轮播最多 4 张',p1_7:'二维码 · KakaoTalk 预览优化',p1_8:'免费托管（零维护费）',p1_9:'修改 2 次（完成后 1 周内）',p1_10:'3–5 个工作日交付',p1_btn:'申请 15万韩元方案',
- p2_best:'含业务推广',p2_d:'不止展示，让客户直接咨询的官网',
- p2_0:'包含 15万方案全部内容 +',p2_1:'服务·产品介绍板块（价目表·作品集）',p2_2:'AI 宣传视频 1 个',p2_3:'预约·咨询表单 → 自动存入您的 Google 表格',p2_4:'10 种语言任选 4 种（每加 1 种 +1万韩元）',p2_5:'图片轮播最多 8 张',p2_6:'MANDU 翻译咨询按钮',p2_7:'优先制作 — 2 个工作日内出初稿',p2_8:'充足修改：1 个月内 3 次 + 3 个月内 1 次',p2_btn:'申请 25万韩元方案',
+ pr_h:'BizHome 定制，二选一即可。',pr_sub:'两者都无模板、一对一制作。区别在于：停在介绍，还是延伸到营销。',
+ p1_d:'好好介绍您和您事业的 BizHome',
+ p1_btn:'申请标准版',
+ p2_best:'从介绍到营销',p2_d:'展示、发布，还能接收咨询的 BizHome',
+ p2_btn:'申请高级版',
  n1:'不含增值税（10%）',n2:'确认付款后开始制作',n4:'10 张以上团体·企业另行报价',
  g_h:'查看实际制作的 BizHome',g_p:'前往按行业分类的作品展示',g_btn:'查看作品',
  ps_h:'从申请到完成 4 步',ps_sub:'申请表 1 分钟完成，其余边沟通边完善。',
@@ -955,7 +1001,7 @@ zh:{
  s3_h:'设计 · 修改',s3_p:'发送定制初稿，在方案修改次数内细化。',
  s4_h:'发布 · 二维码',s4_p:'交付网址和二维码。从今天起用一个网址介绍自己。',
  ac_h:'不必重做，低价更新。',ac_sub:'BizHome 客户专享更新价格。',
- u1:'文字修改',u1d:'电话、职务等',u2:'照片·图片更换',u2d:'头像、封面等',u3:'设计翻新',u3v:'5 折',u3d:'结构·版式变更',u4:'整体重做',u4v:'7 折',u4d:'行业·品牌转换',
+ u1:'文字修改',u1d:'用修改按钮即时更新（每月 1 次）',u2:'照片·图片更换',u2d:'头像、封面等',u3:'设计翻新',u3v:'5 折',u3d:'结构·版式变更',u4:'整体重做',u4v:'7 折',u4d:'行业·品牌转换',
  rf1:'开始制作前',rf1v:'全额退款',rf2:'第一次修改前',rf2v:'退款 50%',rf3:'第一次修改后',rf3v:'不予退款',
  mk_q:'"让每位代表都成为<em>一个品牌</em>。"',
  mk_p:'在 BNI 互相引荐时，我常看到介绍在对方问"这位代表具体做什么？"时中断，因为没有可以展示的地方。BizHome 就是回答这个问题的官网。',
@@ -964,11 +1010,33 @@ zh:{
  ft_by:'宋承勋 · T.M Link · BNI Pioneer'
 },
 ja:{
+ u1v:'無料',
+ n5:'独自ドメイン連携は別途お問い合わせ',
+ beta:'試験運用',
+ p2_6:'🌏 最大 6 言語 + お客様の声セクション',
+ p2_5:'🛠 1 年間の画像・デザイン修正込み（画像差し替え 2 回 + デザインリニューアル 1 回・11.5 万ウォン相当）',
+ p2_4:'📊 月間訪問レポート — 何人が見て何を押したか',
+ p2_3:'📩 問い合わせフォーム + 即時通知 — BizHome が営業ツールに',
+ p2_2:'📣 マイお知らせボード — 商品・事例・お知らせをスマホからすぐ投稿',
+ p2_1:'🎬 ヒーロー AI 動画 — 開いた瞬間から動くトップ画面',
+ p2_0:'スタンダードの全内容 +',
+ p1_12:'制作期間 約 3 日',
+ p1_11:'無料ホスティング（維持費 0 円）',
+ p1_10:'写真・デザインの変更は TM LINK が担当',
+ p1_9:'✏️ いつでもすぐ直せる文章修正 — 依頼して待つ必要なし、修正ボタン一つで。英・日・中は自動翻訳',
+ p1_8:'訪問・クリック統計（「カード状況」）',
+ p1_7:'連絡先保存・共有・カードブック保存・MANDU 連携・QR',
+ p1_6:'4 言語（韓・英・日・中）',
+ p1_5:'ポートフォリオ（業種に必要な場合）',
+ p1_4:'「こんな方を紹介してください」リファーラルセクション',
+ p1_3:'紹介・Why・違い・経歴・サービスのセクション',
+ p1_2:'AI 画像 2 枚 — ヒーロー画像 + プロフィール写真',
+ p1_1:'1:1 オーダーメイドデザイン（テンプレートなし）',
  hint:'マウスホイールで自分でスクロール',
  sc3_p:'企画・デザイン・開発・管理まで。代表一人を紹介するには時間も費用も大きすぎます。',
  sc3_h:'会社のホームページ',
  sc3_w:'重すぎる',
- sc2_p:'紹介・経歴・サービス・リファーラルを一ページに。リンク一つで渡せて、3〜5 営業日で完成。',
+ sc2_p:'紹介・経歴・サービス・リファーラルを一ページに。リンク一つで渡せて、約 3 日で完成。',
  sc2_h:'BizHome',
  sc2_w:'ちょうどいい',
  sc1_p:'名前と連絡先まで。何が得意か、なぜこの人なのかは伝えにくい。',
@@ -976,7 +1044,7 @@ ja:{
  sc1_w:'軽すぎる',
  live:'実際の BizHome サンプル · ソン・スンフン',
  cmp_src:'※ 相場の出典：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「個人ホームページ制作」</a>見積データ（最低 40万 · 最高 180万 · 平均 80万ウォン、2026年10月確認）。機能・ページ数により異なります。',
- fh1:'1:1 企画・デザイン',fh2:'4 言語標準',fh3:'維持費 0 円',fh4:'3〜5 営業日で完成',
+ fh1:'1:1 企画・デザイン',fh2:'4 言語標準',fh3:'維持費 0 円',fh4:'約 3 日で完成',
  r6c:'カカオトークプレビュー · QR 標準',
  r6a:'モバイル・カカオトーク最適化は別作業',
  r6:'共有',
@@ -991,7 +1059,7 @@ ja:{
  hero_h:'名刺では足りず、<br/>ホームページは重すぎる時。<br/><span class="hl">BizHome。</span>',
  hero_sub:'名刺一枚には収まらない話を、ホームページほど重くなく。<b>BizHome</b> は紹介・経歴・サービス・リファーラルを一ページにまとめたパーソナルブランドサイトです。渡すのはリンク一つ、受け取った人はあなたをきちんと知ることができます。',
  hero_btn1:'BizHome の料金を見る',hero_btn2:'制作事例を見る',
- st1:'毎月の<br/>ホスティング費',st2:'標準対応<br/>言語',st3:'平均制作<br/>営業日',st4:'申込後の返信<br/>営業日以内',
+ st1:'毎月の<br/>ホスティング費',st2:'標準対応<br/>言語',st3:'制作期間<br/>（スタンダード）',st4:'申込後の返信<br/>営業日以内',
  apps_h:'TM LINK のサービス',apps_sub:'代表サービスの BizHome と、必要に応じて別に使えるアプリ。すべて TM LINK が開発・運営しています。',
  app_badge:'代表サービス',app1_n:'BizHome',app1_d:'名刺より深く、ホームページより軽いパーソナルブランドサイト。代表一人のために 1:1 で企画・デザイン。',app1_t:'15万 · 25万ウォン →',
  app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'5,900ウォンから →',
@@ -1005,19 +1073,19 @@ ja:{
  b3_h:'「こんな方を紹介してください」',b3_p:'BNI のリファーラル構造をそのまま反映したパートナー・推薦セクション。',
  b4_h:'4 言語を標準搭載',b4_p:'韓・英・中・日の切替ボタン付き。海外バイヤーや外国人顧客にもそのまま送れます。',
  b5_h:'維持費 0 円',b5_p:'サーバー・ホスティング費用なしで運営を続けられます。公開後の月額管理費はありません。',
- b6_h:'変わったら直せばいい',b6_p:'新サービス・受賞・お知らせがあれば 1 万ウォンから更新。同じアドレスが常に最新の姿を見せます。',
+ b6_h:'文章はいつでもすぐ',b6_p:'連絡先・肩書・紹介文は、依頼して待つ必要なく修正ボタン一つですぐ変わります。英・日・中は自動翻訳、写真・デザインは TM LINK が担当。',
  cmp_h:'ホームページで依頼したらいくら？',cmp_sub:'同じ内容を外注プラットフォームで個人ホームページとして依頼する場合と比べました。',
  c_biz:'BizHome',
  
  r2:'価格',r2a:'<b class="mkt">平均 80万ウォン</b><span class="range">40万 〜 180万ウォン</span>',r2c:'<b class="our">15万 · 25万ウォン</b><span class="range">定額制 · プラン別の内容を公開</span>',
- r3:'進め方',r3a:'企画 → デザイン → 開発を段階的に',r3c:'1:1 相談後 3〜5 営業日で完成（PRO 初稿 2 日）',
+ r3:'進め方',r3a:'企画 → デザイン → 開発を段階的に',r3c:'1:1 相談後 約 3 日で完成',
  r4:'維持費',r4a:'ホスティング・ドメイン・管理費が別途',r4c:'ホスティング 0 円',
  r5:'多言語',r5a:'言語ごとに追加作業',r5c:'4 言語標準搭載',
- pr_h:'BizHome オーダーメイド、選ぶのは 2 つだけ。',pr_sub:'どちらもテンプレートなしの 1:1 制作。違いは「どれだけ見せ、どれだけ早く受け取るか」。',
- p1_d:'自分をきちんと見せる初めての個人ホームページ',
- p1_1:'1:1 オーダーメイドデザイン（テンプレートなし）',p1_2:'4 言語自動翻訳（韓・英・中・日）',p1_3:'AI プロフィール写真（スマホ写真 1 枚で OK）',p1_4:'紹介文 + 経歴セクション',p1_5:'パートナー・推薦（リファーラル）セクション',p1_6:'画像スライド最大 4 枚',p1_7:'QR コード · カカオトークプレビュー最適化',p1_8:'無料ホスティング（維持費 0 円）',p1_9:'修正 2 回（完成後 1 週間以内）',p1_10:'制作期間 3〜5 営業日',p1_btn:'15万ウォンプランを申し込む',
- p2_best:'事業 PR までまとめて',p2_d:'見せるだけでなく、問い合わせまで生むホームページ',
- p2_0:'15万ウォンプランの全内容 +',p2_1:'サービス・商品紹介セクション（料金表・ポートフォリオ）',p2_2:'AI PR 動画 1 本',p2_3:'予約・問い合わせフォーム → Google シートに自動受付',p2_4:'10 言語から 4 つ選択（追加 1 言語 +1万ウォン）',p2_5:'画像スライド最大 8 枚',p2_6:'MANDU 通訳相談ボタン連携',p2_7:'優先制作 — 初稿 2 営業日以内',p2_8:'修正たっぷり：1 か月内 3 回 + 3 か月内 1 回',p2_btn:'25万ウォンプランを申し込む',
+ pr_h:'BizHome オーダーメイド、選ぶのは 2 つだけ。',pr_sub:'どちらもテンプレートなしの 1:1 制作。違いは「紹介で止まるか、営業まで進むか」。',
+ p1_d:'あなたと仕事をきちんと紹介する BizHome',
+ p1_btn:'スタンダードを申し込む',
+ p2_best:'紹介を超えて営業まで',p2_d:'見せて、知らせて、問い合わせまで受ける BizHome',
+ p2_btn:'プレミアムを申し込む',
  n1:'消費税（VAT 10%）別',n2:'入金確認後に制作開始',n4:'10 枚以上の団体・企業は別途お見積り',
  g_h:'実際に制作した BizHome をご覧ください',g_p:'業種別の制作事例ギャラリーへ移動します',g_btn:'ギャラリーを見る',
  ps_h:'申し込みから完成まで 4 ステップ',ps_sub:'申込書は 1 分で完了。残りは会話しながら一緒に作ります。',
@@ -1026,7 +1094,7 @@ ja:{
  s3_h:'デザイン・修正',s3_p:'オーダーメイドの初稿をお送りし、プランの修正回数内で仕上げます。',
  s4_h:'公開・QR のお渡し',s4_p:'ホームページのアドレスと QR をお渡し。今日からアドレス一つで自己紹介。',
  ac_h:'作り直さず、安くアップデート。',ac_sub:'BizHome のお客様専用アップデート料金です。',
- u1:'テキスト変更',u1d:'連絡先・肩書など',u2:'写真・画像の差し替え',u2d:'プロフィール・カバーなど',u3:'デザインリニューアル',u3v:'50% オフ',u3d:'構成・レイアウト変更',u4:'全面作り直し',u4v:'30% オフ',u4d:'業種・ブランド転換',
+ u1:'文章修正',u1d:'修正ボタンですぐ（月 1 回）',u2:'写真・画像の差し替え',u2d:'プロフィール・カバーなど',u3:'デザインリニューアル',u3v:'50% オフ',u3d:'構成・レイアウト変更',u4:'全面作り直し',u4v:'30% オフ',u4d:'業種・ブランド転換',
  rf1:'制作開始前',rf1v:'100% 返金',rf2:'1 回目の修正前',rf2v:'50% 返金',rf3:'1 回目の修正後',rf3v:'返金不可',
  mk_q:'「代表一人が<em>一つのブランド</em>になるように作ります。」',
  mk_p:'BNI で紹介をやり取りする中で、「この代表は具体的に何をしている方？」と聞かれた時に見せる場所がなく、紹介が止まる場面をよく見ました。BizHome はその問いに答えるホームページです。',
