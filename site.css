@@ -329,3 +329,16 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 .home-hero h1{font-size:clamp(34px,6vw,60px);line-height:1.14;letter-spacing:-.03em;margin:14px 0 18px}
 .home-hero .lead{max-width:760px}
 @media(max-width:720px){.ap-grid{grid-template-columns:1fr}}
+
+/* ── 서비스별 대표 색 (각 앱의 실제 theme color) ── */
+.app[style*="--c"] .ic{background:var(--ct)!important;color:var(--c)!important}
+.app[style*="--c"] .tag{color:var(--c)}
+.app[style*="--c"]:hover{border-color:var(--c);box-shadow:0 12px 32px var(--ct)}
+.ap-hero[style*="--c"] .ap-head .ic{background:var(--ct);color:var(--c)}
+.ap-hero[style*="--c"] .ap-head .cat{color:var(--c)}
+.ap-hero[style*="--c"] .ap-grid li::before{background:var(--c);opacity:.8}
+.ap-hero[style*="--c"] .ap-grid>div{border-top:3px solid var(--c)}
+.ap-hero[style*="--c"] .btn-primary{background:var(--c);color:#fff}
+.ap-hero[style*="--c"] .btn-primary:hover{filter:brightness(1.1)}
+.ap-hero[style*="--c"] .btn-line{border-color:var(--c);color:var(--c)}
+.ap-hero[style*="--c"] .ap-price{background:var(--ct)}
