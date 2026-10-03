@@ -1,92 +1,4 @@
 /* TM LINK 공통 스크립트: 앱 소개 데이터 · 다국어 · 언어 전환 (홈 / 비즈홈 / 앱 소개 페이지가 함께 씀) */
-var APPS = {
- mandu:{ url:'https://jinjjabg-hub.github.io/MANDU/', icon:'#i-chat', latin:'MANDU',
-  ko:{cat:'통번역 메신저',name:'만두',lead:'언어가 달라도 대화는 하나로. 상대가 외국어로 써도 내 언어로 읽고, 내 언어로 쓰면 상대 언어로 전달됩니다.',
-      when:['해외 바이어·외국인 고객과 상담할 때','외국인 직원·거래처와 매일 연락할 때','해외 출장·여행 중 현지인과 대화할 때'],
-      feat:['14개 언어 실시간 자동 번역 채팅','사진·파일 전송, 친구·채팅방','비즈니스 프로필 링크로 나를 소개','구글·이메일로 바로 시작'],
-      price:'무료로 시작 · 필요하면 플랜 업그레이드',open:'만두 열기'},
-  en:{cat:'Translation messenger',name:'MANDU',lead:'Different languages, one conversation. Read their messages in your language, and they read yours in theirs.',
-      when:['Talking with overseas buyers or foreign clients','Daily contact with foreign staff or partners','Chatting with locals on business trips or travel'],
-      feat:['Real-time translated chat in 14 languages','Photos, files, friends and group chats','Share a business profile link','Start instantly with Google or email'],
-      price:'Free to start · upgrade plans available',open:'Open MANDU'},
-  zh:{cat:'翻译聊天',name:'MANDU',lead:'语言不同，对话如一。对方用外语写，您用母语读；您用母语写，对方用他的语言读。',
-      when:['与海外买家·外国客户沟通时','与外籍员工·合作伙伴日常联系时','出差·旅行时与当地人交流时'],
-      feat:['14 种语言实时自动翻译聊天','发送照片·文件，好友·群聊','用商务名片链接介绍自己','用 Google·邮箱即可开始'],
-      price:'免费开始 · 可升级方案',open:'打开 MANDU'},
-  ja:{cat:'翻訳メッセンジャー',name:'MANDU',lead:'言葉が違っても会話は一つに。相手の外国語は自分の言語で読め、自分の言葉は相手の言語で届きます。',
-      when:['海外バイヤー・外国人顧客と相談する時','外国人スタッフ・取引先と毎日連絡する時','出張・旅行先で現地の人と話す時'],
-      feat:['14 言語のリアルタイム自動翻訳チャット','写真・ファイル送信、友だち・グループ','ビジネスプロフィールのリンクで自己紹介','Google・メールですぐ開始'],
-      price:'無料で開始 · 必要に応じてプランをアップグレード',open:'MANDU を開く'}},
- jujudosa:{ url:'https://jinjjabg-hub.github.io/JUJUDOSA/', icon:'#i-star', latin:'JUJUDOSA',
-  ko:{cat:'AI 사주 상담',name:'주주도사',lead:'타고난 명식을 읽고, 지금 시기에 맞는 조언을 건네는 사주 상담. 궁금한 건 도사님께 채팅으로 물어보세요.',
-      when:['이직·창업 시기가 고민될 때','인연·결혼 운이 궁금할 때','재물 흐름을 미리 보고 싶을 때'],
-      feat:['종합 사주 풀이 — 인생의 큰 흐름','전문 도사님께 AI 채팅으로 질문','궁합 보기 (결혼 시기·경제적 조화)','귀인지도 — 친구 불러 관계 지도 (무료)'],
-      price:'무료 (주간 운세·AI 채팅 3회) · 라이트 월 4,900원 · 스탠다드 월 9,900원 (VAT 포함)',open:'주주도사 열기'},
-  en:{cat:'AI saju counseling',name:'JUJUDOSA',lead:'Korean saju counseling that reads your birth chart and gives advice for this season of life. Ask the masters anything by chat.',
-      when:['Deciding when to change jobs or start a business','Curious about relationships or marriage','Wanting a look at your wealth flow'],
-      feat:['Full saju reading — your life’s big picture','Ask expert masters via AI chat','Compatibility (marriage timing, finances)','Gwiin Map — invite friends to map relationships (free)'],
-      price:'Free (weekly fortune, 3 AI chats) · Lite ₩4,900/mo · Standard ₩9,900/mo (VAT incl.)',open:'Open JUJUDOSA'},
-  zh:{cat:'AI 四柱咨询',name:'JUJUDOSA',lead:'解读您的先天命盘，给出适合当下时期的建议。有疑问可以用聊天直接问道士。',
-      when:['纠结跳槽·创业时机时','想了解姻缘·婚姻运时','想提前看看财运走势时'],
-      feat:['综合四柱解读——人生大方向','通过 AI 聊天向专业道士提问','合婚（结婚时机·经济协调）','贵人地图——邀请朋友绘制关系图（免费）'],
-      price:'免费（每周运势·AI 聊天 3 次）· 轻享 月 4,900韩元 · 标准 月 9,900韩元（含增值税）',open:'打开 JUJUDOSA'},
-  ja:{cat:'AI 四柱推命相談',name:'JUJUDOSA',lead:'生まれ持った命式を読み、今の時期に合ったアドバイスを届ける四柱推命相談。気になることは導師にチャットで聞けます。',
-      when:['転職・起業のタイミングに迷う時','縁・結婚運が気になる時','金運の流れを先に知りたい時'],
-      feat:['総合四柱推命 — 人生の大きな流れ','専門の導師に AI チャットで質問','相性診断（結婚時期・経済的な相性）','貴人マップ — 友だちを招いて関係図（無料）'],
-      price:'無料（週間運勢・AI チャット 3 回）· ライト 月 4,900ウォン · スタンダード 月 9,900ウォン（VAT 込）',open:'JUJUDOSA を開く'}},
- cardbook:{ url:'https://jinjjabg-hub.github.io/cardbook/', icon:'#i-book', latin:'CardBook',
-  ko:{cat:'명함 관리',name:'카드북',lead:'받은 명함을 한곳에 모으고, 기억나는 조각만으로 바로 찾는 명함첩.',
-      when:['모임에서 받은 명함이 쌓여 있을 때','"그 세무사님 누구였지?" 이름이 기억 안 날 때','디지털 명함을 받고 저장할 곳이 필요할 때'],
-      feat:['명함 이미지에서 정보 자동 추출 (여러 장 한 번에)','카톡·이메일로 받은 명함 이미지 인식','휴대폰 연락처 불러오기 (안드로이드 크롬)','디지털 명함의 \'명함첩에 저장\' 버튼과 연동'],
-      price:'무료',open:'카드북 열기'},
-  en:{cat:'Card manager',name:'CardBook',lead:'Keep every card you receive in one place and find people by whatever you remember.',
-      when:['Cards from meetups are piling up','You can’t recall a name — “who was that accountant?”','You need a place to save digital cards'],
-      feat:['Auto-extract info from card images (many at once)','Reads card images received via KakaoTalk or email','Import phone contacts (Android Chrome)','Works with the “Save to CardBook” button on digital cards'],
-      price:'Free',open:'Open CardBook'},
-  zh:{cat:'名片管理',name:'名片册',lead:'把收到的名片集中保存，凭记忆片段即可快速找到。',
-      when:['聚会收到的名片越积越多时','想不起名字——"那位税务师是谁？"','收到数字名片需要保存时'],
-      feat:['从名片图片自动提取信息（可一次多张）','识别 KakaoTalk·邮件收到的名片图片','导入手机通讯录（安卓 Chrome）','与数字名片的"存入名片册"按钮联动'],
-      price:'免费',open:'打开名片册'},
-  ja:{cat:'名刺管理',name:'カードブック',lead:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',
-      when:['集まりでもらった名刺がたまっている時','「あの税理士さん誰だっけ？」と名前が出てこない時','デジタル名刺の保存先が必要な時'],
-      feat:['名刺画像から情報を自動抽出（複数枚まとめて）','カカオトーク・メールで届いた名刺画像も認識','スマホの連絡先を読み込み（Android Chrome）','デジタル名刺の「名刺帳に保存」ボタンと連携'],
-      price:'無料',open:'カードブックを開く'}},
- autocard:{ url:'https://jinjjabg-hub.github.io/autocard/', icon:'#i-bolt', latin:'AutoCard',
-  ko:{cat:'디지털 명함',name:'오토명함',lead:'명함 사진 한 장, 5분이면 완성되는 디지털 명함. 받은 사람은 카드북에 바로 저장합니다.',
-      when:['지금 당장 디지털 명함이 필요할 때','부담 없는 비용으로 먼저 시작하고 싶을 때','직원·팀원 명함을 빠르게 만들 때'],
-      feat:['명함 사진 한 장으로 AI가 초안 작성','템플릿 6종 중 골라 바로 발행','링크로 공유, 받은 사람은 카드북에 저장','미리보기 그대로 공개 명함 발행'],
-      price:'5,900원부터',open:'오토명함 만들기'},
-  en:{cat:'Digital card',name:'AutoCard',lead:'A digital card done in 5 minutes from one photo. Recipients save it straight to CardBook.',
-      when:['You need a digital card right now','You want to start at a low cost','Making cards quickly for staff or a team'],
-      feat:['AI drafts it from one card photo','Pick from 6 templates and publish','Share by link; recipients save to CardBook','Publish exactly what you preview'],
-      price:'From ₩5,900',open:'Make an AutoCard'},
-  zh:{cat:'数字名片',name:'自动名片',lead:'一张名片照片，5 分钟完成的数字名片。对方可直接存入名片册。',
-      when:['马上需要数字名片时','想以低成本先开始时','需要快速为员工·团队制作名片时'],
-      feat:['一张名片照片，AI 自动生成初稿','6 种模板任选，即刻发布','通过链接分享，对方存入名片册','所见即所得发布'],
-      price:'5,900韩元起',open:'制作自动名片'},
-  ja:{cat:'デジタル名刺',name:'オート名刺',lead:'名刺写真 1 枚、5 分で完成するデジタル名刺。受け取った人はカードブックにすぐ保存。',
-      when:['今すぐデジタル名刺が必要な時','負担の少ない費用でまず始めたい時','スタッフ・チームの名刺を素早く作る時'],
-      feat:['名刺写真 1 枚から AI が下書き','6 種のテンプレートから選んですぐ発行','リンクで共有、相手はカードブックに保存','プレビューそのままの名刺を公開'],
-      price:'5,900ウォンから',open:'オート名刺を作る'}}
-};
-var SHEET_UI = {
- ko:{when:'이럴 때 좋아요',feat:'주요 기능',price:'가격',install:'홈 화면에 설치하기',close:'닫기',
-     note:'앱스토어 없이 바로 쓰는 웹앱이에요. 홈 화면에 추가하면 앱처럼 열립니다.',
-     ios:['Safari로 앱을 엽니다','아래쪽 공유 버튼(□↑)을 누릅니다','"홈 화면에 추가"를 누릅니다'],
-     and:['Chrome으로 앱을 엽니다','오른쪽 위 ⋮ 메뉴를 누릅니다','"앱 설치" 또는 "홈 화면에 추가"를 누릅니다']},
- en:{when:'Great for',feat:'Key features',price:'Price',install:'Add to home screen',close:'Close',
-     note:'A web app — no app store needed. Add it to your home screen and it opens like an app.',
-     ios:['Open the app in Safari','Tap the Share button (□↑) at the bottom','Tap “Add to Home Screen”'],
-     and:['Open the app in Chrome','Tap the ⋮ menu at the top right','Tap “Install app” or “Add to Home screen”']},
- zh:{when:'适用场景',feat:'主要功能',price:'价格',install:'添加到主屏幕',close:'关闭',
-     note:'无需应用商店的网页应用。添加到主屏幕后即可像应用一样打开。',
-     ios:['用 Safari 打开应用','点击底部的分享按钮（□↑）','点击"添加到主屏幕"'],
-     and:['用 Chrome 打开应用','点击右上角的 ⋮ 菜单','点击"安装应用"或"添加到主屏幕"']},
- ja:{when:'こんな時に',feat:'主な機能',price:'料金',install:'ホーム画面に追加',close:'閉じる',
-     note:'アプリストア不要のウェブアプリです。ホーム画面に追加するとアプリのように開きます。',
-     ios:['Safari でアプリを開く','下の共有ボタン（□↑）をタップ','「ホーム画面に追加」をタップ'],
-     and:['Chrome でアプリを開く','右上の ⋮ メニューをタップ','「アプリをインストール」または「ホーム画面に追加」をタップ']}
-};
 var curLang = 'ko', curApp = null;
 
 // ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
@@ -144,7 +56,7 @@ en:{
  st1:'Monthly<br/>hosting cost',st2:'Languages<br/>included',st3:'Build time<br/>(Standard)',st4:'Business day<br/>to reply',
  apps_h:'Services by TM LINK',apps_sub:'BizHome, our flagship service, plus apps you can use separately. All built and run by TM LINK.',
  app_badge:'Flagship',app1_n:'BizHome',app1_d:'Deeper than a card, lighter than a website. A personal brand page planned and designed one-on-one for you.',app1_t:'₩150k · ₩250k →',
- app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'From ₩5,900 →',
+ app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'Free · from ₩5,900 →',
  app3_n:'CardBook',app3_d:'Keep every card you receive in one place and find people by whatever you remember.',app3_t:'Try free →',
  app4_n:'MANDU',app4_d:'Different languages, one conversation. A messenger with real-time translation in 14 languages.',app4_t:'Try messenger →',
  app5_n:'JUJUDOSA',app5_d:'AI saju (Korean fortune) counseling: daily fortune, compatibility and timely advice.',app5_t:'Start →',
@@ -237,7 +149,7 @@ zh:{
  st1:'每月<br/>托管费用',st2:'默认<br/>支持语言',st3:'制作周期<br/>（标准版）',st4:'申请后<br/>工作日内回复',
  apps_h:'TM LINK 的服务',apps_sub:'核心服务 BizHome，以及可单独使用的应用。全部由 TM LINK 自主开发运营。',
  app_badge:'核心服务',app1_n:'BizHome',app1_d:'比名片更深入，比官网更轻巧的个人品牌主页。为您一对一策划设计。',app1_t:'15万 · 25万韩元 →',
- app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'5,900韩元起 →',
+ app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'免费 · ₩5,900 起 →',
  app3_n:'名片册',app3_d:'把收到的名片集中保存，凭记忆片段即可快速找到。',app3_t:'免费使用 →',
  app4_n:'MANDU',app4_d:'语言不同，对话如一。支持 14 种语言实时翻译的聊天应用。',app4_t:'体验 →',
  app5_n:'JUJUDOSA',app5_d:'AI 四柱咨询：解读命盘，给出当下的建议。今日运势、合婚尽在其中。',app5_t:'开始咨询 →',
@@ -330,7 +242,7 @@ ja:{
  st1:'毎月の<br/>ホスティング費',st2:'標準対応<br/>言語',st3:'制作期間<br/>（スタンダード）',st4:'申込後の返信<br/>営業日以内',
  apps_h:'TM LINK のサービス',apps_sub:'代表サービスの BizHome と、必要に応じて別に使えるアプリ。すべて TM LINK が開発・運営しています。',
  app_badge:'代表サービス',app1_n:'BizHome',app1_d:'名刺より深く、ホームページより軽いパーソナルブランドサイト。代表一人のために 1:1 で企画・デザイン。',app1_t:'15万 · 25万ウォン →',
- app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'5,900ウォンから →',
+ app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'無料 · ₩5,900から →',
  app3_n:'カードブック',app3_d:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',app3_t:'無料で使う →',
  app4_n:'MANDU',app4_d:'言葉が違っても会話は一つに。14 言語をリアルタイム自動翻訳するメッセンジャー。',app4_t:'体験する →',
  app5_n:'JUJUDOSA',app5_d:'命式を読み、今の時期に合ったアドバイスを届ける AI 四柱推命相談。今日の運勢・相性も。',app5_t:'相談を始める →',
@@ -389,34 +301,6 @@ ja:{
          h_btn1:'サービスを見る', h_btn2:'BizHome を見る', hf_h:'あなたのブランドを一緒に。', hf_p:'釜山 · 全国リモート制作 · 1 営業日以内にご連絡', hf_btn:'BizHome を申し込む' }
   };
   Object.keys(add).forEach(function(l){ Object.assign(I18N[l], add[l]); });
-})();
-
-// 앱 소개 페이지: <main id="appPage" data-app="mandu"> 안의 내용을 현재 언어로 다시 그린다
-function renderAppPage(){
-  var root = document.getElementById('appPage'); if (!root) return;
-  var $ = function(id){ return document.getElementById(id); };
-  var a = APPS[root.dataset.app], d = a[curLang] || a.ko, u = SHEET_UI[curLang] || SHEET_UI.ko;
-  function list(el, arr){ el.innerHTML=''; arr.forEach(function(t){ var li=document.createElement('li'); li.textContent=t; el.appendChild(li); }); }
-  $('apCat').textContent = d.cat;
-  $('apTitle').innerHTML = ''; $('apTitle').appendChild(document.createTextNode(d.name));
-  if (d.name !== a.latin) { var sm=document.createElement('small'); sm.textContent=a.latin; $('apTitle').appendChild(sm); }
-  $('apLead').textContent = d.lead;
-  $('apWhenH').textContent = u.when; list($('apWhen'), d.when);
-  $('apFeatH').textContent = u.feat; list($('apFeat'), d.feat);
-  $('apPriceH').textContent = u.price; $('apPrice').textContent = d.price;
-  $('apOpenT').textContent = d.open; $('apInstallBtn').textContent = u.install;
-  $('apNote').textContent = u.note; list($('apIos'), u.ios); list($('apAnd'), u.and);
-  document.title = d.name + (d.name !== a.latin ? ' ' + a.latin : '') + ' | TM LINK';
-}
-(function(){
-  var root = document.getElementById('appPage'); if (!root) return;
-  var $ = function(id){ return document.getElementById(id); };
-  var ua = navigator.userAgent, os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios' : /Android/.test(ua) ? 'android' : '';
-  document.querySelectorAll('.si-os').forEach(function(el){ el.hidden = !!os && el.dataset.os !== os; });
-  $('apInstallBtn').addEventListener('click', function(){
-    var box = $('apInstall'), open = box.hidden; box.hidden = !open; this.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  window.renderSheet = renderAppPage;
 })();
 
 function setLang(lang){
