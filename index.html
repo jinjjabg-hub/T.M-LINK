@@ -3,18 +3,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TM LINK | 비즈홈 — 명함으론 부족하고, 홈페이지는 부담될 때</title>
-<meta name="description" content="비즈홈은 명함보다 깊고 홈페이지보다 가벼운 개인 브랜드 홈페이지입니다. 1:1 맞춤 제작 15만원 · 25만원, 4개 국어, 유지비 0원. 부산 T.M Link 송승훈 대표."/>
+<title>TM LINK | 사람과 사람을 잇는 앱</title>
+<meta name="description" content="TM LINK는 디지털 명함(오토명함), 명함첩(카드북), 통번역 메신저(만두), AI 사주 상담(주주도사), 개인 브랜드 홈페이지(비즈홈)를 직접 만들고 운영합니다. 부산 T.M Link 송승훈 대표."/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="비즈홈 — 명함으론 부족하고, 홈페이지는 부담될 때"/>
-<meta property="og:description" content="명함보다 깊고, 홈페이지보다 가볍게. 1:1 맞춤 개인 브랜드 홈페이지 15만원 · 25만원."/>
+<meta property="og:title" content="TM LINK — 사람과 사람을 잇는 앱"/>
+<meta property="og:description" content="디지털 명함 · 카드북 · 통번역 메신저 · AI 사주 상담 · 개인 브랜드 홈페이지 비즈홈."/>
 <meta property="og:url" content="https://jinjjabg-hub.github.io/T.M-LINK/"/>
 <meta property="og:site_name" content="TM LINK"/>
 <meta property="og:locale" content="ko_KR"/>
 <meta property="og:image" content="https://jinjjabg-hub.github.io/T.M-LINK/og.jpg?v=2"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="명함으론 부족하고, 홈페이지는 부담될 때. 비즈홈 — TM LINK"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://jinjjabg-hub.github.io/T.M-LINK/og.jpg?v=2"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
@@ -25,308 +24,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet"/>
-<style>
-/* ─────────────────────────────────────────────
-   COLOR TOKENS — theme-factory "Tech Innovation" (라이트 버전)
-   원본: Dark Gray #1e1e1e · Electric Blue #0066ff · Neon Cyan #00ffff · White
-   - 어두운 배경 대신 밝은 쿨그레이·화이트 배경, Dark Gray는 본문 글자색으로 사용
-   - Electric Blue는 버튼 배경 (흰 글자 대비 4.8:1)
-   - 블루·시안 글자는 밝은 배경에서 읽히도록 한 톤 진하게 (대비 4.5:1 이상)
-   - Neon Cyan 원색은 글자가 아닌 그라디언트·빛 장식에만 사용
-   ───────────────────────────────────────────── */
-:root{
-  --bg-deep:#eef3f9;    /* 구분 섹션 배경 (쿨그레이) */
-  --bg:#f7f9fc;         /* 기본 배경 */
-  --surface:#ffffff;    /* 카드 */
-  --line:#dbe3ee;       /* 테두리 */
-  --blue:#0066ff;       /* Tech Innovation · Electric Blue (버튼·강조 면) */
-  --blue-text:#0052cc;  /* 블루 글자 (대비 6.0:1 이상) */
-  --accent:#006e8c;     /* 시안 계열 글자·아이콘 (대비 4.9:1 이상) */
-  --neon:#00ffff;       /* Tech Innovation · Neon Cyan (장식 전용) */
-  --text:#1e1e1e;       /* Tech Innovation · Dark Gray → 본문 */
-  --muted:#5b6472;      /* 보조 텍스트 (대비 5.2:1 이상) */
-  --on-blue:#ffffff;    /* 블루 버튼 위 글자 */
-  --shadow:0 1px 2px rgba(15,23,42,.05),0 8px 24px rgba(15,23,42,.06);
-  --radius:16px;
-  --maxw:1160px;
-  --ease:cubic-bezier(.2,.7,.2,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-html{color-scheme:light}
-body{
-  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;
-  word-break:keep-all;overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-.en{font-family:Montserrat,"Pretendard Variable",sans-serif;letter-spacing:-.01em}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--blue);color:var(--on-blue);padding:8px 14px;border-radius:8px;z-index:100}
-.skip:focus{left:8px}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;border:1.5px solid transparent;transition:transform .18s var(--ease),filter .18s,background .18s,border-color .18s;touch-action:manipulation}
-.btn:active{transform:scale(.97)}
-.btn-primary{background:var(--blue);color:var(--on-blue)}
-.btn-primary:hover{filter:brightness(1.08)}
-.btn-line{border-color:var(--blue);color:var(--accent)}
-.btn-line:hover{background:rgba(0,140,170,0.054)}
-.btn svg{width:18px;height:18px}
-
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,140,170,0.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.logo{font-family:Montserrat,sans-serif;font-weight:800;font-size:20px;letter-spacing:-.02em}
-.logo b{color:var(--blue-text)}
-.nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
-.nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:10px}
-.lang{display:flex;background:var(--surface);border-radius:10px;padding:3px}
-.lang button{background:none;border:0;color:var(--muted);font:inherit;font-size:12px;font-weight:600;padding:6px 8px;border-radius:7px;cursor:pointer;min-width:34px}
-.lang button[aria-pressed="true"]{background:rgba(0,102,255,.16);color:var(--blue-text)}
-.nav .btn{min-height:40px;padding:0 16px;font-size:14px}
-
-/* hero */
-.hero{position:relative;padding:88px 0 72px;overflow:hidden;
-  background:radial-gradient(800px 480px at 88% 15%,rgba(0,255,255,.22),transparent 60%),
-             radial-gradient(700px 500px at 70% 90%,rgba(0,102,255,.14),transparent 60%),
-             linear-gradient(rgba(0,102,255,.06) 1px,transparent 1px) 0 0/44px 44px,
-             linear-gradient(90deg,rgba(0,102,255,.06) 1px,transparent 1px) 0 0/44px 44px,
-             linear-gradient(180deg,#ffffff,var(--bg))}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--accent);border:1px solid rgba(0,140,170,0.14);padding:6px 14px;border-radius:99px;margin-bottom:22px}
-.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block}
-h1{font-size:clamp(34px,5.2vw,58px);line-height:1.15;font-weight:800;letter-spacing:-.03em}
-h1 .hl{background:linear-gradient(90deg,var(--blue),#00a8c8);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{margin-top:20px;font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:540px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px;max-width:560px}
-.stat b{display:block;font-family:Montserrat,sans-serif;font-size:26px;color:var(--text);font-variant-numeric:tabular-nums}
-.stat span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block}
-
-/* phone mockup */
-.phone{width:300px;max-width:100%;margin:0 auto;aspect-ratio:9/18.5;border-radius:42px;padding:12px;background:#0d0d0d;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,60,160,.22),0 0 0 1px rgba(0,140,170,0.048) inset;animation:float 6s ease-in-out infinite}
-.screen{height:100%;border-radius:32px;overflow:hidden;background:#245c4f;position:relative;scrollbar-width:none;overscroll-behavior:contain}
-.screen::-webkit-scrollbar{display:none}
-.screen.manual{overflow-y:auto}            /* PC: 마우스 휠로 직접 스크롤 */
-.scroll-shot{width:100%;height:auto;transition:opacity .45s ease}
-.scroll-shot.fade{opacity:0}
-.phone{display:block;position:relative}
-.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);padding:7px 13px;border-radius:99px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:700;white-space:nowrap;pointer-events:none;transition:opacity .4s}
-.scroll-hint.hide{opacity:0}
-.phone-wrap{text-align:center}
-.live-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;min-height:44px;font-size:14px;font-weight:700;color:var(--blue-text)}
-.live-link svg{width:15px;height:15px}
-.live-link:hover{text-decoration:underline;text-underline-offset:3px}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
-/* sections */
-section{padding:96px 0}
-.sec-head{max-width:720px;margin-bottom:44px}
-.kicker{font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
-h2{font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:800;letter-spacing:-.025em;margin-top:10px}
-.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
-.alt{background:var(--bg-deep)}
-
-/* apps */
-.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.app{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;transition:transform .2s var(--ease),border-color .2s;box-shadow:var(--shadow)}
-.app:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 12px 32px rgba(0,102,255,.14)}
-@media (min-width:961px){.apps{grid-template-columns:repeat(4,1fr)}.app.feat{grid-column:span 2;grid-row:span 2;padding:36px 32px}.app.feat h3{font-size:28px}.app.feat p{font-size:16.5px}}
-.app.feat{border-color:var(--blue);background:linear-gradient(180deg,rgba(0,102,255,.09),var(--surface) 55%)}
-.app .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
-.app .ic svg{width:26px;height:26px}
-.app h3{font-size:19px;font-weight:800}
-.app h3 small{font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:.04em}
-.app p{font-size:14.5px;color:var(--muted);margin-top:8px;flex-grow:1}
-.app .cat{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:2px}
-.app.feat .cat{color:var(--blue-text)}
-.fh{display:none}
-@media (min-width:961px){.fh{display:grid;grid-template-columns:1fr 1fr;gap:10px;list-style:none;margin-top:22px}.fh li{background:rgba(0,102,255,.08);border:1px solid rgba(0,102,255,.25);border-radius:12px;padding:12px 14px;font-weight:700;font-size:15px}}
-.app .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--accent)}
-.app.feat .tag{color:var(--blue-text)}
-.app .badge{position:absolute;top:16px;right:16px;font-size:12px;font-weight:800;background:var(--blue);color:var(--on-blue);padding:3px 9px;border-radius:99px}
-.app::after{content:"";position:absolute;inset:0;border-radius:inherit}
-
-/* scale: 명함 ↔ 홈페이지 사이 */
-.scale{position:relative;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:center;margin-bottom:56px}
-.scale::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--line),var(--blue),var(--line));z-index:0}
-.sc{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-.sc .w{font-size:12.5px;font-weight:800;color:var(--muted);letter-spacing:.04em}
-.sc h3{font-size:19px;font-weight:800;margin:4px 0 6px}
-.sc p{font-size:14.5px;color:var(--muted)}
-.sc.on{border:2px solid var(--blue);padding:30px 26px;box-shadow:0 20px 50px rgba(0,102,255,.18)}
-.sc.on .w{color:var(--blue-text)}
-.sc.on h3{font-size:24px;color:var(--blue-text)}
-.sc.on p{color:var(--text)}
-@media (max-width:760px){.scale{grid-template-columns:1fr}.scale::before{left:50%;right:auto;top:4%;bottom:4%;width:4px;height:auto;background:linear-gradient(180deg,var(--line),var(--blue),var(--line))}}
-
-/* app sheet */
-.sheet{border:0;padding:0;margin:auto;width:min(620px,calc(100% - 32px));max-height:min(88vh,820px);border-radius:24px;background:var(--surface);color:var(--text);box-shadow:0 30px 80px rgba(15,23,42,.25)}
-.sheet::backdrop{background:rgba(15,23,42,.45);backdrop-filter:blur(3px)}
-.sheet[open]{animation:sheetIn .25s var(--ease)}
-@keyframes sheetIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
-.sheet-in{position:relative;padding:30px 28px 26px;overflow-y:auto;max-height:inherit}
-.sheet-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;border-radius:12px;background:none;color:var(--muted);cursor:pointer;display:grid;place-items:center}
-.sheet-x:hover{background:var(--bg-deep);color:var(--text)}
-.sheet-x svg{width:22px;height:22px}
-.sheet-head{display:flex;gap:14px;align-items:center;padding-right:40px}
-.sheet-head .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;background:rgba(0,140,170,.11);color:var(--accent)}
-.sheet-head .ic svg{width:28px;height:28px}
-.sheet-head .cat{font-size:12.5px;font-weight:700;color:var(--muted)}
-.sheet-head h3{font-size:24px;font-weight:800;line-height:1.25}
-.sheet-head h3 small{font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;color:var(--muted);margin-left:6px}
-.sheet-lead{margin-top:14px;font-size:16px;color:var(--text)}
-.sheet-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
-.sheet-grid>div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px}
-.sheet-grid h4{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:8px;letter-spacing:.02em}
-.sheet-grid ul{list-style:none;display:grid;gap:7px;font-size:14.5px}
-.sheet-grid li{position:relative;padding-left:16px}
-.sheet-grid li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
-.sheet-price{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin-top:16px;padding:14px 16px;border-radius:14px;background:rgba(0,102,255,.06);font-size:14.5px}
-.sheet-price b{color:var(--blue-text)}
-.sheet-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.sheet-btns .btn{flex:1 1 200px}
-.sheet-install{margin-top:14px;padding:16px;border-radius:14px;border:1px dashed var(--line);font-size:14.5px}
-.sheet-install[hidden]{display:none}
-.si-note{color:var(--muted);font-size:13.5px;margin-bottom:10px}
-.si-os+.si-os{margin-top:12px}
-.si-os ol{margin:6px 0 0 20px;display:grid;gap:4px}
-@media (max-width:640px){
-  .sheet{width:100%;max-width:100%;margin:auto 0 0;border-radius:24px 24px 0 0;max-height:90vh}
-  .sheet[open]{animation:sheetUp .28s var(--ease)}
-  @keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
-  .sheet-in{padding:26px 20px calc(22px + env(safe-area-inset-bottom))}
-  .sheet-grid{grid-template-columns:1fr}
-}
-
-/* benefits */
-.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.bf{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
-.bf .num{font-family:Montserrat,sans-serif;font-weight:800;font-size:13px;color:var(--blue-text)}
-.bf h3{font-size:19px;font-weight:800;margin:8px 0 8px}
-.bf p{font-size:15px;color:var(--muted)}
-
-/* compare */
-.compare-wrap{margin-top:56px}
-.compare-wrap h3{font-size:22px;font-weight:800;margin-bottom:6px}
-.compare-wrap>p{color:var(--muted);font-size:15px;margin-bottom:18px}
-.tbl-scroll{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line)}
-table{width:100%;border-collapse:collapse;min-width:520px;font-size:14.5px}
-th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{background:var(--surface);font-size:15px}
-tbody th{color:var(--muted);font-weight:600;width:20%}
-td.biz,th.biz{background:rgba(0,102,255,.07)}
-thead th.biz{color:var(--blue-text)}
-tr:last-child th,tr:last-child td{border-bottom:0}
-td .range{display:block;font-size:13px;color:var(--muted);margin-top:2px}
-td .mkt{font-size:17px}
-td .our{font-size:19px;color:var(--blue-text)}
-.src{font-size:12.5px;color:var(--muted);margin-top:10px}
-.src a{text-decoration:underline;text-underline-offset:2px}
-
-/* pricing */
-.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px}
-.plan{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:32px 28px;box-shadow:var(--shadow)}
-.plan.pro{border:2px solid var(--blue);box-shadow:0 20px 50px rgba(0,102,255,.16)}
-.plan .pn{font-family:Montserrat,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--accent)}
-.plan.pro .pn{color:var(--blue-text)}
-.plan .price{font-family:Montserrat,sans-serif;font-size:44px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.plan .price small{font-family:"Pretendard Variable",sans-serif;font-size:17px;font-weight:600;color:var(--muted);margin-left:4px}
-.plan .pd{color:var(--muted);font-size:15px;margin-top:4px}
-.plan .best{position:absolute;top:-13px;left:28px;background:var(--blue);color:var(--on-blue);font-size:12px;font-weight:800;padding:5px 12px;border-radius:99px}
-.plan ul{list-style:none;margin:24px 0 28px;flex-grow:1;display:grid;gap:11px}
-.plan li{display:flex;gap:10px;font-size:15px;line-height:1.5}
-.plan li svg{flex-shrink:0;width:20px;height:20px;margin-top:1px;color:var(--accent)}
-.plan li.hi{color:var(--text);font-weight:700}
-.plan li.hi svg{color:var(--blue-text)}
-.plan li.sep{border-top:1px dashed var(--line);padding-top:12px;margin-top:2px;color:var(--accent);font-size:13px;font-weight:700}
-.plan .btn{width:100%}
-.beta{font-style:normal;font-size:11.5px;font-weight:800;color:var(--blue-text);background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.3);padding:2px 8px;border-radius:99px;margin-left:auto;white-space:nowrap;align-self:flex-start;flex-shrink:0;line-height:1.5}
-.price-notes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.price-notes span{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:7px 13px;border-radius:99px}
-.gallery{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;max-width:960px;padding:20px 24px;border-radius:var(--radius);border:1px solid rgba(0,140,170,0.14);background:linear-gradient(90deg,rgba(0,140,170,0.065),rgba(0,140,170,0.014))}
-.gallery b{display:block;font-size:17px}
-.gallery span{font-size:14px;color:var(--muted)}
-
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-.step .n{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:14px;background:rgba(0,140,170,0.108);color:var(--accent);margin-bottom:14px}
-.step:first-child .n{background:var(--blue);color:var(--on-blue)}
-.step h3{font-size:17px;font-weight:800}
-.step p{font-size:14.5px;color:var(--muted);margin-top:6px}
-
-/* aftercare */
-.care{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.care div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
-.care small{display:block;font-size:13px;color:var(--muted)}
-.care b{display:block;font-size:22px;color:var(--blue-text);margin:4px 0 2px;font-variant-numeric:tabular-nums}
-.care span{font-size:13px;color:var(--muted)}
-.refund{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px;font-size:14.5px;color:var(--muted)}
-.refund b{color:var(--text)}
-
-/* maker */
-.maker{max-width:820px}
-.maker img{width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
-.maker blockquote{font-size:clamp(19px,2.4vw,24px);font-weight:700;line-height:1.5}
-.maker blockquote em{font-style:normal;color:var(--blue-text)}
-.maker p{margin-top:14px;color:var(--muted)}
-.maker .who{margin-top:18px;font-size:15px;color:var(--accent);font-weight:700}
-
-/* final cta */
-.final{text-align:center;color:#fff;background:linear-gradient(120deg,#0052cc 0%,#0066ff 55%,#00b4d8 100%)}
-.final .kicker,.final p{color:rgba(255,255,255,.88)}
-.final .btn-primary{background:#fff;color:var(--blue-text)}
-.final .btn-line{border-color:rgba(255,255,255,.7);color:#fff}
-.final .btn-line:hover{background:rgba(255,255,255,.12)}
-.final h2{max-width:720px;margin:10px auto 0}
-.final p{color:var(--muted);margin-top:14px}
-.final .cta-row{justify-content:center}
-
-footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep);font-size:14px;color:var(--muted)}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
-.foot nav{display:flex;flex-wrap:wrap;gap:8px 20px}
-.foot a:hover{color:var(--text)}
-
-/* responsive */
-@media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr}
-  .phone{width:250px}
-  .benefits{grid-template-columns:repeat(2,1fr)}
-  .steps,.care{grid-template-columns:repeat(2,1fr)}
-  .nav-links{gap:16px;font-size:13.5px}
-}
-@media (max-width:760px){.nav-links{display:none}}
-@media (max-width:640px){
-  section{padding:68px 0}
-  .hero{padding:56px 0 52px}
-  .stats{grid-template-columns:repeat(2,1fr);gap:18px}
-  .benefits,.plans,.steps{grid-template-columns:1fr}
-  .maker{grid-template-columns:1fr}
-  .nav .btn{display:none}
-  .cta-row .btn{flex:1 1 100%}
-}
-@media (pointer:coarse){
-  .lang button{min-height:40px;min-width:40px}
-  .logo{display:inline-block;line-height:44px}
-  .nav-links a,.foot nav a{display:inline-flex;align-items:center;min-height:44px}
-  .foot nav{gap:0 18px}
-}
-/* 아주 좁은 화면 (갤럭시 폴드 접힘 등) */
-@media (max-width:360px){
-  .wrap{padding:0 16px}
-  h1{font-size:27px}
-  .lang button{min-width:34px;padding:6px 4px}
-  .stats{gap:14px}
-}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+<link rel="stylesheet" href="site.css"/>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -345,12 +43,11 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="TM LINK 홈">TM <b>LINK</b></a>
+    <a class="logo" href="./" aria-label="TM LINK 홈">TM <b>LINK</b></a>
     <nav class="nav-links" aria-label="주요 메뉴">
       <a href="#apps" data-i18n="nav_apps">앱 소개</a>
-      <a href="#bizhome" data-i18n="nav_why">비즈홈</a>
-      <a href="#pricing" data-i18n="nav_price">가격</a>
-      <a href="#process" data-i18n="nav_process">제작 과정</a>
+      <a href="bizhome/" data-i18n="nav_why">비즈홈</a>
+      <a href="#about" data-i18n="nav_about">소개</a>
     </nav>
     <div class="nav-right">
       <div class="lang" role="group" aria-label="언어 선택">
@@ -365,32 +62,14 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 </header>
 
 <main id="main">
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow"><i></i><span data-i18n="hero_tag">명함과 홈페이지 사이 · 비즈홈</span></span>
-      <h1 data-i18n="hero_h">명함으론 부족하고,<br/>홈페이지는 부담될&nbsp;때.<br/><span class="hl">비즈홈.</span></h1>
-      <p class="lead" data-i18n="hero_sub">명함 한 장엔 다 담지 못하는 이야기를, 홈페이지처럼 무겁지 않게. <b>비즈홈</b>은 대표님의 소개·경력·서비스·리퍼럴을 한 페이지에 담은 개인 브랜드 홈페이지입니다. 건넬 땐 링크 하나, 받은 사람은 대표님을 제대로 알게 됩니다.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#pricing"><span data-i18n="hero_btn1">비즈홈 가격 보기</span><svg><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-line" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener" data-i18n="hero_btn2">제작 사례 보기</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>0<small style="font-size:15px">원</small></b><span data-i18n="st1">매달 내는<br/>호스팅 유지비</span></div>
-        <div class="stat"><b>4</b><span data-i18n="st2">기본 지원<br/>언어</span></div>
-        <div class="stat"><b>3<small style="font-size:15px">일</small></b><span data-i18n="st3">제작 기간<br/>(스탠다드)</span></div>
-        <div class="stat"><b>1</b><span data-i18n="st4">신청 후 회신<br/>영업일 이내</span></div>
-      </div>
-    </div>
-    <div class="phone-wrap">
-      <div class="phone">
-        <div class="screen" id="bizScreen" tabindex="0" aria-label="송승훈 대표의 실제 비즈홈 미리보기 (스크롤 가능)">
-          <img class="scroll-shot" id="bizShot" src="bizhome-sample.webp" alt="송승훈 대표의 실제 비즈홈 화면 — 프로필, 소개, 왜 T.M인가, 리퍼럴, 포트폴리오, 경력, 연락처" width="540" height="7676" fetchpriority="high"/>
-        </div>
-        <span class="scroll-hint hide" id="scrollHint" data-i18n="hint">마우스 휠로 직접 내려보세요</span>
-      </div>
-      <a class="live-link" href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" rel="noopener"><span data-i18n="live">실제 비즈홈 샘플 · 송승훈 대표</span> <svg><use href="#i-ext"/></svg></a>
+<section class="home-hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><i></i><span data-i18n="h_tag">TM LINK · 사람과 사람을 잇는 앱</span></span>
+    <h1 data-i18n="h_h">사람과 사람을<br/>잇는 앱을 만듭니다.</h1>
+    <p class="lead" data-i18n="h_sub">TM LINK는 디지털 명함, 명함첩, 통번역 메신저, AI 사주 상담, 그리고 대표님 한 사람을 위한 개인 브랜드 홈페이지 <b>비즈홈</b>까지 직접 만들고 운영합니다.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#apps"><span data-i18n="h_btn1">서비스 둘러보기</span><svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-line" href="bizhome/" data-i18n="h_btn2">비즈홈 보기</a>
     </div>
   </div>
 </section>
@@ -404,7 +83,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <p data-i18n="apps_sub">대표 서비스인 비즈홈과, 필요에 따라 따로 쓰는 앱들입니다. 모두 TM LINK가 직접 만들고 운영합니다.</p>
     </div>
     <div class="apps">
-      <a class="app feat" href="#bizhome">
+      <a class="app feat" href="bizhome/">
         <span class="badge" data-i18n="app_badge">대표 서비스</span>
         <div class="ic" style="background:rgba(0,102,255,.16);color:var(--blue-text)"><svg><use href="#i-home"/></svg></div>
         <span class="cat" data-i18n="cat1">개인 브랜드 홈페이지</span>
@@ -418,29 +97,29 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
         </ul>
         <span class="tag" data-i18n="app1_t">15만원 · 25만원 →</span>
       </a>
-      <a class="app" href="https://jinjjabg-hub.github.io/autocard/" target="_blank" rel="noopener" data-app="autocard" aria-haspopup="dialog">
-        <div class="ic" style="background:rgba(0,140,170,0.09);color:var(--accent)"><svg><use href="#i-bolt"/></svg></div>
+      <a class="app" style="--c:#1F3A5F;--ct:rgba(31,58,95,.10)" href="apps/autocard/">
+        <div class="ic"><svg><use href="#i-bolt"/></svg></div>
         <span class="cat" data-i18n="cat2">디지털 명함</span>
         <h3><span data-i18n="app2_n">오토명함</span><small>AutoCard</small></h3>
         <p data-i18n="app2_d">명함 사진 한 장, 5분이면 완성되는 디지털 명함. 템플릿 6종 중 골라 바로 발행.</p>
         <span class="tag" data-i18n="app2_t">5,900원부터 →</span>
       </a>
-      <a class="app" href="https://jinjjabg-hub.github.io/cardbook/" target="_blank" rel="noopener" data-app="cardbook" aria-haspopup="dialog">
-        <div class="ic" style="background:rgba(0,140,170,0.09);color:var(--accent)"><svg><use href="#i-book"/></svg></div>
+      <a class="app" style="--c:#2563EB;--ct:rgba(37,99,235,.10)" href="apps/cardbook/">
+        <div class="ic"><svg><use href="#i-book"/></svg></div>
         <span class="cat" data-i18n="cat3">명함 관리</span>
         <h3><span data-i18n="app3_n">카드북</span><small>CardBook</small></h3>
         <p data-i18n="app3_d">받은 명함을 한곳에 모으고, 기억나는 조각만으로 바로 찾는 명함첩.</p>
         <span class="tag" data-i18n="app3_t">무료로 써보기 →</span>
       </a>
-      <a class="app" href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" rel="noopener" data-app="mandu" aria-haspopup="dialog">
-        <div class="ic" style="background:rgba(0,140,170,0.09);color:var(--accent)"><svg><use href="#i-chat"/></svg></div>
+      <a class="app" style="--c:#6B38D4;--ct:rgba(107,56,212,.10)" href="apps/mandu/">
+        <div class="ic"><svg><use href="#i-chat"/></svg></div>
         <span class="cat" data-i18n="cat4">통번역 메신저</span>
         <h3><span data-i18n="app4_n">만두</span><small>MANDU</small></h3>
         <p data-i18n="app4_d">언어가 달라도 대화는 하나로. 14개 언어를 실시간 자동 번역하는 메신저.</p>
         <span class="tag" data-i18n="app4_t">메신저 체험 →</span>
       </a>
-      <a class="app" href="https://jinjjabg-hub.github.io/JUJUDOSA/" target="_blank" rel="noopener" data-app="jujudosa" aria-haspopup="dialog">
-        <div class="ic" style="background:rgba(0,140,170,0.09);color:var(--accent)"><svg><use href="#i-star"/></svg></div>
+      <a class="app" style="--c:#5D5FEF;--ct:rgba(93,95,239,.10)" href="apps/jujudosa/">
+        <div class="ic"><svg><use href="#i-star"/></svg></div>
         <span class="cat" data-i18n="cat5">AI 사주 상담</span>
         <h3><span data-i18n="app5_n">주주도사</span><small>JUJUDOSA</small></h3>
         <p data-i18n="app5_d">타고난 명식을 읽고 지금 시기에 맞는 조언을 건네는 AI 사주 상담. 오늘의 운세·궁합까지.</p>
@@ -450,150 +129,8 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   </div>
 </section>
 
-<!-- BIZHOME BENEFITS -->
-<section id="bizhome" class="alt">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Why BizHome</span>
-      <h2 data-i18n="why_h">명함보다 깊게,<br/>홈페이지보다 가볍게.</h2>
-      <p data-i18n="why_sub">건네는 건 명함처럼 간단하게, 보여주는 건 홈페이지처럼 충분하게. 소개받은 사람이 대표님을 찾아봤을 때 딱 필요한 만큼을 담습니다.</p>
-    </div>
-    <div class="scale" role="list">
-      <div class="sc" role="listitem"><span class="w" data-i18n="sc1_w">가볍다</span><h3 data-i18n="sc1_h">명함 한 장</h3><p data-i18n="sc1_p">이름과 연락처까지. 무엇을 잘하는지, 왜 이 사람이어야 하는지는 담기 어렵습니다.</p></div>
-      <div class="sc on" role="listitem"><span class="w" data-i18n="sc2_w">딱 맞다</span><h3 data-i18n="sc2_h">비즈홈</h3><p data-i18n="sc2_p">소개·경력·서비스·리퍼럴을 한 페이지에. 링크 하나로 건네고, 약 3일이면 완성됩니다.</p></div>
-      <div class="sc" role="listitem"><span class="w" data-i18n="sc3_w">무겁다</span><h3 data-i18n="sc3_h">회사 홈페이지</h3><p data-i18n="sc3_p">기획·디자인·개발·관리까지. 대표 한 사람을 소개하기엔 시간과 비용이 큽니다.</p></div>
-    </div>
-    <div class="benefits">
-      <div class="bf"><span class="num">01</span><h3 data-i18n="b1_h">템플릿이 아닌 1:1 맞춤</h3><p data-i18n="b1_p">업종·성향·고객층을 듣고 대표가 직접 디자인합니다. 같은 업종이어도 같은 비즈홈은 없습니다.</p></div>
-      <div class="bf"><span class="num">02</span><h3 data-i18n="b2_h">링크 하나로 끝나는 소개</h3><p data-i18n="b2_p">카카오톡 미리보기에 사진과 소개가 바로 뜨도록 최적화. QR 코드도 함께 드립니다.</p></div>
-      <div class="bf"><span class="num">03</span><h3 data-i18n="b3_h">"이런 분을 소개해 주세요"</h3><p data-i18n="b3_p">BNI 리퍼럴 구조를 그대로 담은 파트너·추천 섹션. 받은 사람이 누구를 연결해줘야 할지 바로 압니다.</p></div>
-      <div class="bf"><span class="num">04</span><h3 data-i18n="b4_h">4개 국어 자동 지원</h3><p data-i18n="b4_p">한국어·영어·중국어·일본어 전환 버튼 기본 탑재. 해외 바이어, 외국인 고객에게도 그대로 보냅니다.</p></div>
-      <div class="bf"><span class="num">05</span><h3 data-i18n="b5_h">유지비 0원</h3><p data-i18n="b5_p">서버·호스팅 비용 없이 계속 운영됩니다. 만든 뒤에 매달 나가는 관리비가 없습니다.</p></div>
-      <div class="bf"><span class="num">06</span><h3 data-i18n="b6_h">문구는 언제든 바로</h3><p data-i18n="b6_p">연락처·직함·소개글은 요청하고 기다릴 필요 없이 수정 버튼 하나로 바로 바뀝니다. 영·일·중은 자동 번역, 사진·디자인은 TM LINK가 맡습니다.</p></div>
-    </div>
 
-    <div class="compare-wrap">
-      <h3 data-i18n="cmp_h">홈페이지로 맡기면 얼마일까요?</h3>
-      <p data-i18n="cmp_sub">비즈홈에 담기는 내용을 외주 플랫폼에서 개인 홈페이지로 맡기는 경우와 비교했습니다.</p>
-      <div class="tbl-scroll">
-        <table>
-          <thead><tr><th></th><th data-i18n="c_web">일반 외주 개인 홈페이지</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
-          <tbody>
-            <tr><th data-i18n="r2">가격</th><td data-i18n="r2a"><b class="mkt">평균 80만원</b><span class="range">40만 ~ 180만원</span></td><td class="biz" data-i18n="r2c"><b class="our">15만원 · 25만원</b><span class="range">정찰제 · 플랜별 포함 범위 공개</span></td></tr>
-            <tr><th data-i18n="r3">진행 방식</th><td data-i18n="r3a">기획 → 디자인 → 개발 단계별 진행</td><td class="biz" data-i18n="r3c">1:1 상담 후 약 3일 완성</td></tr>
-            <tr><th data-i18n="r4">유지비</th><td data-i18n="r4a">호스팅·도메인·관리비 별도</td><td class="biz" data-i18n="r4c">호스팅 0원</td></tr>
-            <tr><th data-i18n="r5">다국어</th><td data-i18n="r5a">언어마다 추가 작업</td><td class="biz" data-i18n="r5c">4개 국어 기본 포함</td></tr>
-            <tr><th data-i18n="r6">공유</th><td data-i18n="r6a">모바일·카톡 최적화는 별도 작업</td><td class="biz" data-i18n="r6c">카톡 미리보기 · QR 기본 제공</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="src" data-i18n="cmp_src">※ 시세 출처: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">크몽 「개인 홈페이지 제작」</a> 견적 데이터 (최저 40만 · 최고 180만 · 평균 80만원, 2026년 10월 조회). 기능·페이지 수에 따라 달라질 수 있습니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Pricing</span>
-      <h2 data-i18n="pr_h">비즈홈 맞춤 제작, 두 가지만 고르세요.</h2>
-      <p data-i18n="pr_sub">둘 다 템플릿 없이 1:1로 만듭니다. 차이는 "소개에서 멈추느냐, 영업까지 하느냐"입니다.</p>
-    </div>
-
-    <div class="plans">
-      <div class="plan">
-        <span class="pn">STANDARD</span>
-        <div class="price">150,000<small>원</small></div>
-        <p class="pd" data-i18n="p1_d">나와 내 일을 제대로 소개하는 비즈홈</p>
-        <ul>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_1">1:1 맞춤 디자인 (템플릿 X)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_2">AI 이미지 2장 — 히어로 이미지 + 프로필 사진</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_3">소개 · Why · 차별점 · 경력 · 서비스 섹션</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_4">"이런 분을 소개해 주세요" 리퍼럴 섹션</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_5">포트폴리오 (직종에 필요한 경우)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_6">4개 국어 (한·영·일·중)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_7">연락처 저장 · 공유 · 카드북 저장 · 만두 연결 · QR</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_8">방문·클릭 통계 ("카드 현황 보기")</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_9">✏️ 언제든 바로 고치는 문구 수정 — 요청하고 기다릴 필요 없이 수정 버튼 하나로, 영·일·중은 자동 번역</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_10">사진·디자인 변경은 TM LINK가 맡아서</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_11">무료 호스팅 (유지비 0원)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_12">제작 기간 약 3일</span></li>
-        </ul>
-        <a class="btn btn-line" href="apply/?plan=custom"><span data-i18n="p1_btn">스탠다드 신청하기</span><svg><use href="#i-arrow"/></svg></a>
-      </div>
-
-      <div class="plan pro">
-        <span class="best" data-i18n="p2_best">소개를 넘어 영업까지</span>
-        <span class="pn">PREMIUM</span>
-        <div class="price">250,000<small>원</small></div>
-        <p class="pd" data-i18n="p2_d">보여주고, 알리고, 문의까지 받는 비즈홈</p>
-        <ul>
-          <li class="sep" data-i18n="p2_0">스탠다드 전부 포함 +</li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_1">🎬 히어로 AI 영상 — 열자마자 움직이는 첫 화면</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_2">📣 내 소식판 — 상품·사례·소식을 휴대폰으로 바로 올리기</span> <em class="beta" data-i18n="beta">시범 운영</em></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_3">📩 문의 폼 + 즉시 알림 — 비즈홈이 영업 도구로</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_4">📊 월간 방문 리포트 — 몇 명이 보고 무엇을 눌렀는지</span></li>
-          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_5">🛠 1년 이미지·디자인 수정 포함 (이미지 교체 2회 + 디자인 리뉴얼 1회 · 11.5만원 상당)</span></li>
-          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_6">🌏 언어 최대 6개 + 고객 후기 섹션</span></li>
-        </ul>
-        <a class="btn btn-primary" href="apply/?plan=pro"><span data-i18n="p2_btn">프리미엄 신청하기</span><svg><use href="#i-arrow"/></svg></a>
-      </div>
-    </div>
-
-    <div class="price-notes">
-      <span data-i18n="n1">부가세(VAT 10%) 별도</span>
-      <span data-i18n="n2">결제 확인 후 제작 시작</span>
-      <span data-i18n="n4">10개 이상 단체·기업은 별도 견적</span>
-      <span data-i18n="n5">개인 도메인 연결은 별도 문의</span>
-    </div>
-
-    <a class="gallery" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener">
-      <div><b data-i18n="g_h">실제 제작된 비즈홈을 직접 확인하세요</b><span data-i18n="g_p">업종별 완성 사례 갤러리로 이동합니다</span></div>
-      <span class="btn btn-line" style="min-height:42px"><span data-i18n="g_btn">갤러리 보기</span><svg><use href="#i-ext"/></svg></span>
-    </a>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="alt">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Process</span>
-      <h2 data-i18n="ps_h">신청부터 완성까지 4단계</h2>
-      <p data-i18n="ps_sub">신청서는 1분이면 끝납니다. 나머지는 대화하면서 함께 채웁니다.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="n">01</div><h3 data-i18n="s1_h">신청서 작성</h3><p data-i18n="s1_p">플랜을 고르고 기본 정보만 남기면 접수 완료. 1영업일 안에 연락드립니다.</p></div>
-      <div class="step"><div class="n">02</div><h3 data-i18n="s2_h">상담 · 자료 전달</h3><p data-i18n="s2_p">하는 일, 원하는 고객, 소개받고 싶은 분을 듣고 사진·로고를 받습니다.</p></div>
-      <div class="step"><div class="n">03</div><h3 data-i18n="s3_h">디자인 · 수정</h3><p data-i18n="s3_p">맞춤 초안을 보내드리고, 플랜별 수정 횟수 안에서 다듬습니다.</p></div>
-      <div class="step"><div class="n">04</div><h3 data-i18n="s4_h">발행 · QR 전달</h3><p data-i18n="s4_p">홈페이지 주소와 QR을 드립니다. 오늘부터 주소 하나로 대표님을 소개하세요.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- AFTERCARE -->
-<section id="care">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Aftercare</span>
-      <h2 data-i18n="ac_h">새로 만들지 마세요. 저렴하게 업데이트하세요.</h2>
-      <p data-i18n="ac_sub">비즈홈 고객 전용 업데이트 요금입니다.</p>
-    </div>
-    <div class="care">
-      <div><small data-i18n="u1">문구 수정</small><b data-i18n="u1v">무료</b><span data-i18n="u1d">수정 버튼으로 바로 (월 1회)</span></div>
-      <div><small data-i18n="u2">사진·이미지 교체</small><b>20,000<span style="font-size:14px;color:var(--muted)">원</span></b><span data-i18n="u2d">프로필·커버 등</span></div>
-      <div><small data-i18n="u3">디자인 리뉴얼</small><b data-i18n="u3v">50% 할인</b><span data-i18n="u3d">구조·레이아웃 변경</span></div>
-      <div><small data-i18n="u4">전면 재제작</small><b data-i18n="u4v">30% 할인</b><span data-i18n="u4d">업종·브랜드 전환</span></div>
-    </div>
-    <div class="refund">
-      <span><b data-i18n="rf1">제작 시작 전</b> → <span data-i18n="rf1v">100% 환불</span></span>
-      <span><b data-i18n="rf2">1차 수정 전</b> → <span data-i18n="rf2v">50% 환불</span></span>
-      <span><b data-i18n="rf3">1차 수정 후</b> → <span data-i18n="rf3v">환불 불가</span></span>
-    </div>
-  </div>
-</section>
-
+<span id="about"></span>
 <!-- MAKER -->
 <section class="alt">
   <div class="wrap maker">
@@ -606,45 +143,18 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   </div>
 </section>
 
-<!-- FINAL CTA -->
+
 <section class="final">
   <div class="wrap">
     <span class="kicker">Start</span>
-    <h2 data-i18n="f_h">다음 소개는 대표님의 홈페이지 주소로.</h2>
-    <p data-i18n="f_p">부산 · 전국 원격 제작 · 신청 후 1영업일 내 연락</p>
+    <h2 data-i18n="hf_h">대표님의 브랜드를 함께 만들어요.</h2>
+    <p data-i18n="hf_p">부산 · 전국 원격 제작 · 신청 후 1영업일 내 연락</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="apply/"><span data-i18n="f_btn1">비즈홈 신청하기</span><svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-line" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener" data-i18n="f_btn2">제작 사례 보기</a>
+      <a class="btn btn-primary" href="apply/"><span data-i18n="hf_btn">비즈홈 신청하기</span><svg><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 </main>
-
-<!-- 앱 설명 창 -->
-<dialog class="sheet" id="appSheet" aria-labelledby="sheetTitle">
-  <div class="sheet-in">
-    <button type="button" class="sheet-x" id="sheetClose" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    <div class="sheet-head">
-      <div class="ic" id="sheetIc"></div>
-      <div><span class="cat" id="sheetCat"></span><h3 id="sheetTitle"></h3></div>
-    </div>
-    <p class="sheet-lead" id="sheetLead"></p>
-    <div class="sheet-grid">
-      <div><h4 id="sheetWhenH"></h4><ul id="sheetWhen"></ul></div>
-      <div><h4 id="sheetFeatH"></h4><ul id="sheetFeat"></ul></div>
-    </div>
-    <div class="sheet-price"><b id="sheetPriceH"></b><span id="sheetPrice"></span></div>
-    <div class="sheet-btns">
-      <a class="btn btn-primary" id="sheetOpen" target="_blank" rel="noopener"><span id="sheetOpenT"></span><svg><use href="#i-ext"/></svg></a>
-      <button type="button" class="btn btn-line" id="sheetInstallBtn" aria-expanded="false" aria-controls="sheetInstall"></button>
-    </div>
-    <div class="sheet-install" id="sheetInstall" hidden>
-      <p class="si-note" id="siNote"></p>
-      <div class="si-os" data-os="ios"><b>iPhone · iPad</b><ol id="siIos"></ol></div>
-      <div class="si-os" data-os="android"><b>Android</b><ol id="siAnd"></ol></div>
-    </div>
-  </div>
-</dialog>
 
 <footer>
   <div class="wrap foot">
@@ -652,486 +162,23 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       <div class="logo">TM <b>LINK</b></div>
       <div style="margin-top:6px" data-i18n="ft_by">송승훈 대표 · T.M Link · BNI 파이오니어</div>
     </div>
-    <nav aria-label="앱 바로가기">
-      <a href="#bizhome" data-i18n="app1_n">비즈홈</a>
-      <a href="https://jinjjabg-hub.github.io/autocard/" target="_blank" rel="noopener" data-i18n="app2_n">오토명함</a>
-      <a href="https://jinjjabg-hub.github.io/cardbook/" target="_blank" rel="noopener" data-i18n="app3_n">카드북</a>
-      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" rel="noopener" data-i18n="app4_n">만두</a>
-      <a href="https://jinjjabg-hub.github.io/JUJUDOSA/" target="_blank" rel="noopener" data-i18n="app5_n">주주도사</a>
+    <nav aria-label="서비스 바로가기">
+      <a href="bizhome/" data-i18n="app1_n">비즈홈</a>
+      <a href="apps/autocard/" data-i18n="app2_n">오토명함</a>
+      <a href="apps/cardbook/" data-i18n="app3_n">카드북</a>
+      <a href="apps/mandu/" data-i18n="app4_n">만두</a>
+      <a href="apps/jujudosa/" data-i18n="app5_n">주주도사</a>
       <a href="https://jinjjabg-hub.github.io/BNI-PIONEER/" target="_blank" rel="noopener">BNI Pioneer</a>
     </nav>
   </div>
 </footer>
 
+<script src="site.js"></script>
 <script>
-// ===== 히어로 휴대폰: 실제 비즈홈을 위 → 아래로 자동 스크롤 =====
-(function(){
-  var scr = document.getElementById('bizScreen'), shot = document.getElementById('bizShot'), hint = document.getElementById('scrollHint');
-  if (!scr) return;
-  var SPEED = 70;               // 초당 이동 px (화면 높이 기준 약 40초에 끝까지)
-  var START_HOLD = 1500, END_HOLD = 2500, RESUME_AFTER = 5000;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var canWheel = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  var pos = 0, last = 0, holdUntil = performance.now() + START_HOLD, pausedUntil = 0, visible = true, resetting = false;
-
-  if (canWheel) { scr.classList.add('manual'); hint.classList.remove('hide'); }
-  function userTouched(){ pausedUntil = performance.now() + RESUME_AFTER; pos = scr.scrollTop; hint.classList.add('hide'); }
-  ['wheel','pointerdown','keydown'].forEach(function(ev){ scr.addEventListener(ev, userTouched, {passive:true}); });
-  scr.addEventListener('mouseenter', function(){ if (canWheel) pausedUntil = Infinity; });
-  scr.addEventListener('mouseleave', function(){ if (canWheel) { pausedUntil = performance.now() + 1500; pos = scr.scrollTop; } });
-  if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }).observe(scr);
-
-  function tick(t){
-    var dt = last ? Math.min(t - last, 100) : 0; last = t;
-    var max = scr.scrollHeight - scr.clientHeight;
-    if (!reduce && visible && !resetting && t > pausedUntil && t > holdUntil && max > 0) {
-      pos = Math.min(max, pos + SPEED * dt / 1000);
-      scr.scrollTop = pos;
-      if (pos >= max) {            // 맨 아래 도착 → 잠시 멈춤 → 페이드 후 맨 위에서 다시 시작
-        resetting = true;
-        setTimeout(function(){
-          shot.classList.add('fade');
-          setTimeout(function(){ pos = 0; scr.scrollTop = 0; shot.classList.remove('fade'); holdUntil = performance.now() + START_HOLD; resetting = false; }, 450);
-        }, END_HOLD);
-      }
-    }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-
-// ===== 앱 설명 창 =====
-var APPS = {
- mandu:{ url:'https://jinjjabg-hub.github.io/MANDU/', icon:'#i-chat', latin:'MANDU',
-  ko:{cat:'통번역 메신저',name:'만두',lead:'언어가 달라도 대화는 하나로. 상대가 외국어로 써도 내 언어로 읽고, 내 언어로 쓰면 상대 언어로 전달됩니다.',
-      when:['해외 바이어·외국인 고객과 상담할 때','외국인 직원·거래처와 매일 연락할 때','해외 출장·여행 중 현지인과 대화할 때'],
-      feat:['14개 언어 실시간 자동 번역 채팅','사진·파일 전송, 친구·채팅방','비즈니스 프로필 링크로 나를 소개','구글·이메일로 바로 시작'],
-      price:'무료로 시작 · 필요하면 플랜 업그레이드',open:'만두 열기'},
-  en:{cat:'Translation messenger',name:'MANDU',lead:'Different languages, one conversation. Read their messages in your language, and they read yours in theirs.',
-      when:['Talking with overseas buyers or foreign clients','Daily contact with foreign staff or partners','Chatting with locals on business trips or travel'],
-      feat:['Real-time translated chat in 14 languages','Photos, files, friends and group chats','Share a business profile link','Start instantly with Google or email'],
-      price:'Free to start · upgrade plans available',open:'Open MANDU'},
-  zh:{cat:'翻译聊天',name:'MANDU',lead:'语言不同，对话如一。对方用外语写，您用母语读；您用母语写，对方用他的语言读。',
-      when:['与海外买家·外国客户沟通时','与外籍员工·合作伙伴日常联系时','出差·旅行时与当地人交流时'],
-      feat:['14 种语言实时自动翻译聊天','发送照片·文件，好友·群聊','用商务名片链接介绍自己','用 Google·邮箱即可开始'],
-      price:'免费开始 · 可升级方案',open:'打开 MANDU'},
-  ja:{cat:'翻訳メッセンジャー',name:'MANDU',lead:'言葉が違っても会話は一つに。相手の外国語は自分の言語で読め、自分の言葉は相手の言語で届きます。',
-      when:['海外バイヤー・外国人顧客と相談する時','外国人スタッフ・取引先と毎日連絡する時','出張・旅行先で現地の人と話す時'],
-      feat:['14 言語のリアルタイム自動翻訳チャット','写真・ファイル送信、友だち・グループ','ビジネスプロフィールのリンクで自己紹介','Google・メールですぐ開始'],
-      price:'無料で開始 · 必要に応じてプランをアップグレード',open:'MANDU を開く'}},
- jujudosa:{ url:'https://jinjjabg-hub.github.io/JUJUDOSA/', icon:'#i-star', latin:'JUJUDOSA',
-  ko:{cat:'AI 사주 상담',name:'주주도사',lead:'타고난 명식을 읽고, 지금 시기에 맞는 조언을 건네는 사주 상담. 궁금한 건 도사님께 채팅으로 물어보세요.',
-      when:['이직·창업 시기가 고민될 때','인연·결혼 운이 궁금할 때','재물 흐름을 미리 보고 싶을 때'],
-      feat:['종합 사주 풀이 — 인생의 큰 흐름','전문 도사님께 AI 채팅으로 질문','궁합 보기 (결혼 시기·경제적 조화)','귀인지도 — 친구 불러 관계 지도 (무료)'],
-      price:'무료 (주간 운세·AI 채팅 3회) · 라이트 월 4,900원 · 스탠다드 월 9,900원 (VAT 포함)',open:'주주도사 열기'},
-  en:{cat:'AI saju counseling',name:'JUJUDOSA',lead:'Korean saju counseling that reads your birth chart and gives advice for this season of life. Ask the masters anything by chat.',
-      when:['Deciding when to change jobs or start a business','Curious about relationships or marriage','Wanting a look at your wealth flow'],
-      feat:['Full saju reading — your life’s big picture','Ask expert masters via AI chat','Compatibility (marriage timing, finances)','Gwiin Map — invite friends to map relationships (free)'],
-      price:'Free (weekly fortune, 3 AI chats) · Lite ₩4,900/mo · Standard ₩9,900/mo (VAT incl.)',open:'Open JUJUDOSA'},
-  zh:{cat:'AI 四柱咨询',name:'JUJUDOSA',lead:'解读您的先天命盘，给出适合当下时期的建议。有疑问可以用聊天直接问道士。',
-      when:['纠结跳槽·创业时机时','想了解姻缘·婚姻运时','想提前看看财运走势时'],
-      feat:['综合四柱解读——人生大方向','通过 AI 聊天向专业道士提问','合婚（结婚时机·经济协调）','贵人地图——邀请朋友绘制关系图（免费）'],
-      price:'免费（每周运势·AI 聊天 3 次）· 轻享 月 4,900韩元 · 标准 月 9,900韩元（含增值税）',open:'打开 JUJUDOSA'},
-  ja:{cat:'AI 四柱推命相談',name:'JUJUDOSA',lead:'生まれ持った命式を読み、今の時期に合ったアドバイスを届ける四柱推命相談。気になることは導師にチャットで聞けます。',
-      when:['転職・起業のタイミングに迷う時','縁・結婚運が気になる時','金運の流れを先に知りたい時'],
-      feat:['総合四柱推命 — 人生の大きな流れ','専門の導師に AI チャットで質問','相性診断（結婚時期・経済的な相性）','貴人マップ — 友だちを招いて関係図（無料）'],
-      price:'無料（週間運勢・AI チャット 3 回）· ライト 月 4,900ウォン · スタンダード 月 9,900ウォン（VAT 込）',open:'JUJUDOSA を開く'}},
- cardbook:{ url:'https://jinjjabg-hub.github.io/cardbook/', icon:'#i-book', latin:'CardBook',
-  ko:{cat:'명함 관리',name:'카드북',lead:'받은 명함을 한곳에 모으고, 기억나는 조각만으로 바로 찾는 명함첩.',
-      when:['모임에서 받은 명함이 쌓여 있을 때','"그 세무사님 누구였지?" 이름이 기억 안 날 때','디지털 명함을 받고 저장할 곳이 필요할 때'],
-      feat:['명함 이미지에서 정보 자동 추출 (여러 장 한 번에)','카톡·이메일로 받은 명함 이미지 인식','휴대폰 연락처 불러오기 (안드로이드 크롬)','디지털 명함의 \'명함첩에 저장\' 버튼과 연동'],
-      price:'무료',open:'카드북 열기'},
-  en:{cat:'Card manager',name:'CardBook',lead:'Keep every card you receive in one place and find people by whatever you remember.',
-      when:['Cards from meetups are piling up','You can’t recall a name — “who was that accountant?”','You need a place to save digital cards'],
-      feat:['Auto-extract info from card images (many at once)','Reads card images received via KakaoTalk or email','Import phone contacts (Android Chrome)','Works with the “Save to CardBook” button on digital cards'],
-      price:'Free',open:'Open CardBook'},
-  zh:{cat:'名片管理',name:'名片册',lead:'把收到的名片集中保存，凭记忆片段即可快速找到。',
-      when:['聚会收到的名片越积越多时','想不起名字——"那位税务师是谁？"','收到数字名片需要保存时'],
-      feat:['从名片图片自动提取信息（可一次多张）','识别 KakaoTalk·邮件收到的名片图片','导入手机通讯录（安卓 Chrome）','与数字名片的"存入名片册"按钮联动'],
-      price:'免费',open:'打开名片册'},
-  ja:{cat:'名刺管理',name:'カードブック',lead:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',
-      when:['集まりでもらった名刺がたまっている時','「あの税理士さん誰だっけ？」と名前が出てこない時','デジタル名刺の保存先が必要な時'],
-      feat:['名刺画像から情報を自動抽出（複数枚まとめて）','カカオトーク・メールで届いた名刺画像も認識','スマホの連絡先を読み込み（Android Chrome）','デジタル名刺の「名刺帳に保存」ボタンと連携'],
-      price:'無料',open:'カードブックを開く'}},
- autocard:{ url:'https://jinjjabg-hub.github.io/autocard/', icon:'#i-bolt', latin:'AutoCard',
-  ko:{cat:'디지털 명함',name:'오토명함',lead:'명함 사진 한 장, 5분이면 완성되는 디지털 명함. 받은 사람은 카드북에 바로 저장합니다.',
-      when:['지금 당장 디지털 명함이 필요할 때','부담 없는 비용으로 먼저 시작하고 싶을 때','직원·팀원 명함을 빠르게 만들 때'],
-      feat:['명함 사진 한 장으로 AI가 초안 작성','템플릿 6종 중 골라 바로 발행','링크로 공유, 받은 사람은 카드북에 저장','미리보기 그대로 공개 명함 발행'],
-      price:'5,900원부터',open:'오토명함 만들기'},
-  en:{cat:'Digital card',name:'AutoCard',lead:'A digital card done in 5 minutes from one photo. Recipients save it straight to CardBook.',
-      when:['You need a digital card right now','You want to start at a low cost','Making cards quickly for staff or a team'],
-      feat:['AI drafts it from one card photo','Pick from 6 templates and publish','Share by link; recipients save to CardBook','Publish exactly what you preview'],
-      price:'From ₩5,900',open:'Make an AutoCard'},
-  zh:{cat:'数字名片',name:'自动名片',lead:'一张名片照片，5 分钟完成的数字名片。对方可直接存入名片册。',
-      when:['马上需要数字名片时','想以低成本先开始时','需要快速为员工·团队制作名片时'],
-      feat:['一张名片照片，AI 自动生成初稿','6 种模板任选，即刻发布','通过链接分享，对方存入名片册','所见即所得发布'],
-      price:'5,900韩元起',open:'制作自动名片'},
-  ja:{cat:'デジタル名刺',name:'オート名刺',lead:'名刺写真 1 枚、5 分で完成するデジタル名刺。受け取った人はカードブックにすぐ保存。',
-      when:['今すぐデジタル名刺が必要な時','負担の少ない費用でまず始めたい時','スタッフ・チームの名刺を素早く作る時'],
-      feat:['名刺写真 1 枚から AI が下書き','6 種のテンプレートから選んですぐ発行','リンクで共有、相手はカードブックに保存','プレビューそのままの名刺を公開'],
-      price:'5,900ウォンから',open:'オート名刺を作る'}}
-};
-var SHEET_UI = {
- ko:{when:'이럴 때 좋아요',feat:'주요 기능',price:'가격',install:'홈 화면에 설치하기',close:'닫기',
-     note:'앱스토어 없이 바로 쓰는 웹앱이에요. 홈 화면에 추가하면 앱처럼 열립니다.',
-     ios:['Safari로 앱을 엽니다','아래쪽 공유 버튼(□↑)을 누릅니다','"홈 화면에 추가"를 누릅니다'],
-     and:['Chrome으로 앱을 엽니다','오른쪽 위 ⋮ 메뉴를 누릅니다','"앱 설치" 또는 "홈 화면에 추가"를 누릅니다']},
- en:{when:'Great for',feat:'Key features',price:'Price',install:'Add to home screen',close:'Close',
-     note:'A web app — no app store needed. Add it to your home screen and it opens like an app.',
-     ios:['Open the app in Safari','Tap the Share button (□↑) at the bottom','Tap “Add to Home Screen”'],
-     and:['Open the app in Chrome','Tap the ⋮ menu at the top right','Tap “Install app” or “Add to Home screen”']},
- zh:{when:'适用场景',feat:'主要功能',price:'价格',install:'添加到主屏幕',close:'关闭',
-     note:'无需应用商店的网页应用。添加到主屏幕后即可像应用一样打开。',
-     ios:['用 Safari 打开应用','点击底部的分享按钮（□↑）','点击"添加到主屏幕"'],
-     and:['用 Chrome 打开应用','点击右上角的 ⋮ 菜单','点击"安装应用"或"添加到主屏幕"']},
- ja:{when:'こんな時に',feat:'主な機能',price:'料金',install:'ホーム画面に追加',close:'閉じる',
-     note:'アプリストア不要のウェブアプリです。ホーム画面に追加するとアプリのように開きます。',
-     ios:['Safari でアプリを開く','下の共有ボタン（□↑）をタップ','「ホーム画面に追加」をタップ'],
-     and:['Chrome でアプリを開く','右上の ⋮ メニューをタップ','「アプリをインストール」または「ホーム画面に追加」をタップ']}
-};
-var curLang = 'ko', curApp = null;
-(function(){
-  var dlg = document.getElementById('appSheet');
-  if (!dlg || typeof dlg.showModal !== 'function') return;   // 구형 브라우저: 기존처럼 링크로 이동
-  var $ = function(id){ return document.getElementById(id); };
-  var ua = navigator.userAgent, os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios' : /Android/.test(ua) ? 'android' : '';
-  function list(el, arr){ el.innerHTML=''; arr.forEach(function(t){ var li=document.createElement('li'); li.textContent=t; el.appendChild(li); }); }
-  window.renderSheet = function(){
-    if (!curApp) return;
-    var a = APPS[curApp], d = a[curLang] || a.ko, u = SHEET_UI[curLang] || SHEET_UI.ko;
-    $('sheetIc').innerHTML = '<svg><use href="'+a.icon+'"/></svg>';
-    $('sheetCat').textContent = d.cat;
-    $('sheetTitle').innerHTML = ''; $('sheetTitle').appendChild(document.createTextNode(d.name));
-    if (d.name !== a.latin) { var sm=document.createElement('small'); sm.textContent=a.latin; $('sheetTitle').appendChild(sm); }
-    $('sheetLead').textContent = d.lead;
-    $('sheetWhenH').textContent = u.when; list($('sheetWhen'), d.when);
-    $('sheetFeatH').textContent = u.feat; list($('sheetFeat'), d.feat);
-    $('sheetPriceH').textContent = u.price; $('sheetPrice').textContent = d.price;
-    $('sheetOpen').href = a.url; $('sheetOpenT').textContent = d.open;
-    $('sheetInstallBtn').textContent = u.install; $('sheetClose').setAttribute('aria-label', u.close);
-    $('siNote').textContent = u.note; list($('siIos'), u.ios); list($('siAnd'), u.and);
-    // 지금 기기에 맞는 설치 방법을 먼저 보여줌
-    document.querySelectorAll('.si-os').forEach(function(el){ el.classList.toggle('mine', el.dataset.os === os); el.hidden = !!os && el.dataset.os !== os; });
-  };
-  document.querySelectorAll('[data-app]').forEach(function(card){
-    card.addEventListener('click', function(e){
-      e.preventDefault(); curApp = card.dataset.app;
-      $('sheetInstall').hidden = true; $('sheetInstallBtn').setAttribute('aria-expanded','false');
-      renderSheet(); dlg.showModal(); dlg.querySelector('.sheet-in').scrollTop = 0;
-      try { history.replaceState(null, '', '#app-' + curApp); } catch (err) {}
-    });
-  });
-  $('sheetInstallBtn').addEventListener('click', function(){
-    var box = $('sheetInstall'), open = box.hidden; box.hidden = !open; this.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) box.scrollIntoView({behavior:'smooth', block:'nearest'});
-  });
-  $('sheetClose').addEventListener('click', function(){ dlg.close(); });
-  dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });   // 바깥 누르면 닫힘
-  dlg.addEventListener('close', function(){ try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {} });
-  // #app-mandu 처럼 주소로 바로 열기 (카톡 공유용)
-  var m = location.hash.match(/^#app-(\w+)$/);
-  if (m && APPS[m[1]]) { var c = document.querySelector('[data-app="'+m[1]+'"]'); if (c) setTimeout(function(){ c.click(); }, 300); }
-})();
-
-// ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
-var I18N = {
-en:{
- u1v:'Free',
- n5:'Custom domain: ask separately',
- beta:'Pilot',
- p2_6:'🌏 Up to 6 languages + customer reviews',
- p2_5:'🛠 1 year of image & design updates (2 image swaps + 1 redesign · worth ₩115k)',
- p2_4:'📊 Monthly visit report — who viewed and what they tapped',
- p2_3:'📩 Inquiry form + instant alerts — your BizHome sells for you',
- p2_2:'📣 My News Board — post products, cases and news from your phone',
- p2_1:'🎬 Hero AI video — a first screen that moves',
- p2_0:'Everything in Standard +',
- p1_12:'Ready in about 3 days',
- p1_11:'Free hosting (₩0 upkeep)',
- p1_10:'Photo & design changes handled by TM LINK',
- p1_9:'✏️ Edit your text anytime — no waiting on requests, one edit button; EN·JP·CN auto-translated',
- p1_8:'Visit & click stats (“Card stats”)',
- p1_7:'Save contact · Share · Save to CardBook · MANDU · QR',
- p1_6:'4 languages (KR·EN·JP·CN)',
- p1_5:'Portfolio (when your field needs it)',
- p1_4:'“Please introduce me to…” referral section',
- p1_3:'Intro · Why · Difference · Career · Services sections',
- p1_2:'2 AI images — hero image + profile photo',
- p1_1:'1:1 custom design (no templates)',
- hint:'Scroll it yourself with your mouse',
- sc3_p:'Planning, design, development and upkeep. Too much time and cost just to introduce one leader.',
- sc3_h:'A company website',
- sc3_w:'Too heavy',
- sc2_p:'Intro, career, services and referrals on one page. Shared by one link, ready in about 3 days.',
- sc2_h:'BizHome',
- sc2_w:'Just right',
- sc1_p:'Name and contact. Hard to show what you do best or why it should be you.',
- sc1_h:'A business card',
- sc1_w:'Too light',
- live:'Live BizHome sample · Seunghoon Song',
- cmp_src:'※ Market data: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong “Personal website”</a> quotes (min ₩400k · max ₩1.8M · avg ₩800k, checked Oct 2026). Varies by features and pages.',
- fh1:'1:1 planning & design',fh2:'4 languages included',fh3:'₩0 upkeep',fh4:'Ready in ~3 days',
- r6c:'KakaoTalk preview · QR included',
- r6a:'Mobile & KakaoTalk optimization extra',
- r6:'Sharing',
- c_web:'Typical freelance personal website',
- cat5:'AI fortune',
- cat4:'Translation messenger',
- cat3:'Card manager',
- cat2:'Digital card',
- cat1:'Personal brand website',
- nav_apps:'Apps',nav_why:'BizHome',nav_price:'Pricing',nav_process:'Process',nav_cta:'Apply',
- hero_tag:'Between a card and a website · BizHome',
- hero_h:'A card isn’t enough,<br/>a website feels too much.<br/><span class="hl">BizHome.</span>',
- hero_sub:'The story a single card can’t hold, without the weight of a full website. <b>BizHome</b> puts your intro, career, services and referrals on one personal brand page. Hand over one link — they truly get to know you.',
- hero_btn1:'See BizHome pricing',hero_btn2:'See our work',
- st1:'Monthly<br/>hosting cost',st2:'Languages<br/>included',st3:'Build time<br/>(Standard)',st4:'Business day<br/>to reply',
- apps_h:'Services by TM LINK',apps_sub:'BizHome, our flagship service, plus apps you can use separately. All built and run by TM LINK.',
- app_badge:'Flagship',app1_n:'BizHome',app1_d:'Deeper than a card, lighter than a website. A personal brand page planned and designed one-on-one for you.',app1_t:'₩150k · ₩250k →',
- app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'From ₩5,900 →',
- app3_n:'CardBook',app3_d:'Keep every card you receive in one place and find people by whatever you remember.',app3_t:'Try free →',
- app4_n:'MANDU',app4_d:'Different languages, one conversation. A messenger with real-time translation in 14 languages.',app4_t:'Try messenger →',
- app5_n:'JUJUDOSA',app5_d:'AI saju (Korean fortune) counseling: daily fortune, compatibility and timely advice.',app5_t:'Start →',
- why_h:'Deeper than a card,<br/>lighter than a website.',
- why_sub:'As easy to hand over as a card, as complete as a website. Exactly what a referred client needs when they look you up.',
- b1_h:'One-on-one, not a template',b1_p:'Designed personally after hearing your industry, style and customers. No two BizHomes are alike.',
- b2_h:'One link says it all',b2_p:'Optimized KakaoTalk preview with your photo and intro. A QR code is included.',
- b3_h:'"Please introduce me to…"',b3_p:'A partner & referral section built on the BNI model, so people know exactly whom to connect you with.',
- b4_h:'4 languages built in',b4_p:'Korean, English, Chinese and Japanese switch by default — ready for overseas buyers.',
- b5_h:'₩0 upkeep',b5_p:'Runs with no server or hosting fees. No monthly maintenance bills after launch.',
- b6_h:'Edit text anytime',b6_p:'Phone, title or intro — no waiting on requests, one edit button changes it instantly. EN·JP·CN auto-translated; photos and design handled by TM LINK.',
- cmp_h:'What would it cost as a website?',cmp_sub:'Compared with ordering the same content as a personal website on a freelance marketplace.',
- c_biz:'BizHome',
- 
- r2:'Price',r2a:'<b class="mkt">Avg. ₩800k</b><span class="range">₩400k – ₩1.8M</span>',r2c:'<b class="our">₩150k · ₩250k</b><span class="range">Fixed price · scope published per plan</span>',
- r3:'Process',r3a:'Planning → design → development in stages',r3c:'1:1 consultation, ready in about 3 days',
- r4:'Upkeep',r4a:'Hosting, domain and maintenance extra',r4c:'₩0 hosting',
- r5:'Languages',r5a:'Extra work per language',r5c:'4 languages included',
- pr_h:'Custom BizHome — just pick one of two.',pr_sub:'Both are made one-on-one without templates. The difference: stop at introducing, or go on to selling.',
- p1_d:'A BizHome that properly introduces you and your work',
- p1_btn:'Apply for Standard',
- p2_best:'Beyond intro — into sales',p2_d:'Shows, announces, and brings in inquiries',
- p2_btn:'Apply for Premium',
- n1:'VAT (10%) not included',n2:'Production starts after payment',n4:'10+ cards for teams: custom quote',
- g_h:'See real BizHomes we have made',g_p:'Opens the gallery of finished work by industry',g_btn:'View gallery',
- ps_h:'4 steps from application to launch',ps_sub:'The form takes 1 minute. We fill in the rest together.',
- s1_h:'Apply',s1_p:'Choose a plan and leave basic info. We reply within 1 business day.',
- s2_h:'Consult · send materials',s2_p:'We learn what you do, whom you serve and who you want to meet, then collect photos and logos.',
- s3_h:'Design · revise',s3_p:'You get a custom draft and we refine it within your plan’s revisions.',
- s4_h:'Launch · QR',s4_p:'You receive your website address and QR. Introduce yourself with one address from today.',
- ac_h:'Don’t rebuild. Update for less.',ac_sub:'Update prices for BizHome customers.',
- u1:'Text edits',u1d:'Edit button, instantly (once a month)',u2:'Photo/image swap',u2d:'Profile, cover, etc.',u3:'Design renewal',u3v:'50% off',u3d:'Structure & layout',u4:'Full rebuild',u4v:'30% off',u4d:'New industry or brand',
- rf1:'Before production',rf1v:'100% refund',rf2:'Before 1st revision',rf2v:'50% refund',rf3:'After 1st revision',rf3v:'No refund',
- mk_q:'"I help each leader become <em>a brand of their own</em>."',
- mk_p:'Exchanging referrals at BNI, I often saw introductions stall when someone asked, "So what exactly does this person do?" and there was nothing to show. BizHome is the website that answers that question.',
- mk_who:'Seunghoon Song · CEO, T.M Link · BNI Pioneer (Busan)',
- f_h:'Make your next introduction your website address.',f_p:'Busan · remote nationwide · reply within 1 business day',f_btn1:'Apply for BizHome',f_btn2:'See our work',
- ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
-},
-zh:{
- u1v:'免费',
- n5:'个人域名绑定请另行咨询',
- beta:'试运营',
- p2_6:'🌏 最多 6 种语言 + 客户评价板块',
- p2_5:'🛠 1 年图片·设计修改（更换图片 2 次 + 设计翻新 1 次 · 价值 11.5 万韩元）',
- p2_4:'📊 月度访问报告——多少人看过、点了什么',
- p2_3:'📩 咨询表单 + 即时通知——让 BizHome 成为营销工具',
- p2_2:'📣 我的动态板——用手机随时发布产品·案例·动态',
- p2_1:'🎬 主视觉 AI 视频——一打开就会动的首屏',
- p2_0:'包含标准版全部内容 +',
- p1_12:'制作周期约 3 天',
- p1_11:'免费托管（零维护费）',
- p1_10:'照片·设计变更由 TM LINK 负责',
- p1_9:'✏️ 随时修改文字——无需提出请求等待，一个按钮即可修改，英·日·中自动翻译',
- p1_8:'访问·点击统计（"名片概况"）',
- p1_7:'保存联系人·分享·存入名片册·MANDU·二维码',
- p1_6:'4 种语言（韩·英·日·中）',
- p1_5:'作品集（行业需要时）',
- p1_4:'"请帮我介绍这样的人"引荐板块',
- p1_3:'介绍·Why·差异·经历·服务板块',
- p1_2:'AI 图片 2 张——主视觉图 + 头像',
- p1_1:'一对一定制设计（无模板）',
- hint:'用鼠标滚轮自己浏览',
- sc3_p:'策划、设计、开发、维护。只为介绍一位代表，时间和成本都太高。',
- sc3_h:'公司官网',
- sc3_w:'太重',
- sc2_p:'介绍·经历·服务·引荐尽在一页。一个链接即可分享，约 3 天完成。',
- sc2_h:'BizHome',
- sc2_w:'刚刚好',
- sc1_p:'只有姓名和联系方式，难以说明您擅长什么、为什么选您。',
- sc1_h:'一张名片',
- sc1_w:'太轻',
- live:'真实 BizHome 案例 · 宋承勋',
- cmp_src:'※ 行情来源：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「个人网站制作」</a>报价数据（最低 40万 · 最高 180万 · 平均 80万韩元，2026年10月查询）。因功能和页数而异。',
- fh1:'一对一策划·设计',fh2:'默认 4 种语言',fh3:'零维护费',fh4:'约 3 天完成',
- r6c:'默认提供 KakaoTalk 预览 · 二维码',
- r6a:'移动端·KakaoTalk 优化另计',
- r6:'分享',
- c_web:'一般外包个人网站',
- cat5:'AI 四柱',
- cat4:'翻译聊天',
- cat3:'名片管理',
- cat2:'数字名片',
- cat1:'个人品牌官网',
- nav_apps:'应用',nav_why:'BizHome',nav_price:'价格',nav_process:'流程',nav_cta:'申请',
- hero_tag:'名片与官网之间 · BizHome',
- hero_h:'名片不够用，<br/>官网又太重。<br/><span class="hl">BizHome。</span>',
- hero_sub:'一张名片装不下的故事，不必做成沉重的官网。<b>BizHome</b> 把您的介绍、经历、服务和引荐放在一页个人品牌主页上。递出一个链接，对方就能真正了解您。',
- hero_btn1:'查看 BizHome 价格',hero_btn2:'查看案例',
- st1:'每月<br/>托管费用',st2:'默认<br/>支持语言',st3:'制作周期<br/>（标准版）',st4:'申请后<br/>工作日内回复',
- apps_h:'TM LINK 的服务',apps_sub:'核心服务 BizHome，以及可单独使用的应用。全部由 TM LINK 自主开发运营。',
- app_badge:'核心服务',app1_n:'BizHome',app1_d:'比名片更深入，比官网更轻巧的个人品牌主页。为您一对一策划设计。',app1_t:'15万 · 25万韩元 →',
- app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'5,900韩元起 →',
- app3_n:'名片册',app3_d:'把收到的名片集中保存，凭记忆片段即可快速找到。',app3_t:'免费使用 →',
- app4_n:'MANDU',app4_d:'语言不同，对话如一。支持 14 种语言实时翻译的聊天应用。',app4_t:'体验 →',
- app5_n:'JUJUDOSA',app5_d:'AI 四柱咨询：解读命盘，给出当下的建议。今日运势、合婚尽在其中。',app5_t:'开始咨询 →',
- why_h:'比名片更深入，<br/>比官网更轻巧。',
- why_sub:'像名片一样容易递出，像官网一样内容充足。正好满足被引荐者搜索您时所需。',
- b1_h:'一对一定制，而非模板',b1_p:'了解您的行业、风格和客户后亲自设计。没有两个相同的 BizHome。',
- b2_h:'一个链接完成介绍',b2_p:'优化 KakaoTalk 预览，照片与简介即刻显示，并附赠二维码。',
- b3_h:'"请帮我介绍这样的人"',b3_p:'按 BNI 引荐模式设计的伙伴·推荐板块，对方立刻知道该为您连接谁。',
- b4_h:'内置 4 种语言',b4_p:'韩、英、中、日一键切换，可直接发给海外买家和外国客户。',
- b5_h:'零维护费',b5_p:'无需服务器和托管费用即可持续运营，上线后没有每月管理费。',
- b6_h:'文字随时修改',b6_p:'电话、职务、介绍——无需提出请求等待，一个按钮即刻修改。英·日·中自动翻译，照片·设计由 TM LINK 负责。',
- cmp_h:'如果做成官网要多少钱？',cmp_sub:'与在外包平台把同样内容做成个人网站的情况比较。',
- c_biz:'BizHome',
- 
- r2:'价格',r2a:'<b class="mkt">平均 80万韩元</b><span class="range">40万 ~ 180万韩元</span>',r2c:'<b class="our">15万 · 25万韩元</b><span class="range">明码标价 · 各方案内容公开</span>',
- r3:'进行方式',r3a:'策划 → 设计 → 开发 分阶段进行',r3c:'一对一咨询后约 3 天完成',
- r4:'维护费',r4a:'托管·域名·管理费另计',r4c:'托管 0 元',
- r5:'多语言',r5a:'每种语言需额外制作',r5c:'默认包含 4 种语言',
- pr_h:'BizHome 定制，二选一即可。',pr_sub:'两者都无模板、一对一制作。区别在于：停在介绍，还是延伸到营销。',
- p1_d:'好好介绍您和您事业的 BizHome',
- p1_btn:'申请标准版',
- p2_best:'从介绍到营销',p2_d:'展示、发布，还能接收咨询的 BizHome',
- p2_btn:'申请高级版',
- n1:'不含增值税（10%）',n2:'确认付款后开始制作',n4:'10 张以上团体·企业另行报价',
- g_h:'查看实际制作的 BizHome',g_p:'前往按行业分类的作品展示',g_btn:'查看作品',
- ps_h:'从申请到完成 4 步',ps_sub:'申请表 1 分钟完成，其余边沟通边完善。',
- s1_h:'填写申请',s1_p:'选择方案并留下基本信息即可。1 个工作日内联系您。',
- s2_h:'咨询 · 提交资料',s2_p:'了解您的业务、目标客户与想认识的人，并收集照片和标志。',
- s3_h:'设计 · 修改',s3_p:'发送定制初稿，在方案修改次数内细化。',
- s4_h:'发布 · 二维码',s4_p:'交付网址和二维码。从今天起用一个网址介绍自己。',
- ac_h:'不必重做，低价更新。',ac_sub:'BizHome 客户专享更新价格。',
- u1:'文字修改',u1d:'用修改按钮即时更新（每月 1 次）',u2:'照片·图片更换',u2d:'头像、封面等',u3:'设计翻新',u3v:'5 折',u3d:'结构·版式变更',u4:'整体重做',u4v:'7 折',u4d:'行业·品牌转换',
- rf1:'开始制作前',rf1v:'全额退款',rf2:'第一次修改前',rf2v:'退款 50%',rf3:'第一次修改后',rf3v:'不予退款',
- mk_q:'"让每位代表都成为<em>一个品牌</em>。"',
- mk_p:'在 BNI 互相引荐时，我常看到介绍在对方问"这位代表具体做什么？"时中断，因为没有可以展示的地方。BizHome 就是回答这个问题的官网。',
- mk_who:'宋承勋 · T.M Link 代表 · BNI Pioneer（釜山）',
- f_h:'下一次介绍，用您的官网网址。',f_p:'釜山 · 全国远程制作 · 申请后 1 个工作日内联系',f_btn1:'申请 BizHome',f_btn2:'查看案例',
- ft_by:'宋承勋 · T.M Link · BNI Pioneer'
-},
-ja:{
- u1v:'無料',
- n5:'独自ドメイン連携は別途お問い合わせ',
- beta:'試験運用',
- p2_6:'🌏 最大 6 言語 + お客様の声セクション',
- p2_5:'🛠 1 年間の画像・デザイン修正込み（画像差し替え 2 回 + デザインリニューアル 1 回・11.5 万ウォン相当）',
- p2_4:'📊 月間訪問レポート — 何人が見て何を押したか',
- p2_3:'📩 問い合わせフォーム + 即時通知 — BizHome が営業ツールに',
- p2_2:'📣 マイお知らせボード — 商品・事例・お知らせをスマホからすぐ投稿',
- p2_1:'🎬 ヒーロー AI 動画 — 開いた瞬間から動くトップ画面',
- p2_0:'スタンダードの全内容 +',
- p1_12:'制作期間 約 3 日',
- p1_11:'無料ホスティング（維持費 0 円）',
- p1_10:'写真・デザインの変更は TM LINK が担当',
- p1_9:'✏️ いつでもすぐ直せる文章修正 — 依頼して待つ必要なし、修正ボタン一つで。英・日・中は自動翻訳',
- p1_8:'訪問・クリック統計（「カード状況」）',
- p1_7:'連絡先保存・共有・カードブック保存・MANDU 連携・QR',
- p1_6:'4 言語（韓・英・日・中）',
- p1_5:'ポートフォリオ（業種に必要な場合）',
- p1_4:'「こんな方を紹介してください」リファーラルセクション',
- p1_3:'紹介・Why・違い・経歴・サービスのセクション',
- p1_2:'AI 画像 2 枚 — ヒーロー画像 + プロフィール写真',
- p1_1:'1:1 オーダーメイドデザイン（テンプレートなし）',
- hint:'マウスホイールで自分でスクロール',
- sc3_p:'企画・デザイン・開発・管理まで。代表一人を紹介するには時間も費用も大きすぎます。',
- sc3_h:'会社のホームページ',
- sc3_w:'重すぎる',
- sc2_p:'紹介・経歴・サービス・リファーラルを一ページに。リンク一つで渡せて、約 3 日で完成。',
- sc2_h:'BizHome',
- sc2_w:'ちょうどいい',
- sc1_p:'名前と連絡先まで。何が得意か、なぜこの人なのかは伝えにくい。',
- sc1_h:'名刺一枚',
- sc1_w:'軽すぎる',
- live:'実際の BizHome サンプル · ソン・スンフン',
- cmp_src:'※ 相場の出典：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「個人ホームページ制作」</a>見積データ（最低 40万 · 最高 180万 · 平均 80万ウォン、2026年10月確認）。機能・ページ数により異なります。',
- fh1:'1:1 企画・デザイン',fh2:'4 言語標準',fh3:'維持費 0 円',fh4:'約 3 日で完成',
- r6c:'カカオトークプレビュー · QR 標準',
- r6a:'モバイル・カカオトーク最適化は別作業',
- r6:'共有',
- c_web:'一般的な外注の個人ホームページ',
- cat5:'AI 四柱推命',
- cat4:'翻訳メッセンジャー',
- cat3:'名刺管理',
- cat2:'デジタル名刺',
- cat1:'パーソナルブランドサイト',
- nav_apps:'アプリ',nav_why:'BizHome',nav_price:'料金',nav_process:'制作の流れ',nav_cta:'申し込む',
- hero_tag:'名刺とホームページの間 · BizHome',
- hero_h:'名刺では足りず、<br/>ホームページは重すぎる時。<br/><span class="hl">BizHome。</span>',
- hero_sub:'名刺一枚には収まらない話を、ホームページほど重くなく。<b>BizHome</b> は紹介・経歴・サービス・リファーラルを一ページにまとめたパーソナルブランドサイトです。渡すのはリンク一つ、受け取った人はあなたをきちんと知ることができます。',
- hero_btn1:'BizHome の料金を見る',hero_btn2:'制作事例を見る',
- st1:'毎月の<br/>ホスティング費',st2:'標準対応<br/>言語',st3:'制作期間<br/>（スタンダード）',st4:'申込後の返信<br/>営業日以内',
- apps_h:'TM LINK のサービス',apps_sub:'代表サービスの BizHome と、必要に応じて別に使えるアプリ。すべて TM LINK が開発・運営しています。',
- app_badge:'代表サービス',app1_n:'BizHome',app1_d:'名刺より深く、ホームページより軽いパーソナルブランドサイト。代表一人のために 1:1 で企画・デザイン。',app1_t:'15万 · 25万ウォン →',
- app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'5,900ウォンから →',
- app3_n:'カードブック',app3_d:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',app3_t:'無料で使う →',
- app4_n:'MANDU',app4_d:'言葉が違っても会話は一つに。14 言語をリアルタイム自動翻訳するメッセンジャー。',app4_t:'体験する →',
- app5_n:'JUJUDOSA',app5_d:'命式を読み、今の時期に合ったアドバイスを届ける AI 四柱推命相談。今日の運勢・相性も。',app5_t:'相談を始める →',
- why_h:'名刺より深く、<br/>ホームページより軽く。',
- why_sub:'渡すのは名刺のように簡単に、見せるのはホームページのように十分に。紹介された人が検索した時にちょうど必要な分だけ。',
- b1_h:'テンプレートではなく 1:1',b1_p:'業種・スタイル・顧客層を伺い代表が直接デザイン。同じ BizHome は二つとありません。',
- b2_h:'リンク一つで紹介完了',b2_p:'カカオトークのプレビューに写真と紹介がすぐ表示。QR コードもお渡しします。',
- b3_h:'「こんな方を紹介してください」',b3_p:'BNI のリファーラル構造をそのまま反映したパートナー・推薦セクション。',
- b4_h:'4 言語を標準搭載',b4_p:'韓・英・中・日の切替ボタン付き。海外バイヤーや外国人顧客にもそのまま送れます。',
- b5_h:'維持費 0 円',b5_p:'サーバー・ホスティング費用なしで運営を続けられます。公開後の月額管理費はありません。',
- b6_h:'文章はいつでもすぐ',b6_p:'連絡先・肩書・紹介文は、依頼して待つ必要なく修正ボタン一つですぐ変わります。英・日・中は自動翻訳、写真・デザインは TM LINK が担当。',
- cmp_h:'ホームページで依頼したらいくら？',cmp_sub:'同じ内容を外注プラットフォームで個人ホームページとして依頼する場合と比べました。',
- c_biz:'BizHome',
- 
- r2:'価格',r2a:'<b class="mkt">平均 80万ウォン</b><span class="range">40万 〜 180万ウォン</span>',r2c:'<b class="our">15万 · 25万ウォン</b><span class="range">定額制 · プラン別の内容を公開</span>',
- r3:'進め方',r3a:'企画 → デザイン → 開発を段階的に',r3c:'1:1 相談後 約 3 日で完成',
- r4:'維持費',r4a:'ホスティング・ドメイン・管理費が別途',r4c:'ホスティング 0 円',
- r5:'多言語',r5a:'言語ごとに追加作業',r5c:'4 言語標準搭載',
- pr_h:'BizHome オーダーメイド、選ぶのは 2 つだけ。',pr_sub:'どちらもテンプレートなしの 1:1 制作。違いは「紹介で止まるか、営業まで進むか」。',
- p1_d:'あなたと仕事をきちんと紹介する BizHome',
- p1_btn:'スタンダードを申し込む',
- p2_best:'紹介を超えて営業まで',p2_d:'見せて、知らせて、問い合わせまで受ける BizHome',
- p2_btn:'プレミアムを申し込む',
- n1:'消費税（VAT 10%）別',n2:'入金確認後に制作開始',n4:'10 枚以上の団体・企業は別途お見積り',
- g_h:'実際に制作した BizHome をご覧ください',g_p:'業種別の制作事例ギャラリーへ移動します',g_btn:'ギャラリーを見る',
- ps_h:'申し込みから完成まで 4 ステップ',ps_sub:'申込書は 1 分で完了。残りは会話しながら一緒に作ります。',
- s1_h:'申込書の記入',s1_p:'プランを選び基本情報を残すだけ。1 営業日以内にご連絡します。',
- s2_h:'相談・資料のお渡し',s2_p:'お仕事・顧客・紹介してほしい方を伺い、写真やロゴを受け取ります。',
- s3_h:'デザイン・修正',s3_p:'オーダーメイドの初稿をお送りし、プランの修正回数内で仕上げます。',
- s4_h:'公開・QR のお渡し',s4_p:'ホームページのアドレスと QR をお渡し。今日からアドレス一つで自己紹介。',
- ac_h:'作り直さず、安くアップデート。',ac_sub:'BizHome のお客様専用アップデート料金です。',
- u1:'文章修正',u1d:'修正ボタンですぐ（月 1 回）',u2:'写真・画像の差し替え',u2d:'プロフィール・カバーなど',u3:'デザインリニューアル',u3v:'50% オフ',u3d:'構成・レイアウト変更',u4:'全面作り直し',u4v:'30% オフ',u4d:'業種・ブランド転換',
- rf1:'制作開始前',rf1v:'100% 返金',rf2:'1 回目の修正前',rf2v:'50% 返金',rf3:'1 回目の修正後',rf3v:'返金不可',
- mk_q:'「代表一人が<em>一つのブランド</em>になるように作ります。」',
- mk_p:'BNI で紹介をやり取りする中で、「この代表は具体的に何をしている方？」と聞かれた時に見せる場所がなく、紹介が止まる場面をよく見ました。BizHome はその問いに答えるホームページです。',
- mk_who:'ソン・スンフン · T.M Link 代表 · BNI Pioneer（釜山）',
- f_h:'次の紹介は、あなたのホームページのアドレスで。',f_p:'釜山 · 全国リモート制作 · 申込後 1 営業日以内にご連絡',f_btn1:'BizHome を申し込む',f_btn2:'制作事例を見る',
- ft_by:'ソン・スンフン · T.M Link · BNI Pioneer'
-}};
-
-function setLang(lang){
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    if(el.dataset.ko === undefined) el.dataset.ko = el.innerHTML;   // 한국어 원문 보관
-    var d = I18N[lang];
-    el.innerHTML = (lang === 'ko' || !d || d[el.dataset.i18n] === undefined) ? el.dataset.ko : d[el.dataset.i18n];
-  });
-  document.documentElement.lang = lang;
-  curLang = lang; if (window.renderSheet) renderSheet();
-  document.querySelectorAll('.lang button').forEach(function(b){
-    b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
-  });
-  try{ localStorage.setItem('tmlink-lang', lang); }catch(e){}
-}
-document.querySelectorAll('.lang button').forEach(function(b){
-  b.addEventListener('click', function(){ setLang(b.dataset.lang); });
-});
-try{ var saved = localStorage.getItem('tmlink-lang'); if(saved && saved !== 'ko') setLang(saved); }catch(e){}
+// 예전 주소(#app-mandu 등)로 들어와도 해당 앱 소개 페이지로 보낸다 (카톡·소식판에 퍼진 링크 호환)
+(function(){ var m = location.hash.match(/^#app-(\w+)$/); if (m && /^(autocard|cardbook|mandu|jujudosa)$/.test(m[1])) location.replace('apps/' + m[1] + '/'); })();
+// 예전 비즈홈 구역 주소(#bizhome, #pricing, #process, #care)도 비즈홈 페이지로
+(function(){ var m = location.hash.match(/^#(bizhome|pricing|process|care)$/); if (m) location.replace('bizhome/#' + m[1]); })();
 </script>
 </body>
 </html>
