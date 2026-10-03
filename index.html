@@ -1,1801 +1,693 @@
 <!DOCTYPE html>
-<html class="dark" lang="ko">
+<html lang="ko">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TM LINK | 명함은 종이였습니다. 이제는 자산입니다.</title>
-<meta name="description" content="BNI 멤버카드, 비즈홈, 링크 페이지 전문 제작. 부산 T.M Link 송승훈 대표."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "inverse-surface": "#e2e2e2",
-        "surface-container-lowest": "#0e0e0e",
-        "on-tertiary-container": "#454544",
-        "on-secondary-fixed-variant": "#584400",
-        "tertiary-fixed-dim": "#c8c6c5",
-        "on-primary-fixed": "#241a00",
-        "on-surface": "#e2e2e2",
-        "outline": "#99907c",
-        "primary": "#f2ca50",
-        "primary-fixed": "#ffe088",
-        "on-secondary": "#3d2f00",
-        "on-secondary-fixed": "#241a00",
-        "on-primary-container": "#554300",
-        "secondary": "#eac249",
-        "on-error": "#690005",
-        "surface-container-high": "#2a2a2a",
-        "background": "#131313",
-        "error": "#ffb4ab",
-        "on-primary-fixed-variant": "#574500",
-        "on-error-container": "#ffdad6",
-        "surface-bright": "#393939",
-        "outline-variant": "#4d4635",
-        "surface-dim": "#131313",
-        "on-secondary-container": "#352800",
-        "inverse-primary": "#735c00",
-        "on-tertiary-fixed-variant": "#474746",
-        "on-background": "#e2e2e2",
-        "surface-container-highest": "#353535",
-        "secondary-fixed-dim": "#eac249",
-        "surface-tint": "#e9c349",
-        "on-primary": "#3c2f00",
-        "surface-container-low": "#1b1b1b",
-        "tertiary-container": "#b4b2b2",
-        "surface-container": "#1f1f1f",
-        "on-surface-variant": "#d0c5af",
-        "error-container": "#93000a",
-        "on-tertiary": "#313030",
-        "primary-fixed-dim": "#e9c349",
-        "on-tertiary-fixed": "#1c1b1b",
-        "tertiary-fixed": "#e5e2e1",
-        "surface": "#131313",
-        "primary-container": "#d4af37",
-        "inverse-on-surface": "#303030",
-        "secondary-container": "#b08c10",
-        "surface-variant": "#353535",
-        "tertiary": "#d0cdcd",
-        "secondary-fixed": "#ffe08b"
-      },
-      borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-      spacing: {
-        "container-max": "1280px", "margin-desktop": "64px",
-        "base": "8px", "margin-mobile": "16px", "gutter": "24px"
-      },
-      fontFamily: {
-        "body-md": ["Inter"], "headline-md": ["Montserrat"],
-        "display-lg": ["Montserrat"], "label-sm": ["Inter"],
-        "body-lg": ["Inter"], "headline-lg": ["Montserrat"],
-        "headline-lg-mobile": ["Montserrat"]
-      },
-      fontSize: {
-        "body-md": ["16px", {"lineHeight":"24px","fontWeight":"400"}],
-        "headline-md": ["24px", {"lineHeight":"32px","fontWeight":"600"}],
-        "display-lg": ["64px", {"lineHeight":"72px","letterSpacing":"-0.02em","fontWeight":"700"}],
-        "label-sm": ["12px", {"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],
-        "body-lg": ["18px", {"lineHeight":"28px","fontWeight":"400"}],
-        "headline-lg": ["40px", {"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],
-        "headline-lg-mobile": ["32px", {"lineHeight":"40px","fontWeight":"600"}]
-      }
-    }
-  }
-}
-</script>
+<meta name="description" content="TM LINK가 직접 만들고 운영하는 앱 5종 — 비즈홈·오토명함·카드북·MANDU·주주도사. 맞춤 비즈홈 15만원부터. 부산 T.M Link 송승훈 대표."/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="TM LINK | 명함은 종이였습니다. 이제는 자산입니다."/>
+<meta property="og:description" content="비즈홈 맞춤 제작 15만원 · 25만원. 카톡 링크 하나로 나를 소개하는 비즈니스 홈."/>
+<meta property="og:image" content="https://jinjjabg-hub.github.io/T.M-LINK/%EC%86%A1%EC%8A%B9%ED%9B%88.png"/>
+<meta name="theme-color" content="#1a2332"/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  body { background-color: #000000; color: #e2e2e2; overflow-x: hidden; }
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    display: inline-block; vertical-align: middle;
-  }
-  .glass-card {
-    background: rgba(26,26,26,0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid #2d2d2d;
-    transition: all 0.3s ease;
-  }
-  .glass-card:hover {
-    border-color: #f2ca50;
-    box-shadow: 0 0 30px rgba(242,202,80,0.1);
-  }
-  .gold-glow { box-shadow: 0 0 20px rgba(212,175,55,0.15); }
-  .network-lines {
-    background-image: radial-gradient(circle at 2px 2px, rgba(212,175,55,0.05) 1px, transparent 0);
-    background-size: 40px 40px;
-  }
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #f2ca50 0%, #b08c10 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .nav-link { position: relative; transition: color 0.3s ease; }
-  .nav-link::after {
-    content: ''; position: absolute;
-    width: 0; height: 2px; bottom: -4px; left: 0;
-    background-color: #f2ca50; transition: width 0.3s ease;
-  }
-  .nav-link:hover::after { width: 100%; }
+/* ─────────────────────────────────────────────
+   COLOR TOKENS — theme-factory "Ocean Depths" + TM LINK 골드
+   Ocean Depths: 신뢰·컨설팅용 팔레트 (navy / teal / seafoam / cream)
+   골드는 기존 TM LINK 브랜드색 → 행동 유도(CTA)에만 사용
+   ───────────────────────────────────────────── */
+:root{
+  --navy-950:#0f1620;   /* 가장 깊은 배경 */
+  --navy-900:#1a2332;   /* Ocean Depths · Deep Navy (기본 배경) */
+  --navy-800:#223047;   /* 카드 배경 */
+  --navy-700:#2c3d58;   /* 테두리 */
+  --teal:#2d8b8b;       /* Ocean Depths · Teal (면·테두리 강조) */
+  --seafoam:#a8dadc;    /* Ocean Depths · Seafoam (강조 텍스트, 대비 9:1) */
+  --cream:#f1faee;      /* Ocean Depths · Cream (본문 텍스트) */
+  --muted:#b4c3cf;      /* 보조 텍스트 (대비 8:1) */
+  --gold:#e9c349;       /* TM LINK 골드 (CTA) */
+  --gold-ink:#1a1400;   /* 골드 위 글자 */
+  --radius:16px;
+  --maxw:1160px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  background:var(--navy-900);color:var(--cream);line-height:1.65;font-size:16px;
+  word-break:keep-all;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.en{font-family:Montserrat,"Pretendard Variable",sans-serif;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--gold-ink);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
 
-  /* Hero card animation */
-  @keyframes float {
-    0%,100% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-  }
-  .card-float { animation: float 5s ease-in-out infinite; }
-  .card-float-delay { animation: float 5s ease-in-out infinite; animation-delay: -2.5s; }
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;cursor:pointer;border:1.5px solid transparent;transition:transform .18s var(--ease),filter .18s,background .18s,border-color .18s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-gold:hover{filter:brightness(1.08)}
+.btn-line{border-color:var(--teal);color:var(--seafoam)}
+.btn-line:hover{background:rgba(45,139,139,.15)}
+.btn svg{width:18px;height:18px}
 
-  /* Cursor glow - optimized */
-  .cursor-glow {
-    position: fixed; width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 70%);
-    pointer-events: none; z-index: 9999;
-    transform: translate(-50%,-50%);
-    transition: left 0.15s ease, top 0.15s ease;
-  }
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(15,22,32,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(168,218,220,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-family:Montserrat,sans-serif;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo b{color:var(--gold)}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--cream)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang{display:flex;background:var(--navy-800);border-radius:10px;padding:3px}
+.lang button{background:none;border:0;color:var(--muted);font:inherit;font-size:12px;font-weight:600;padding:6px 8px;border-radius:7px;cursor:pointer;min-width:34px}
+.lang button[aria-pressed="true"]{background:rgba(233,195,73,.16);color:var(--gold)}
+.nav .btn{min-height:40px;padding:0 16px;font-size:14px}
 
-/* ── MOBILE RESPONSIVE ── */
-@media (max-width: 768px) {
-  /* 헤더 */
-  header { padding: 0 16px !important; }
+/* hero */
+.hero{position:relative;padding:88px 0 72px;overflow:hidden;
+  background:radial-gradient(900px 500px at 85% 20%,rgba(45,139,139,.28),transparent 60%),
+             radial-gradient(600px 400px at 0% 100%,rgba(233,195,73,.07),transparent 60%),var(--navy-950)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--seafoam);border:1px solid rgba(168,218,220,.3);padding:6px 14px;border-radius:99px;margin-bottom:22px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.15;font-weight:800;letter-spacing:-.03em}
+h1 .hl{color:var(--gold)}
+.lead{margin-top:20px;font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:540px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px;max-width:560px}
+.stat b{display:block;font-family:Montserrat,sans-serif;font-size:26px;color:var(--cream);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block}
 
-  /* 히어로 */
-  #hero { padding: 80px 20px 40px !important; min-height: auto !important; }
-  #hero .grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-  #hero h2 { font-size: 36px !important; line-height: 1.2 !important; }
-  #hero p.font-body-lg { font-size: 14px !important; }
-  #hero .hero-visual-wrap { height: 280px !important; }
-  #hero img[src="송승훈.png"] { height: 280px !important; position: relative !important; right: auto !important; max-width: 100% !important; }
+/* phone mockup */
+.phone{width:300px;max-width:100%;margin:0 auto;aspect-ratio:9/18.5;border-radius:42px;padding:12px;background:#0b1018;border:1px solid var(--navy-700);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(168,218,220,.06) inset;animation:float 6s ease-in-out infinite}
+.screen{height:100%;border-radius:32px;overflow:hidden;background:linear-gradient(180deg,#1f3a4f 0%,var(--navy-900) 46%);display:flex;flex-direction:column;align-items:center;padding:34px 18px 18px;text-align:center}
+.screen .mono{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--gold);background:radial-gradient(circle at 30% 30%,#2c4a63,var(--navy-900));font-family:Montserrat,sans-serif;font-weight:800;font-size:28px;color:var(--gold)}
+.screen .nm{margin-top:12px;font-weight:800;font-size:19px}
+.screen .rl{font-size:12px;color:var(--seafoam)}
+.screen .chips{display:flex;gap:6px;margin:12px 0 14px;flex-wrap:wrap;justify-content:center}
+.screen .chips span{font-size:10px;padding:3px 8px;border-radius:99px;background:rgba(168,218,220,.12);color:var(--seafoam)}
+.screen .row{width:100%;display:flex;align-items:center;gap:10px;background:var(--navy-800);border:1px solid var(--navy-700);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:12px;text-align:left}
+.screen .row i{width:26px;height:26px;border-radius:8px;background:rgba(45,139,139,.3);flex-shrink:0;display:grid;place-items:center;color:var(--seafoam);font-style:normal;font-size:12px}
+.screen .save{margin-top:auto;width:100%;background:var(--gold);color:var(--gold-ink);font-weight:800;font-size:12.5px;border-radius:12px;padding:11px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
-  /* Stats */
-  .hero-stats { flex-direction: row !important; gap: 16px !important; }
-  .hero-stats .stat-num { font-size: 22px !important; }
-  .hero-stats .stat-desc { font-size: 11px !important; }
+/* sections */
+section{padding:96px 0}
+.sec-head{max-width:720px;margin-bottom:44px}
+.kicker{font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--seafoam);text-transform:uppercase}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:800;letter-spacing:-.025em;margin-top:10px}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+.alt{background:var(--navy-950)}
 
-  /* 버튼 */
-  #hero .flex.gap-4 { gap: 10px !important; }
-  #hero button { padding: 12px 20px !important; font-size: 13px !important; }
+/* apps */
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.app{position:relative;display:flex;flex-direction:column;background:var(--navy-800);border:1px solid var(--navy-700);border-radius:var(--radius);padding:24px 22px;transition:transform .2s var(--ease),border-color .2s}
+.app:hover{transform:translateY(-4px);border-color:var(--teal)}
+.app.feat{border-color:var(--gold);background:linear-gradient(180deg,rgba(233,195,73,.09),var(--navy-800) 55%)}
+.app .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
+.app .ic svg{width:26px;height:26px}
+.app h3{font-size:19px;font-weight:800}
+.app h3 small{font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:.04em}
+.app p{font-size:14.5px;color:var(--muted);margin-top:8px;flex-grow:1}
+.app .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--seafoam)}
+.app.feat .tag{color:var(--gold)}
+.app .badge{position:absolute;top:16px;right:16px;font-size:11px;font-weight:800;background:var(--gold);color:var(--gold-ink);padding:3px 9px;border-radius:99px}
+.app::after{content:"";position:absolute;inset:0;border-radius:inherit}
 
-  /* WHY 섹션 */
-  #why { padding: 60px 20px !important; }
-  #why h3 { font-size: 22px !important; }
-  #why .grid { grid-template-columns: 1fr !important; }
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bf{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:var(--radius);padding:26px}
+.bf .num{font-family:Montserrat,sans-serif;font-weight:800;font-size:13px;color:var(--gold)}
+.bf h3{font-size:19px;font-weight:800;margin:8px 0 8px}
+.bf p{font-size:15px;color:var(--muted)}
 
-  /* DIGITAL CARD */
-  #digital-card { padding: 60px 20px !important; }
-  #digital-card .grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-  #digital-card h4 { font-size: 24px !important; }
-  #digital-card .grid.grid-cols-3 { grid-template-columns: repeat(2, 1fr) !important; }
+/* compare */
+.compare-wrap{margin-top:56px}
+.compare-wrap h3{font-size:22px;font-weight:800;margin-bottom:6px}
+.compare-wrap>p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.tbl-scroll{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--navy-700)}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:14.5px}
+th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--navy-700);vertical-align:top}
+thead th{background:var(--navy-800);font-size:15px}
+tbody th{color:var(--muted);font-weight:600;width:20%}
+td.biz,th.biz{background:rgba(233,195,73,.07)}
+thead th.biz{color:var(--gold)}
+tr:last-child th,tr:last-child td{border-bottom:0}
 
-  /* ECOSYSTEM */
-  #ecosystem { padding: 60px 20px !important; }
-  #ecosystem .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
-  #ecosystem canvas { width: 100% !important; height: 280px !important; }
-  #ecosystem .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
-  #ecosystem .glass-card.p-6 { padding: 16px !important; }
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px}
+.plan{position:relative;display:flex;flex-direction:column;background:var(--navy-800);border:1px solid var(--navy-700);border-radius:22px;padding:32px 28px}
+.plan.pro{border:2px solid var(--gold);box-shadow:0 20px 60px rgba(233,195,73,.08)}
+.plan .pn{font-family:Montserrat,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--seafoam)}
+.plan.pro .pn{color:var(--gold)}
+.plan .price{font-family:Montserrat,sans-serif;font-size:44px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.plan .price small{font-family:"Pretendard Variable",sans-serif;font-size:17px;font-weight:600;color:var(--muted);margin-left:4px}
+.plan .pd{color:var(--muted);font-size:15px;margin-top:4px}
+.plan .best{position:absolute;top:-13px;left:28px;background:var(--gold);color:var(--gold-ink);font-size:12px;font-weight:800;padding:5px 12px;border-radius:99px}
+.plan ul{list-style:none;margin:24px 0 28px;flex-grow:1;display:grid;gap:11px}
+.plan li{display:flex;gap:10px;font-size:15px;line-height:1.5}
+.plan li svg{flex-shrink:0;width:20px;height:20px;margin-top:1px;color:var(--seafoam)}
+.plan li.hi{color:var(--cream);font-weight:700}
+.plan li.hi svg{color:var(--gold)}
+.plan li.sep{border-top:1px dashed var(--navy-700);padding-top:12px;margin-top:2px;color:var(--seafoam);font-size:13px;font-weight:700}
+.plan .btn{width:100%}
+.price-notes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.price-notes span{font-size:13.5px;color:var(--muted);background:var(--navy-800);border:1px solid var(--navy-700);padding:7px 13px;border-radius:99px}
+.gallery{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;max-width:960px;padding:20px 24px;border-radius:var(--radius);border:1px solid rgba(168,218,220,.25);background:linear-gradient(90deg,rgba(45,139,139,.18),rgba(45,139,139,.04))}
+.gallery b{display:block;font-size:17px}
+.gallery span{font-size:14px;color:var(--muted)}
 
-  /* PRICING */
-  #pricing { padding: 60px 20px !important; }
-  #pricing .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
-  #pricing .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
-  #pricing h3 { font-size: 28px !important; }
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:var(--radius);padding:24px}
+.step .n{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:14px;background:rgba(45,139,139,.3);color:var(--seafoam);margin-bottom:14px}
+.step:first-child .n{background:var(--gold);color:var(--gold-ink)}
+.step h3{font-size:17px;font-weight:800}
+.step p{font-size:14.5px;color:var(--muted);margin-top:6px}
 
-  /* WHO */
-  #who-section { padding: 60px 20px !important; }
-  .who-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+/* aftercare */
+.care{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.care div{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:14px;padding:18px}
+.care small{display:block;font-size:13px;color:var(--muted)}
+.care b{display:block;font-size:22px;color:var(--gold);margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.care span{font-size:13px;color:var(--muted)}
+.refund{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px;font-size:14.5px;color:var(--muted)}
+.refund b{color:var(--cream)}
 
-  /* CTA */
-  #cta { padding: 60px 20px !important; }
-  #cta h3 { font-size: 22px !important; }
-  #cta .max-w-lg { max-width: 100% !important; }
-  #cta .form-grid { grid-template-columns: 1fr !important; }
+/* maker */
+.maker{display:grid;grid-template-columns:380px 1fr;gap:48px;align-items:center}
+.maker img{width:100%;height:auto;border-radius:22px;border:1px solid var(--navy-700)}
+.maker blockquote{font-size:clamp(19px,2.4vw,24px);font-weight:700;line-height:1.5}
+.maker blockquote em{font-style:normal;color:var(--gold)}
+.maker p{margin-top:14px;color:var(--muted)}
+.maker .who{margin-top:18px;font-size:15px;color:var(--seafoam);font-weight:700}
 
-  /* FOOTER */
-  footer { padding: 40px 20px !important; }
-  footer .grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+/* final cta */
+.final{text-align:center;background:radial-gradient(700px 300px at 50% 0%,rgba(45,139,139,.3),transparent 70%),var(--navy-950)}
+.final h2{max-width:720px;margin:10px auto 0}
+.final p{color:var(--muted);margin-top:14px}
+.final .cta-row{justify-content:center}
 
-  /* 섹션 공통 */
-  section { padding-left: 20px !important; padding-right: 20px !important; }
-  .max-w-container-max { padding-left: 0 !important; padding-right: 0 !important; }
-  .px-margin-desktop { padding-left: 20px !important; padding-right: 20px !important; }
+footer{padding:44px 0;border-top:1px solid var(--navy-700);background:var(--navy-950);font-size:14px;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+.foot a:hover{color:var(--cream)}
 
-  /* display-lg 폰트 모바일 */
-  .font-display-lg, [class*="text-display-lg"] { font-size: 32px !important; line-height: 1.2 !important; }
-  .font-headline-lg, [class*="text-headline-lg"] { font-size: 24px !important; }
-
-  /* 지구본 모바일 */
-  #globe-canvas { width: 100% !important; height: 280px !important; }
-
-  /* Scale 제거 (pricing featured) */
-  .scale-105 { transform: none !important; }
-
-  /* 샘플 모달 */
+/* responsive */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .phone{width:250px}
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .steps,.care{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+}
+@media (max-width:640px){
+  section{padding:68px 0}
+  .hero{padding:56px 0 52px}
+  .stats{grid-template-columns:repeat(2,1fr);gap:18px}
+  .benefits,.plans,.steps{grid-template-columns:1fr}
+  .maker{grid-template-columns:1fr}
+  .nav .btn{display:none}
+  .cta-row .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 </style>
-<script>
-function setLang(lang) {
-  var d = window.i18n && window.i18n[lang];
-  if (!d) { setTimeout(function(){ setLang(lang); }, 150); return; }
-  // 버튼 활성화
-  [].forEach.call(document.querySelectorAll('.lang-btn'), function(b){
-    b.style.background='transparent'; b.style.color='rgba(208,197,175,0.7)'; b.style.fontWeight='500';
-  });
-  var ab=document.getElementById('lang-'+lang);
-  if(ab){ab.style.background='rgba(242,202,80,0.15)';ab.style.color='#f2ca50';ab.style.fontWeight='700';}
-  // Hero 전용 (innerHTML)
-  var g=function(id){return document.getElementById(id);};
-  if(g('i18n-tag'))g('i18n-tag').textContent=d.tag;
-  if(g('i18n-hero-h'))g('i18n-hero-h').innerHTML=d.h;
-  if(g('i18n-hero-sub'))g('i18n-hero-sub').innerHTML=d.sub;
-  if(g('i18n-btn1'))g('i18n-btn1').textContent=d.btn1;
-  if(g('i18n-btn2'))g('i18n-btn2').textContent=d.btn2;
-  if(g('i18n-hbtn'))g('i18n-hbtn').textContent=d.hbtn;
-  // data-i18n 전체 (innerHTML로 줄바꿈 지원)
-  [].forEach.call(document.querySelectorAll('[data-i18n]'), function(e){
-    var k=e.getAttribute('data-i18n');
-    if(d[k]!==undefined) e.innerHTML=d[k];
-  });
-}
-</script>
 </head>
-<body class="font-body-md text-body-md min-h-screen">
-<div class="cursor-glow" id="cursor-glow"></div>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
 
-<!-- ── HEADER ── -->
-<header class="bg-surface/80 backdrop-blur-xl top-0 sticky z-50 border-b border-outline-variant/20 flex justify-center w-full">
-  <div class="max-w-container-max w-full px-margin-desktop py-5 flex items-center justify-between">
-    <div class="flex items-center gap-6">
-      <h1 class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">TM LINK</h1>
-      <nav class="hidden md:flex items-center gap-5">
-        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#why" data-i18n="nav_why">Why TM LINK</a>
-        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#digital-card" data-i18n="nav_card">비즈홈</a>
-        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#ecosystem" data-i18n="nav_eco">Ecosystem</a>
-        <a class="nav-link font-label-sm uppercase tracking-wide text-on-surface/80 hover:text-primary" href="#pricing" data-i18n="nav_price">Pricing</a>
-      </nav>
-    </div>
-    <div class="flex items-center gap-2">
-      <button id="i18n-hbtn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})"
-        class="hidden lg:block border border-primary/50 text-primary px-4 py-2 rounded-lg font-bold text-xs hover:bg-primary hover:text-on-primary transition-all">
-        상담 신청
-      </button>
-      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
-        class="hidden lg:block bg-[#FEE500] text-[#3c1e1e] px-4 py-2 rounded-lg font-bold text-xs hover:brightness-95 transition-all">
-        MANDU
-      </a>
-      <!-- 언어 선택기 -->
-      <div class="hidden lg:flex gap-1 ml-2 bg-surface-container rounded-lg p-1">
-        <button onclick="setLang('ko')" id="lang-ko" class="lang-btn bg-surface-container-high text-primary px-2 py-1 rounded text-[10px] font-bold transition-all">한국어</button>
-        <button onclick="setLang('en')" id="lang-en" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">EN</button>
-        <button onclick="setLang('zh')" id="lang-zh" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">中文</button>
-        <button onclick="setLang('ja')" id="lang-ja" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant hover:text-primary transition-all">日本語</button>
+<!-- 아이콘 (한 세트, stroke 2px) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h4"/><path d="M17 9l-1.5 3H18l-1.5 3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 10.5h7M8.5 13.5h4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 1 0 9 4.5 4.5 0 0 0 0 9"/><circle cx="12" cy="7.5" r="1" fill="currentColor"/><circle cx="12" cy="16.5" r="1"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="TM LINK 홈">TM <b>LINK</b></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="#apps" data-i18n="nav_apps">앱 소개</a>
+      <a href="#bizhome" data-i18n="nav_why">비즈홈</a>
+      <a href="#pricing" data-i18n="nav_price">가격</a>
+      <a href="#process" data-i18n="nav_process">제작 과정</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="언어 선택">
+        <button type="button" data-lang="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        <button type="button" data-lang="ja" aria-pressed="false">日</button>
       </div>
+      <a class="btn btn-gold" href="apply/" data-i18n="nav_cta">비즈홈 신청</a>
     </div>
   </div>
 </header>
 
-<!-- ── HERO ── -->
-<section class="relative min-h-[100vh] flex items-center overflow-hidden" style="background:#000000;">
-  <!-- 왼쪽 블랙 → 오른쪽 밝은 하늘색 그라디언트 오버레이 -->
-  <div class="absolute inset-0 z-0 pointer-events-none" style="background:linear-gradient(to right, #000000 0%, #000000 35%, #0d2a4a 55%, #1a5080 70%, #2e7ab8 82%, #c8e8f8 100%);"></div>
-  <!-- 오른쪽 파란 빛 글로우 -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="absolute top-0 right-0 w-[600px] h-full" style="background:radial-gradient(ellipse at right center, rgba(30,80,160,0.3) 0%, transparent 65%);"></div>
-  </div>
-  <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12">
-    <div class="space-y-8">
-      <div class="inline-block px-4 py-1 border border-blue-400/30 rounded-full bg-white/5">
-        <span id="i18n-tag" class="text-blue-300 font-label-sm text-label-sm tracking-widest uppercase">BNI 파이오니어 · 부산 디지털 아이덴티티</span>
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i><span data-i18n="hero_tag">BNI 파이오니어 · 부산 디지털 아이덴티티</span></span>
+      <h1 data-i18n="hero_h">명함은 종이였습니다.<br/><span class="hl">이제는 자산입니다.</span></h1>
+      <p class="lead" data-i18n="hero_sub">TM LINK가 직접 만들고 운영하는 앱 5종으로 소개·저장·대화까지 연결합니다. 그 중심에는 나만을 위해 1:1로 만드는 <b>비즈홈</b>이 있습니다.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="#pricing"><span data-i18n="hero_btn1">비즈홈 가격 보기</span><svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="#apps" data-i18n="hero_btn2">앱 5종 둘러보기</a>
       </div>
-      <h2 id="i18n-hero-h" class="font-display-lg text-display-lg font-bold leading-[1.1]" style="color:#ffffff;">
-        명함은<br/>종이였습니다.<br/><span class="text-gradient-gold">이제는 자산입니다.</span>
-      </h2>
-      <p id="i18n-hero-sub" class="font-body-lg text-body-lg leading-relaxed max-w-lg" style="color:rgba(255,255,255,0.75);">
-        비즈홈 · BNI 멤버카드 · 실시간 통번역 메신저 MANDU.<br/>
-        TM LINK로 귀하의 비즈니스 가치를 격상시키십시오.
-      </p>
-      <div class="flex flex-row gap-4 pt-4 flex-wrap">
-        <button id="i18n-btn1" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})"
-          class="w-48 py-4 bg-primary text-on-primary font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/30 text-sm">
-          무료 상담 신청
-        </button>
-        <button id="i18n-btn2" onclick="window.open('https://jinjjabg-hub.github.io/DiCA-gallery/', '_blank')"
-          class="w-48 py-4 border-2 border-white/50 text-white font-bold rounded-lg active:scale-95 transition-all hover:bg-white/10 text-sm">
-          포트폴리오 감상
-        </button>
-      </div>
-      <!-- Stats -->
-      <div class="hero-stats flex gap-10 pt-4" style="flex-wrap:nowrap;">
-        <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">10개</div>
-          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat1">MANDU<br/>지원 언어</div>
-        </div>
-        <div class="w-px bg-white/20"></div>
-        <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">4개국어</div>
-          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat2">기본 지원<br/>한·영·중·일</div>
-        </div>
-        <div class="w-px bg-white/20"></div>
-        <div>
-          <div class="text-3xl font-bold font-headline-lg" style="color:#f2ca50;" class="stat-num">3~5일</div>
-          <div class="text-sm mt-1" style="color:rgba(255,255,255,0.6);" data-i18n="stat3">평균 완성<br/>기간</div>
-        </div>
+      <div class="stats">
+        <div class="stat"><b>5</b><span data-i18n="st1">직접 개발·운영<br/>하는 앱</span></div>
+        <div class="stat"><b>4</b><span data-i18n="st2">비즈홈 기본<br/>지원 언어</span></div>
+        <div class="stat"><b>3~5</b><span data-i18n="st3">평균 제작<br/>영업일</span></div>
+        <div class="stat"><b>1</b><span data-i18n="st4">신청 후 회신<br/>영업일 이내</span></div>
       </div>
     </div>
-    <!-- Hero Visual: 송승훈 대표 이미지 -->
-    <div class="hero-visual-wrap relative flex items-center justify-end" style="height:640px;">
-      <img src="송승훈.png" alt="TM LINK 비즈홈 서비스" 
-        style="height:640px;width:auto;max-width:115%;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(26,90,180,0.45));position:absolute;right:-20px;"
-        onerror="this.style.display='none';document.getElementById('globe-fallback').style.display='flex'"/>
-      <div id="globe-fallback" style="display:none;"></div>
-    </div>
-    <div style="display:none">
-      <div class="absolute w-[340px] h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-2xl border border-primary/20 p-6 shadow-2xl card-float-delay rotate-[-8deg] translate-x-[-40px] translate-y-[60px] opacity-50">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">이</div>
-          <div>
-            <div class="font-bold text-sm">이화춘</div>
-            <div class="text-xs text-primary">이화춘 뷰티랩 원장</div>
-          </div>
+    <div aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <div class="mono">TM</div>
+          <div class="nm">송승훈</div>
+          <div class="rl">T.M Link 대표 · BNI 파이오니어</div>
+          <div class="chips"><span>한국어</span><span>English</span><span>中文</span><span>日本語</span></div>
+          <div class="row"><i>☎</i>전화 · 문자 · 카카오톡</div>
+          <div class="row"><i>◎</i>제가 하는 일 · 경력</div>
+          <div class="row"><i>✦</i>이런 분을 소개해 주세요</div>
+          <div class="save">카드북에 저장하기</div>
         </div>
-        <div class="text-xs text-on-surface-variant">KR · EN · JP · CN</div>
-      </div>
-      <!-- Main card -->
-      <div class="relative z-10 w-[320px] rounded-2xl overflow-hidden border border-primary/30 shadow-2xl card-float gold-glow">
-        <div class="h-28 bg-gradient-to-br from-[#1a1400] via-[#2a2000] to-[#1a1a1a] relative overflow-hidden">
-          <div class="absolute inset-0 network-lines opacity-50"></div>
-          <div class="absolute top-4 right-4 text-primary/30 font-bold text-6xl font-headline-lg tracking-tighter">TM</div>
-        </div>
-        <div class="bg-[#111] p-6 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-14 h-14 rounded-full bg-primary/20 border-2 border-primary/40 flex items-center justify-center text-primary text-xl font-bold -mt-10 ring-4 ring-black">宋</div>
-            <div>
-              <div class="font-bold text-lg">송승훈</div>
-              <div class="text-xs text-primary tracking-widest uppercase">T.M Link</div>
-            </div>
-          </div>
-          <div class="text-xs text-on-surface-variant leading-relaxed">
-            물리치료사 15년 · 외식업 10년<br/>BNI 파이오니어 챕터 의장 역임
-          </div>
-          <div class="flex gap-2 pt-2">
-            <div class="flex-1 py-2 border border-outline-variant/40 rounded-lg text-center text-xs text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">웹사이트</div>
-            <div class="flex-1 py-2 border border-outline-variant/40 rounded-lg text-center text-xs text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">SNS</div>
-            <div class="flex-1 py-2 bg-primary text-on-primary rounded-lg text-center text-xs font-bold cursor-pointer">저장</div>
-          </div>
-          <div class="flex gap-1 pt-1">
-            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">KR</span>
-            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">EN</span>
-            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">JP</span>
-            <span class="text-[9px] bg-primary/10 text-primary px-2 py-0.5 rounded">CN</span>
-          </div>
-        </div>
-      </div>
-    </div><!-- end hidden -->
-  </div>
-</section>
-
-<!-- ── WHY TM LINK ── -->
-<section id="why" class="py-32 px-margin-desktop bg-surface-container-low border-y border-outline-variant/10">
-  <div class="max-w-container-max mx-auto">
-    <div class="text-center space-y-6 mb-20">
-      <h3 class="font-headline-lg text-headline-lg font-bold">
-        <span data-i18n="why_h1">명함의 문제는 디자인이 아닙니다.</span><br/>
-        <span class="text-primary" data-i18n="why_h2">관리되지 않는 인맥은 사라집니다.</span>
-      </h3>
-      <p class="text-on-surface-variant max-w-2xl mx-auto">
-        <span data-i18n="why_sub">전통적인 종이 명함을 디지털 자산 관리 시스템으로 혁신합니다.</span>
-      </p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="glass-card p-10 rounded-2xl space-y-6 border-l-4 border-l-primary">
-        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary text-4xl">badge</span>
-        </div>
-        <h4 class="font-headline-md text-headline-md" data-i18n="why_c1_title">비즈홈</h4>
-        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
-          <span data-i18n="why_c1_desc">단순한 연락처 교환을 넘어 전문가의 권위와 신뢰를 담은 프리미엄 비즈홈. BNI 멤버카드 4개국어 지원.</span>
-        </p>
-      </div>
-      <div class="glass-card p-10 rounded-2xl space-y-6">
-        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary text-4xl">translate</span>
-        </div>
-        <h4 class="font-headline-md text-headline-md" data-i18n="why_c2_title">MANDU 메신저</h4>
-        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
-          <span data-i18n="why_c2_desc">10개국어 실시간 자동번역 지원 메신저. 외국어 없이도 전 세계 BNI 멤버와 즉시 소통.</span>
-        </p>
-      </div>
-      <div class="glass-card p-10 rounded-2xl space-y-6">
-        <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-          <span class="material-symbols-outlined text-primary text-4xl">account_balance_wallet</span>
-        </div>
-        <h4 class="font-headline-md text-headline-md" data-i18n="why_c3_title">CardBook</h4>
-        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
-          <span data-i18n="why_c3_desc">개인의 인맥을 영구적인 디지털 자산으로 전환. BNI 파이오니어 챕터 31명 전체 통합 관리.</span>
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── DIGITAL CARD FOCUS ── -->
-<section id="digital-card" class="py-32 px-margin-desktop max-w-container-max mx-auto space-y-16">
-  <div class="flex items-center gap-8">
-    <h3 class="font-headline-lg text-headline-lg text-primary shrink-0">DIGITAL BRANDING</h3>
-    <div class="h-px w-full bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
-  </div>
-  <div class="max-w-3xl mx-auto text-center">
-    <!-- Features -->
-    <div class="space-y-10">
-      <h4 class="text-3xl font-bold font-headline-lg">Elite Digital Identity<br/><span class="text-gradient-gold">Features</span></h4>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body-md text-body-md text-left">
-        <li class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">language</span>
-          <div>
-            <p class="font-bold mb-1" data-i18n="feat1_t">4개국어 지원</p>
-            <p class="text-on-surface-variant text-sm" data-i18n="feat1_d">한·영·일·중 자동 전환. 글로벌 네트워킹 최적화.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">qr_code_2</span>
-          <div>
-            <p class="font-bold mb-1" data-i18n="feat2_t">QR 자동 생성</p>
-            <p class="text-on-surface-variant text-sm" data-i18n="feat2_d">QR 하나로 언제 어디서든 공유 가능.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">download</span>
-          <div>
-            <p class="font-bold mb-1" data-i18n="feat3_t">vCard 저장</p>
-            <p class="text-on-surface-variant text-sm" data-i18n="feat3_d">한 번 탭으로 연락처 즉시 저장. iOS·Android 지원.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">share</span>
-          <div>
-            <p class="font-bold mb-1" data-i18n="feat4_t">카카오톡 최적화</p>
-            <p class="text-on-surface-variant text-sm" data-i18n="feat4_d">OG 이미지 설정으로 카카오 공유 시 프리미엄 미리보기.</p>
-          </div>
-        </li>
-      </ul>
+<!-- APPS -->
+<section id="apps">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our Apps</span>
+      <h2 data-i18n="apps_h">TM LINK가 만든 앱 5종</h2>
+      <p data-i18n="apps_sub">각 앱은 하나의 목적을 위해 만들었습니다. 나를 소개하고, 저장되고, 언어 장벽 없이 이어지도록.</p>
+    </div>
+    <div class="apps">
+      <a class="app feat" href="#bizhome">
+        <span class="badge" data-i18n="app_badge">맞춤 제작</span>
+        <div class="ic" style="background:rgba(233,195,73,.16);color:var(--gold)"><svg><use href="#i-home"/></svg></div>
+        <h3><span data-i18n="app1_n">비즈홈</span><small>BizHome</small></h3>
+        <p data-i18n="app1_d">나만을 위해 1:1로 디자인하는 비즈니스 홈. 링크 하나로 나와 내 사업을 소개합니다.</p>
+        <span class="tag" data-i18n="app1_t">15만원 · 25만원 →</span>
+      </a>
+      <a class="app" href="https://jinjjabg-hub.github.io/autocard/" target="_blank" rel="noopener">
+        <div class="ic" style="background:rgba(45,139,139,.25);color:var(--seafoam)"><svg><use href="#i-bolt"/></svg></div>
+        <h3><span data-i18n="app2_n">오토명함</span><small>AutoCard</small></h3>
+        <p data-i18n="app2_d">명함 사진 한 장, 5분이면 완성되는 디지털 명함. 템플릿 6종 중 골라 바로 발행.</p>
+        <span class="tag" data-i18n="app2_t">5,900원부터 ↗</span>
+      </a>
+      <a class="app" href="https://jinjjabg-hub.github.io/cardbook/" target="_blank" rel="noopener">
+        <div class="ic" style="background:rgba(45,139,139,.25);color:var(--seafoam)"><svg><use href="#i-book"/></svg></div>
+        <h3><span data-i18n="app3_n">카드북</span><small>CardBook</small></h3>
+        <p data-i18n="app3_d">받은 명함을 한곳에 모으고, 기억나는 조각만으로 바로 찾는 명함첩.</p>
+        <span class="tag" data-i18n="app3_t">무료로 써보기 ↗</span>
+      </a>
+      <a class="app" href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" rel="noopener">
+        <div class="ic" style="background:rgba(45,139,139,.25);color:var(--seafoam)"><svg><use href="#i-chat"/></svg></div>
+        <h3><span data-i18n="app4_n">만두</span><small>MANDU</small></h3>
+        <p data-i18n="app4_d">언어가 달라도 대화는 하나로. 14개 언어를 실시간 자동 번역하는 메신저.</p>
+        <span class="tag" data-i18n="app4_t">메신저 체험 ↗</span>
+      </a>
+      <a class="app" href="https://jinjjabg-hub.github.io/JUJUDOSA/" target="_blank" rel="noopener">
+        <div class="ic" style="background:rgba(45,139,139,.25);color:var(--seafoam)"><svg><use href="#i-star"/></svg></div>
+        <h3><span data-i18n="app5_n">주주도사</span><small>JUJUDOSA</small></h3>
+        <p data-i18n="app5_d">타고난 명식을 읽고 지금 시기에 맞는 조언을 건네는 AI 사주 상담. 오늘의 운세·궁합까지.</p>
+        <span class="tag" data-i18n="app5_t">상담 시작 ↗</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ── ECOSYSTEM FLOW ── -->
-<section id="ecosystem" class="py-32 px-margin-desktop bg-black relative">
-  <div class="max-w-container-max mx-auto">
-    <div class="text-center mb-16">
-      <h3 class="font-headline-lg text-headline-lg mb-4">TM LINK Ecosystem</h3>
-      <p class="text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase" data-i18n="eco_sub">From Local Trust to Global Scale</p>
+<!-- BIZHOME BENEFITS -->
+<section id="bizhome" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Why BizHome</span>
+      <h2 data-i18n="why_h">명함은 건네면 끝나지만,<br/>비즈홈은 건넨 뒤에 일합니다.</h2>
+      <p data-i18n="why_sub">종이명함은 한 번 건네면 서랍으로 갑니다. 비즈홈은 카톡으로 전달되고, 저장되고, 다시 찾아져서 소개로 이어집니다.</p>
     </div>
-    <!-- 왼쪽 2x2 그리드 + 오른쪽 지구본 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- 왼쪽: 2x2 카드 그리드 -->
-      <div class="grid grid-cols-2 gap-4">
-        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
-          <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-            <span class="material-symbols-outlined text-on-primary text-2xl">badge</span>
-          </div>
-          <div>
-            <h5 class="font-headline-md text-primary mb-1 text-lg">비즈홈</h5>
-            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco1_d">권위 있는 첫인상의 시작. QR·4개국어.</p>
-          </div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all overflow-hidden">
-          <canvas id="network-canvas" width="160" height="80" style="width:100%;height:80px;"></canvas>
-          <div>
-            <h5 class="font-headline-md text-primary mb-1 text-lg">BNI CardBook</h5>
-            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco2_d">멤버들이 서로 연결·연결·연결</p>
-          </div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
-          <div class="w-14 h-14 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-            <span class="material-symbols-outlined text-primary text-2xl">translate</span>
-          </div>
-          <div>
-            <h5 class="font-headline-md text-primary mb-1 text-lg">MANDU</h5>
-            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco3_d">10개국어 실시간 자동번역 메신저.</p>
-          </div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-primary/40 transition-all">
-          <div class="w-14 h-14 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
-            <span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
-          </div>
-          <div>
-            <h5 class="font-headline-md text-primary mb-1 text-lg">Global Scale</h5>
-            <p class="text-on-surface-variant text-xs leading-relaxed" data-i18n="eco4_d">국경 없는 비즈니스 네트워크 확장.</p>
-          </div>
-        </div>
-      </div>
-      <!-- 오른쪽: 지구본 -->
-      <div class="flex items-center justify-center">
-        <canvas id="globe-canvas" width="460" height="460" style="width:460px;height:460px;max-width:100%;"></canvas>
+    <div class="benefits">
+      <div class="bf"><span class="num">01</span><h3 data-i18n="b1_h">템플릿이 아닌 1:1 맞춤</h3><p data-i18n="b1_p">업종·성향·고객층을 듣고 대표가 직접 디자인합니다. 같은 업종이어도 같은 비즈홈은 없습니다.</p></div>
+      <div class="bf"><span class="num">02</span><h3 data-i18n="b2_h">링크 하나로 끝나는 소개</h3><p data-i18n="b2_p">카카오톡 미리보기에 사진과 소개가 바로 뜨도록 최적화. QR 코드도 함께 드립니다.</p></div>
+      <div class="bf"><span class="num">03</span><h3 data-i18n="b3_h">"이런 분을 소개해 주세요"</h3><p data-i18n="b3_p">BNI 리퍼럴 구조를 그대로 담은 파트너·추천 섹션. 받은 사람이 누구를 연결해줘야 할지 바로 압니다.</p></div>
+      <div class="bf"><span class="num">04</span><h3 data-i18n="b4_h">4개 국어 자동 지원</h3><p data-i18n="b4_p">한국어·영어·중국어·일본어 전환 버튼 기본 탑재. 해외 바이어, 외국인 고객에게도 그대로 보냅니다.</p></div>
+      <div class="bf"><span class="num">05</span><h3 data-i18n="b5_h">받은 사람의 카드북에 저장</h3><p data-i18n="b5_p">버튼 한 번으로 상대 명함첩에 저장됩니다. 필요할 때 "그 대표님"을 검색으로 다시 찾습니다.</p></div>
+      <div class="bf"><span class="num">06</span><h3 data-i18n="b6_h">바뀌면 고치면 됩니다</h3><p data-i18n="b6_p">직함·연락처가 바뀌어도 재인쇄 없이 수정 1만원부터. 같은 링크가 계속 최신 정보를 보여줍니다.</p></div>
+    </div>
+
+    <div class="compare-wrap">
+      <h3 data-i18n="cmp_h">나에게 맞는 건 무엇일까요?</h3>
+      <p data-i18n="cmp_sub">빠르고 저렴하게는 오토명함, 제대로 나를 보여주려면 비즈홈.</p>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th></th><th data-i18n="c_paper">종이명함</th><th data-i18n="c_auto">오토명함</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
+          <tbody>
+            <tr><th data-i18n="r1">가격</th><td data-i18n="r1a">인쇄비 (재인쇄 반복)</td><td data-i18n="r1b">5,900원부터</td><td class="biz" data-i18n="r1c"><b>15만원 · 25만원</b></td></tr>
+            <tr><th data-i18n="r2">만드는 방식</th><td data-i18n="r2a">인쇄소 주문</td><td data-i18n="r2b">셀프 · 5분</td><td class="biz" data-i18n="r2c">대표가 1:1 상담 후 제작</td></tr>
+            <tr><th data-i18n="r3">디자인</th><td data-i18n="r3a">정해진 틀</td><td data-i18n="r3b">템플릿 6종</td><td class="biz" data-i18n="r3c">완전 맞춤</td></tr>
+            <tr><th data-i18n="r4">담을 수 있는 내용</th><td data-i18n="r4a">앞·뒤 두 면</td><td data-i18n="r4b">연락처 중심</td><td class="biz" data-i18n="r4c">사진·경력·서비스·리퍼럴·영상</td></tr>
+            <tr><th data-i18n="r5">받은 뒤</th><td data-i18n="r5a">지갑·서랍 속</td><td data-i18n="r5b">카드북 저장</td><td class="biz" data-i18n="r5c">카드북 저장 + 링크·QR로 재공유</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── PRICING ── -->
-<section id="pricing" class="py-32 px-margin-desktop bg-surface-container-lowest">
-  <div class="max-w-container-max mx-auto">
-    <h3 class="font-headline-lg text-headline-lg text-center mb-4" data-i18n="pricing_title">비즈홈 요금제</h3>
-    <p class="text-on-surface-variant text-center mb-4 max-w-xl mx-auto" data-i18n="pricing_sub">종이명함은 버려집니다. 비즈홈은 공유됩니다.</p>
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-      <span class="text-sm font-bold border border-primary/50 text-primary px-5 py-2 rounded-full" data-i18n="vat_note">💳 부가세(VAT 10%) 별도</span>
-      <span class="text-sm font-bold border border-primary/50 text-primary px-5 py-2 rounded-full" data-i18n="pay_note">✅ 결제 후 제작 시작</span>
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Pricing</span>
+      <h2 data-i18n="pr_h">비즈홈 맞춤 제작, 두 가지만 고르세요.</h2>
+      <p data-i18n="pr_sub">둘 다 템플릿 없이 1:1로 만듭니다. 차이는 "얼마나 많이 보여주고, 얼마나 빨리 받느냐"입니다.</p>
     </div>
 
-    <!-- C타입 골드 띠 배너 -->
-    <a href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank"
-      class="block w-full mb-10 rounded-2xl overflow-hidden group"
-      style="background:linear-gradient(90deg,#1a1200 0%,#2a1e00 30%,#3a2800 50%,#2a1e00 70%,#1a1200 100%);border:1px solid rgba(242,202,80,0.4);">
-      <div class="relative px-8 py-5 flex items-center justify-between">
-        <div class="absolute inset-0 network-lines opacity-10"></div>
-        <div class="relative flex items-center gap-4">
-          <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
-          <div>
-            <div class="text-primary font-bold text-base" data-i18n="gallery_title">실제 제작된 비즈홈을 직접 확인하세요</div>
-            <div class="text-on-surface-variant text-xs mt-0.5" data-i18n="gallery_sub">클릭하면 비즈홈 갤러리로 이동합니다</div>
-          </div>
-        </div>
-        <div class="relative flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-bold text-sm group-hover:brightness-110 transition-all shrink-0">
-          <span data-i18n="gallery_btn">갤러리 보기</span>
-          <span class="material-symbols-outlined text-base">arrow_forward</span>
-        </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="pn">CUSTOM</span>
+        <div class="price">150,000<small>원</small></div>
+        <p class="pd" data-i18n="p1_d">나를 제대로 소개하는 첫 비즈홈</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_1">1:1 맞춤 디자인 (템플릿 X)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_2">4개 국어 자동 번역 (한·영·중·일)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_3">AI 프로필 사진 (휴대폰 사진 1장이면 OK)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_4">소개글 + 경력 섹션</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p1_5">파트너·추천(리퍼럴) 섹션</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_6">이미지 슬라이드 최대 4장</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_7">QR 코드 · 카톡 미리보기 · 카드북 저장 버튼</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_8">무료 호스팅 (유지비 0원)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_9">수정 2회 (완성 후 1주일 내)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p1_10">제작 기간 3~5 영업일</span></li>
+        </ul>
+        <a class="btn btn-line" href="apply/?plan=custom"><span data-i18n="p1_btn">15만원 플랜 신청하기</span><svg><use href="#i-arrow"/></svg></a>
       </div>
+
+      <div class="plan pro">
+        <span class="best" data-i18n="p2_best">사업 홍보까지 한 번에</span>
+        <span class="pn">CUSTOM PRO</span>
+        <div class="price">250,000<small>원</small></div>
+        <p class="pd" data-i18n="p2_d">소개를 넘어 고객이 문의까지 하는 비즈홈</p>
+        <ul>
+          <li class="sep" data-i18n="p2_0">15만원 플랜 전부 포함 +</li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_1">서비스·제품 소개 섹션 (가격표·포트폴리오)</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_2">AI 홍보 영상 1개 제작</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_3">예약·문의 폼 → 내 구글시트 자동 접수</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_4">언어 10개 중 4개 선택 (추가 1개당 +1만원)</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_5">이미지 슬라이드 최대 8장</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_6">MANDU 통번역 상담 버튼 연결</span></li>
+          <li class="hi"><svg><use href="#i-check"/></svg><span data-i18n="p2_7">우선 제작 — 초안 2영업일 이내</span></li>
+          <li><svg><use href="#i-check"/></svg><span data-i18n="p2_8">수정 넉넉히: 1개월 내 3회 + 3개월 내 1회</span></li>
+        </ul>
+        <a class="btn btn-gold" href="apply/?plan=pro"><span data-i18n="p2_btn">25만원 플랜 신청하기</span><svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <div class="price-notes">
+      <span data-i18n="n1">부가세(VAT 10%) 별도</span>
+      <span data-i18n="n2">결제 확인 후 제작 시작</span>
+      <span data-i18n="n3">BNI 멤버는 신청서에 챕터를 적어주시면 특별가 안내</span>
+      <span data-i18n="n4">10개 이상 단체·기업은 별도 견적</span>
+    </div>
+
+    <a class="gallery" href="https://jinjjabg-hub.github.io/DiCA-gallery/" target="_blank" rel="noopener">
+      <div><b data-i18n="g_h">실제 제작된 비즈홈을 직접 확인하세요</b><span data-i18n="g_p">업종별 완성 사례 갤러리로 이동합니다</span></div>
+      <span class="btn btn-line" style="min-height:42px"><span data-i18n="g_btn">갤러리 보기</span><svg><use href="#i-ext"/></svg></span>
     </a>
-
-    <!-- 전 플랜 공통 혜택 -->
-    <div class="mb-8 p-5 rounded-2xl border border-primary/20 flex flex-wrap items-center gap-6" style="background:rgba(242,202,80,0.04);">
-      <span class="text-primary font-bold text-xs tracking-widest" data-i18n="common_label">✦ 전 플랜 공통 포함</span>
-      <div class="flex flex-wrap gap-4 text-sm">
-        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">style</span><span data-i18n="common_cardbook">📱 CardBook 무료 제공 (디지털 명함첩)</span></div>
-        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">qr_code</span><span data-i18n="common_qr">QR 자동 생성</span></div>
-        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">language</span><span data-i18n="common_domain">무료 도메인 제공</span></div>
-        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">share</span><span data-i18n="common_kakao">카카오톡 프리뷰 최적화</span></div>
-      </div>
-    </div>
-
-    <!-- 3단 플랜 카드 -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-
-      <!-- BASIC -->
-      <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
-        <div class="mb-6">
-          <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">BASIC</span>
-          <div class="mt-3 flex items-baseline gap-2">
-            <h4 class="font-headline-lg text-headline-lg">150,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
-            <span class="text-xs text-on-surface-variant">/ $103</span>
-          </div>
-          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_basic_desc">사업의 첫 얼굴. 사진부터 명함까지 한 번에.</span></p>
-        </div>
-
-        <!-- 기능 목록 -->
-        <div class="flex-grow space-y-2 mb-8 text-sm">
-          <!-- 되는 것 -->
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_lang">AI 자동 번역, 4개국어 고정 (한/영/중/일)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_photo">AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_bio">소개글 + 경력 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span class="font-semibold text-primary" data-i18n="s_ref">파트너·추천 섹션 ⭐</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_slide">이미지 슬라이드 2~4장</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="s_rev">1주일 내 수정 2회 포함</span></div>
-          <!-- 안 되는 것 -->
-          <div class="mt-3 pt-3 border-t border-outline-variant/20 space-y-2">
-            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_video">AI 영상 제작</span></div>
-            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_service">서비스/제품 소개 섹션</span></div>
-            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_form">예약/문의 폼 연결</span></div>
-            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_priority">우선 제작</span></div>
-          </div>
-        </div>
-
-        <button onclick="pickPlan('베이직 (150,000원)')"
-          class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all">
-          Get Started
-        </button>
-      </div>
-
-      <!-- STANDARD (featured) -->
-      <div class="glass-card p-8 rounded-3xl border-2 border-primary relative overflow-hidden flex flex-col gold-glow">
-        <div class="absolute top-0 right-0 bg-primary text-on-primary px-5 py-2 font-bold rounded-bl-2xl text-xs tracking-wide">MOST POPULAR</div>
-        <div class="mb-6">
-          <span class="font-label-sm text-label-sm text-primary tracking-widest">STANDARD</span>
-          <div class="mt-3 flex items-baseline gap-2">
-            <h4 class="font-headline-lg text-headline-lg">210,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
-            <span class="text-xs text-on-surface-variant">/ $144</span>
-          </div>
-          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_std_desc">AI 영상까지, 한 단계 더 강력하게.</span></p>
-        </div>
-
-        <div class="flex-grow space-y-2 mb-8 text-sm">
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_lang">10개국어 중 4개 선택 (초과 시 1개당 +10,000원)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_photo">AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_bio">소개글 + 경력 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_ref">파트너·추천 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_slide">이미지 슬라이드 2~8장</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span class="font-semibold text-primary" data-i18n="p_video">AI 영상 제작 포함 (1개) ⭐</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_service">서비스/제품 소개 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_form">예약/문의 폼 연결</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="p_rev">1주일 내 수정 3회 포함</span></div>
-          <!-- 안 되는 것 -->
-          <div class="mt-3 pt-3 border-t border-primary/20 space-y-2">
-            <div class="flex items-center gap-3 opacity-35"><span class="material-symbols-outlined text-base">cancel</span><span data-i18n="no_priority">우선 제작 (초안 2일 이내)</span></div>
-          </div>
-        </div>
-
-        <button onclick="pickPlan('스탠다드 (210,000원)')"
-          class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/30 hover:brightness-110 transition-all">
-          Select Standard
-        </button>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col">
-        <div class="mb-6">
-          <span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">PREMIUM</span>
-          <div class="mt-3 flex items-baseline gap-2">
-            <h4 class="font-headline-lg text-headline-lg">270,000<span class="text-body-md font-body-md text-on-surface-variant ml-1">원</span></h4>
-            <span class="text-xs text-on-surface-variant">/ $185</span>
-          </div>
-          <p class="text-on-surface-variant mt-3 text-sm"><span data-i18n="plan_prem_desc">언어 확장 · AI영상 2개 · 우선 제작까지, 최상위 플랜.</span></p>
-        </div>
-
-        <div class="flex-grow space-y-2 mb-8 text-sm">
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_lang">10개국어 중 4개 선택 (초과 시 1개당 +10,000원)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_photo">AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_bio">소개글 + 경력 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_ref">파트너·추천 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_slide">이미지 슬라이드 2~8장</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span class="font-semibold text-primary" data-i18n="pp_video">AI 영상 제작 포함 (2개) ⭐</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_service">서비스/제품 소개 섹션</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_form">예약/문의 폼 연결</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span class="font-semibold text-primary" data-i18n="pp_priority">우선 제작 (초안 2일 이내) ⭐</span></div>
-          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span data-i18n="pp_rev">수정 정책: 1개월 이내 3회 · 3개월 이내 1회</span></div>
-        </div>
-
-        <button onclick="pickPlan('프리미엄 (270,000원)')"
-          class="w-full py-4 border border-outline rounded-xl font-bold hover:bg-white/5 hover:border-primary transition-all">
-          Go Premium
-        </button>
-      </div>
-
-    </div>
-
-    <!-- BNI 특별가 안내 -->
-    <div class="mb-6 p-6 rounded-2xl border border-primary/30 flex flex-wrap items-center justify-between gap-4" style="background:rgba(242,202,80,0.06);">
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-primary text-3xl">groups</span>
-        <div>
-          <p class="font-headline-sm text-headline-sm text-primary" data-i18n="bni_special_title">BNI 특별가</p>
-          <p class="text-on-surface-variant text-sm mt-1" data-i18n="bni_special_desc">BNI 챕터 멤버 전용 할인 가격입니다.</p>
-        </div>
-      </div>
-      <button onclick="openBniModal()"
-        class="shrink-0 px-6 py-3 rounded-xl border border-primary/60 text-primary font-bold text-sm hover:bg-primary hover:text-on-primary transition-all" data-i18n="bni_special_btn">
-        특별가 문의하기
-      </button>
-    </div>
-
-    <!-- BNI 확인 모달 -->
-    <div id="bni-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:20px;">
-      <div class="glass-card p-8 rounded-3xl border border-primary/30 max-w-sm w-full" style="background:#141414;">
-        <div id="bni-step-form">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="material-symbols-outlined text-primary text-2xl">groups</span>
-            <h4 class="font-headline-sm text-headline-sm text-primary">BNI 특별가 확인</h4>
-          </div>
-          <p class="text-on-surface-variant text-sm mb-5">소속 BNI 챕터 또는 소개해주신 멤버 성함을 간단히 적어주시면 특별가를 바로 안내해 드려요.</p>
-          <div class="space-y-3 mb-5">
-            <input id="bni-name" type="text" placeholder="성함"
-              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-            <input id="bni-phone" type="tel" placeholder="연락처 (010-0000-0000)"
-              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-            <input id="bni-referral" type="text" placeholder="소속 챕터 또는 소개자 성함 (예: BNI 파이오니어 / 홍길동님 소개)"
-              class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-          </div>
-          <div class="flex gap-3">
-            <button onclick="closeBniModal()" class="flex-1 py-3 border border-outline rounded-xl text-sm font-bold hover:bg-white/5 transition-all">취소</button>
-            <button onclick="submitBniInquiry()" class="flex-1 py-3 bg-primary text-on-primary rounded-xl font-bold text-sm hover:brightness-110 transition-all">가격 확인</button>
-          </div>
-        </div>
-        <div id="bni-step-result" style="display:none;">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
-            <h4 class="font-headline-sm text-headline-sm text-primary">BNI 특별가</h4>
-          </div>
-          <div class="grid grid-cols-3 gap-3 mb-5 text-center">
-            <div class="bg-surface-container rounded-xl p-3">
-              <div class="text-xs text-on-surface-variant mb-1">베이직</div>
-              <div class="text-base font-bold text-primary">110,000원</div>
-            </div>
-            <div class="bg-surface-container rounded-xl p-3">
-              <div class="text-xs text-on-surface-variant mb-1">스탠다드</div>
-              <div class="text-base font-bold text-primary">150,000원</div>
-            </div>
-            <div class="bg-surface-container rounded-xl p-3">
-              <div class="text-xs text-on-surface-variant mb-1">프리미엄</div>
-              <div class="text-base font-bold text-primary">190,000원</div>
-            </div>
-          </div>
-          <p class="text-on-surface-variant text-xs mb-5">문의 내용이 정상 접수되었습니다. 빠르게 연락드릴게요 😊</p>
-          <button onclick="closeBniModal()" class="w-full py-3 border border-outline rounded-xl text-sm font-bold hover:bg-white/5 transition-all">닫기</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 기업·단체 -->
-    <div class="mb-6">
-      <div class="relative rounded-3xl overflow-hidden border border-primary/30 p-8 flex flex-col" style="background:linear-gradient(135deg,#1a1400 0%,#2a2000 50%,#1a1a1a 100%);">
-        <div class="absolute inset-0 network-lines opacity-20"></div>
-        <div class="relative z-10">
-          <div class="flex flex-wrap justify-between items-start gap-6 mb-6">
-            <div>
-              <span class="font-label-sm text-label-sm text-primary tracking-widest">ENTERPRISE</span>
-              <h4 class="font-headline-md text-headline-md mt-2 text-on-surface">기업 · 단체 (10개 이상)</h4>
-              <p class="text-on-surface-variant mt-2 text-sm">별도 협의 · 규모에 따른 맞춤 견적</p>
-            </div>
-            <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
-              <span class="material-symbols-outlined text-primary text-3xl">business</span>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 text-sm mb-6">
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>기업 고유 로고 적용</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>브랜드 컬러 시스템</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>임직원 단체 제작</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>기업 카드북 통합</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>MANDU 단체 연동</span></div>
-            <div class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span>전담 관리 지원</span></div>
-          </div>
-          <button onclick="pickPlan('기업·단체 (별도 협의)')"
-            class="w-full lg:w-auto lg:px-16 py-4 bg-primary text-on-primary rounded-xl font-bold shadow-xl shadow-primary/20 hover:brightness-110 transition-all">
-            기업 상담 신청
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 비즈홈 고객 전용 업데이트 혜택 -->
-    <div class="relative rounded-3xl overflow-hidden border border-primary/20 p-8" style="background:linear-gradient(135deg,#0e0e0e 0%,#1a1400 50%,#0e0e0e 100%);">
-      <div class="absolute inset-0 network-lines opacity-10"></div>
-      <div class="relative z-10">
-        <div class="flex items-center gap-3 mb-2">
-          <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
-          <span class="font-label-sm text-label-sm text-primary tracking-widest">CUSTOMER BENEFIT</span>
-        </div>
-        <h4 class="font-headline-md text-headline-md mb-2" data-i18n="update_title">💛 비즈홈 고객 전용 업데이트 혜택</h4>
-        <p class="text-on-surface-variant text-sm mb-8" data-i18n="update_sub">새로 만들지 마세요. 저렴하게 업데이트하세요.</p>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
-            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd1_label">텍스트 변경</div>
-            <div class="text-on-surface-variant line-through text-xs mb-1">150,000원~</div>
-            <div class="text-xl font-bold text-primary">10,000원</div>
-            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd1_desc">연락처·직함 등</div>
-          </div>
-          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
-            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd2_label">사진·이미지 교체</div>
-            <div class="text-on-surface-variant line-through text-xs mb-1">150,000원~</div>
-            <div class="text-xl font-bold text-primary">20,000원</div>
-            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd2_desc">프로필·커버 등</div>
-          </div>
-          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
-            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd3_label">디자인 리뉴얼</div>
-            <div class="text-on-surface-variant line-through text-xs mb-1">150,000원~</div>
-            <div class="text-xl font-bold text-primary">50% 할인</div>
-            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd3_desc">구조·레이아웃 변경</div>
-          </div>
-          <div class="bg-surface-container/60 rounded-2xl p-5 border border-outline-variant/20">
-            <div class="text-xs text-on-surface-variant mb-1" data-i18n="upd4_label">전면 재제작</div>
-            <div class="text-on-surface-variant line-through text-xs mb-1">150,000원~</div>
-            <div class="text-xl font-bold text-primary">30% 할인</div>
-            <div class="text-xs text-on-surface-variant mt-1" data-i18n="upd4_desc">업종·브랜드 전환</div>
-          </div>
-        </div>
-        <!-- 환불 규정 -->
-        <div class="border-t border-outline-variant/20 pt-6 grid grid-cols-1 lg:grid-cols-3 gap-4 text-sm">
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-green-400 shrink-0"></span>
-            <span><span class="font-bold text-on-surface" data-i18n="ref_before">제작 시작 전</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_before_val">100% 환불</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-yellow-400 shrink-0"></span>
-            <span><span class="font-bold text-on-surface" data-i18n="ref_mid">1차 수정 전</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_mid_val">50% 환불</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-red-400 shrink-0"></span>
-            <span><span class="font-bold text-on-surface" data-i18n="ref_after">1차 수정 후</span> <span class="text-on-surface-variant">→ </span><span class="text-on-surface-variant" data-i18n="ref_after_val">환불 불가</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ── WHO IS TM LINK FOR ── -->
-<section class="py-32 px-margin-desktop max-w-container-max mx-auto">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-    <div>
-      <h3 class="font-headline-lg text-headline-lg mb-8"><span data-i18n="who_title">TM LINK는 누구를 위한 서비스인가요?</span></h3>
-      <div class="flex flex-wrap gap-4 mb-12">
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who1">기업체 임직원</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who2">BNI Member</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who3">소상공인 대표</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who4">프리랜서</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who5">뷰티·헬스 원장</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who6">외식업 창업자</span>
-        <span class="px-6 py-3 bg-surface-container rounded-full border border-outline-variant/30 text-body-md font-semibold hover:border-primary transition-colors cursor-default" data-i18n="who7">글로벌 비즈니스</span>
-      </div>
+<!-- PROCESS -->
+<section id="process" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Process</span>
+      <h2 data-i18n="ps_h">신청부터 완성까지 4단계</h2>
+      <p data-i18n="ps_sub">신청서는 1분이면 끝납니다. 나머지는 대화하면서 함께 채웁니다.</p>
     </div>
-    <!-- Process steps -->
-    <div class="space-y-6">
-      <h4 class="font-headline-md text-headline-md mb-8"><span data-i18n="process_title">제작 과정</span> <span class="text-primary" data-i18n="process_steps">4단계</span></h4>
-      <div class="space-y-4">
-        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
-          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shrink-0">01</div>
-          <div><p class="font-bold mb-1" data-i18n="p1_title">상담 & 의뢰</p><p class="text-sm text-on-surface-variant" data-i18n="p1_desc">폼 또는 카카오톡으로 연락. 목적·업종·예산 간단 공유.</p></div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
-          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">02</div>
-          <div><p class="font-bold mb-1"><span data-i18n="p2_title">정보 수집</span></p><p class="text-sm text-on-surface-variant" data-i18n="p2_desc">이름·직함·사진·링크를 템플릿으로 전달받습니다.</p></div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
-          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">03</div>
-          <div><p class="font-bold mb-1" data-i18n="p3_title">디자인 & 개발</p><p class="text-sm text-on-surface-variant" data-i18n="p3_desc">브랜드 맞춤 디자인. 초안 공유 후 피드백 반영.</p></div>
-        </div>
-        <div class="glass-card p-6 rounded-2xl flex items-start gap-5">
-          <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold shrink-0">04</div>
-          <div><p class="font-bold mb-1" data-i18n="p4_title">배포 & 전달</p><p class="text-sm text-on-surface-variant" data-i18n="p4_desc">GitHub Pages 배포. QR 코드 + 공유 링크 전달. 평균 3~5 영업일.</p></div>
-        </div>
-      </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3 data-i18n="s1_h">신청서 작성</h3><p data-i18n="s1_p">플랜을 고르고 기본 정보만 남기면 접수 완료. 1영업일 안에 연락드립니다.</p></div>
+      <div class="step"><div class="n">02</div><h3 data-i18n="s2_h">상담 · 자료 전달</h3><p data-i18n="s2_p">하는 일, 원하는 고객, 소개받고 싶은 분을 듣고 사진·로고를 받습니다.</p></div>
+      <div class="step"><div class="n">03</div><h3 data-i18n="s3_h">디자인 · 수정</h3><p data-i18n="s3_p">맞춤 초안을 보내드리고, 플랜별 수정 횟수 안에서 다듬습니다.</p></div>
+      <div class="step"><div class="n">04</div><h3 data-i18n="s4_h">발행 · QR 전달</h3><p data-i18n="s4_p">공유 링크와 QR을 드립니다. 오늘부터 카톡 한 번으로 나를 소개하세요.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ── -->
-<section id="cta" class="py-32 px-margin-desktop text-center relative overflow-hidden bg-surface-container-low">
-  <div class="absolute inset-0 bg-primary/5 -z-10 network-lines"></div>
-  <div class="max-w-2xl mx-auto space-y-10">
-    <h3 class="font-headline-lg text-headline-lg font-bold leading-tight" style="word-break:keep-all;letter-spacing:-0.01em;">
-      <span data-i18n="cta_h1">명함 한 장이 비즈니스의 미래를 바꿉니다.</span><br/>
-      <span class="text-primary"><span data-i18n="cta_h2">지금 바로 귀하의 디지털 자산을 확보하십시오.</span></span>
-    </h3>
-    <!-- Quick form -->
-    <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 text-left max-w-lg mx-auto">
-      <div class="grid grid-cols-2 gap-4 mb-4">
-        <div>
-          <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_name">성함</span></label>
-          <input id="f-name" type="text" placeholder="홍길동"
-            class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-        </div>
-        <div>
-          <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_phone">연락처</span></label>
-          <input id="f-phone" type="tel" placeholder="010-0000-0000"
-            class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-        </div>
-      </div>
-      <div class="mb-4">
-        <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_plan">플랜 선택</span></label>
-        <select id="f-plan" class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all">
-          <option value="">플랜을 선택하세요</option>
-          <option value="베이직 (150,000원)">베이직 · 150,000원</option>
-          <option value="스탠다드 (210,000원)" selected>스탠다드 · 210,000원 ★ 인기</option>
-          <option value="프리미엄 (270,000원)">프리미엄 · 270,000원 (AI영상 포함)</option>
-          <option value="BNI 특별가 (별도문의)">BNI 특별가 · 별도문의</option>
-          <option value="기업·단체 (10개 이상, 별도문의)">기업·단체 (10개 이상) · 별도문의</option>
-        </select>
-      </div>
-      <div class="mb-6">
-        <label class="text-xs text-on-surface-variant tracking-widest uppercase mb-2 block"><span data-i18n="form_job">업종 / 직함</span></label>
-        <input id="f-job" type="text" placeholder="예: BNI 멤버, 뷰티 원장, 외식업 대표"
-          class="w-full bg-surface-container/50 border border-outline-variant/30 rounded-lg px-4 py-3 text-sm focus:border-primary outline-none transition-all"/>
-      </div>
-      <button onclick="submitForm()"
-        class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] hover:brightness-110 transition-all">
-        <span data-i18n="form_submit">상담 신청</span> <span class="material-symbols-outlined">arrow_forward</span>
-      </button>
+<!-- AFTERCARE -->
+<section id="care">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Aftercare</span>
+      <h2 data-i18n="ac_h">새로 만들지 마세요. 저렴하게 업데이트하세요.</h2>
+      <p data-i18n="ac_sub">비즈홈 고객 전용 업데이트 요금입니다.</p>
     </div>
-    <div class="flex flex-wrap justify-center gap-4 pt-4">
-      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
-        class="px-8 py-4 bg-[#FEE500] text-[#3c1e1e] rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-all">
-        <span class="material-symbols-outlined text-[20px]">chat</span> <span data-i18n="mandu_cta">MANDU 메신저 체험</span>
-      </a>
-      <a href="https://jinjjabg-hub.github.io/cardbook/" target="_blank"
-        class="px-8 py-4 border border-primary text-primary rounded-xl font-bold flex items-center gap-2 hover:bg-primary/5 hover:scale-105 transition-all">
-        <span class="material-symbols-outlined text-[20px]">style</span><span data-i18n="cardbook_btn"> CardBook 보기</span>
-      </a>
+    <div class="care">
+      <div><small data-i18n="u1">텍스트 변경</small><b>10,000<span style="font-size:14px;color:var(--muted)">원</span></b><span data-i18n="u1d">연락처·직함 등</span></div>
+      <div><small data-i18n="u2">사진·이미지 교체</small><b>20,000<span style="font-size:14px;color:var(--muted)">원</span></b><span data-i18n="u2d">프로필·커버 등</span></div>
+      <div><small data-i18n="u3">디자인 리뉴얼</small><b data-i18n="u3v">50% 할인</b><span data-i18n="u3d">구조·레이아웃 변경</span></div>
+      <div><small data-i18n="u4">전면 재제작</small><b data-i18n="u4v">30% 할인</b><span data-i18n="u4d">업종·브랜드 전환</span></div>
     </div>
-    <p class="text-on-surface-variant text-sm opacity-60"><span data-i18n="footer_note">부산 · 전국 원격 제작 가능 · 접수 후 1영업일 내 회신</span></p>
+    <div class="refund">
+      <span><b data-i18n="rf1">제작 시작 전</b> → <span data-i18n="rf1v">100% 환불</span></span>
+      <span><b data-i18n="rf2">1차 수정 전</b> → <span data-i18n="rf2v">50% 환불</span></span>
+      <span><b data-i18n="rf3">1차 수정 후</b> → <span data-i18n="rf3v">환불 불가</span></span>
+    </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer class="bg-surface-container-lowest py-24 px-margin-desktop border-t border-outline-variant/30">
-  <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-    <div class="space-y-6">
-      <h2 class="font-headline-md text-headline-md text-primary font-bold">TM LINK</h2>
-      <p class="text-on-surface-variant text-sm leading-relaxed">
-        Digital Identity & Elite Networking Solutions.<br/>
-        <span data-i18n="footer_by">송승훈 대표 · T.M Link · BNI 파이오니어</span>
-      </p>
-      <div class="flex gap-4">
-        <a href="https://jinjjabg-hub.github.io/BNI-PIONEER/" target="_blank"
-          class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer transition-colors">
-          <span class="material-symbols-outlined text-sm">groups</span>
-        </a>
-        <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank"
-          class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer transition-colors">
-          <span class="material-symbols-outlined text-sm">translate</span>
-        </a>
-      </div>
-    </div>
+<!-- MAKER -->
+<section class="alt">
+  <div class="wrap maker">
+    <img src="송승훈.png" alt="송승훈 대표의 비즈홈 예시 — 4개 국어 전환, 포트폴리오, 연락 버튼, QR 공유" width="1122" height="1402" loading="lazy"/>
     <div>
-      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs">Solutions</h4>
-      <ul class="space-y-4 text-on-surface-variant text-sm">
-        <li><a class="hover:text-primary transition-colors" href="#digital-card" data-i18n="footer_l1">비즈홈</a></li>
-        <li><a class="hover:text-primary transition-colors" href="#ecosystem">BNI CardBook</a></li>
-        <li><a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" class="hover:text-primary transition-colors" data-i18n="footer_l3">MANDU 메신저</a></li>
-        <li><a class="hover:text-primary transition-colors" href="#pricing" data-i18n="footer_l4">가격 안내</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs" data-i18n="footer_h2">제작과정</h4>
-      <ul class="space-y-4 text-on-surface-variant text-sm">
-        <li data-i18n="footer_p1">01 · 상담 & 의뢰</li>
-        <li data-i18n="footer_p2">02 · 정보 수집</li>
-        <li data-i18n="footer_p3">03 · 디자인 & 개발</li>
-        <li data-i18n="footer_p4">04 · 배포 & 전달</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold text-on-surface mb-8 uppercase tracking-widest text-xs">Base</h4>
-      <ul class="space-y-4 text-on-surface-variant text-sm">
-        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span data-i18n="footer_b1"> 부산, KR (본사)</li>
-        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span data-i18n="footer_b2"> 전국 원격 제작</li>
-        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span data-i18n="footer_b3"> BNI 글로벌 네트워크</li>
-      </ul>
+      <span class="kicker">Maker</span>
+      <blockquote data-i18n="mk_q">"명함 한 장이 <em>소개 한 건</em>으로 이어지도록 만듭니다."</blockquote>
+      <p data-i18n="mk_p">BNI에서 직접 리퍼럴을 주고받으며, 소개가 끊기는 지점이 늘 같다는 걸 봤습니다. 받은 명함이 어디 있는지 모르고, 그 사람이 정확히 무엇을 하는지 모른다는 것. TM LINK의 앱들은 그 문제를 풀기 위해 하나씩 만들었습니다.</p>
+      <div class="who" data-i18n="mk_who">송승훈 · T.M Link 대표 · BNI 파이오니어 (부산)</div>
     </div>
   </div>
-  <div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center">
-    <p class="text-on-surface-variant text-sm opacity-60"><span data-i18n="footer_copy">© 2025 TM LINK · 송승훈 대표 · T.M Link · ALL RIGHTS RESERVED.</span></p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <span class="kicker">Start</span>
+    <h2 data-i18n="f_h">다음 소개는 종이가 아니라 링크로 하세요.</h2>
+    <p data-i18n="f_p">부산 · 전국 원격 제작 · 신청 후 1영업일 내 연락</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="apply/"><span data-i18n="f_btn1">비즈홈 신청하기</span><svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-line" href="https://jinjjabg-hub.github.io/autocard/" target="_blank" rel="noopener" data-i18n="f_btn2">5,900원 오토명함 먼저 써보기</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="logo">TM <b>LINK</b></div>
+      <div style="margin-top:6px" data-i18n="ft_by">송승훈 대표 · T.M Link · BNI 파이오니어</div>
+    </div>
+    <nav aria-label="앱 바로가기">
+      <a href="#bizhome" data-i18n="app1_n">비즈홈</a>
+      <a href="https://jinjjabg-hub.github.io/autocard/" target="_blank" rel="noopener" data-i18n="app2_n">오토명함</a>
+      <a href="https://jinjjabg-hub.github.io/cardbook/" target="_blank" rel="noopener" data-i18n="app3_n">카드북</a>
+      <a href="https://jinjjabg-hub.github.io/MANDU/" target="_blank" rel="noopener" data-i18n="app4_n">만두</a>
+      <a href="https://jinjjabg-hub.github.io/JUJUDOSA/" target="_blank" rel="noopener" data-i18n="app5_n">주주도사</a>
+      <a href="https://jinjjabg-hub.github.io/BNI-PIONEER/" target="_blank" rel="noopener">BNI Pioneer</a>
+    </nav>
   </div>
 </footer>
 
 <script>
-// ── Globe Network Animation (Blue Earth) ──
-(function() {
-  const canvas = document.getElementById('globe-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
-  const cx = W/2, cy = H/2, R = Math.min(W,H)/2 - 10;
-  let t = 0;
-  const cities = [
-    { lat: 37.5,  lon: 127,   name: '서울' },
-    { lat: 35.7,  lon: 139.7, name: '도쿄' },
-    { lat: 31.2,  lon: 121.5, name: '상하이' },
-    { lat: 1.3,   lon: 103.8, name: '싱가포르' },
-    { lat: 40.7,  lon: -74,   name: 'New York' },
-    { lat: 51.5,  lon: -0.1,  name: 'London' },
-    { lat: -33.9, lon: 151.2, name: 'Sydney' },
-    { lat: 48.9,  lon: 2.3,   name: 'Paris' },
-    { lat: 55.7,  lon: 37.6,  name: 'Moscow' },
-    { lat: 25.2,  lon: 55.3,  name: 'Dubai' },
-    { lat: -23.5, lon: -46.6, name: 'SP' },
-    { lat: 19.4,  lon: -99.1, name: 'Mexico' },
-  ];
-  const conns = [[0,1],[0,2],[0,3],[0,4],[1,2],[1,6],[2,3],[3,9],[4,5],[4,7],[5,7],[5,8],[6,3],[7,8],[9,3],[10,4],[11,4]];
-  const packets = conns.map(c => ({ from: c[0], to: c[1], p: Math.random(), speed: 0.003 + Math.random()*0.003 }));
-  function latLonToXY(lat, lon, rotY) {
-    const phi = (90 - lat) * Math.PI / 180;
-    const theta = (lon + rotY) * Math.PI / 180;
-    const x3 = R * Math.sin(phi) * Math.cos(theta);
-    const y3 = R * Math.cos(phi);
-    const z3 = R * Math.sin(phi) * Math.sin(theta);
-    return { x: cx + x3, y: cy - y3, z: z3, visible: z3 > -30 };
-  }
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    const rotY = t * 10;
-    // Ocean gradient
-    const grad = ctx.createRadialGradient(cx-50, cy-50, 10, cx, cy, R);
-    grad.addColorStop(0, '#6ab4e8');
-    grad.addColorStop(0.5, '#2676b8');
-    grad.addColorStop(1, '#0d3d6e');
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
-    ctx.fillStyle = grad; ctx.fill();
-    // Atmosphere
-    const atmo = ctx.createRadialGradient(cx, cy, R-8, cx, cy, R+20);
-    atmo.addColorStop(0, 'rgba(120,190,255,0.35)');
-    atmo.addColorStop(1, 'rgba(120,190,255,0)');
-    ctx.beginPath(); ctx.arc(cx, cy, R+20, 0, Math.PI*2);
-    ctx.fillStyle = atmo; ctx.fill();
-    // Clip
-    ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2); ctx.clip();
-    // Grid
-    for (let lat = -60; lat <= 60; lat += 30) {
-      ctx.beginPath(); let first = true;
-      for (let lon = -180; lon <= 180; lon += 4) {
-        const p = latLonToXY(lat, lon, rotY);
-        if (p.z > -50) { if (first) { ctx.moveTo(p.x, p.y); first = false; } else ctx.lineTo(p.x, p.y); } else first = true;
-      }
-      ctx.strokeStyle = 'rgba(255,255,255,0.13)'; ctx.lineWidth = 0.6; ctx.stroke();
-    }
-    for (let lon = 0; lon < 360; lon += 30) {
-      ctx.beginPath(); let first = true;
-      for (let lat = -90; lat <= 90; lat += 4) {
-        const p = latLonToXY(lat, lon, rotY);
-        if (p.z > -50) { if (first) { ctx.moveTo(p.x, p.y); first = false; } else ctx.lineTo(p.x, p.y); } else first = true;
-      }
-      ctx.strokeStyle = 'rgba(255,255,255,0.08)'; ctx.lineWidth = 0.6; ctx.stroke();
-    }
-    const pos = cities.map(c => latLonToXY(c.lat, c.lon, rotY));
-    // Connections (gold)
-    conns.forEach(([a, b]) => {
-      const pa = pos[a], pb = pos[b];
-      if (pa.visible && pb.visible && pa.z > 0 && pb.z > 0) {
-        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y);
-        ctx.strokeStyle = 'rgba(242,202,80,0.4)'; ctx.lineWidth = 1; ctx.stroke();
-      }
-    });
-    // Packets
-    packets.forEach(pk => {
-      pk.p += pk.speed; if (pk.p > 1) pk.p = 0;
-      const pa = pos[pk.from], pb = pos[pk.to];
-      if (pa.visible && pb.visible && pa.z > 0 && pb.z > 0) {
-        const px = pa.x + (pb.x - pa.x) * pk.p, py = pa.y + (pb.y - pa.y) * pk.p;
-        ctx.beginPath(); ctx.arc(px, py, 3.5, 0, Math.PI*2);
-        ctx.fillStyle = '#f2ca50'; ctx.shadowColor = '#f2ca50'; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
-      }
-    });
-    // City dots
-    pos.forEach((p, i) => {
-      if (!p.visible || p.z < 0) return;
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.z > 80 ? 5 : 3.5, 0, Math.PI*2);
-      ctx.fillStyle = '#fff'; ctx.shadowColor = '#f2ca50'; ctx.shadowBlur = p.z > 80 ? 10 : 4; ctx.fill(); ctx.shadowBlur = 0;
-      if (p.z > 60) { ctx.font = '10px Inter,sans-serif'; ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.fillText(cities[i].name, p.x+7, p.y+4); }
-    });
-    // Specular
-    const spec = ctx.createRadialGradient(cx-60, cy-60, 5, cx-40, cy-40, 110);
-    spec.addColorStop(0, 'rgba(255,255,255,0.2)'); spec.addColorStop(1, 'rgba(255,255,255,0)');
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2); ctx.fillStyle = spec; ctx.fill();
-    ctx.restore();
-    // Border
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
-    ctx.strokeStyle = 'rgba(20,80,160,0.5)'; ctx.lineWidth = 2; ctx.stroke();
-    // Label
-    ctx.font = 'bold 12px Montserrat,sans-serif'; ctx.fillStyle = 'rgba(10,40,100,0.4)';
-    ctx.textAlign = 'center'; ctx.fillText('TM LINK', cx, cy + R + 22); ctx.textAlign = 'left';
-    t += 0.004; requestAnimationFrame(draw);
-  }
-  draw();
-})();
+// ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
+var I18N = {
+en:{
+ nav_apps:'Apps',nav_why:'BizHome',nav_price:'Pricing',nav_process:'Process',nav_cta:'Apply',
+ hero_tag:'BNI Pioneer · Busan Digital Identity',
+ hero_h:'Business cards were paper.<br/><span class="hl">Now they are assets.</span>',
+ hero_sub:'Five apps built and run by TM LINK connect introductions, saving and conversations. At the center is <b>BizHome</b>, designed one-on-one just for you.',
+ hero_btn1:'See BizHome pricing',hero_btn2:'Explore 5 apps',
+ st1:'Apps built<br/>& operated',st2:'Languages in<br/>every BizHome',st3:'Business days<br/>to build',st4:'Business day<br/>to reply',
+ apps_h:'5 apps made by TM LINK',apps_sub:'Each app has one job: introduce you, get saved, and connect across languages.',
+ app_badge:'Custom',app1_n:'BizHome',app1_d:'A business home designed one-on-one for you. One link introduces you and your business.',app1_t:'₩150k · ₩250k →',
+ app2_n:'AutoCard',app2_d:'A digital card done in 5 minutes from one photo. Pick from 6 templates and publish.',app2_t:'From ₩5,900 ↗',
+ app3_n:'CardBook',app3_d:'Keep every card you receive in one place and find people by whatever you remember.',app3_t:'Try free ↗',
+ app4_n:'MANDU',app4_d:'Different languages, one conversation. A messenger with real-time translation in 14 languages.',app4_t:'Try messenger ↗',
+ app5_n:'JUJUDOSA',app5_d:'AI saju (Korean fortune) counseling: daily fortune, compatibility and timely advice.',app5_t:'Start ↗',
+ why_h:'A card ends when you hand it over.<br/>BizHome keeps working after.',
+ why_sub:'Paper cards end up in a drawer. BizHome is sent on KakaoTalk, saved, found again, and turns into referrals.',
+ b1_h:'One-on-one, not a template',b1_p:'Designed personally after hearing your industry, style and customers. No two BizHomes are alike.',
+ b2_h:'One link says it all',b2_p:'Optimized KakaoTalk preview with your photo and intro. A QR code is included.',
+ b3_h:'"Please introduce me to…"',b3_p:'A partner & referral section built on the BNI model, so people know exactly whom to connect you with.',
+ b4_h:'4 languages built in',b4_p:'Korean, English, Chinese and Japanese switch by default — ready for overseas buyers.',
+ b5_h:'Saved to their CardBook',b5_p:'One tap saves you to their card holder, so they can search and find you later.',
+ b6_h:'Changes? Just update',b6_p:'New title or number? No reprinting — updates from ₩10,000. The same link always shows the latest.',
+ cmp_h:'Which one fits you?',cmp_sub:'Fast and cheap: AutoCard. Show yourself properly: BizHome.',
+ c_paper:'Paper card',c_auto:'AutoCard',c_biz:'BizHome',
+ r1:'Price',r1a:'Printing (again and again)',r1b:'From ₩5,900',r1c:'<b>₩150k · ₩250k</b>',
+ r2:'How it is made',r2a:'Print shop order',r2b:'Self-serve · 5 min',r2c:'Built after 1:1 consultation',
+ r3:'Design',r3a:'Fixed layout',r3b:'6 templates',r3c:'Fully custom',
+ r4:'Content',r4a:'Two sides',r4b:'Contact-focused',r4c:'Photos · career · services · referrals · video',
+ r5:'After handing over',r5a:'Wallet or drawer',r5b:'Saved to CardBook',r5c:'CardBook + re-share by link · QR',
+ pr_h:'Custom BizHome — just pick one of two.',pr_sub:'Both are made one-on-one without templates. The difference is how much you show and how fast you get it.',
+ p1_d:'Your first BizHome that introduces you properly',
+ p1_1:'1:1 custom design (no templates)',p1_2:'Auto-translated into 4 languages (KR·EN·CN·JP)',p1_3:'AI profile photo (one phone photo is enough)',p1_4:'Intro + career section',p1_5:'Partner & referral section',p1_6:'Image slides up to 4',p1_7:'QR · KakaoTalk preview · Save-to-CardBook button',p1_8:'Free hosting (₩0 upkeep)',p1_9:'2 revisions (within 1 week)',p1_10:'Delivered in 3–5 business days',p1_btn:'Apply for ₩150k plan',
+ p2_best:'Promotion included',p2_d:'Beyond an intro — a BizHome that gets inquiries',
+ p2_0:'Everything in ₩150k plan +',p2_1:'Services & products section (price list · portfolio)',p2_2:'1 AI promo video',p2_3:'Booking/inquiry form → your Google Sheet',p2_4:'Pick 4 of 10 languages (+₩10k each extra)',p2_5:'Image slides up to 8',p2_6:'MANDU translation chat button',p2_7:'Priority — draft within 2 business days',p2_8:'Generous revisions: 3 in 1 month + 1 within 3 months',p2_btn:'Apply for ₩250k plan',
+ n1:'VAT (10%) not included',n2:'Production starts after payment',n3:'BNI members: write your chapter for special pricing',n4:'10+ cards for teams: custom quote',
+ g_h:'See real BizHomes we have made',g_p:'Opens the gallery of finished work by industry',g_btn:'View gallery',
+ ps_h:'4 steps from application to launch',ps_sub:'The form takes 1 minute. We fill in the rest together.',
+ s1_h:'Apply',s1_p:'Choose a plan and leave basic info. We reply within 1 business day.',
+ s2_h:'Consult · send materials',s2_p:'We learn what you do, whom you serve and who you want to meet, then collect photos and logos.',
+ s3_h:'Design · revise',s3_p:'You get a custom draft and we refine it within your plan’s revisions.',
+ s4_h:'Launch · QR',s4_p:'You receive the share link and QR. Introduce yourself with one KakaoTalk message.',
+ ac_h:'Don’t rebuild. Update for less.',ac_sub:'Update prices for BizHome customers.',
+ u1:'Text change',u1d:'Phone, title, etc.',u2:'Photo/image swap',u2d:'Profile, cover, etc.',u3:'Design renewal',u3v:'50% off',u3d:'Structure & layout',u4:'Full rebuild',u4v:'30% off',u4d:'New industry or brand',
+ rf1:'Before production',rf1v:'100% refund',rf2:'Before 1st revision',rf2v:'50% refund',rf3:'After 1st revision',rf3v:'No refund',
+ mk_q:'"I make one business card lead to <em>one referral</em>."',
+ mk_p:'Exchanging referrals at BNI, I kept seeing introductions break at the same points: nobody knew where the card was, or exactly what the person did. Each TM LINK app was built to fix that.',
+ mk_who:'Seunghoon Song · CEO, T.M Link · BNI Pioneer (Busan)',
+ f_h:'Make your next introduction a link, not paper.',f_p:'Busan · remote nationwide · reply within 1 business day',f_btn1:'Apply for BizHome',f_btn2:'Try AutoCard from ₩5,900 first',
+ ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
+},
+zh:{
+ nav_apps:'应用',nav_why:'BizHome',nav_price:'价格',nav_process:'流程',nav_cta:'申请',
+ hero_tag:'BNI Pioneer · 釜山数字名片',
+ hero_h:'名片曾是纸张。<br/><span class="hl">如今是资产。</span>',
+ hero_sub:'TM LINK 自主开发运营的 5 款应用，连接介绍、保存与对话。核心是为您一对一打造的 <b>BizHome</b>。',
+ hero_btn1:'查看 BizHome 价格',hero_btn2:'浏览 5 款应用',
+ st1:'自主开发<br/>运营的应用',st2:'BizHome<br/>默认语言',st3:'平均制作<br/>工作日',st4:'申请后<br/>工作日内回复',
+ apps_h:'TM LINK 打造的 5 款应用',apps_sub:'每款应用只为一个目的：介绍您、被保存、跨越语言相连。',
+ app_badge:'定制',app1_n:'BizHome',app1_d:'一对一为您设计的商务主页。一个链接介绍您和您的事业。',app1_t:'15万 · 25万韩元 →',
+ app2_n:'自动名片',app2_d:'一张名片照片，5 分钟完成的数字名片。6 种模板任选，即刻发布。',app2_t:'5,900韩元起 ↗',
+ app3_n:'名片册',app3_d:'把收到的名片集中保存，凭记忆片段即可快速找到。',app3_t:'免费使用 ↗',
+ app4_n:'MANDU',app4_d:'语言不同，对话如一。支持 14 种语言实时翻译的聊天应用。',app4_t:'体验 ↗',
+ app5_n:'JUJUDOSA',app5_d:'AI 四柱咨询：解读命盘，给出当下的建议。今日运势、合婚尽在其中。',app5_t:'开始咨询 ↗',
+ why_h:'名片递出即结束，<br/>BizHome 递出后仍在工作。',
+ why_sub:'纸质名片终归抽屉。BizHome 通过 KakaoTalk 发送、被保存、被再次找到，并转化为引荐。',
+ b1_h:'一对一定制，而非模板',b1_p:'了解您的行业、风格和客户后亲自设计。没有两个相同的 BizHome。',
+ b2_h:'一个链接完成介绍',b2_p:'优化 KakaoTalk 预览，照片与简介即刻显示，并附赠二维码。',
+ b3_h:'"请帮我介绍这样的人"',b3_p:'按 BNI 引荐模式设计的伙伴·推荐板块，对方立刻知道该为您连接谁。',
+ b4_h:'内置 4 种语言',b4_p:'韩、英、中、日一键切换，可直接发给海外买家和外国客户。',
+ b5_h:'保存到对方名片册',b5_p:'一键保存到对方的名片册，需要时搜索即可找到您。',
+ b6_h:'有变化就修改',b6_p:'职务、电话变更无需重印，修改 1 万韩元起，同一链接始终显示最新信息。',
+ cmp_h:'哪种适合您？',cmp_sub:'快速低价选自动名片，完整展示自己选 BizHome。',
+ c_paper:'纸质名片',c_auto:'自动名片',c_biz:'BizHome',
+ r1:'价格',r1a:'印刷费（反复重印）',r1b:'5,900韩元起',r1c:'<b>15万 · 25万韩元</b>',
+ r2:'制作方式',r2a:'印刷厂下单',r2b:'自助 · 5 分钟',r2c:'一对一咨询后制作',
+ r3:'设计',r3a:'固定版式',r3b:'6 种模板',r3c:'完全定制',
+ r4:'可承载内容',r4a:'正反两面',r4b:'以联系方式为主',r4c:'照片·经历·服务·引荐·视频',
+ r5:'递出之后',r5a:'钱包或抽屉',r5b:'存入名片册',r5c:'名片册 + 链接·二维码再分享',
+ pr_h:'BizHome 定制，二选一即可。',pr_sub:'两者都无模板、一对一制作。区别在于展示多少、交付多快。',
+ p1_d:'好好介绍自己的第一个 BizHome',
+ p1_1:'一对一定制设计（无模板）',p1_2:'4 种语言自动翻译（韩·英·中·日）',p1_3:'AI 头像照片（一张手机照片即可）',p1_4:'简介 + 经历板块',p1_5:'伙伴·推荐（引荐）板块',p1_6:'图片轮播最多 4 张',p1_7:'二维码 · KakaoTalk 预览 · 存入名片册按钮',p1_8:'免费托管（零维护费）',p1_9:'修改 2 次（完成后 1 周内）',p1_10:'3–5 个工作日交付',p1_btn:'申请 15万韩元方案',
+ p2_best:'含业务推广',p2_d:'不止介绍，让客户直接咨询的 BizHome',
+ p2_0:'包含 15万方案全部内容 +',p2_1:'服务·产品介绍板块（价目表·作品集）',p2_2:'AI 宣传视频 1 个',p2_3:'预约·咨询表单 → 自动存入您的 Google 表格',p2_4:'10 种语言任选 4 种（每加 1 种 +1万韩元）',p2_5:'图片轮播最多 8 张',p2_6:'MANDU 翻译咨询按钮',p2_7:'优先制作 — 2 个工作日内出初稿',p2_8:'充足修改：1 个月内 3 次 + 3 个月内 1 次',p2_btn:'申请 25万韩元方案',
+ n1:'不含增值税（10%）',n2:'确认付款后开始制作',n3:'BNI 会员填写分会可享特价',n4:'10 张以上团体·企业另行报价',
+ g_h:'查看实际制作的 BizHome',g_p:'前往按行业分类的作品展示',g_btn:'查看作品',
+ ps_h:'从申请到完成 4 步',ps_sub:'申请表 1 分钟完成，其余边沟通边完善。',
+ s1_h:'填写申请',s1_p:'选择方案并留下基本信息即可。1 个工作日内联系您。',
+ s2_h:'咨询 · 提交资料',s2_p:'了解您的业务、目标客户与想认识的人，并收集照片和标志。',
+ s3_h:'设计 · 修改',s3_p:'发送定制初稿，在方案修改次数内细化。',
+ s4_h:'发布 · 二维码',s4_p:'交付分享链接和二维码。从今天起一条 KakaoTalk 即可介绍自己。',
+ ac_h:'不必重做，低价更新。',ac_sub:'BizHome 客户专享更新价格。',
+ u1:'文字修改',u1d:'电话、职务等',u2:'照片·图片更换',u2d:'头像、封面等',u3:'设计翻新',u3v:'5 折',u3d:'结构·版式变更',u4:'整体重做',u4v:'7 折',u4d:'行业·品牌转换',
+ rf1:'开始制作前',rf1v:'全额退款',rf2:'第一次修改前',rf2v:'退款 50%',rf3:'第一次修改后',rf3v:'不予退款',
+ mk_q:'"让一张名片带来<em>一次引荐</em>。"',
+ mk_p:'在 BNI 互相引荐时，我发现介绍总在同样的地方中断：不知道名片在哪，也不清楚对方具体做什么。TM LINK 的每款应用都是为解决这个问题而生。',
+ mk_who:'宋承勋 · T.M Link 代表 · BNI Pioneer（釜山）',
+ f_h:'下一次介绍，用链接而不是纸张。',f_p:'釜山 · 全国远程制作 · 申请后 1 个工作日内联系',f_btn1:'申请 BizHome',f_btn2:'先试用 5,900韩元自动名片',
+ ft_by:'宋承勋 · T.M Link · BNI Pioneer'
+},
+ja:{
+ nav_apps:'アプリ',nav_why:'BizHome',nav_price:'料金',nav_process:'制作の流れ',nav_cta:'申し込む',
+ hero_tag:'BNI Pioneer · 釜山デジタルアイデンティティ',
+ hero_h:'名刺は紙でした。<br/><span class="hl">これからは資産です。</span>',
+ hero_sub:'TM LINK が自ら開発・運営する 5 つのアプリで、紹介・保存・会話までつなぎます。中心にあるのは、あなただけのために 1:1 で作る <b>BizHome</b>。',
+ hero_btn1:'BizHome の料金を見る',hero_btn2:'5 つのアプリを見る',
+ st1:'自社開発・運営<br/>のアプリ',st2:'BizHome<br/>標準対応言語',st3:'平均制作<br/>営業日',st4:'申込後の返信<br/>営業日以内',
+ apps_h:'TM LINK が作った 5 つのアプリ',apps_sub:'それぞれのアプリは一つの目的のために。あなたを紹介し、保存され、言葉の壁なくつながるように。',
+ app_badge:'オーダーメイド',app1_n:'BizHome',app1_d:'あなたのために 1:1 でデザインするビジネスホーム。リンク一つで自分と事業を紹介。',app1_t:'15万 · 25万ウォン →',
+ app2_n:'オート名刺',app2_d:'名刺写真 1 枚、5 分で完成するデジタル名刺。6 種のテンプレートからすぐ発行。',app2_t:'5,900ウォンから ↗',
+ app3_n:'カードブック',app3_d:'受け取った名刺を一か所に集め、覚えている断片だけですぐ探せる名刺帳。',app3_t:'無料で使う ↗',
+ app4_n:'MANDU',app4_d:'言葉が違っても会話は一つに。14 言語をリアルタイム自動翻訳するメッセンジャー。',app4_t:'体験する ↗',
+ app5_n:'JUJUDOSA',app5_d:'命式を読み、今の時期に合ったアドバイスを届ける AI 四柱推命相談。今日の運勢・相性も。',app5_t:'相談を始める ↗',
+ why_h:'名刺は渡せば終わり。<br/>BizHome は渡した後も働きます。',
+ why_sub:'紙の名刺は引き出しへ。BizHome はカカオトークで届き、保存され、また見つけられ、紹介につながります。',
+ b1_h:'テンプレートではなく 1:1',b1_p:'業種・スタイル・顧客層を伺い代表が直接デザイン。同じ BizHome は二つとありません。',
+ b2_h:'リンク一つで紹介完了',b2_p:'カカオトークのプレビューに写真と紹介がすぐ表示。QR コードもお渡しします。',
+ b3_h:'「こんな方を紹介してください」',b3_p:'BNI のリファーラル構造をそのまま反映したパートナー・推薦セクション。',
+ b4_h:'4 言語を標準搭載',b4_p:'韓・英・中・日の切替ボタン付き。海外バイヤーや外国人顧客にもそのまま送れます。',
+ b5_h:'相手のカードブックに保存',b5_p:'ボタン一つで相手の名刺帳に保存。必要な時に検索で見つけてもらえます。',
+ b6_h:'変わったら直せばいい',b6_p:'肩書や連絡先が変わっても刷り直し不要。修正 1 万ウォンから、同じリンクが常に最新。',
+ cmp_h:'あなたに合うのはどれ？',cmp_sub:'早く安くならオート名刺、しっかり見せるなら BizHome。',
+ c_paper:'紙の名刺',c_auto:'オート名刺',c_biz:'BizHome',
+ r1:'価格',r1a:'印刷費（刷り直しの繰り返し）',r1b:'5,900ウォンから',r1c:'<b>15万 · 25万ウォン</b>',
+ r2:'作り方',r2a:'印刷所に注文',r2b:'セルフ · 5 分',r2c:'1:1 相談後に制作',
+ r3:'デザイン',r3a:'決まった型',r3b:'テンプレート 6 種',r3c:'完全オーダーメイド',
+ r4:'載せられる内容',r4a:'表裏 2 面',r4b:'連絡先中心',r4c:'写真・経歴・サービス・紹介・動画',
+ r5:'渡した後',r5a:'財布・引き出しの中',r5b:'カードブックに保存',r5c:'カードブック + リンク・QR で再共有',
+ pr_h:'BizHome オーダーメイド、選ぶのは 2 つだけ。',pr_sub:'どちらもテンプレートなしの 1:1 制作。違いは「どれだけ見せ、どれだけ早く受け取るか」。',
+ p1_d:'自分をきちんと紹介する初めての BizHome',
+ p1_1:'1:1 オーダーメイドデザイン（テンプレートなし）',p1_2:'4 言語自動翻訳（韓・英・中・日）',p1_3:'AI プロフィール写真（スマホ写真 1 枚で OK）',p1_4:'紹介文 + 経歴セクション',p1_5:'パートナー・推薦（リファーラル）セクション',p1_6:'画像スライド最大 4 枚',p1_7:'QR · カカオトークプレビュー · カードブック保存ボタン',p1_8:'無料ホスティング（維持費 0 円）',p1_9:'修正 2 回（完成後 1 週間以内）',p1_10:'制作期間 3〜5 営業日',p1_btn:'15万ウォンプランを申し込む',
+ p2_best:'事業 PR までまとめて',p2_d:'紹介を超えて、問い合わせまで生む BizHome',
+ p2_0:'15万ウォンプランの全内容 +',p2_1:'サービス・商品紹介セクション（料金表・ポートフォリオ）',p2_2:'AI PR 動画 1 本',p2_3:'予約・問い合わせフォーム → Google シートに自動受付',p2_4:'10 言語から 4 つ選択（追加 1 言語 +1万ウォン）',p2_5:'画像スライド最大 8 枚',p2_6:'MANDU 通訳相談ボタン連携',p2_7:'優先制作 — 初稿 2 営業日以内',p2_8:'修正たっぷり：1 か月内 3 回 + 3 か月内 1 回',p2_btn:'25万ウォンプランを申し込む',
+ n1:'消費税（VAT 10%）別',n2:'入金確認後に制作開始',n3:'BNI メンバーはチャプター記入で特別価格をご案内',n4:'10 枚以上の団体・企業は別途お見積り',
+ g_h:'実際に制作した BizHome をご覧ください',g_p:'業種別の制作事例ギャラリーへ移動します',g_btn:'ギャラリーを見る',
+ ps_h:'申し込みから完成まで 4 ステップ',ps_sub:'申込書は 1 分で完了。残りは会話しながら一緒に作ります。',
+ s1_h:'申込書の記入',s1_p:'プランを選び基本情報を残すだけ。1 営業日以内にご連絡します。',
+ s2_h:'相談・資料のお渡し',s2_p:'お仕事・顧客・紹介してほしい方を伺い、写真やロゴを受け取ります。',
+ s3_h:'デザイン・修正',s3_p:'オーダーメイドの初稿をお送りし、プランの修正回数内で仕上げます。',
+ s4_h:'公開・QR のお渡し',s4_p:'共有リンクと QR をお渡し。今日からカカオトーク一つで自己紹介。',
+ ac_h:'作り直さず、安くアップデート。',ac_sub:'BizHome のお客様専用アップデート料金です。',
+ u1:'テキスト変更',u1d:'連絡先・肩書など',u2:'写真・画像の差し替え',u2d:'プロフィール・カバーなど',u3:'デザインリニューアル',u3v:'50% オフ',u3d:'構成・レイアウト変更',u4:'全面作り直し',u4v:'30% オフ',u4d:'業種・ブランド転換',
+ rf1:'制作開始前',rf1v:'100% 返金',rf2:'1 回目の修正前',rf2v:'50% 返金',rf3:'1 回目の修正後',rf3v:'返金不可',
+ mk_q:'「名刺一枚が<em>紹介一件</em>につながるように作ります。」',
+ mk_p:'BNI で紹介をやり取りする中で、紹介が途切れる場所はいつも同じでした。名刺がどこにあるか分からない、その人が何をしているか正確に分からない。TM LINK のアプリはその問題を解くために一つずつ作りました。',
+ mk_who:'ソン・スンフン · T.M Link 代表 · BNI Pioneer（釜山）',
+ f_h:'次の紹介は、紙ではなくリンクで。',f_p:'釜山 · 全国リモート制作 · 申込後 1 営業日以内にご連絡',f_btn1:'BizHome を申し込む',f_btn2:'まず 5,900ウォンのオート名刺を試す',
+ ft_by:'ソン・スンフン · T.M Link · BNI Pioneer'
+}};
 
-// ── Language Switcher ──
-window.i18n = {
-  ko: {
-    tag:'BNI 파이오니어 · 부산 디지털 아이덴티티',
-    h:'명함은<br/>종이였습니다.<br/><span class="text-gradient-gold">이제는 자산입니다.</span>',
-    sub:'비즈홈 · BNI 멤버카드 · 실시간 통번역 메신저 MANDU.<br/>TM LINK로 귀하의 비즈니스 가치를 격상시키십시오.',
-    btn1:'무료 상담 신청', btn2:'포트폴리오 감상', hbtn:'상담 신청',
-    nav_why:'WHY TM LINK', nav_card:'BIZHOME', nav_eco:'ECOSYSTEM', nav_price:'PRICING',
-    why_sub:'전통적인 종이 명함을 디지털 자산 관리 시스템으로 혁신합니다.',
-    why_h1:'명함의 문제는 디자인이 아닙니다.',
-    why_h2:'관리되지 않는 인맥은 사라집니다.',
-    why_c1_title:'비즈홈', why_c2_title:'MANDU 메신저', why_c3_title:'CardBook',
-    why_c1_desc:'단순한 연락처 교환을 넘어 전문가의 권위와 신뢰를 담은 프리미엄 비즈홈. BNI 멤버카드 4개국어 지원.',
-    why_c2_desc:'10개국어 실시간 자동번역 메신저. 외국어 없이도 전 세계 BNI 멤버와 즉시 소통.',
-    why_c3_desc:'개인의 인맥을 영구적인 디지털 자산으로 전환. BNI 챕터 전체 통합 관리.',
-    pricing_title:'Elite Membership',
-    btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'기업 상담 신청',
-    who_title:'TM LINK는 누구를 위한 서비스인가요?',
-    process_title:'제작 과정', process_steps:'4단계',
-    p1_title:'상담 & 의뢰', p2_title:'정보 수집', p3_title:'디자인 & 개발', p4_title:'배포 & 전달',
-    cta_h1:'명함 한 장이 비즈니스의 미래를 바꿉니다.',
-    cta_h2:'지금 바로 귀하의 디지털 자산을 확보하십시오.',
-    form_name:'성함', form_phone:'연락처', form_plan:'플랜 선택', form_job:'업종 / 직함',
-    form_submit:'상담 신청',
-    mandu_cta:'MANDU 메신저 체험',
-    footer_note:'부산 · 전국 원격 제작 가능 · 접수 후 1영업일 내 회신',
-    footer_by:'송승훈 대표 · T.M Link · BNI 파이오니어',
-    footer_l1:'비즈홈',
-    footer_l3:'MANDU 메신저',
-    footer_l4:'가격 안내',
-    footer_h2:'제작과정',
-    footer_p1:'01 · 상담 & 의뢰',
-    footer_p2:'02 · 정보 수집',
-    footer_p3:'03 · 디자인 & 개발',
-    footer_p4:'04 · 배포 & 전달',
-    footer_b1:'부산, KR (본사)',
-    footer_b2:'전국 원격 제작',
-    footer_b3:'BNI 글로벌 네트워크',
-    footer_copy:'© 2025 TM LINK · 송승훈 대표 · T.M Link · ALL RIGHTS RESERVED.',
-    modal_note:'각 카드를 클릭하면 실제 비즈홈이 새 탭에서 열립니다.',
-    stat1:'MANDU<br/>지원 언어',
-    stat2:'기본 지원<br/>한·영·중·일',
-    stat3:'평균 완성<br/>기간',
-    feat1_t:'4개국어 지원',
-    feat1_d:'한·영·일·중 자동 전환. 글로벌 네트워킹 최적화.',
-    feat2_t:'QR 자동 생성',
-    feat2_d:'QR 하나로 언제 어디서든 공유 가능.',
-    feat3_t:'vCard 저장',
-    feat3_d:'한 번 탭으로 연락처 즉시 저장. iOS·Android 지원.',
-    feat4_t:'카카오톡 최적화',
-    feat4_d:'OG 이미지 설정으로 카카오 공유 시 프리미엄 미리보기.',
-    eco_sub:'From Local Trust to Global Scale',
-    eco1_d:'권위 있는 첫인상의 시작. QR·4개국어.',
-    eco2_d:'멤버들이 서로 연결·연결·연결',
-    eco3_d:'10개국어 실시간 자동번역 메신저.',
-    eco4_d:'국경 없는 비즈니스 네트워크 확장.',
-    pricing_title:'비즈홈 요금제',
-    pricing_sub:'종이명함은 버려집니다. 비즈홈은 공유됩니다.',
-    vat_note:'💳 부가세(VAT 10%) 별도',
-    pay_note:'✅ 결제 후 제작 시작',
-    gallery_title:'실제 제작된 비즈홈을 직접 확인하세요',
-    gallery_sub:'클릭하면 비즈홈 갤러리로 이동합니다',
-    gallery_btn:'갤러리 보기',
-    common_label:'✦ 전 플랜 공통 포함',
-    common_cardbook:'📱 CardBook 무료 제공 (디지털 명함첩)',
-    common_qr:'QR 자동 생성',
-    common_domain:'무료 도메인 제공',
-    common_kakao:'카카오톡 프리뷰 최적화',
-    b_cover:'대문 커버 + 기본 연락처',
-    b_lang:'2개국어 (한/영)',
-    b_rev:'수정 1회 포함',
-    s_lang:'AI 자동 번역, 4개국어 고정 (한/영/중/일)',
-    s_photo:'AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)',
-    s_bio:'소개글 + 경력 섹션',
-    s_ref:'파트너·추천 섹션 ⭐',
-    s_slide:'이미지 슬라이드 2~4장',
-    s_rev:'1주일 내 수정 2회 포함',
-    p_lang:'10개국어 중 4개 선택 (초과 시 1개당 +10,000원)',
-    p_photo:'AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)',
-    p_bio:'소개글 + 경력 섹션',
-    p_ref:'파트너·추천 섹션',
-    p_slide:'이미지 슬라이드 2~8장',
-    p_video:'AI 영상 제작 포함 (1개) ⭐',
-    p_service:'서비스/제품 소개 섹션',
-    p_form:'예약/문의 폼 연결',
-    p_rev:'1주일 내 수정 3회 포함',
-    pp_lang:'10개국어 중 4개 선택 (초과 시 1개당 +10,000원)',
-    pp_photo:'AI 프로필 사진 제작 (휴대폰 사진 1장이면 OK)',
-    pp_bio:'소개글 + 경력 섹션',
-    pp_ref:'파트너·추천 섹션',
-    pp_slide:'이미지 슬라이드 2~8장',
-    pp_video:'AI 영상 제작 포함 (2개) ⭐',
-    pp_service:'서비스/제품 소개 섹션',
-    pp_form:'예약/문의 폼 연결',
-    pp_priority:'우선 제작 (초안 2일 이내) ⭐',
-    pp_rev:'수정 정책: 1개월 이내 3회 · 3개월 이내 1회',
-    no_priority:'우선 제작',
-    no_photo:'AI 프로필 사진',
-    no_bio:'소개글 + 경력',
-    no_ref:'파트너·추천 섹션',
-    no_slide:'이미지 슬라이드',
-    no_video:'동영상 삽입',
-    no_service:'서비스/제품 소개 섹션',
-    no_form:'예약/문의 폼 연결',
-    update_title:'💛 비즈홈 고객 전용 업데이트 혜택',
-    update_sub:'새로 만들지 마세요. 저렴하게 업데이트하세요.',
-    upd1_label:'텍스트 변경', upd1_desc:'연락처·직함 등',
-    upd2_label:'사진·이미지 교체', upd2_desc:'프로필·커버 등',
-    upd3_label:'디자인 리뉴얼', upd3_desc:'구조·레이아웃 변경',
-    upd4_label:'전면 재제작', upd4_desc:'업종·브랜드 전환',
-    ref_before:'제작 시작 전', ref_before_val:'100% 환불',
-    ref_mid:'1차 수정 전', ref_mid_val:'50% 환불',
-    ref_after:'1차 수정 후', ref_after_val:'환불 불가',
-    inc_basic:'베이직 전체 포함',
-    inc_std:'스탠다드 전체 포함',
-    inc_prem:'프리미엄 전체 포함',
-    prem_lang:'4개 언어 선택 가능 (10개 언어 중 직접 선택 — 불어·아랍어·러시아어·스페인어 등)',
-    ent_title:'기업 · 단체 (10개 이상)',
-    bni_special_title:'BNI 특별가',
-    bni_special_desc:'BNI 챕터 멤버 전용 할인 가격입니다.',
-    bni_special_btn:'특별가 문의하기',
-    kakao_note:'* 카카오톡으로 링크 공유 시 이름·사진·직함이 미리보기로 표시됩니다.',
-    cardbook_btn:' CardBook 보기',
-    footer_desc:'비즈홈 · BNI 네트워킹 · 글로벌 아이덴티티 솔루션.',
-    plan_basic_desc:'사업의 첫 얼굴. 사진부터 명함까지 한 번에.',
-    plan_std_desc:'AI 영상까지, 한 단계 더 강력하게.',
-    plan_prem_desc:'언어 확장 · AI영상 2개 · 우선 제작까지, 최상위 플랜.',
-    plan_free_desc:'원하는 디자인 100% 반영. 미니 웹사이트 구조.',
-    ent_desc:'별도 협의 · 규모에 따른 맞춤 견적',
-    b1:'컬러 선택 (브랜드 색상 적용)', b2:'커버 이미지', b3:'연락처 한 번 탭으로 저장 (vCard)',
-    b4:'3개국어 (한/영/중)', b5:'MANDU 메신저 연동', b6:'무료 도메인 제공 (GitHub Pages)', b7:'1회 수정 포함',
-    s1:'4개국어 (한/영/중/일)', s2:'프로필 사진', s3:'소개글 + 경력 섹션',
-    s4:'리퍼럴 섹션 (BNI 전용)', s5:'이미지 슬라이드 (2~4장)', s6:'카카오톡 공유 시 프리뷰 최적화', s7:'2회 수정 포함',
-    p1:'이미지 슬라이드 (2~8장)', p2:'동영상 삽입 (1개)', p3:'서비스/제품 소개 섹션', p4:'예약·문의 폼 연결',
-    f1:'원하는 디자인', f2:'포트폴리오 갤러리', f3:'도메인 연결 지원 (무료 도메인도 가능)',
-    f4:'수정 10회 (2주간)', f5:'MANDU 연동', f6:'무료 도메인 제공',
-    e1:'기업 고유 로고 적용', e2:'브랜드 컬러 시스템', e3:'임직원 단체 제작',
-    e4:'기업 카드북 통합', e5:'MANDU 단체 연동', e6:'전담 관리 지원',
-    who1:'기업체 임직원', who2:'BNI Member', who3:'소상공인 대표', who4:'프리랜서',
-    who5:'뷰티·헬스 원장', who6:'외식업 창업자', who7:'글로벌 비즈니스',
-    p1_desc:'폼 또는 카카오톡으로 연락. 목적·업종·예산 간단 공유.',
-    p2_desc:'이름·직함·사진·링크를 템플릿으로 전달받습니다.',
-    p3_desc:'브랜드 맞춤 디자인. 초안 공유 후 피드백 반영.',
-    p4_desc:'GitHub Pages 배포. QR 코드 + 공유 링크 전달. 평균 3~5 영업일.',
-  },
-  en: {
-    tag:'BNI PIONEER · BUSAN DIGITAL IDENTITY',
-    h:'Cards Were<br/>Paper.<br/><span class="text-gradient-gold">Now They Are Assets.</span>',
-    sub:'BizHome sites · BNI Member Cards · Real-time 10-language Messenger MANDU.<br/>Elevate your business with TM LINK.',
-    btn1:'Free Consultation', btn2:'View Portfolio', hbtn:'Consult',
-    nav_why:'WHY TM LINK', nav_card:'BIZHOME', nav_eco:'ECOSYSTEM', nav_price:'PRICING',
-    why_sub:'Transforming traditional paper cards into a digital asset management system.',
-    why_h1:'The problem is not design.',
-    why_h2:'Unmanaged networks disappear.',
-    why_c1_title:'BizHome', why_c2_title:'MANDU Messenger', why_c3_title:'CardBook',
-    why_c1_desc:'Beyond simple contact exchange — a premium digital card that carries authority and trust. BNI member cards with 4-language support.',
-    why_c2_desc:'Real-time 10-language auto-translation messenger. Connect instantly with BNI members worldwide without language barriers.',
-    why_c3_desc:'Transform personal networks into permanent digital assets. Integrated management for entire BNI chapters.',
-    pricing_title:'Elite Membership',
-    btn_basic:'Get Started', btn_std:'Select Standard', btn_prem:'Go Premium', btn_free:'Go Free Pro', btn_ent:'Enterprise Inquiry',
-    who_title:'Who is TM LINK for?',
-    process_title:'How It Works', process_steps:'4 Steps',
-    p1_title:'Consult & Order', p2_title:'Collect Info', p3_title:'Design & Build', p4_title:'Deploy & Deliver',
-    cta_h1:'One card can change your business future.',
-    cta_h2:'Secure your digital identity right now.',
-    form_name:'Full Name', form_phone:'Phone', form_plan:'Select Plan', form_job:'Industry / Title',
-    form_submit:'Submit',
-    mandu_cta:'Try MANDU Messenger',
-    footer_note:'Busan · Remote production available · Reply within 1 business day',
-    footer_by:'CEO Song Seung-hun · T.M Link · BNI Pioneer',
-    footer_l1:'BizHome',
-    footer_l3:'MANDU Messenger',
-    footer_l4:'Pricing',
-    footer_h2:'Process',
-    footer_p1:'01 · Consult & Order',
-    footer_p2:'02 · Collect Info',
-    footer_p3:'03 · Design & Build',
-    footer_p4:'04 · Deploy & Deliver',
-    footer_b1:'Busan, KR (HQ)',
-    footer_b2:'Remote nationwide',
-    footer_b3:'BNI Global Network',
-    footer_copy:'© 2025 TM LINK · ALL RIGHTS RESERVED.',
-    modal_note:'Click each card to open the actual digital card in a new tab.',
-    stat1:'MANDU<br/>languages',
-    stat2:'Core support<br/>KR·EN·CN·JP',
-    stat3:'Avg completion<br/>days',
-    feat1_t:'4 Languages',
-    feat1_d:'Auto-switch between KR/EN/JP/CN. Global networking ready.',
-    feat2_t:'Auto QR Code',
-    feat2_d:'Share anytime via QR. Link is permanent.',
-    feat3_t:'vCard Save',
-    feat3_d:'One tap to save contact. iOS & Android supported.',
-    feat4_t:'KakaoTalk Ready',
-    feat4_d:'Premium preview card when shared via KakaoTalk.',
-    eco_sub:'From Local Trust to Global Scale',
-    eco1_d:'The start of an authoritative first impression. QR & 4 languages.',
-    eco2_d:'Members connecting · connecting · connecting',
-    eco3_d:'Real-time 10-language auto-translation messenger.',
-    eco4_d:'Borderless business network expansion.',
-    pricing_title:'BizHome Plans',
-    pricing_sub:'Paper cards get thrown away. BizHome gets shared.',
-    vat_note:'※ All prices exclude VAT (10%) · Production starts after payment',
-    gallery_title:'See real BizHome sites we\'ve made',
-    gallery_sub:'Click to visit the BizHome gallery',
-    gallery_btn:'View Gallery',
-    common_label:'✦ Included in All Plans',
-    common_cardbook:'📱 CardBook free (digital card holder)',
-    common_qr:'Auto QR code generation',
-    common_domain:'Free domain provided',
-    common_kakao:'KakaoTalk preview optimized',
-    b_cover:'Cover + Basic contact info',
-    b_lang:'2 languages (KR/EN)',
-    b_rev:'1 revision included',
-    s_lang:'AI auto-translation, 4 languages fixed (KR/EN/CN/JP)',
-    s_photo:'AI profile photo (one phone snapshot is enough)',
-    s_bio:'Bio + career section',
-    s_ref:'Partner & referral section ⭐',
-    s_slide:'Image slideshow 2~4',
-    s_rev:'2 revisions within 1 week',
-    p_lang:'Choose 4 from 10 languages (+$7/lang beyond 4)',
-    p_photo:'AI profile photo (one phone snapshot is enough)',
-    p_bio:'Bio + career section',
-    p_ref:'Partner & referral section',
-    p_slide:'Image slideshow 2~8',
-    p_video:'AI Video Production Included (1) ⭐',
-    p_service:'Service/product intro section',
-    p_form:'Booking/inquiry form',
-    p_rev:'3 revisions within 1 week',
-    pp_lang:'Choose 4 from 10 languages (+$7/lang beyond 4)',
-    pp_photo:'AI profile photo (one phone snapshot is enough)',
-    pp_bio:'Bio + career section',
-    pp_ref:'Partner & referral section',
-    pp_slide:'Image slideshow 2~8',
-    pp_video:'AI Video Production Included (2) ⭐',
-    pp_service:'Service/product intro section',
-    pp_form:'Booking/inquiry form',
-    pp_priority:'Priority production (draft in 2 days) ⭐',
-    pp_rev:'Revision policy: 3x within 1 month · 1x within 3 months',
-    no_priority:'Priority production',
-    no_photo:'Profile photo',
-    no_bio:'Bio + career section',
-    no_ref:'Referral section',
-    no_slide:'Image slideshow',
-    no_video:'Video embed',
-    no_service:'Service/product section',
-    no_form:'Booking/inquiry form',
-    update_title:'💛 BizHome Customer Update Benefits',
-    update_sub:'Don\'t start over. Update at a fraction of the cost.',
-    upd1_label:'Text update', upd1_desc:'Contact, title, etc.',
-    upd2_label:'Photo/image swap', upd2_desc:'Profile, cover, etc.',
-    upd3_label:'Design renewal', upd3_desc:'Layout restructure',
-    upd4_label:'Full remake', upd4_desc:'Brand/industry change',
-    ref_before:'Before production', ref_before_val:'100% refund',
-    ref_mid:'Before 1st revision', ref_mid_val:'50% refund',
-    ref_after:'After 1st revision', ref_after_val:'No refund',
-    inc_basic:'Includes all Basic features',
-    inc_std:'Includes all Standard features',
-    inc_prem:'Includes all Premium features',
-    prem_lang:'Choose 4 languages (from 10 available — French, Arabic, Russian, Spanish, etc.)',
-    ent_title:'Enterprise · Group (10+)',
-    bni_special_title:'BNI Special Rate',
-    bni_special_desc:'Exclusive discounted pricing for BNI chapter members.',
-    bni_special_btn:'Ask about special rate',
-    kakao_note:'* Name, photo, and title appear as preview when sharing via KakaoTalk.',
-    cardbook_btn:' View CardBook',
-    footer_desc:'BizHome sites · BNI Networking · Global Identity Solutions.',
-    plan_basic_desc:'Your first impression as a business - photo and card in one go.',
-    plan_std_desc:'A step up — now with AI video included.',
-    plan_prem_desc:'Extra languages · 2 AI videos · priority production — our top tier.',
-    plan_free_desc:'100% custom design. Mini website structure.',
-    ent_desc:'Custom pricing · consultation required',
-    b1:'Color selection (brand color)', b2:'Cover image', b3:'One-tap contact save (vCard)',
-    b4:'3 languages (KR/EN/CN)', b5:'MANDU messenger integration', b6:'Free domain (GitHub Pages)', b7:'1 revision included',
-    s1:'4 languages (KR/EN/CN/JP)', s2:'Profile photo', s3:'Bio + career section',
-    s4:'Referral section (BNI only)', s5:'Image slideshow (2~4)', s6:'KakaoTalk share preview optimized', s7:'2 revisions included',
-    p1:'Image slideshow (2~8)', p2:'Video embed (1)', p3:'Service/product intro section', p4:'Booking/inquiry form',
-    f1:'Custom design', f2:'Portfolio gallery', f3:'Domain connection (free domain available)',
-    f4:'10 revisions (within 2 weeks)', f5:'MANDU integration', f6:'Free domain',
-    e1:'Corporate logo applied', e2:'Brand color system', e3:'Group card production',
-    e4:'Corporate CardBook', e5:'MANDU group integration', e6:'Dedicated support',
-    who1:'Corporate employees', who2:'BNI Member', who3:'Small business owner', who4:'Freelancer',
-    who5:'Beauty/health professional', who6:'Restaurant/food industry', who7:'Global business',
-    p1_desc:'Contact us via form or KakaoTalk. Share your goals and budget.',
-    p2_desc:'We collect your name, title, photo, and links via template.',
-    p3_desc:'Custom brand design. Preview shared, feedback applied.',
-    p4_desc:'Deployed to GitHub Pages. QR code + link delivered. Avg 3~5 business days.',
-  },
-  zh: {
-    tag:'BNI先锋 · 釜山数字身份',
-    h:'名片曾是<br/>纸张。<br/><span class="text-gradient-gold">现在是资产。</span>',
-    sub:'BizHome · BNI会员卡 · 实时10语言翻译 MANDU。<br/>用TM LINK提升您的商业价值。',
-    btn1:'免费咨询', btn2:'查看作品集', hbtn:'咨询',
-    nav_why:'为什么选TM', nav_card:'BizHome', nav_eco:'生态系统', nav_price:'价格',
-    why_sub:'将传统纸质名片转变为数字资产管理系统。',
-    why_h1:'名片的问题不在于设计。',
-    why_h2:'没有管理的人脉会消失。',
-    why_c1_title:'BizHome', why_c2_title:'MANDU 信使', why_c3_title:'名片册',
-    why_c1_desc:'超越简单的联系方式交换——承载专业权威与信任的高端BizHome。BNI会员卡支持4种语言。',
-    why_c2_desc:'实时10语言自动翻译信使。无需外语即可与全球BNI成员即时沟通。',
-    why_c3_desc:'将个人人脉转化为永久数字资产。整合管理整个BNI分会。',
-    pricing_title:'精英会员',
-    btn_basic:'立即开始', btn_std:'选择标准版', btn_prem:'选择高级版', btn_free:'选择自由版', btn_ent:'企业咨询',
-    who_title:'TM LINK适合谁？',
-    process_title:'制作流程', process_steps:'4个步骤',
-    p1_title:'咨询与委托', p2_title:'收集信息', p3_title:'设计与开发', p4_title:'部署与交付',
-    cta_h1:'一张名片能改变您的商业未来。',
-    cta_h2:'立即确保您的数字身份。',
-    form_name:'姓名', form_phone:'电话', form_plan:'选择方案', form_job:'行业 / 职位',
-    form_submit:'提交咨询',
-    mandu_cta:'体验MANDU信使',
-    footer_note:'釜山 · 支持远程制作 · 1个工作日内回复',
-    footer_by:'宋承勋 代表 · T.M Link · BNI先锋',
-    footer_l1:'BizHome',
-    footer_l3:'MANDU信使',
-    footer_l4:'价格',
-    footer_h2:'制作流程',
-    footer_p1:'01 · 咨询与委托',
-    footer_p2:'02 · 收集信息',
-    footer_p3:'03 · 设计与开发',
-    footer_p4:'04 · 部署与交付',
-    footer_b1:'釜山, KR (总部)',
-    footer_b2:'全国远程制作',
-    footer_b3:'BNI全球网络',
-    footer_copy:'© 2025 TM LINK · 版权所有。',
-    modal_note:'点击每张卡片即可在新标签页中打开实际BizHome。',
-    stat1:'MANDU<br/>支持语言',
-    stat2:'基础支持<br/>韩·英·中·日',
-    stat3:'平均完成<br/>天数',
-    feat1_t:'4种语言',
-    feat1_d:'韩/英/日/中自动切换。全球网络就绪。',
-    feat2_t:'自动QR码',
-    feat2_d:'随时随地通过QR分享。链接永久有效。',
-    feat3_t:'vCard保存',
-    feat3_d:'一键保存联系方式。支持iOS和Android。',
-    feat4_t:'KakaoTalk优化',
-    feat4_d:'通过KakaoTalk分享时显示精美预览。',
-    eco_sub:'从本地信任到全球规模',
-    eco1_d:'权威第一印象的开始。QR码·4种语言。',
-    eco2_d:'会员们相互连接·连接·连接',
-    eco3_d:'实时10语言自动翻译信使。',
-    eco4_d:'无国界商业网络扩张。',
-    pricing_title:'BizHome 套餐',
-    pricing_sub:'纸质名片会被丢弃。BizHome 会被分享。',
-    vat_note:'💳 含税（增值税10%）另计',
-    pay_note:'✅ 付款后开始制作',
-    gallery_title:'直接查看实际制作的 BizHome 名片',
-    gallery_sub:'点击即可前往 BizHome 图库',
-    gallery_btn:'查看图库',
-    common_label:'✦ 所有套餐通用',
-    common_cardbook:'📱 免费提供 CardBook（数字名片夹）',
-    common_qr:'自动生成 QR 码',
-    common_domain:'免费域名',
-    common_kakao:'KakaoTalk 分享预览优化',
-    b_cover:'封面 + 基本联系方式',
-    b_lang:'2种语言（韩/英）',
-    b_rev:'含1次修改',
-    s_lang:'AI自动翻译，固定4种语言（韩/英/中/日）',
-    s_photo:'AI 个人照片生成（一张手机照片即可）',
-    s_bio:'简介 + 经历板块',
-    s_ref:'合作·推荐板块 ⭐',
-    s_slide:'图片轮播 2~4张',
-    s_rev:'一周内含2次修改',
-    p_lang:'从10种语言中选4种（超出每种+10,000韩元）',
-    p_photo:'AI 个人照片生成（一张手机照片即可）',
-    p_bio:'简介 + 经历板块',
-    p_ref:'合作·推荐板块',
-    p_slide:'图片轮播 2~8张',
-    p_video:'包含AI视频制作（1个） ⭐',
-    p_service:'服务/产品介绍板块',
-    p_form:'预约/咨询表单',
-    p_rev:'一周内含3次修改',
-    pp_lang:'从10种语言中选4种（超出每种+10,000韩元）',
-    pp_photo:'AI 个人照片生成（一张手机照片即可）',
-    pp_bio:'简介 + 经历板块',
-    pp_ref:'合作·推荐板块',
-    pp_slide:'图片轮播 2~8张',
-    pp_video:'包含AI视频制作（2个） ⭐',
-    pp_service:'服务/产品介绍板块',
-    pp_form:'预约/咨询表单',
-    pp_priority:'优先制作（2天内出初稿） ⭐',
-    pp_rev:'修改政策：1个月内3次 · 3个月内1次',
-    no_priority:'优先制作',
-    no_photo:'个人照片',
-    no_bio:'简介 + 经历',
-    no_ref:'推荐板块',
-    no_slide:'图片轮播',
-    no_video:'嵌入视频',
-    no_service:'服务/产品板块',
-    no_form:'预约/咨询表单',
-    update_title:'💛 BizHome 客户专属更新优惠',
-    update_sub:'无需重新制作，以超低价格更新。',
-    upd1_label:'文字更新', upd1_desc:'联系方式·职称等',
-    upd2_label:'照片/图片替换', upd2_desc:'头像·封面等',
-    upd3_label:'设计更新', upd3_desc:'结构·布局变更',
-    upd4_label:'全面重制', upd4_desc:'行业·品牌变更',
-    ref_before:'制作开始前', ref_before_val:'全额退款',
-    ref_mid:'首次修改前', ref_mid_val:'退款50%',
-    ref_after:'首次修改后', ref_after_val:'不予退款',
-    inc_basic:'包含所有基础功能',
-    inc_std:'包含所有标准功能',
-    inc_prem:'包含所有高级功能',
-    prem_lang:'可选4种语言（10种语言中选择 — 法语·阿拉伯语·俄语·西班牙语等）',
-    ent_title:'企业 · 团体（10个以上）',
-    bni_special_title:'BNI特惠价',
-    bni_special_desc:'BNI分会会员专属优惠价格。',
-    bni_special_btn:'咨询特惠价',
-    kakao_note:'* 通过KakaoTalk分享链接时，姓名·照片·职称将显示为预览。',
-    cardbook_btn:' 查看 CardBook',
-    footer_desc:'BizHome · BNI网络 · 全球身份解决方案。',
-    plan_basic_desc:'事业的第一张面孔，照片到名片一次搞定。',
-    plan_std_desc:'更进一步，现已包含AI视频。',
-    plan_prem_desc:'语言扩展 · AI视频2个 · 优先制作，我们的最高级方案。',
-    plan_free_desc:'100%定制设计。微型网站结构。',
-    ent_desc:'另行协商 · 根据规模定制报价',
-    b1:'颜色选择（品牌色彩）', b2:'封面图片', b3:'一键保存联系方式 (vCard)',
-    b4:'3种语言（韩/英/中）', b5:'MANDU信使集成', b6:'免费域名（GitHub Pages）', b7:'含1次修改',
-    s1:'4种语言（韩/英/中/日）', s2:'个人照片', s3:'简介+经历板块',
-    s4:'推荐板块（BNI专用）', s5:'图片轮播（2~4张）', s6:'KakaoTalk分享预览优化', s7:'含2次修改',
-    p1:'图片轮播（2~8张）', p2:'嵌入视频（1个）', p3:'服务/产品介绍板块', p4:'预约/咨询表单',
-    f1:'定制设计', f2:'作品集画廊', f3:'域名连接（可用免费域名）',
-    f4:'10次修改（2周内）', f5:'MANDU集成', f6:'免费域名',
-    e1:'企业专属Logo', e2:'品牌色彩系统', e3:'员工团体制作',
-    e4:'企业名片册', e5:'MANDU团体集成', e6:'专属管理支持',
-    who1:'企业员工', who2:'BNI会员', who3:'小企业主', who4:'自由职业者',
-    who5:'美容健康从业者', who6:'餐饮创业者', who7:'全球商业',
-    p1_desc:'通过表单或KakaoTalk联系。分享您的目标和预算。',
-    p2_desc:'通过模板收集您的姓名、职称、照片和链接。',
-    p3_desc:'品牌定制设计。分享初稿后应用反馈。',
-    p4_desc:'部署到GitHub Pages。交付QR码+分享链接。平均3~5个工作日。',
-  },
-  ja: {
-    tag:'BNIパイオニア · 釜山デジタルアイデンティティ',
-    h:'名刺は<br/>紙でした。<br/><span class="text-gradient-gold">今は資産です。</span>',
-    sub:'BizHome · BNIメンバーカード · リアルタイム10言語翻訳 MANDU。<br/>TM LINKでビジネスの価値を高めてください。',
-    btn1:'無料相談申込', btn2:'ポートフォリオ', hbtn:'相談',
-    nav_why:'WHY TM LINK', nav_card:'BizHome', nav_eco:'エコシステム', nav_price:'料金',
-    why_sub:'従来の紙名刺をデジタル資産管理システムに革新します。',
-    why_h1:'名刺の問題はデザインではありません。',
-    why_h2:'管理されない人脈は消えていきます。',
-    why_c1_title:'BizHome', why_c2_title:'MANDUメッセンジャー', why_c3_title:'カードブック',
-    why_c1_desc:'単なる連絡先交換を超えた、権威と信頼を込めたプレミアムBizHome。BNIメンバーカード4言語対応。',
-    why_c2_desc:'リアルタイム10言語自動翻訳メッセンジャー。外国語なしで世界中のBNIメンバーと即座に繋がる。',
-    why_c3_desc:'個人の人脈を永続的なデジタル資産へ転換。BNIチャプター全体の統合管理。',
-    pricing_title:'BizHome プラン',
-    pricing_sub:'紙の名刺は捨てられます。BizHomeはシェアされます。',
-    vat_note:'💳 消費税（10%）別途',
-    pay_note:'✅ 入金後に制作開始',
-    gallery_title:'実際に制作されたBizHomeをご確認ください',
-    gallery_sub:'クリックするとBizHomeギャラリーへ移動します',
-    gallery_btn:'ギャラリーを見る',
-    common_label:'✦ 全プラン共通',
-    common_cardbook:'📱 CardBook 無料提供（デジタル名刺帳）',
-    common_qr:'QRコード自動生成',
-    common_domain:'無料ドメイン提供',
-    common_kakao:'KakaoTalkプレビュー最適化',
-    b_cover:'カバー + 基本連絡先',
-    b_lang:'2言語（韓/英）',
-    b_rev:'修正1回含む',
-    s_lang:'AI自動翻訳、4言語固定（韓/英/中/日）',
-    s_photo:'AIプロフィール写真生成（スマホ写真1枚でOK）',
-    s_bio:'自己紹介 + 経歴セクション',
-    s_ref:'パートナー・紹介セクション ⭐',
-    s_slide:'画像スライド 2~4枚',
-    s_rev:'1週間以内 修正2回含む',
-    p_lang:'10言語から4言語選択（超過1言語ごとに+10,000ウォン）',
-    p_photo:'AIプロフィール写真生成（スマホ写真1枚でOK）',
-    p_bio:'自己紹介 + 経歴セクション',
-    p_ref:'パートナー・紹介セクション',
-    p_slide:'画像スライド 2~8枚',
-    p_video:'AI動画制作込み（1本） ⭐',
-    p_service:'サービス/製品紹介セクション',
-    p_form:'予約/お問い合わせフォーム',
-    p_rev:'1週間以内 修正3回含む',
-    pp_lang:'10言語から4言語選択（超過1言語ごとに+10,000ウォン）',
-    pp_photo:'AIプロフィール写真生成（スマホ写真1枚でOK）',
-    pp_bio:'自己紹介 + 経歴セクション',
-    pp_ref:'パートナー・紹介セクション',
-    pp_slide:'画像スライド 2~8枚',
-    pp_video:'AI動画制作込み（2本） ⭐',
-    pp_service:'サービス/製品紹介セクション',
-    pp_form:'予約/お問い合わせフォーム',
-    pp_priority:'優先制作（下書き2日以内） ⭐',
-    pp_rev:'修正ポリシー：1ヶ月以内3回 · 3ヶ月以内1回',
-    no_priority:'優先制作',
-    no_photo:'プロフィール写真',
-    no_bio:'自己紹介 + 経歴',
-    no_ref:'紹介セクション',
-    no_slide:'画像スライド',
-    no_video:'動画埋め込み',
-    no_service:'サービス/製品セクション',
-    no_form:'予約/お問い合わせフォーム',
-    update_title:'💛 BizHomeご利用者様限定アップデート特典',
-    update_sub:'作り直さなくていい。低価格でアップデートできます。',
-    upd1_label:'テキスト変更', upd1_desc:'連絡先·肩書き等',
-    upd2_label:'写真/画像交換', upd2_desc:'プロフィール·カバー等',
-    upd3_label:'デザインリニューアル', upd3_desc:'構成·レイアウト変更',
-    upd4_label:'全面リメイク', upd4_desc:'業種·ブランド変更',
-    ref_before:'制作開始前', ref_before_val:'全額返金',
-    ref_mid:'初回修正前', ref_mid_val:'50%返金',
-    ref_after:'初回修正後', ref_after_val:'返金不可',
-    who_title:'TM LINKは誰のためのサービスですか？',
-    process_title:'制作プロセス', process_steps:'4ステップ',
-    p1_title:'相談・依頼', p2_title:'情報収集', p3_title:'デザイン・開発', p4_title:'配布・納品',
-    cta_h1:'一枚の名刺がビジネスの未来を変えます。',
-    cta_h2:'今すぐデジタル資産を確保してください。',
-    form_name:'お名前', form_phone:'電話番号', form_plan:'プラン選択', form_job:'業種 / 肩書き',
-    form_submit:'相談申込',
-    mandu_cta:'MANDUメッセンジャーを体験',
-    footer_note:'釜山 · 全国リモート制作対応 · 1営業日以内に返信',
-    footer_by:'ソン・スンフン 代表 · T.M Link · BNIパイオニア',
-    footer_l1:'BizHome',
-    footer_l3:'MANDUメッセンジャー',
-    footer_l4:'料金',
-    footer_h2:'制作プロセス',
-    footer_p1:'01 · 相談・依頼',
-    footer_p2:'02 · 情報収集',
-    footer_p3:'03 · デザイン・開発',
-    footer_p4:'04 · 配布・納品',
-    footer_b1:'釜山, KR (本社)',
-    footer_b2:'全国リモート制作',
-    footer_b3:'BNIグローバルネットワーク',
-    footer_copy:'© 2025 TM LINK · 全著作権所有。',
-    modal_note:'各カードをクリックすると実際のBizHomeが新しいタブで開きます。',
-    stat1:'MANDU<br/>対応言語',
-    stat2:'基本対応<br/>韓·英·中·日',
-    stat3:'平均完成<br/>日数',
-    feat1_t:'4言語対応',
-    feat1_d:'韓/英/日/中の自動切替。グローバルネットワークに最適。',
-    feat2_t:'QRコード自動生成',
-    feat2_d:'QR一つでいつでもどこでも共有可能。',
-    feat3_t:'vCard保存',
-    feat3_d:'ワンタップで連絡先を即時保存。iOS・Android対応。',
-    feat4_t:'KakaoTalk最適化',
-    feat4_d:'KakaoTalkで共有時にプレミアムプレビュー表示。',
-    eco_sub:'地元の信頼からグローバルへ',
-    eco1_d:'権威ある第一印象の始まり。QR・4言語。',
-    eco2_d:'メンバーたちが繋がる·繋がる·繋がる',
-    eco3_d:'リアルタイム10言語自動翻訳メッセンジャー。',
-    eco4_d:'国境のないビジネスネットワーク拡張。',
-    pricing_sub:'透明な価格。追加費用なし。必要なプランのみ選択。',
-    vat_note:'※ 全ての価格は消費税（10%）別途です',
-    inc_basic:'ベーシック全機能含む',
-    inc_std:'スタンダード全機能含む',
-    inc_prem:'プレミアム全機能含む',
-    prem_lang:'4言語を選択可能（10言語から選択 — フランス語·アラビア語·ロシア語·スペイン語等）',
-    ent_title:'企業 · 団体（10件以上）',
-    bni_special_title:'BNI特別価格',
-    bni_special_desc:'BNIチャプターメンバー専用の割引価格です。',
-    bni_special_btn:'特別価格を問い合わせる',
-    kakao_note:'* KakaoTalkでリンク共有時、名前・写真・肩書きがプレビューに表示されます。',
-    cardbook_btn:' CardBookを見る',
-    footer_desc:'BizHome · BNIネットワーキング · グローバルアイデンティティソリューション。',
-    plan_basic_desc:'ビジネスの第一印象。写真から名刺までまとめて。',
-    plan_std_desc:'AI動画込みで、もう一段階パワフルに。',
-    plan_prem_desc:'言語拡張 · AI動画2本 · 優先制作まで、最上位プラン。',
-    plan_free_desc:'100%カスタムデザイン。ミニウェブサイト構造。',
-    ent_desc:'別途協議 · 規模に応じたカスタム見積もり',
-    b1:'カラー選択（ブランドカラー）', b2:'カバー画像', b3:'ワンタップ連絡先保存 (vCard)',
-    b4:'3言語（韓/英/中）', b5:'MANDUメッセンジャー連携', b6:'無料ドメイン（GitHub Pages）', b7:'修正1回含む',
-    s1:'4言語（韓/英/中/日）', s2:'プロフィール写真', s3:'自己紹介+経歴セクション',
-    s4:'リファーラルセクション（BNI専用）', s5:'画像スライド（2~4枚）', s6:'KakaoTalkシェアプレビュー最適化', s7:'修正2回含む',
-    p1:'画像スライド（2~8枚）', p2:'動画埋め込み（1本）', p3:'サービス/商品紹介セクション', p4:'予約・問い合わせフォーム',
-    f1:'カスタムデザイン', f2:'ポートフォリオギャラリー', f3:'ドメイン接続（無料ドメインも可）',
-    f4:'修正10回（2週間以内）', f5:'MANDU連携', f6:'無料ドメイン',
-    e1:'企業ロゴ適用', e2:'ブランドカラーシステム', e3:'社員グループ制作',
-    e4:'企業カードブック', e5:'MANDUグループ連携', e6:'専任サポート',
-    who1:'企業従業員', who2:'BNIメンバー', who3:'中小事業者', who4:'フリーランサー',
-    who5:'美容・ヘルス専門家', who6:'飲食業起業家', who7:'グローバルビジネス',
-    p1_desc:'フォームまたはKakaoTalkでご連絡。目的・業種・予算を簡単にご共有ください。',
-    p2_desc:'お名前・肩書き・写真・リンクをテンプレートでお送りします。',
-    p3_desc:'ブランドに合わせたデザイン。初稿共有後フィードバックを反映。',
-    p4_desc:'GitHub Pagesに公開。QRコード+共有リンクをお届け。平均3~5営業日。',
-  }
-};
-document.addEventListener('DOMContentLoaded', function(){ setLang('ko'); });
-
-// ── Network Canvas Animation ──
-(function() {
-  const canvas = document.getElementById('network-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
-  const GOLD = 'rgba(242,202,80,';
-  const nodes = [];
-  const COUNT = 10;
-  for (let i = 0; i < COUNT; i++) {
-    nodes.push({
-      x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
-      r: Math.random() * 3 + 2,
-      pulse: Math.random() * Math.PI * 2
-    });
-  }
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    nodes.forEach(n => {
-      n.x += n.vx; n.y += n.vy; n.pulse += 0.04;
-      if (n.x < 0 || n.x > W) n.vx *= -1;
-      if (n.y < 0 || n.y > H) n.vy *= -1;
-    });
-    // Lines
-    for (let i = 0; i < COUNT; i++) {
-      for (let j = i + 1; j < COUNT; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < 90) {
-          ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = GOLD + (1 - dist/90) * 0.5 + ')';
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-    // Nodes
-    nodes.forEach(n => {
-      const glow = Math.sin(n.pulse) * 0.3 + 0.7;
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = GOLD + glow + ')';
-      ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-
-// Cursor glow (optimized - single element)
-const glow = document.getElementById('cursor-glow');
-document.addEventListener('mousemove', e => {
-  glow.style.left = e.clientX + 'px';
-  glow.style.top = e.clientY + 'px';
-});
-
-// pickPlan from pricing cards
-function pickPlan(plan) {
-  document.getElementById('f-plan').value = plan;
-  document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
-}
-
-// ===== BNI 특별가 모달 =====
-// ⚠️ 아래 URL을 Google Apps Script 배포 후 나온 웹앱 URL로 교체하세요.
-const BNI_WEBHOOK_URL = 'https://script.google.com/macros/s/여기에_배포_URL_붙여넣기/exec';
-
-function openBniModal() {
-  document.getElementById('bni-modal').style.display = 'flex';
-  document.getElementById('bni-step-form').style.display = 'block';
-  document.getElementById('bni-step-result').style.display = 'none';
-}
-function closeBniModal() {
-  document.getElementById('bni-modal').style.display = 'none';
-}
-function submitBniInquiry() {
-  const name     = document.getElementById('bni-name').value.trim();
-  const phone    = document.getElementById('bni-phone').value.trim();
-  const referral = document.getElementById('bni-referral').value.trim();
-  if (!name || !phone || !referral) {
-    alert('성함, 연락처, 소속 챕터(또는 소개자)를 모두 적어주세요.');
-    return;
-  }
-  const payload = {
-    type: 'BNI특별가문의',
-    name, phone, referral,
-    timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
-    page: location.href
-  };
-  // Google Apps Script 웹앱은 CORS 응답이 없어 no-cors로 전송 (fire-and-forget)
-  fetch(BNI_WEBHOOK_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify(payload)
-  }).catch(() => {});
-  document.getElementById('bni-step-form').style.display = 'none';
-  document.getElementById('bni-step-result').style.display = 'block';
-}
-
-// Submit
-function submitForm() {
-  const name  = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const plan  = document.getElementById('f-plan').value;
-  const job   = document.getElementById('f-job').value.trim();
-  if (!name || !phone) { alert('성함과 연락처는 필수입니다.'); return; }
-  fetch('https://script.google.com/macros/s/AKfycbyYTrzN34zVxq5tYbICtHzuqpKSccDQ0ZK6lyfBZ56au-QoK7XPh-fj49hfFhPHrY2q/exec', {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({
-      formType: 'TM LINK 홈페이지',
-      name: name,
-      phone: phone,
-      option: plan,
-      industry: job
-    })
-  }).catch(() => {});
-  const msg = `[TM LINK 제작 의뢰]\n성함: ${name}\n연락처: ${phone}\n업종/직함: ${job||'-'}\n선택 플랜: ${plan||'미선택'}\n\n※ TM LINK 홈페이지에서 접수된 의뢰입니다.`;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(msg).then(() => toast('의뢰 내용이 복사되었습니다!\n카카오톡에 붙여넣어 전송해 주세요 😊'));
-  } else { toast('접수 완료! 곧 연락드리겠습니다.'); }
-}
-
-function toast(msg) {
-  const t = document.createElement('div');
-  t.style.cssText = 'position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#f2ca50;color:#3c2f00;padding:16px 28px;border-radius:12px;font-size:13px;font-weight:700;z-index:99999;max-width:320px;text-align:center;line-height:1.7;box-shadow:0 8px 32px rgba(242,202,80,0.4);white-space:pre-line';
-  t.textContent = msg;
-  document.body.appendChild(t);
-  setTimeout(() => { t.style.transition = 'opacity 0.5s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 500); }, 3500);
-}
-
-// Nav active on scroll
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-  document.querySelectorAll('.nav-link').forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + cur ? '#f2ca50' : '';
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    if(el.dataset.ko === undefined) el.dataset.ko = el.innerHTML;   // 한국어 원문 보관
+    var d = I18N[lang];
+    el.innerHTML = (lang === 'ko' || !d || d[el.dataset.i18n] === undefined) ? el.dataset.ko : d[el.dataset.i18n];
   });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
+  });
+  try{ localStorage.setItem('tmlink-lang', lang); }catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(function(b){
+  b.addEventListener('click', function(){ setLang(b.dataset.lang); });
 });
+try{ var saved = localStorage.getItem('tmlink-lang'); if(saved && saved !== 'ko') setLang(saved); }catch(e){}
 </script>
-
 </body>
 </html>
