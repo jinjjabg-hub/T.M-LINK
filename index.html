@@ -97,11 +97,14 @@ h1 .hl{background:linear-gradient(90deg,var(--blue),#00a8c8);-webkit-background-
 
 /* phone mockup */
 .phone{width:300px;max-width:100%;margin:0 auto;aspect-ratio:9/18.5;border-radius:42px;padding:12px;background:#0d0d0d;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,60,160,.22),0 0 0 1px rgba(0,140,170,0.048) inset;animation:float 6s ease-in-out infinite}
-.screen{height:100%;border-radius:32px;overflow:hidden;background:#245c4f;position:relative;container-type:size}
-.scroll-shot{width:100%;height:auto;animation:shot 38s cubic-bezier(.45,0,.55,1) 1.2s infinite alternate}
-.phone:hover .scroll-shot{animation-play-state:paused}
-@keyframes shot{0%,6%{transform:translateY(0)}94%,100%{transform:translateY(calc(-100% + 100cqh))}}
-.phone{display:block}
+.screen{height:100%;border-radius:32px;overflow:hidden;background:#245c4f;position:relative;scrollbar-width:none;overscroll-behavior:contain}
+.screen::-webkit-scrollbar{display:none}
+.screen.manual{overflow-y:auto}            /* PC: 마우스 휠로 직접 스크롤 */
+.scroll-shot{width:100%;height:auto;transition:opacity .45s ease}
+.scroll-shot.fade{opacity:0}
+.phone{display:block;position:relative}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);padding:7px 13px;border-radius:99px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:700;white-space:nowrap;pointer-events:none;transition:opacity .4s}
+.scroll-hint.hide{opacity:0}
 .phone-wrap{text-align:center}
 .live-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:700;color:var(--blue-text)}
 .live-link svg{width:15px;height:15px}
@@ -315,11 +318,12 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
       </div>
     </div>
     <div class="phone-wrap">
-      <a class="phone" href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" rel="noopener" aria-label="실제 비즈홈 샘플 보기: 송승훈 대표 (새 창)">
-        <div class="screen">
-          <img class="scroll-shot" src="bizhome-sample.webp" alt="송승훈 대표의 실제 비즈홈 화면 — 프로필, 소개, 왜 T.M인가, 리퍼럴, 포트폴리오, 경력, 연락처" width="540" height="7676" fetchpriority="high"/>
+      <div class="phone">
+        <div class="screen" id="bizScreen" tabindex="0" aria-label="송승훈 대표의 실제 비즈홈 미리보기 (스크롤 가능)">
+          <img class="scroll-shot" id="bizShot" src="bizhome-sample.webp" alt="송승훈 대표의 실제 비즈홈 화면 — 프로필, 소개, 왜 T.M인가, 리퍼럴, 포트폴리오, 경력, 연락처" width="540" height="7676" fetchpriority="high"/>
         </div>
-      </a>
+        <span class="scroll-hint hide" id="scrollHint" data-i18n="hint">마우스 휠로 직접 내려보세요</span>
+      </div>
       <a class="live-link" href="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/" target="_blank" rel="noopener"><span data-i18n="live">실제 비즈홈 샘플 · 송승훈 대표</span> <svg><use href="#i-ext"/></svg></a>
     </div>
   </div>
@@ -567,9 +571,46 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 </footer>
 
 <script>
+// ===== 히어로 휴대폰: 실제 비즈홈을 위 → 아래로 자동 스크롤 =====
+(function(){
+  var scr = document.getElementById('bizScreen'), shot = document.getElementById('bizShot'), hint = document.getElementById('scrollHint');
+  if (!scr) return;
+  var SPEED = 70;               // 초당 이동 px (화면 높이 기준 약 40초에 끝까지)
+  var START_HOLD = 1500, END_HOLD = 2500, RESUME_AFTER = 5000;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canWheel = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var pos = 0, last = 0, holdUntil = performance.now() + START_HOLD, pausedUntil = 0, visible = true, resetting = false;
+
+  if (canWheel) { scr.classList.add('manual'); hint.classList.remove('hide'); }
+  function userTouched(){ pausedUntil = performance.now() + RESUME_AFTER; pos = scr.scrollTop; hint.classList.add('hide'); }
+  ['wheel','pointerdown','keydown'].forEach(function(ev){ scr.addEventListener(ev, userTouched, {passive:true}); });
+  scr.addEventListener('mouseenter', function(){ if (canWheel) pausedUntil = Infinity; });
+  scr.addEventListener('mouseleave', function(){ if (canWheel) { pausedUntil = performance.now() + 1500; pos = scr.scrollTop; } });
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }).observe(scr);
+
+  function tick(t){
+    var dt = last ? Math.min(t - last, 100) : 0; last = t;
+    var max = scr.scrollHeight - scr.clientHeight;
+    if (!reduce && visible && !resetting && t > pausedUntil && t > holdUntil && max > 0) {
+      pos = Math.min(max, pos + SPEED * dt / 1000);
+      scr.scrollTop = pos;
+      if (pos >= max) {            // 맨 아래 도착 → 잠시 멈춤 → 페이드 후 맨 위에서 다시 시작
+        resetting = true;
+        setTimeout(function(){
+          shot.classList.add('fade');
+          setTimeout(function(){ pos = 0; scr.scrollTop = 0; shot.classList.remove('fade'); holdUntil = performance.now() + START_HOLD; resetting = false; }, 450);
+        }, END_HOLD);
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
 // ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
 var I18N = {
 en:{
+ hint:'Scroll it yourself with your mouse',
  sc3_p:'Planning, design, development and upkeep. Too much time and cost just to introduce one leader.',
  sc3_h:'A company website',
  sc3_w:'Too heavy',
@@ -640,6 +681,7 @@ en:{
  ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
 },
 zh:{
+ hint:'用鼠标滚轮自己浏览',
  sc3_p:'策划、设计、开发、维护。只为介绍一位代表，时间和成本都太高。',
  sc3_h:'公司官网',
  sc3_w:'太重',
@@ -710,6 +752,7 @@ zh:{
  ft_by:'宋承勋 · T.M Link · BNI Pioneer'
 },
 ja:{
+ hint:'マウスホイールで自分でスクロール',
  sc3_p:'企画・デザイン・開発・管理まで。代表一人を紹介するには時間も費用も大きすぎます。',
  sc3_h:'会社のホームページ',
  sc3_w:'重すぎる',
