@@ -106,7 +106,7 @@ h1 .hl{background:linear-gradient(90deg,var(--blue),#00a8c8);-webkit-background-
 .scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);padding:7px 13px;border-radius:99px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:700;white-space:nowrap;pointer-events:none;transition:opacity .4s}
 .scroll-hint.hide{opacity:0}
 .phone-wrap{text-align:center}
-.live-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:700;color:var(--blue-text)}
+.live-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;min-height:44px;font-size:14px;font-weight:700;color:var(--blue-text)}
 .live-link svg{width:15px;height:15px}
 .live-link:hover{text-decoration:underline;text-underline-offset:3px}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -128,7 +128,7 @@ h2{font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:800;letter-spacin
 .app .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
 .app .ic svg{width:26px;height:26px}
 .app h3{font-size:19px;font-weight:800}
-.app h3 small{font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:.04em}
+.app h3 small{font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:.04em}
 .app p{font-size:14.5px;color:var(--muted);margin-top:8px;flex-grow:1}
 .app .cat{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:2px}
 .app.feat .cat{color:var(--blue-text)}
@@ -136,7 +136,7 @@ h2{font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:800;letter-spacin
 @media (min-width:961px){.fh{display:grid;grid-template-columns:1fr 1fr;gap:10px;list-style:none;margin-top:22px}.fh li{background:rgba(0,102,255,.08);border:1px solid rgba(0,102,255,.25);border-radius:12px;padding:12px 14px;font-weight:700;font-size:15px}}
 .app .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--accent)}
 .app.feat .tag{color:var(--blue-text)}
-.app .badge{position:absolute;top:16px;right:16px;font-size:11px;font-weight:800;background:var(--blue);color:var(--on-blue);padding:3px 9px;border-radius:99px}
+.app .badge{position:absolute;top:16px;right:16px;font-size:12px;font-weight:800;background:var(--blue);color:var(--on-blue);padding:3px 9px;border-radius:99px}
 .app::after{content:"";position:absolute;inset:0;border-radius:inherit}
 
 /* scale: 명함 ↔ 홈페이지 사이 */
@@ -246,8 +246,9 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   .phone{width:250px}
   .benefits{grid-template-columns:repeat(2,1fr)}
   .steps,.care{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
+  .nav-links{gap:16px;font-size:13.5px}
 }
+@media (max-width:760px){.nav-links{display:none}}
 @media (max-width:640px){
   section{padding:68px 0}
   .hero{padding:56px 0 52px}
@@ -256,6 +257,19 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   .maker{grid-template-columns:1fr}
   .nav .btn{display:none}
   .cta-row .btn{flex:1 1 100%}
+}
+@media (pointer:coarse){
+  .lang button{min-height:40px;min-width:40px}
+  .logo{display:inline-block;line-height:44px}
+  .nav-links a,.foot nav a{display:inline-flex;align-items:center;min-height:44px}
+  .foot nav{gap:0 18px}
+}
+/* 아주 좁은 화면 (갤럭시 폴드 접힘 등) */
+@media (max-width:360px){
+  .wrap{padding:0 16px}
+  h1{font-size:27px}
+  .lang button{min-width:34px;padding:6px 4px}
+  .stats{gap:14px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -304,7 +318,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><i></i><span data-i18n="hero_tag">명함과 홈페이지 사이 · 비즈홈</span></span>
-      <h1 data-i18n="hero_h">명함으론 부족하고,<br/>홈페이지는 부담될 때.<br/><span class="hl">비즈홈.</span></h1>
+      <h1 data-i18n="hero_h">명함으론 부족하고,<br/>홈페이지는 부담될&nbsp;때.<br/><span class="hl">비즈홈.</span></h1>
       <p class="lead" data-i18n="hero_sub">명함 한 장엔 다 담지 못하는 이야기를, 홈페이지처럼 무겁지 않게. <b>비즈홈</b>은 대표님의 소개·경력·서비스·리퍼럴을 한 페이지에 담은 개인 브랜드 홈페이지입니다. 건넬 땐 링크 하나, 받은 사람은 대표님을 제대로 알게 됩니다.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#pricing"><span data-i18n="hero_btn1">비즈홈 가격 보기</span><svg><use href="#i-arrow"/></svg></a>
