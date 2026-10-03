@@ -155,6 +155,11 @@ tbody th{color:var(--muted);font-weight:600;width:20%}
 td.biz,th.biz{background:rgba(0,102,255,.07)}
 thead th.biz{color:var(--blue-text)}
 tr:last-child th,tr:last-child td{border-bottom:0}
+td .range{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+td .mkt{font-size:17px}
+td .our{font-size:19px;color:var(--blue-text)}
+.src{font-size:12.5px;color:var(--muted);margin-top:10px}
+.src a{text-decoration:underline;text-underline-offset:2px}
 
 /* pricing */
 .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px}
@@ -387,13 +392,12 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 
     <div class="compare-wrap">
       <h3 data-i18n="cmp_h">같은 홈페이지, 다른 방식</h3>
-      <p data-i18n="cmp_sub">회사 홈페이지를 처음부터 만드는 일반적인 방식과 비교했습니다.</p>
+      <p data-i18n="cmp_sub">외주 플랫폼에서 개인 홈페이지를 맡기는 일반적인 경우와 비교했습니다.</p>
       <div class="tbl-scroll">
         <table>
-          <thead><tr><th></th><th data-i18n="c_web">일반 홈페이지 제작</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
+          <thead><tr><th></th><th data-i18n="c_web">일반 외주 개인 홈페이지</th><th class="biz" data-i18n="c_biz">비즈홈</th></tr></thead>
           <tbody>
-            <tr><th data-i18n="r1">주인공</th><td data-i18n="r1a">회사 전체</td><td class="biz" data-i18n="r1c">대표님 한 사람 (개인 브랜드)</td></tr>
-            <tr><th data-i18n="r2">가격</th><td data-i18n="r2a">기획 범위에 따라 별도 견적</td><td class="biz" data-i18n="r2c"><b>15만원 · 25만원 정찰제</b></td></tr>
+            <tr><th data-i18n="r2">가격</th><td data-i18n="r2a"><b class="mkt">평균 80만원</b><span class="range">40만 ~ 180만원</span></td><td class="biz" data-i18n="r2c"><b class="our">15만원 · 25만원</b><span class="range">정찰제 · 플랜별 포함 범위 공개</span></td></tr>
             <tr><th data-i18n="r3">진행 방식</th><td data-i18n="r3a">기획 → 디자인 → 개발 단계별 진행</td><td class="biz" data-i18n="r3c">1:1 상담 후 3~5영업일 완성 (PRO 초안 2일)</td></tr>
             <tr><th data-i18n="r4">유지비</th><td data-i18n="r4a">호스팅·도메인·관리비 별도</td><td class="biz" data-i18n="r4c">호스팅 0원</td></tr>
             <tr><th data-i18n="r5">다국어</th><td data-i18n="r5a">언어마다 추가 작업</td><td class="biz" data-i18n="r5c">4개 국어 기본 포함</td></tr>
@@ -401,6 +405,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
           </tbody>
         </table>
       </div>
+      <p class="src" data-i18n="cmp_src">※ 시세 출처: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">크몽 「개인 홈페이지 제작」</a> 견적 데이터 (최저 40만 · 최고 180만 · 평균 80만원, 2026년 10월 조회). 기능·페이지 수에 따라 달라질 수 있습니다.</p>
     </div>
   </div>
 </section>
@@ -553,11 +558,12 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 // ===== 다국어 (한국어는 HTML 원문을 그대로 사용) =====
 var I18N = {
 en:{
+ cmp_src:'※ Market data: <a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong “Personal website”</a> quotes (min ₩400k · max ₩1.8M · avg ₩800k, checked Oct 2026). Varies by features and pages.',
  fh1:'1:1 planning & design',fh2:'4 languages included',fh3:'₩0 upkeep',fh4:'Done in 3–5 business days',
  r6c:'KakaoTalk preview · QR included',
  r6a:'Mobile & KakaoTalk optimization extra',
  r6:'Sharing',
- c_web:'Typical website build',
+ c_web:'Typical freelance personal website',
  cat5:'AI fortune',
  cat4:'Translation messenger',
  cat3:'Card manager',
@@ -583,10 +589,10 @@ en:{
  b4_h:'4 languages built in',b4_p:'Korean, English, Chinese and Japanese switch by default — ready for overseas buyers.',
  b5_h:'₩0 upkeep',b5_p:'Runs with no server or hosting fees. No monthly maintenance bills after launch.',
  b6_h:'Changes? Just update',b6_p:'New service, award or news? Updates from ₩10,000. The same address always shows your latest.',
- cmp_h:'Same website, different approach',cmp_sub:'Compared with the usual way of building a company website from scratch.',
+ cmp_h:'Same website, different approach',cmp_sub:'Compared with ordering a personal website from a typical freelance marketplace.',
  c_biz:'BizHome',
- r1:'Who it features',r1a:'The whole company',r1c:'You (personal brand)',
- r2:'Price',r2a:'Quoted by scope',r2c:'<b>Fixed: ₩150k · ₩250k</b>',
+ 
+ r2:'Price',r2a:'<b class="mkt">Avg. ₩800k</b><span class="range">₩400k – ₩1.8M</span>',r2c:'<b class="our">₩150k · ₩250k</b><span class="range">Fixed price · scope published per plan</span>',
  r3:'Process',r3a:'Planning → design → development in stages',r3c:'1:1 consultation, done in 3–5 business days (PRO draft in 2)',
  r4:'Upkeep',r4a:'Hosting, domain and maintenance extra',r4c:'₩0 hosting',
  r5:'Languages',r5a:'Extra work per language',r5c:'4 languages included',
@@ -612,11 +618,12 @@ en:{
  ft_by:'Seunghoon Song · T.M Link · BNI Pioneer'
 },
 zh:{
+ cmp_src:'※ 行情来源：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「个人网站制作」</a>报价数据（最低 40万 · 最高 180万 · 平均 80万韩元，2026年10月查询）。因功能和页数而异。',
  fh1:'一对一策划·设计',fh2:'默认 4 种语言',fh3:'零维护费',fh4:'3–5 个工作日完成',
  r6c:'默认提供 KakaoTalk 预览 · 二维码',
  r6a:'移动端·KakaoTalk 优化另计',
  r6:'分享',
- c_web:'一般官网制作',
+ c_web:'一般外包个人网站',
  cat5:'AI 四柱',
  cat4:'翻译聊天',
  cat3:'名片管理',
@@ -642,10 +649,10 @@ zh:{
  b4_h:'内置 4 种语言',b4_p:'韩、英、中、日一键切换，可直接发给海外买家和外国客户。',
  b5_h:'零维护费',b5_p:'无需服务器和托管费用即可持续运营，上线后没有每月管理费。',
  b6_h:'有变化就修改',b6_p:'有新服务、获奖或消息时，1 万韩元起即可更新，同一网址始终展示最新面貌。',
- cmp_h:'同样是官网，方式不同',cmp_sub:'与从零开始制作公司官网的一般方式比较。',
+ cmp_h:'同样是官网，方式不同',cmp_sub:'与在外包平台定制个人网站的一般情况比较。',
  c_biz:'BizHome',
- r1:'主角',r1a:'整个公司',r1c:'您本人（个人品牌）',
- r2:'价格',r2a:'按策划范围另行报价',r2c:'<b>15万 · 25万韩元 明码标价</b>',
+ 
+ r2:'价格',r2a:'<b class="mkt">平均 80万韩元</b><span class="range">40万 ~ 180万韩元</span>',r2c:'<b class="our">15万 · 25万韩元</b><span class="range">明码标价 · 各方案内容公开</span>',
  r3:'进行方式',r3a:'策划 → 设计 → 开发 分阶段进行',r3c:'一对一咨询后 3–5 个工作日完成（PRO 初稿 2 天）',
  r4:'维护费',r4a:'托管·域名·管理费另计',r4c:'托管 0 元',
  r5:'多语言',r5a:'每种语言需额外制作',r5c:'默认包含 4 种语言',
@@ -671,11 +678,12 @@ zh:{
  ft_by:'宋承勋 · T.M Link · BNI Pioneer'
 },
 ja:{
+ cmp_src:'※ 相場の出典：<a href="https://kmong.com/best-gig/47--%EB%88%84%EA%B5%AC%EB%82%98-%EC%89%BD%EA%B2%8C-%EA%B0%9C%EC%9D%B8-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" target="_blank" rel="noopener">Kmong「個人ホームページ制作」</a>見積データ（最低 40万 · 最高 180万 · 平均 80万ウォン、2026年10月確認）。機能・ページ数により異なります。',
  fh1:'1:1 企画・デザイン',fh2:'4 言語標準',fh3:'維持費 0 円',fh4:'3〜5 営業日で完成',
  r6c:'カカオトークプレビュー · QR 標準',
  r6a:'モバイル・カカオトーク最適化は別作業',
  r6:'共有',
- c_web:'一般的なホームページ制作',
+ c_web:'一般的な外注の個人ホームページ',
  cat5:'AI 四柱推命',
  cat4:'翻訳メッセンジャー',
  cat3:'名刺管理',
@@ -701,10 +709,10 @@ ja:{
  b4_h:'4 言語を標準搭載',b4_p:'韓・英・中・日の切替ボタン付き。海外バイヤーや外国人顧客にもそのまま送れます。',
  b5_h:'維持費 0 円',b5_p:'サーバー・ホスティング費用なしで運営を続けられます。公開後の月額管理費はありません。',
  b6_h:'変わったら直せばいい',b6_p:'新サービス・受賞・お知らせがあれば 1 万ウォンから更新。同じアドレスが常に最新の姿を見せます。',
- cmp_h:'同じホームページ、違う作り方',cmp_sub:'会社のホームページを一から作る一般的な方法と比べました。',
+ cmp_h:'同じホームページ、違う作り方',cmp_sub:'外注プラットフォームで個人ホームページを依頼する一般的なケースと比べました。',
  c_biz:'BizHome',
- r1:'主役',r1a:'会社全体',r1c:'代表ご本人（パーソナルブランド）',
- r2:'価格',r2a:'企画範囲により別途見積',r2c:'<b>15万 · 25万ウォンの定額制</b>',
+ 
+ r2:'価格',r2a:'<b class="mkt">平均 80万ウォン</b><span class="range">40万 〜 180万ウォン</span>',r2c:'<b class="our">15万 · 25万ウォン</b><span class="range">定額制 · プラン別の内容を公開</span>',
  r3:'進め方',r3a:'企画 → デザイン → 開発を段階的に',r3c:'1:1 相談後 3〜5 営業日で完成（PRO 初稿 2 日）',
  r4:'維持費',r4a:'ホスティング・ドメイン・管理費が別途',r4c:'ホスティング 0 円',
  r5:'多言語',r5a:'言語ごとに追加作業',r5c:'4 言語標準搭載',
