@@ -400,6 +400,7 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 .ap-plans{display:grid;gap:14px;align-items:stretch}
 .ap-plans.n2{grid-template-columns:repeat(2,1fr);max-width:760px}
 .ap-plans.n3{grid-template-columns:repeat(3,1fr)}
+.ap-plans.n6{grid-template-columns:repeat(3,1fr)}
 .ap-plan{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column}
 .ap-plan.hi{border:2px solid var(--c);box-shadow:0 12px 32px var(--ct)}
 .ap-plan h3{font-size:15px;font-weight:800;color:var(--muted)}
@@ -429,8 +430,8 @@ footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg-deep)
 .ap-policy{display:flex;gap:6px 18px;justify-content:center;flex-wrap:wrap;margin-top:28px;font-size:13px}
 .ap-policy span{color:rgba(255,255,255,.7)}
 .ap-policy a{color:#fff;text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}
-@media(max-width:900px){.ap-hero-grid{grid-template-columns:1fr;gap:28px}.ap-vis{order:-1}.ap-vis img{max-width:300px}.ap-cards.c3{grid-template-columns:repeat(2,1fr)}.ap-plans.n3{grid-template-columns:1fr}}
-@media(max-width:620px){.ap-cards.c2,.ap-cards.c3,.ap-more,.ap-plans.n2{grid-template-columns:1fr}.ap-stats{grid-template-columns:1fr}.ap-sec{padding:44px 0}.ap-table .r{grid-template-columns:1fr}.ap-table .r b{padding-bottom:4px}.ap-table .hd{display:none}.ap-table .r span::before{content:attr(data-l);display:block;font-size:11.5px;font-weight:800;color:var(--muted);margin-bottom:2px}.ap-table .r .us::before{color:var(--c)}}
+@media(max-width:900px){.ap-hero-grid{grid-template-columns:1fr;gap:28px}.ap-vis{order:-1}.ap-vis img{max-width:300px}.ap-cards.c3{grid-template-columns:repeat(2,1fr)}.ap-plans.n3{grid-template-columns:1fr}.ap-plans.n6{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.ap-cards.c2,.ap-cards.c3,.ap-more,.ap-plans.n2,.ap-plans.n6{grid-template-columns:1fr}.ap-stats{grid-template-columns:1fr}.ap-sec{padding:44px 0}.ap-table .r{grid-template-columns:1fr}.ap-table .r b{padding-bottom:4px}.ap-table .hd{display:none}.ap-table .r span::before{content:attr(data-l);display:block;font-size:11.5px;font-weight:800;color:var(--muted);margin-bottom:2px}.ap-table .r .us::before{color:var(--c)}}
 .home-hero{padding:56px 0 24px}
 .home-hero h1{font-size:clamp(34px,6vw,60px);line-height:1.14;letter-spacing:-.03em;margin:14px 0 18px}
 .home-hero .lead{max-width:760px}
