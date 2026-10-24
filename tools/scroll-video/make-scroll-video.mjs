@@ -8,7 +8,6 @@
  * 만드는 것(--presets 로 고름, 기본 전부)
  *   reels  인스타 릴스·스토리   1080×1920  30초
  *   feed   인스타 피드          1080×1350  30초
- *   ppt    PPT·발표            1920×1080  36초
  *   kakao  카카오톡 프로필      1080×1080  10초 (+ 사진 kakao.png)  ← --name 이 있을 때만
  *
  * 필요한 것: node, playwright(+chromium), ffmpeg, ImageMagick(convert, identify)
@@ -30,11 +29,10 @@ const O = {
   url: A.url, image: A.image,                       // url 로 캡처하거나, 이미 캡처한 긴 이미지(--image)를 쓴다
   out: path.resolve(A.out || './out'),
   width: Number(A.width || 430),                    // 캡처 폭(CSS px). 카드 최대 폭(430)에 맞춤
-  presets: String(A.presets || 'reels,feed,ppt,kakao').split(','),
+  presets: String(A.presets || 'reels,feed,kakao').split(','),
   offline: !!A.offline,                             // 같은 주소(localhost) 외 요청 차단 (인터넷 막힌 환경용)
   kicker: A.kicker ?? 'TM LINK · BIZHOME',
   title: A.title ?? '명함보다 깊고,|홈페이지보다 가볍게',  // | 는 줄바꿈
-  sub: A.sub ?? '',                                 // ppt 전용 설명(줄바꿈 |)
   footer: A.footer ?? 'jinjjabg-hub.github.io/T.M-LINK',
   name: A.name, role: A.role ?? '', tags: String(A.tags || '').split(',').map(s => s.trim()).filter(Boolean),
   bg1: A.bg1 ?? '#1f6bff', bg2: A.bg2 ?? '#0a2a7a', bg3: A.bg3 ?? '#070f2b',   // 배경 그라데이션 3색
@@ -77,7 +75,6 @@ async function capture(pw) {
 const P = {
   reels: { W: 1080, H: 1920, SX: 270, SY: 480, SW: 540, SH: 1040, R: 44, BZ: 20, dur: 30, hs: 1.5, he: 2.0, top: { x: 540, y: 340, align: 'center', size: 50, tag: 44 }, bottom: { x: 540, y: 1560 } },
   feed:  { W: 1080, H: 1350, SX: 290, SY: 190, SW: 500, SH: 960, R: 42, BZ: 18, dur: 30, hs: 1.5, he: 2.0, top: { x: 540, y: 84, align: 'center', size: 44, tag: 36 }, bottom: { x: 540, y: 1230 } },
-  ppt:   { W: 1920, H: 1080, SX: 1180, SY: 100, SW: 430, SH: 880, R: 40, BZ: 18, dur: 36, hs: 1.5, he: 2.0, top: { x: 130, y: 300, align: 'left', size: 76, tag: 30 }, bottom: { x: 130, y: 880 } },
   kakao: { W: 1080, H: 1080, SX: 610, SY: 130, SW: 400, SH: 820, R: 40, BZ: 16, dur: 10, hs: 0.8, he: 1.0, profile: true },
 };
 
@@ -99,8 +96,8 @@ function bgInner(f) {
   return back + `<div style="position:absolute;left:${t.x}px;top:${t.y - (c ? 60 : 120)}px;transform:${tx};text-align:${t.align};color:#fff;white-space:nowrap">
       <div style="font:800 ${t.tag * 0.62}px Montserrat,sans-serif;letter-spacing:.18em;color:#7fd0ff;margin-bottom:12px">${esc(O.kicker)}</div>
       <div style="font-weight:800;font-size:${t.size}px;line-height:1.18;letter-spacing:-.02em">${esc(O.title)}</div>
-      ${f.W > 1500 && O.sub ? `<div style="font-weight:500;font-size:30px;color:rgba(255,255,255,.78);margin-top:26px;line-height:1.6">${esc(O.sub)}</div>` : ''}</div>
-    ${O.footer ? `<div style="position:absolute;left:${b.x}px;top:${b.y}px;transform:${tx};text-align:${t.align};color:rgba(255,255,255,.85);font-weight:600;font-size:${f.W > 1500 ? 30 : 28}px;white-space:nowrap">${esc(O.footer)}</div>` : ''}` + phoneGlow(f);
+      </div>
+    ${O.footer ? `<div style="position:absolute;left:${b.x}px;top:${b.y}px;transform:${tx};text-align:${t.align};color:rgba(255,255,255,.85);font-weight:600;font-size:28px;white-space:nowrap">${esc(O.footer)}</div>` : ''}` + phoneGlow(f);
 }
 
 /* ───────── 3. 합성 ───────── */

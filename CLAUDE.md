@@ -15,7 +15,7 @@ TM LINK(송승훈 대표, 부산)의 공개 홈페이지. GitHub Pages: https://
 예전 주소(`#app-mandu`, `#pricing` 등)는 홈의 스크립트가 새 페이지로 보냅니다(소식판·카톡에 퍼진 링크 호환).
 
 ## 도구 (`tools/`) — 먼저 여기를 보세요
-- `tools/scroll-video/` — **비즈홈을 스크롤 영상으로**(인스타 릴스·피드, PPT, 카톡 프로필). `README.md` 에 사용법과 만든 원리.
+- `tools/scroll-video/` — **비즈홈을 스크롤 영상으로**(인스타 릴스·피드, 카톡 프로필). `README.md` 에 사용법과 만든 원리.
 - `tools/apps-pages/` — 앱 소개 페이지의 **원본 내용과 생성 스크립트**. `apps.js`·`apps/*/index.html` 은 직접 고치지 말고 `content.py` 수정 → `python3 tools/apps-pages/regen.py`.
 
 ## 사실 정보 (바뀌면 여러 곳을 같이 고칠 것)
