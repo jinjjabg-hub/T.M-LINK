@@ -74,7 +74,7 @@ async function capture(pw) {
 /* ───────── 2. 형태별 배치 ───────── */
 const P = {
   reels: { W: 1080, H: 1920, SX: 270, SY: 480, SW: 540, SH: 1040, R: 44, BZ: 20, dur: 30, hs: 1.5, he: 2.0, top: { x: 540, y: 340, align: 'center', size: 50, tag: 44 }, bottom: { x: 540, y: 1560 } },
-  feed:  { W: 1080, H: 1350, SX: 290, SY: 190, SW: 500, SH: 960, R: 42, BZ: 18, dur: 30, hs: 1.5, he: 2.0, top: { x: 540, y: 84, align: 'center', size: 44, tag: 36 }, bottom: { x: 540, y: 1230 } },
+  feed:  { W: 1080, H: 1350, SX: 290, SY: 240, SW: 500, SH: 910, R: 42, BZ: 18, dur: 30, hs: 1.5, he: 2.0, top: { x: 540, y: 84, align: 'center', size: 44, tag: 36 }, bottom: { x: 540, y: 1230 } },
   kakao: { W: 1080, H: 1080, SX: 610, SY: 130, SW: 400, SH: 820, R: 40, BZ: 16, dur: 10, hs: 0.8, he: 1.0, profile: true },
 };
 
@@ -89,8 +89,8 @@ function bgInner(f) {
     const tags = O.tags.map(t => `<span style="display:inline-block;font-weight:700;font-size:38px;color:#fff;border:3px solid rgba(255,255,255,.85);border-radius:99px;padding:10px 32px;margin:0 14px 12px 0">${esc(t)}</span>`).join('');
     return back + `<div style="position:absolute;left:70px;top:0;height:${f.H}px;width:520px;display:flex;flex-direction:column;justify-content:center;color:#fff">
       <div style="font:800 28px Montserrat,sans-serif;letter-spacing:.2em;color:#7fd0ff;margin-bottom:18px">TM LINK</div>
-      <div style="font-weight:800;font-size:128px;letter-spacing:-.03em;line-height:1.05">${esc(O.name)}</div>
-      <div style="font-weight:700;font-size:50px;color:#e8c877;margin:14px 0 36px">${esc(O.role)}</div><div>${tags}</div></div>` + phoneGlow(f);
+      <div style="font-weight:800;font-size:${O.name.length > 4 ? 100 : 128}px;letter-spacing:-.03em;line-height:1.05;word-break:keep-all">${esc(O.name)}</div>
+      <div style="font-weight:700;font-size:${O.role.length > 20 ? 34 : O.role.length > 12 ? 40 : 50}px;line-height:1.3;color:#e8c877;margin:14px 0 36px;word-break:keep-all">${esc(O.role)}</div><div>${tags}</div></div>` + phoneGlow(f);
   }
   const t = f.top, b = f.bottom, c = t.align === 'center', tx = c ? 'translateX(-50%)' : 'none';
   return back + `<div style="position:absolute;left:${t.x}px;top:${t.y - (c ? 60 : 120)}px;transform:${tx};text-align:${t.align};color:#fff;white-space:nowrap">
