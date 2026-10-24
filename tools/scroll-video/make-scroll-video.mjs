@@ -90,7 +90,7 @@ function bgInner(f) {
     return back + `<div style="position:absolute;left:70px;top:0;height:${f.H}px;width:520px;display:flex;flex-direction:column;justify-content:center;color:#fff">
       <div style="font:800 28px Montserrat,sans-serif;letter-spacing:.2em;color:#7fd0ff;margin-bottom:18px">TM LINK</div>
       <div style="font-weight:800;font-size:${O.name.length > 4 ? 100 : 128}px;letter-spacing:-.03em;line-height:1.05;word-break:keep-all">${esc(O.name)}</div>
-      <div style="font-weight:700;font-size:${O.role.length > 20 ? 34 : O.role.length > 12 ? 40 : 50}px;line-height:1.3;color:#e8c877;margin:14px 0 36px;word-break:keep-all">${esc(O.role)}</div><div>${tags}</div></div>` + phoneGlow(f);
+      <div style="font-weight:700;font-size:${O.role.length > 20 ? 34 : O.role.length > 10 ? 40 : 50}px;line-height:1.3;color:#e8c877;margin:14px 0 36px;word-break:keep-all;overflow-wrap:anywhere">${esc(O.role)}</div><div>${tags}</div></div>` + phoneGlow(f);
   }
   const t = f.top, b = f.bottom, c = t.align === 'center', tx = c ? 'translateX(-50%)' : 'none';
   return back + `<div style="position:absolute;left:${t.x}px;top:${t.y - (c ? 60 : 120)}px;transform:${tx};text-align:${t.align};color:#fff;white-space:nowrap">
