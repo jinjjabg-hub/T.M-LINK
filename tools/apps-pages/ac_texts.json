@@ -1,0 +1,218 @@
+{
+ "hero_kick": {
+  "ko": "무료로 시작 · 디지털 명함",
+  "en": "Start free · Digital Card",
+  "ja": "無料で始める・デジタル名刺",
+  "zh": "免费开始·数字名片"
+ },
+ "hero_h": {
+  "ko": "주고 끝나는 명함 말고,|저장되는 명함",
+  "en": "Not a card they toss.|A card they save.",
+  "ja": "渡して終わりの名刺ではなく、|保存される名刺",
+  "zh": "不是递完就丢的名片，|而是会被保存的名片"
+ },
+ "hero_p": {
+  "ko": "완전 무료로 30초면 만들어요. 링크 하나로 전화·연락처 저장·카드북 저장까지. 사진·다국어는 {price}부터 유료로 추가할 수 있어요.",
+  "en": "Completely free, ready in 30 seconds. One link to call, save your contact and keep you in CardBook. Add a photo or more languages from {price}.",
+  "ja": "完全無料で30秒で完成。リンク一つで電話・連絡先保存・CardBook保存まで。写真・多言語は{price}から有料で追加できます。",
+  "zh": "完全免费，30 秒完成。一个链接即可拨打电话、保存联系人、存入 CardBook。照片和多语言可从 {price} 付费追加。"
+ },
+ "why_h": {
+  "ko": "왜 디지털 명함인가요?",
+  "en": "Why a digital card?",
+  "ja": "なぜデジタル名刺？",
+  "zh": "为什么要数字名片？"
+ },
+ "why1_t": {
+  "ko": "잃어버리지 않아요",
+  "en": "It doesn’t get lost",
+  "ja": "なくならない",
+  "zh": "不会丢失"
+ },
+ "why1_p": {
+  "ko": "종이 명함은 지갑 속에 묻히지만, 디지털 명함은 받은 사람 폰의 연락처·카드북에 바로 저장돼요.",
+  "en": "Paper cards get buried in wallets. A digital card goes straight into their phone contacts and CardBook.",
+  "ja": "紙の名刺は財布に埋もれますが、デジタル名刺は相手のスマホの連絡先・CardBookにすぐ保存されます。",
+  "zh": "纸质名片会被埋在钱包里，数字名片会直接存进对方手机通讯录和 CardBook。"
+ },
+ "why2_t": {
+  "ko": "바뀌면 바로 고쳐요",
+  "en": "Update it anytime",
+  "ja": "変わったらすぐ修正",
+  "zh": "随时修改"
+ },
+ "why2_p": {
+  "ko": "번호·직함이 바뀌어도 다시 인쇄할 필요 없어요. 고치면 이미 건넨 명함도 최신이 돼요.",
+  "en": "New number or title? No reprinting. Edit once and every card you’ve shared is up to date.",
+  "ja": "番号や肩書が変わっても再印刷不要。直せば渡した名刺も最新になります。",
+  "zh": "号码或职位变了也不用重印，修改后已发出的名片也同步更新。"
+ },
+ "why3_t": {
+  "ko": "카톡으로 건네요",
+  "en": "Share by message",
+  "ja": "メッセージで渡せる",
+  "zh": "用消息发送"
+ },
+ "why3_p": {
+  "ko": "만나기 전후 링크 하나로 보내고, 전화·문자·이메일이 한 번에 연결돼요. 외국어를 추가해 두면 받는 사람 폰 언어로 자동으로 열려요.",
+  "en": "Send one link before or after you meet — call, text and email in one tap. Add languages and it opens in the recipient’s phone language.",
+  "ja": "会う前後にリンク一つで送れて、電話・SMS・メールがワンタップ。外国語を追加すると相手のスマホの言語で自動表示されます。",
+  "zh": "见面前后发一个链接，电话、短信、邮件一键直达。添加外语后，会按对方手机语言自动显示。"
+ },
+ "why4_t": {
+  "ko": "소개로 이어져요",
+  "en": "It leads to referrals",
+  "ja": "紹介につながる",
+  "zh": "带来转介绍"
+ },
+ "why4_p": {
+  "ko": "하는 일과 \"이런 분을 소개해 주세요\"가 함께 있어, 받은 사람이 누구에게 나를 연결할지 바로 알아요.",
+  "en": "What you do and “who to introduce me to” sit together, so people know exactly who to connect you with.",
+  "ja": "仕事内容と「こんな方を紹介してください」が一緒にあるので、誰につなげばいいかすぐ分かります。",
+  "zh": "业务内容和“请帮我介绍这样的人”放在一起，对方马上知道该把你介绍给谁。"
+ },
+ "vs_h": {
+  "ko": "무료 명함 앱과 뭐가 다른가요?",
+  "en": "How is it different from free card apps?",
+  "ja": "無料の名刺アプリとの違いは？",
+  "zh": "和免费名片应用有什么不同？"
+ },
+ "vs_free": {
+  "ko": "흔한 무료 명함",
+  "en": "Typical free app",
+  "ja": "よくある無料名刺",
+  "zh": "常见免费名片"
+ },
+ "vs_ours": {
+  "ko": "디지털 명함",
+  "en": "Digital Card",
+  "ja": "デジタル名刺",
+  "zh": "数字名片"
+ },
+ "vs_note": {
+  "ko": "* 무료 명함 앱은 일반적인 경우 기준이며, 서비스마다 다를 수 있어요.",
+  "en": "* Free-app column describes typical cases and varies by service.",
+  "ja": "* 無料アプリは一般的な例で、サービスにより異なります。",
+  "zh": "* 免费应用一栏为一般情况，因服务而异。"
+ },
+ "free_desc": {
+  "ko": "이름·직함·연락처·한 줄 소개만. 사진 없이 종이 명함 수준으로 30초 만에. 나중에 언제든 유료로 업그레이드할 수 있어요.",
+  "en": "Just your name, title, contact and a one-line intro — no photo, paper-card simple, 30 seconds. Upgrade to the paid version anytime later.",
+  "ja": "名前・肩書き・連絡先・ひとこと紹介だけ。写真なしで紙の名刺くらいの内容を30秒で。あとからいつでも有料版にアップグレードできます。",
+  "zh": "只需姓名、职位、联系方式和一句话介绍。无照片，纸质名片水准，30秒完成。之后随时可升级为付费版。"
+ },
+ "free_note": {
+  "ko": "무료판은 사진·다국어 없이 기본 정보만 들어가요. 발행 후에도 내용은 언제든 무료로 고칠 수 있고, 사진·다국어가 필요하면 새로 유료 명함을 만들면 돼요.",
+  "en": "The free card has only the basics — no photo, one language. You can still edit the content for free anytime. Need a photo or more languages? Make a paid card instead.",
+  "ja": "無料版は写真・多言語なしの基本情報のみです。公開後も内容はいつでも無料で直せます。写真や多言語が必要なら有料版で新しく作ってください。",
+  "zh": "免费版仅含基本信息，无照片、无多语言。发布后仍可随时免费修改内容。如需照片或多语言，请另外制作付费名片。"
+ },
+ "vs1_l": {
+  "ko": "받는 사람",
+  "en": "Recipient",
+  "ja": "受け取る人",
+  "zh": "接收方"
+ },
+ "vs1_a": {
+  "ko": "앱 설치·가입을 요구하는 경우가 많아요",
+  "en": "Often has to install an app or sign up",
+  "ja": "アプリのインストールや登録が必要なことが多い",
+  "zh": "常常需要安装应用或注册"
+ },
+ "vs1_b": {
+  "ko": "링크만 열면 끝, 설치 없이 저장",
+  "en": "Just open the link — save without installing",
+  "ja": "リンクを開くだけ、インストール不要で保存",
+  "zh": "打开链接即可，无需安装就能保存"
+ },
+ "vs2_l": {
+  "ko": "만드는 법",
+  "en": "Setup",
+  "ja": "作り方",
+  "zh": "制作方式"
+ },
+ "vs2_a": {
+  "ko": "칸을 하나하나 직접 입력",
+  "en": "Fill every field by hand",
+  "ja": "項目を一つずつ手入力",
+  "zh": "逐项手动填写"
+ },
+ "vs2_b": {
+  "ko": "명함 이미지 한 장이면 자동으로 채워요",
+  "en": "One card image fills it in automatically",
+  "ja": "名刺画像1枚で自動入力",
+  "zh": "一张名片图片即可自动填写"
+ },
+ "vs3_l": {
+  "ko": "소개 문구",
+  "en": "Your pitch",
+  "ja": "紹介文",
+  "zh": "介绍文案"
+ },
+ "vs3_a": {
+  "ko": "이름·연락처 위주",
+  "en": "Mostly name and contact",
+  "ja": "名前・連絡先が中心",
+  "zh": "以姓名和联系方式为主"
+ },
+ "vs3_b": {
+  "ko": "하는 일·돕는 분·리퍼럴 문구를 AI가 초안",
+  "en": "AI drafts what you do, who you help and your referral ask",
+  "ja": "仕事・支援する相手・紹介文をAIが下書き",
+  "zh": "AI 起草业务、服务对象和转介绍文案"
+ },
+ "vs4_l": {
+  "ko": "언어",
+  "en": "Languages",
+  "ja": "言語",
+  "zh": "语言"
+ },
+ "vs4_a": {
+  "ko": "한 가지 언어 위주",
+  "en": "Usually one language",
+  "ja": "主に1言語",
+  "zh": "通常只有一种语言"
+ },
+ "vs4_b": {
+  "ko": "최대 4개 언어, 외국어 이름 표기까지 자동",
+  "en": "Up to 4 languages, names written for each automatically",
+  "ja": "最大4言語、外国語の名前表記まで自動",
+  "zh": "最多 4 种语言，外文姓名也自动生成"
+ },
+ "vs5_l": {
+  "ko": "받은 명함",
+  "en": "Cards you receive",
+  "ja": "受け取った名刺",
+  "zh": "收到的名片"
+ },
+ "vs5_a": {
+  "ko": "따로 모아둘 곳이 없어요",
+  "en": "Nowhere to keep them",
+  "ja": "まとめる場所がない",
+  "zh": "没有地方统一保存"
+ },
+ "vs5_b": {
+  "ko": "카드북에 저장·검색 (무료)",
+  "en": "Save and search them in CardBook (free)",
+  "ja": "CardBookで保存・検索(無料)",
+  "zh": "存入 CardBook 并可搜索(免费)"
+ },
+ "vs6_l": {
+  "ko": "비용",
+  "en": "Cost",
+  "ja": "費用",
+  "zh": "费用"
+ },
+ "vs6_a": {
+  "ko": "무료 대신 기능 제한·유료 전환",
+  "en": "Free, but limited or upsold to a plan",
+  "ja": "無料だが機能制限や有料プランへ誘導",
+  "zh": "免费但功能受限或引导付费"
+ },
+ "vs6_b": {
+  "ko": "{price} 한 번, 월 요금 없음",
+  "en": "{price} once, no monthly fee",
+  "ja": "{price}を1回だけ、月額なし",
+  "zh": "一次 {price}，无月费"
+ }
+}
