@@ -1,6 +1,6 @@
 # T.M-LINK 저장소 안내 (Claude Code 용)
 
-TM LINK(송승훈 대표, 부산)의 공개 홈페이지. GitHub Pages: https://jinjjabg-hub.github.io/T.M-LINK/
+TM LINK(송승훈 대표, 부산)의 공개 홈페이지. 주소: https://tmlink.bizmy.net/ (GitHub Pages + 개인 도메인, `CNAME`)
 사용자는 **한국어**, **쉬운 설명**, **데이터 근거**, **왜(목적)** 를 중요하게 여깁니다. 사용 방법은 짧고 쉽게 알려 주세요.
 
 ## 구조

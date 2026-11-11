@@ -303,6 +303,40 @@ ja:{
   Object.keys(add).forEach(function(l){ Object.assign(I18N[l], add[l]); });
 })();
 
+// 비즈홈 페이지 "자주 묻는 질문"
+(function(){
+  var add = {
+    en:{ fq_h:'Frequently asked questions',
+         fq1q:'What is BizHome?', fq1a:'A personal brand website that puts your introduction, career, services and referral requests on one page. Share one link and people see exactly what you do.',
+         fq2q:'How is it different from a business card or a company website?', fq2a:'A business card only holds your name and contact details. A company website needs planning, design, development and upkeep, which is a lot of time and money to introduce one person. BizHome sits in between, with just what an introduction needs on one page.',
+         fq3q:'How much does BizHome cost?', fq3a:'Standard is KRW 150,000 and Premium is KRW 250,000 (VAT not included). There is no hosting cost, so the monthly fee is KRW 0.',
+         fq4q:'How long does it take?', fq4a:'We contact you within 1 business day of your application, and Standard is finished in about 3 days.',
+         fq5q:'Can I change the content later?', fq5a:'Text such as contact details, title and introduction can be edited right away with the edit button. Replacing a photo or image is KRW 20,000, and a design renewal is 50% off.',
+         fq6q:'Is it available in other languages?', fq6a:'Korean, English, Chinese and Japanese switching is included by default. Premium supports up to 6 languages.',
+         fq7q:'Can you make one if I am not in Busan?', fq7a:'Yes. We consult and build remotely anywhere in Korea.',
+         fq8q:'Can I get a refund?', fq8a:'100% before production starts and 50% before the first revision. No refund after the first revision.' },
+    zh:{ fq_h:'常见问题',
+         fq1q:'BizHome 是什么？', fq1a:'把您的介绍、经历、服务和引荐需求放在一页上的个人品牌主页。发一个链接，对方就能清楚了解您做什么。',
+         fq2q:'和名片、公司官网有什么不同？', fq2a:'名片只能放姓名和联系方式。公司官网需要策划、设计、开发和维护，用来介绍一个人，时间和费用都太高。BizHome 介于两者之间，在一页上放下介绍所需的内容。',
+         fq3q:'BizHome 制作价格是多少？', fq3a:'标准版 15 万韩元，高级版 25 万韩元（不含增值税）。没有托管费用，每月维护费为 0 韩元。',
+         fq4q:'制作需要多长时间？', fq4a:'申请后 1 个工作日内与您联系，标准版约 3 天完成。',
+         fq5q:'做好后可以修改内容吗？', fq5a:'联系方式、职位、介绍等文字可以用修改按钮直接修改。更换照片或图片为 20,000 韩元，设计翻新享 5 折优惠。',
+         fq6q:'可以用外语查看吗？', fq6a:'默认支持韩语、英语、中文、日语四种语言切换。高级版最多支持 6 种语言。',
+         fq7q:'不在釜山也可以制作吗？', fq7a:'可以。全国各地均可远程咨询和制作。',
+         fq8q:'可以退款吗？', fq8a:'开始制作前退 100%，第一次修改前退 50%。第一次修改后无法退款。' },
+    ja:{ fq_h:'よくある質問',
+         fq1q:'BizHome とは何ですか？', fq1a:'代表ご本人の紹介・経歴・サービス・リファーラルを 1 ページにまとめた個人ブランドホームページです。リンクひとつで渡せば、受け取った方が何をしている人なのかすぐに分かります。',
+         fq2q:'名刺や会社のホームページと何が違いますか？', fq2a:'名刺に載るのは名前と連絡先までです。会社のホームページは企画・デザイン・開発・管理が必要で、代表お一人を紹介するには時間も費用もかかります。BizHome はその中間で、紹介に必要な分だけを 1 ページにまとめます。',
+         fq3q:'BizHome の制作料金はいくらですか？', fq3a:'スタンダード 15 万ウォン、プレミアム 25 万ウォンです（付加価値税別）。ホスティング費用がかからないため、毎月の維持費は 0 ウォンです。',
+         fq4q:'制作期間はどのくらいですか？', fq4a:'お申し込み後 1 営業日以内にご連絡し、スタンダードは約 3 日で完成します。',
+         fq5q:'完成後に内容を修正できますか？', fq5a:'連絡先・肩書き・紹介文などの文章は、修正ボタンでご自身ですぐに直せます。写真・画像の差し替えは 20,000 ウォン、デザインリニューアルは 50% 割引です。',
+         fq6q:'外国語でも見られますか？', fq6a:'韓国語・英語・中国語・日本語の 4 か国語切り替えが標準で入っています。プレミアムは最大 6 言語まで対応します。',
+         fq7q:'釜山以外でも制作できますか？', fq7a:'はい。全国どこでもリモートでご相談・制作します。',
+         fq8q:'返金はできますか？', fq8a:'制作開始前は 100%、1 回目の修正前は 50% 返金します。1 回目の修正後は返金できません。' }
+  };
+  Object.keys(add).forEach(function(l){ Object.assign(I18N[l], add[l]); });
+})();
+
 function setLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     if(el.dataset.ko === undefined) el.dataset.ko = el.innerHTML;   // 한국어 원문 보관
