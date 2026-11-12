@@ -1,6 +1,6 @@
 # T.M-LINK 저장소 안내 (Claude Code 용)
 
-TM LINK(송승훈 대표, 부산)의 공개 홈페이지. GitHub Pages: https://jinjjabg-hub.github.io/T.M-LINK/
+TM LINK(송승훈 대표, 부산)의 공개 홈페이지. 대표 주소: https://tmlink.bizmy.net/ (CNAME, canonical·og:url 기준) · GitHub Pages 원본 주소도 열림
 사용자는 **한국어**, **쉬운 설명**, **데이터 근거**, **왜(목적)** 를 중요하게 여깁니다. 사용 방법은 짧고 쉽게 알려 주세요.
 
 ## 구조
@@ -16,12 +16,13 @@ TM LINK(송승훈 대표, 부산)의 공개 홈페이지. GitHub Pages: https://
 
 ## 도구 (`tools/`) — 먼저 여기를 보세요
 - `tools/scroll-video/` — **비즈홈을 스크롤 영상으로**(인스타 릴스·피드, 카톡 프로필). `README.md` 에 사용법과 만든 원리.
+- `tools/seo/` — 검색·AI 노출(canonical, JSON-LD, sitemap, robots, `llms.txt`). 대표 주소는 `seo.py` 의 `BASE`. 마케팅 기준표·점검은 `docs/marketing/`.
 - `tools/apps-pages/` — 앱 소개 페이지의 **원본 내용과 생성 스크립트**. `apps.js`·`apps/*/index.html` 은 직접 고치지 말고 `content.py` 수정 → `python3 tools/apps-pages/regen.py`.
 
 ## 사실 정보 (바뀌면 여러 곳을 같이 고칠 것)
 - **비즈홈 가격**: 스탠다드 15만 / 프리미엄 25만. (오토명함 앱 `assets/common.js` 의 `AC_BIZHOME_PLANS` 도 같은 값이어야 함, 카드북 홈 배너도 "15만 원부터")
 - **서비스 색**(각 앱의 theme color): 오토명함 `#1F3A5F` · 카드북 `#2563EB` · 만두 `#6B38D4` · 주주도사 `#5D5FEF` · 비즈홈/TM LINK `#0066FF`. 새 앱은 색을 먼저 정해 홈 카드·소개 페이지에 같이 쓴다.
-- 오토명함은 **무료판(0원)이 있고** 사진·다국어는 5,900원부터. 주주도사는 **채팅 횟수를 적지 않는다**.
+- 오토명함은 **무료판(0원)이 있고** 사진·다국어는 5,900원부터. 주주도사는 1회 1,200 / 월 5,900·11,900·25,900 / 상담팩 9,900원(VAT 포함), 상담 횟수는 앱 요금제 기준으로 표기.
 
 ## 관련 레포 (모두 jinjjabg-hub)
 `NAMECARD`(공용 수정 스크립트 `dica-edit.js` + Cloudflare Worker `worker/`; main 합치면 자동 배포) ·

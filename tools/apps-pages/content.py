@@ -156,52 +156,263 @@ C['mandu'] = dict(
 # ───────────────────────── 주주도사 ─────────────────────────
 C['jujudosa'] = dict(
   visual='personas',
-  hero=dict(kick=T('AI 사주 상담 · 무료로 시작','AI Saju counseling · Free to start','AI 八字咨询 · 免费开始','AI四柱推命相談・無料で開始'),
-    h=T('점쟁이가 아닌,|시간의 흐름을 읽는 조언자','Not a fortune-teller —|an adviser who reads time','不是算命先生，|而是解读时间流向的顾问','占い師ではなく、|時の流れを読む相談役'),
-    p=T('타고난 명식(사주팔자)을 읽고, 지금 시기에 맞는 조언을 건네는 AI 사주 상담이에요. 오늘의 운세와 궁합까지 이야기해 보세요.','An AI Saju counselor that reads your birth chart and offers advice that fits this moment. Talk about today’s fortune and compatibility too.','解读您与生俱来的命式（八字），给出契合当下的建议的 AI 八字咨询。也可以聊聊今日运势和合婚。','生まれ持った命式（四柱推命）を読み、今の時期に合った助言を届けるAI四柱推命相談です。今日の運勢や相性もどうぞ。'),
-    stats=[(T('7명','7','7 位','7人'), T('상담 도사 (종합 1 + 전문 6)','Counselors (1 general + 6 specialists)','咨询道士（综合 1 + 专业 6）','相談役（総合1 + 専門6）')),
-           (T('0원','₩0','₩0','₩0'), T('무료로 시작','Start free','免费开始','無料で開始')),
-           (T('4,900원~','From ₩4,900','₩4,900 起','₩4,900〜'), T('월 구독 (부가세 포함)','Monthly plan (VAT incl.)','月订阅（含增值税）','月額プラン（税込）'))]),
-  why=dict(h=T('이런 점이 달라요','What’s different','与众不同之处','ここが違います'), items=[
-    (T('랜덤 문구가 아니에요','Not random phrases','不是随机文案','ランダムな文言ではありません'), T('모든 풀이는 내 명식의 실제 글자에서 출발해요. 어떤 글자를 읽고 있는지 함께 보여줘요.','Every reading starts from the actual characters of your chart, and shows which ones it’s reading.','所有解读都从您命式中的实际文字出发，并告诉您读的是哪个字。','すべての読み解きは、あなたの命式の実際の文字から始まり、どの文字を読んでいるかも示します。')),
-    (T('‘언제’에 강해요','Strong on “when”','擅长回答“何时”','「いつ」に強い'), T('성격 묘사에 머물지 않고 대운·세운의 흐름을 따라 시기 조언으로 이어가요.','It goes beyond describing character and follows the flow of your luck cycles into advice on timing.','不止于性格描述，还顺着大运、流年的走势给出时机建议。','性格の描写にとどまらず、大運・流年の流れに沿って時期の助言につなげます。')),
-    (T('겁주지 않아요','No scare tactics','不吓唬人','不安をあおりません'), T('단정적인 불운 예언은 하지 않아요. 나쁜 흐름도 ‘날씨’처럼 설명하고 대처법을 함께 전해요.','No definitive predictions of misfortune. Bad stretches are explained like weather, with ways to cope.','不做断言式的厄运预言。不顺的阶段也像“天气”一样说明，并给出应对方法。','断定的な不運の予言はしません。悪い流れも「天気」のように説明し、対処法を添えます。')),
-    (T('선을 지켜요','It keeps its limits','有底线','一線を守ります'), T('건강 진단, 특정 종목·코인 같은 투자 지시, 수명에 관한 질문에는 답하지 않아요.','It doesn’t diagnose health, tell you which stocks or coins to buy, or answer questions about lifespan.','不做健康诊断，不给出具体股票、加密货币等投资指示，也不回答寿命相关问题。','健康の診断、特定の銘柄・コインなどの投資指示、寿命に関する質問にはお答えしません。'))]),
-  how=dict(h=T('이렇게 이용해요','How it works','使用方法','使い方'), items=[
-    (T('내 명식 만들기','Build your chart','生成我的命式','命式をつくる'), T('생년월일시를 입력하면 명식(사주팔자)을 계산해요.','Enter your birth date and time and your chart is calculated.','输入出生年月日时，系统会计算命式（八字）。','生年月日時を入力すると、命式（四柱推命）を計算します。')),
-    (T('도사와 이야기하기','Talk to a counselor','与道士交谈','相談役と話す'), T('종합 상담은 주주도사가, 재물·직업·연애·자녀·힘든 시기·대운은 전문 도사가 맡아요.','Juju Dosa handles general readings; specialists cover money, career, love, children, hard times and life cycles.','综合咨询由主主道士负责，财运、事业、爱情、子女、低谷期和大运由专业道士负责。','総合相談はジュジュ道士が、金運・仕事・恋愛・子供・つらい時期・大運は専門の道士が担当します。')),
-    (T('오늘의 운세·궁합','Daily fortune & compatibility','今日运势与合婚','今日の運勢・相性'), T('매일 운세와 궁합 풀이로 일상에서 이어서 활용해요.','Keep using it day to day with daily fortunes and compatibility readings.','通过每日运势和合婚解读，在日常中持续使用。','毎日の運勢と相性の読み解きで、日常でも活用できます。'))]),
-  team=dict(h=T('상담 도사를 소개해요','Meet the counselors','认识咨询道士','相談役の紹介'), items=[
-    ('persona-juju', T('주주도사','Juju Dosa','主主道士','ジュジュ道士'), T('종합','General','综合','総合')),
-    ('persona-jaecheon', T('재천도사','Jaecheon','财天道士','ジェチョン道士'), T('재물운','Wealth','财运','金運')),
-    ('persona-gwallok', T('관록도사','Gwallok','官禄道士','クァンロク道士'), T('직업운','Career','事业运','仕事運')),
-    ('persona-wolha', T('월하도사','Wolha','月下道士','ウォルハ道士'), T('연애운','Love','爱情运','恋愛運')),
-    ('persona-seulha', T('슬하도사','Seulha','膝下道士','スラ道士'), T('자녀운','Children','子女运','子供運')),
-    ('persona-dadok', T('다독도사','Dadok','多笃道士','タドク道士'), T('힘들 때는','Hard times','低谷时','つらい時')),
-    ('persona-cheonmyeong', T('천명도사','Cheonmyeong','天命道士','チョンミョン道士'), T('대운 흐름','Life cycles','大运走势','大運の流れ'))]),
-  feat=dict(h=T('이런 기능이 들어 있어요','What’s inside','包含的功能','主な機能'), items=[
-    (T('종합 풀이','General reading','综合解读','総合鑑定'), T('첫 상담은 명식 전체를 길게 짚는 종합 풀이로 시작해요.','The first session starts with a thorough reading of your whole chart.','首次咨询从完整解读整个命式开始。','最初の相談は、命式全体をじっくり読む総合鑑定から始まります。')),
-    (T('전문 도사 6명','6 specialist counselors','6 位专业道士','専門の道士6人'), T('재물·직업·연애·자녀·힘든 시기·대운. 분야마다 말투와 초점이 달라요.','Money, career, love, children, hard times and life cycles — each with its own tone and focus.','财运、事业、爱情、子女、低谷期、大运——每位道士的语气与侧重点各不相同。','金運・仕事・恋愛・子供・つらい時期・大運。分野ごとに語り口と焦点が異なります。')),
-    (T('오늘의 운세','Daily fortune','今日运势','今日の運勢'), T('매일 확인하는 오늘의 운세를 받아요. (무료는 주간 운세)','Get a daily fortune each day. (Free plan: weekly fortune.)','每天查看今日运势。（免费版为每周运势）','毎日の運勢が届きます。（無料プランは週間運勢）')),
-    (T('궁합 풀이','Compatibility','合婚解读','相性鑑定'), T('두 사람의 명식을 함께 읽어 궁합을 풀어줘요.','Reads two charts together to explain compatibility.','同时解读两人的命式，说明合婚。','2人の命式を合わせて読み、相性を解説します。')),
-    (T('월간 리포트','Monthly report','月度报告','月間レポート'), T('스탠다드는 월간 4개 섹션 정밀 리포트를 제공해요.','Standard includes a detailed monthly report in 4 sections.','标准版提供含 4 个部分的月度精细报告。','スタンダードは月間4セクションの詳細レポートつきです。')),
-    (T('정밀 MBTI 분석','Detailed MBTI analysis','精细 MBTI 分析','詳細MBTI分析'), T('라이트 이상 결제 회원은 정밀 MBTI 분석을 쓸 수 있어요.','Paid members on Lite and above can use the detailed MBTI analysis.','Lite 及以上付费会员可使用精细 MBTI 分析。','ライト以上の有料会員は詳細MBTI分析を利用できます。'))]),
-  plan=dict(h=T('요금제','Plans','价格方案','料金プラン'), cards=[
-    dict(n=T('무료','Free','免费','無料'), price=T('0원','₩0','₩0','₩0'), per=T('가볍게 체험','Try it out','轻松体验','気軽に体験'),
-         items=[T('주간 운세','Weekly fortune','每周运势','週間運勢'), T('AI 사주 채팅 체험','Try AI Saju chat','体验 AI 八字聊天','AI四柱推命チャット体験')]),
-    dict(n=T('라이트','Lite','Lite','ライト'), price=T('4,900원','₩4,900','₩4,900','₩4,900'), per=T('월 · 부가세 포함','per month · VAT incl.','每月 · 含增值税','月額・税込'),
-         items=[T('매일 운세','Daily fortune','每日运势','毎日の運勢'), T('월간 총운 요약','Monthly overview','月度总运概要','月間総合運の要約'), T('AI 사주 채팅','AI Saju chat','AI 八字聊天','AI四柱推命チャット'), T('궁합 풀이 월 1회','1 compatibility reading a month','合婚解读每月 1 次','相性鑑定 月1回')]),
-    dict(n=T('스탠다드','Standard','标准版','スタンダード'), price=T('9,900원','₩9,900','₩9,900','₩9,900'), per=T('월 · 부가세 포함','per month · VAT incl.','每月 · 含增值税','月額・税込'), hi=True,
-         items=[T('라이트의 모든 기능','Everything in Lite','包含 Lite 全部功能','ライトの全機能'), T('월간 4개 섹션 정밀 리포트','Detailed 4-section monthly report','含 4 个部分的月度精细报告','月間4セクションの詳細レポート'), T('전문 도사 6명 전체 이용','All 6 specialist counselors','全部 6 位专业道士','専門の道士6人すべて'), T('궁합 풀이 무제한','Unlimited compatibility readings','合婚解读不限次数','相性鑑定は無制限')])],
-    note=T('결제는 1회 결제 또는 매월 결제 중에서 고를 수 있어요. 금액은 부가세 포함이에요. 해지와 환불은 앱의 환불정책에서 확인할 수 있어요.','You can pay once or pay monthly. Prices include VAT. Cancellation and refunds are explained in the app’s refund policy.','可选择一次性付款或按月付款。金额含增值税。取消与退款请参阅应用内的退款政策。','お支払いは1回払いまたは毎月払いからお選びいただけます。金額は税込です。解約と返金は、アプリの返金ポリシーをご確認ください。')),
-  faq=dict(h=T('자주 묻는 질문','FAQ','常见问题','よくある質問'), items=[
-    (T('사주 결과를 그대로 믿어도 되나요?','Should I take the result literally?','可以完全相信结果吗？','結果をそのまま信じてよい？'), T('사주는 정해진 결말이 아니라 흐름을 읽는 참고 도구예요. 주주도사는 ‘운은 날씨’라는 관점으로 대처법과 함께 조언해요. 중요한 결정은 스스로의 판단이 우선이에요.','Saju is a tool for reading flow, not a fixed ending. Juju Dosa treats luck like weather and gives ways to cope. Important decisions are still yours.','八字是解读走势的参考工具，而不是既定结局。主主道士以“运如天气”的观点给出建议和应对方法。重要决定仍以您自己的判断为先。','四柱推命は決まった結末ではなく、流れを読むための参考です。ジュジュ道士は「運は天気」という視点で対処法とともに助言します。大事な決定は、ご自身の判断が優先です。')),
-    (T('무료로 얼마나 쓸 수 있나요?','How much can I use for free?','免费能用多少？','無料でどこまで使える？'), T('무료 요금제는 주간 운세와 AI 사주 채팅 체험을 제공해요.','The free plan gives you a weekly fortune and a taste of AI Saju chat.','免费方案提供每周运势和 AI 八字聊天体验。','無料プランでは週間運勢とAI四柱推命チャットの体験をご利用いただけます。')),
-    (T('내 정보는 어떻게 쓰이나요?','How is my information used?','我的信息如何使用？','入力した情報の扱いは？'), T('상담을 위해 입력한 생년월일 등의 정보가 쓰여요. 자세한 내용은 개인정보처리방침에서 확인해 주세요.','The birth details you enter are used for your readings. See the Privacy Policy for details.','您输入的出生信息等用于咨询。详情请见隐私政策。','入力した生年月日などは相談のために使われます。詳細はプライバシーポリシーをご確認ください。')),
-    (T('결제는 어떻게 하나요?','How do I pay?','如何付款？','お支払い方法は？'), T('결제는 1회 결제 또는 매월 결제 중에서 고를 수 있어요. 해지와 환불은 요금제·환불정책 페이지에서 확인할 수 있어요.','You can pay once or pay monthly. Cancellation and refunds are on the pricing and refund policy pages.','可选择一次性付款或按月付款。取消与退款请在价格方案和退款政策页面查看。','お支払いは1回払いまたは毎月払いを選べます。解約と返金は料金プランと返金ポリシーのページでご確認ください。'))]),
-  more=['mandu', 'cardbook'],
-  cta=dict(h=T('지금 내 명식을 확인해 보세요','See your chart today','现在就查看您的命式','今すぐ命式を確かめよう'), p=T('무료로 시작해서, 필요할 때 구독을 선택하면 돼요.','Start free and choose a plan when you need one.','先免费开始，需要时再选择订阅。','無料で始めて、必要になったらプランを選べます。')),
-  policy=[('pricing','https://jinjjabg-hub.github.io/JUJUDOSA/pricing.html'), ('refund','https://jinjjabg-hub.github.io/JUJUDOSA/refund.html'), ('terms','https://jinjjabg-hub.github.io/JUJUDOSA/terms.html'), ('privacy','https://jinjjabg-hub.github.io/JUJUDOSA/privacy.html')],
+  hero=dict(
+    kick=T('AI 사주 상담 · 무료로 시작', 'AI Saju counseling · Free to start', 'AI 八字咨询 · 免费开始', 'AI四柱推命相談・無料で開始'),
+    h=T('점쟁이가 아닌,|시간의 흐름을 읽는 조언자', 'Not a fortune-teller —|an adviser who reads time', '不是算命先生，|而是解读时间流向的顾问', '占い師ではなく、|時の流れを読む相談役'),
+    p=T('같은 만세력으로 풀기 때문에 기본 풀이는 누가 봐도 비슷해요. 주주도사는 기본 사주를 읽은 뒤, 지금 궁금한 것을 대화로 묻고 답하는 상담이에요. 대표와 직원의 상성도 볼 수 있어요.', 'Everyone reads from the same Manseryeok calendar, so the basic reading is similar wherever you go. Juju Dosa reads your basic chart, then answers what you’re wondering about right now in conversation. It can also read the fit between an employer and an employee.', '大家使用同一部万年历排盘，所以基本解读都大同小异。主主道士先解读您的基本命盘，再通过对话询问和解答您当下最想知道的事。也可以查看老板与员工的相合度。', '同じ万年暦で読むため、基本の読み解きはどこで見てもほぼ同じです。ジュジュ道士は基本の命式を読んだうえで、今気になることを対話で聞いてお答えします。経営者と従業員の相性も見られます。'),
+    stats=[
+      [
+        T('7명', '7', '7 位', '7人'),
+        T('상담 도사 (종합 1 + 전문 6)', 'Counselors (1 general + 6 specialists)', '咨询道士（综合 1 + 专业 6）', '相談役（総合1 + 専門6）'),
+      ],
+      [
+        T('0원', '₩0', '₩0', '₩0'),
+        T('무료로 시작', 'Start free', '免费开始', '無料で開始'),
+      ],
+      [
+        T('5,900원~', 'From ₩5,900', '₩5,900 起', '₩5,900〜'),
+        T('월 이용권 (부가세 포함)', 'Monthly plan (VAT incl.)', '月订阅（含增值税）', '月額プラン（税込）'),
+      ],
+    ],
+  ),
+  why=dict(
+    h=T('이런 점이 달라요', 'What’s different', '与众不同之处', 'ここが違います'),
+    items=[
+      [
+        T('기본 풀이는 같아요, 달라지는 건 대화예요', 'Same basics — the conversation is what differs', '基本解读相同，不同的是对话', '基本は同じ、違うのは対話'),
+        T('같은 만세력을 쓰면 기본 해석은 대부분 비슷해요. 주주도사는 기본 사주를 읽은 뒤, 지금 내가 궁금한 것을 묻고 답하며 내 상황에 맞춰가요.', 'With the same calendar, the basic interpretation is mostly alike. Juju Dosa reads your chart, then asks and answers what you want to know now, fitted to your situation.', '使用同一部万年历，基本解释大多相近。主主道士解读基本命盘后，围绕您当下想知道的事一问一答，贴合您的处境。', '同じ万年暦を使えば基本の解釈はほぼ同じです。ジュジュ道士は命式を読んだあと、今気になることを聞いて答え、あなたの状況に合わせていきます。'),
+      ],
+      [
+        T('랜덤 문구가 아니에요', 'Not random phrases', '不是随机文案', 'ランダムな文言ではありません'),
+        T('모든 풀이는 내 명식의 실제 글자에서 출발해요. 어떤 글자를 읽고 있는지 함께 보여줘요.', 'Every reading starts from the actual characters of your chart, and shows which ones it’s reading.', '所有解读都从您命式中的实际文字出发，并告诉您读的是哪个字。', 'すべての読み解きは、あなたの命式の実際の文字から始まり、どの文字を読んでいるかも示します。'),
+      ],
+      [
+        T('‘언제’에 강해요', 'Strong on “when”', '擅长回答“何时”', '「いつ」に強い'),
+        T('성격 묘사에 머물지 않고 대운·세운의 흐름을 따라 시기 조언으로 이어가요.', 'It goes beyond describing character and follows the flow of your luck cycles into advice on timing.', '不止于性格描述，还顺着大运、流年的走势给出时机建议。', '性格の描写にとどまらず、大運・流年の流れに沿って時期の助言につなげます。'),
+      ],
+      [
+        T('겁주지 않고 선을 지켜요', 'No scare tactics, clear limits', '不吓唬人，守底线', '不安をあおらず、一線を守ります'),
+        T('단정적인 불운 예언은 하지 않고, 나쁜 흐름도 ‘날씨’처럼 설명하며 대처법을 전해요. 건강 진단, 특정 종목·코인 투자 지시, 수명 질문에는 답하지 않아요.', 'No definitive predictions of misfortune; bad stretches are explained like weather, with ways to cope. It doesn’t diagnose health, pick stocks or coins, or answer questions about lifespan.', '不做断言式的厄运预言，不顺的阶段也像“天气”一样说明并给出应对方法。不做健康诊断，不给出具体股票、加密货币等投资指示，也不回答寿命相关问题。', '断定的な不運の予言はせず、悪い流れも「天気」のように説明し対処法を添えます。健康の診断、特定の銘柄・コインなどの投資指示、寿命に関する質問にはお答えしません。'),
+      ],
+    ],
+  ),
+  how=dict(
+    h=T('이렇게 이용해요', 'How it works', '使用方法', '使い方'),
+    items=[
+      [
+        T('내 명식 만들기', 'Build your chart', '生成我的命式', '命式をつくる'),
+        T('생년월일시를 입력하면 명식(사주팔자)을 계산해요.', 'Enter your birth date and time and your chart is calculated.', '输入出生年月日时，系统会计算命式（八字）。', '生年月日時を入力すると、命式（四柱推命）を計算します。'),
+      ],
+      [
+        T('궁금한 것을 대화로 묻기', 'Ask what’s on your mind', '把想问的直接问出来', '気になることを聞く'),
+        T('기본 풀이를 읽은 뒤 지금 궁금한 것을 도사에게 직접 물어보세요. 종합은 주주도사가, 재물·직업·연애·자녀·힘든 시기·대운은 전문 도사가 맡아요.', 'After the basic reading, ask a master directly. Juju Dosa handles general readings; specialists cover money, career, love, children, hard times and life cycles.', '基本解读之后，可直接向道士提问。综合咨询由主主道士负责，财运、事业、爱情、子女、低谷期和大运由专业道士负责。', '基本の鑑定のあと、道士に直接質問できます。総合はジュジュ道士が、金運・仕事・恋愛・子供・つらい時期・大運は専門の道士が担当します。'),
+      ],
+      [
+        T('대표 × 직원 상성 보기', 'Check employer × employee fit', '查看老板 × 员工相合度', '経営者 × 従業員の相性を見る'),
+        T('대표와 직원(또는 함께할 사람)의 명식을 함께 읽어요. 일하다 관계가 불편해졌을 때는 서로의 성향을 짚어 풀어갈 길을 상담해요.', 'Reads the charts of the boss and a staff member (or someone you may work with) together. When the relationship has become uncomfortable, it talks through a way forward based on each person’s temperament.', '同时解读老板与员工（或将要共事的人）的命式。共事中关系变得不顺时，会结合双方性情商量化解之道。', '経営者と従業員（または一緒に働く予定の人）の命式を合わせて読みます。働くうちに関係がぎくしゃくした時は、お互いの気質をふまえて解く道を相談します。'),
+      ],
+    ],
+  ),
+  team=dict(
+    h=T('상담 도사를 소개해요', 'Meet the counselors', '认识咨询道士', '相談役の紹介'),
+    items=[
+      [
+        'persona-juju',
+        T('주주도사', 'Juju Dosa', '主主道士', 'ジュジュ道士'),
+        T('종합', 'General', '综合', '総合'),
+      ],
+      [
+        'persona-jaecheon',
+        T('재천도사', 'Jaecheon', '财天道士', 'ジェチョン道士'),
+        T('재물운', 'Wealth', '财运', '金運'),
+      ],
+      [
+        'persona-gwallok',
+        T('관록도사', 'Gwallok', '官禄道士', 'クァンロク道士'),
+        T('직업운', 'Career', '事业运', '仕事運'),
+      ],
+      [
+        'persona-wolha',
+        T('월하도사', 'Wolha', '月下道士', 'ウォルハ道士'),
+        T('연애운', 'Love', '爱情运', '恋愛運'),
+      ],
+      [
+        'persona-seulha',
+        T('슬하도사', 'Seulha', '膝下道士', 'スラ道士'),
+        T('자녀운', 'Children', '子女运', '子供運'),
+      ],
+      [
+        'persona-dadok',
+        T('다독도사', 'Dadok', '多笃道士', 'タドク道士'),
+        T('힘들 때는', 'Hard times', '低谷时', 'つらい時'),
+      ],
+      [
+        'persona-cheonmyeong',
+        T('천명도사', 'Cheonmyeong', '天命道士', 'チョンミョン道士'),
+        T('대운 흐름', 'Life cycles', '大运走势', '大運の流れ'),
+      ],
+    ],
+  ),
+  feat=dict(
+    h=T('이런 기능이 들어 있어요', 'What’s inside', '包含的功能', '主な機能'),
+    items=[
+      [
+        T('기본 풀이 + 채팅 상담', 'Basic reading + chat', '基本解读 + 聊天咨询', '基本鑑定 + チャット相談'),
+        T('첫 상담은 명식 전체를 짚는 종합 풀이로 시작하고, 이어서 궁금한 것을 자유롭게 물어요.', 'The first session reads your whole chart; then ask anything you like.', '首次咨询先解读整个命式，之后可自由提问。', '最初の相談は命式全体を読む総合鑑定から。そのあと自由に質問できます。'),
+      ],
+      [
+        T('대표 × 직원 상성', 'Employer × employee fit', '老板 × 员工相合度', '経営者 × 従業員の相性'),
+        T('회사와 어울리는 직원인지, 대표와 일하는 방식이 맞는지 일하는 궁합으로 살펴봐요. 직원이 적은 회사일수록 대표와의 상성이 중요해요.', 'See whether a staff member suits the company and the boss’s way of working, as working compatibility. The smaller the team, the more the boss–employee fit matters.', '从共事契合度看员工是否适合公司、是否与老板的做事方式相合。人数越少的公司，与老板的相合度越重要。', '会社や経営者の働き方に合う従業員か、働く相性で見ます。少人数の会社ほど経営者との相性が大切です。'),
+      ],
+      [
+        T('관계가 불편해졌을 때', 'When a relationship turns uncomfortable', '关系变得不顺时', '関係がぎくしゃくした時'),
+        T('사주로 서로의 성향을 파악해 어떻게 풀어갈지 상담해요. 푸는 방법은 사람마다 다르니 정답을 강요하지 않아요.', 'Uses saju to understand each person’s temperament and talks through how to handle it. How people resolve things differs, so it doesn’t push one right answer.', '用八字了解双方性情，一起商量如何化解。化解方式因人而异，不强加唯一答案。', '四柱推命でお互いの気質を把握し、どう解いていくかを相談します。解き方は人それぞれなので、正解を押しつけません。'),
+      ],
+      [
+        T('전문 도사 6명', '6 specialist counselors', '6 位专业道士', '専門の道士6人'),
+        T('재물·직업·연애·자녀·힘든 시기·대운. 분야마다 말투와 초점이 달라요.', 'Money, career, love, children, hard times and life cycles — each with its own tone and focus.', '财运、事业、爱情、子女、低谷期、大运——每位道士的语气与侧重点各不相同。', '金運・仕事・恋愛・子供・つらい時期・大運。分野ごとに語り口と焦点が異なります。'),
+      ],
+      [
+        T('오늘의 운세·궁합', 'Daily fortune & compatibility', '今日运势与合婚', '今日の運勢・相性'),
+        T('매일 운세(무료는 주간 운세)와 연인·친구·사업 파트너 궁합 풀이도 해줘요.', 'A daily fortune (free plan: weekly), plus compatibility for partners, friends and business partners.', '每日运势（免费版为每周运势），以及恋人·朋友·合伙人的合盘解读。', '毎日の運勢（無料は週間運勢）と、恋人・友人・ビジネスパートナーの相性鑑定も。'),
+      ],
+      [
+        T('MBTI는 참고용이에요', 'MBTI is for reference only', 'MBTI 仅供参考', 'MBTIは参考用です'),
+        T('MBTI는 직접 검사해 드리지 않아요. 아는 MBTI를 입력하거나 간이 검사(16문항)로 참고할 수 있고, 라이트 이상은 정밀 분석(20문항)도 쓸 수 있어요. 어느 쪽도 정식 검사가 아니라 정확하지 않을 수 있어요.', 'We don’t administer MBTI ourselves. You can enter an MBTI you already know or use the 16-question quick check (Lite and above also get a 20-question detailed analysis). Neither is an official test, so results may not be accurate.', '我们不直接做 MBTI 测试。可输入已知的 MBTI，或使用 16 题简易测试（Lite 及以上还可使用 20 题精细分析）。两者都不是正式测试，结果可能不准确。', 'MBTIは当サービスで直接検査しません。ご存じのMBTIを入力するか、16問の簡易チェック（ライト以上は20問の詳細分析も）で参考にできます。どちらも正式な検査ではないため、正確でない場合があります。'),
+      ],
+    ],
+  ),
+  plan=dict(
+    h=T('요금제', 'Plans', '价格方案', '料金プラン'),
+    cards=[
+      dict(
+        n=T('무료', 'Free', '免费', '無料'),
+        price=T('0원', '₩0', '₩0', '₩0'),
+        per=T('가볍게 체험', 'Try it out', '轻松体验', '気軽に体験'),
+        items=[
+          T('종합 풀이 1회 (본인)', '1 full reading (yours)', '综合解读 1 次（本人）', '総合鑑定 1回（ご自身）'),
+          T('AI 사주 상담 3회', '3 AI Saju chats', 'AI 八字咨询 3 次', 'AI四柱推命相談 3回'),
+          T('주간 운세', 'Weekly fortune', '每周运势', '週間運勢'),
+        ],
+      ),
+      dict(
+        n=T('1회 이용권', 'Single pass', '单次券', '1回券'),
+        price=T('1,200원', '₩1,200', '₩1,200', '₩1,200'),
+        per=T('1회 · 30일 안에 사용 · 부가세 포함', 'one-time · use within 30 days · VAT incl.', '一次性 · 30 天内使用 · 含增值税', '1回・30日以内に使用・税込'),
+        items=[
+          T('도사 1명 풀이 또는 궁합 1회 (택 1)', '1 reading by one counselor, or 1 compatibility reading', '1 位道士的解读或合婚解读 1 次（二选一）', '導師1人の鑑定または相性鑑定 1回（どちらか）'),
+          T('AI 사주 상담 6회', '6 AI Saju chats', 'AI 八字咨询 6 次', 'AI四柱推命相談 6回'),
+        ],
+      ),
+      dict(
+        n=T('월 5,900원', '₩5,900 / month', '月 ₩5,900', '月額 ₩5,900'),
+        price=T('5,900원', '₩5,900', '₩5,900', '₩5,900'),
+        per=T('월 · 부가세 포함', 'per month · VAT incl.', '每月 · 含增值税', '月額・税込'),
+        items=[
+          T('종합 풀이 3회 (본인+2인)', '3 full readings (you + 2 people)', '综合解读 3 次（本人+2 人）', '総合鑑定 3回（ご自身＋2人）'),
+          T('궁합 풀이 2회', '2 compatibility readings', '合婚解读 2 次', '相性鑑定 2回'),
+          T('AI 사주 상담 40회', '40 AI Saju chats', 'AI 八字咨询 40 次', 'AI四柱推命相談 40回'),
+          T('정밀 MBTI 분석 월 1회', 'Detailed MBTI analysis once a month', '精细 MBTI 分析每月 1 次', '詳細MBTI分析 月1回'),
+          T('매일 운세', 'Daily fortune', '每日运势', '毎日の運勢'),
+        ],
+      ),
+      dict(
+        n=T('월 11,900원', '₩11,900 / month', '月 ₩11,900', '月額 ₩11,900'),
+        price=T('11,900원', '₩11,900', '₩11,900', '₩11,900'),
+        per=T('월 · 부가세 포함', 'per month · VAT incl.', '每月 · 含增值税', '月額・税込'),
+        hi=True,
+        items=[
+          T('종합 풀이 6회 (본인+5인)', '6 full readings (you + 5 people)', '综合解读 6 次（本人+5 人）', '総合鑑定 6回（ご自身＋5人）'),
+          T('궁합 풀이 5회', '5 compatibility readings', '合婚解读 5 次', '相性鑑定 5回'),
+          T('AI 사주 상담 90회', '90 AI Saju chats', 'AI 八字咨询 90 次', 'AI四柱推命相談 90回'),
+          T('정밀 MBTI 분석 월 1회', 'Detailed MBTI analysis once a month', '精细 MBTI 分析每月 1 次', '詳細MBTI分析 月1回'),
+          T('매일 운세', 'Daily fortune', '每日运势', '毎日の運勢'),
+        ],
+      ),
+      dict(
+        n=T('월 25,900원', '₩25,900 / month', '月 ₩25,900', '月額 ₩25,900'),
+        price=T('25,900원', '₩25,900', '₩25,900', '₩25,900'),
+        per=T('월 · 부가세 포함', 'per month · VAT incl.', '每月 · 含增值税', '月額・税込'),
+        items=[
+          T('종합 풀이 11회 (본인+10인)', '11 full readings (you + 10 people)', '综合解读 11 次（本人+10 人）', '総合鑑定 11回（ご自身＋10人）'),
+          T('궁합 풀이 10회', '10 compatibility readings', '合婚解读 10 次', '相性鑑定 10回'),
+          T('AI 사주 상담 200회', '200 AI Saju chats', 'AI 八字咨询 200 次', 'AI四柱推命相談 200回'),
+          T('정밀 MBTI 분석 월 1회', 'Detailed MBTI analysis once a month', '精细 MBTI 分析每月 1 次', '詳細MBTI分析 月1回'),
+          T('매일 운세', 'Daily fortune', '每日运势', '毎日の運勢'),
+        ],
+      ),
+      dict(
+        n=T('상담팩', 'Chat pack', '咨询包', '相談パック'),
+        price=T('9,900원', '₩9,900', '₩9,900', '₩9,900'),
+        per=T('30일 안에 사용 · 부가세 포함', 'use within 30 days · VAT incl.', '30 天内使用 · 含增值税', '30日以内に使用・税込'),
+        items=[
+          T('AI 사주 상담 77회', '77 AI Saju chats', 'AI 八字咨询 77 次', 'AI四柱推命相談 77回'),
+          T('구매일로부터 30일 안에 사용 (지나면 소멸)', 'Use within 30 days of purchase (then expires)', '自购买日起 30 天内使用（过期作废）', '購入日から30日以内に使用（以降は失効）'),
+          T('월 이용권의 상담을 먼저 쓰고, 소진 후 차감', 'Used after your monthly plan’s chats run out', '先用完月订阅的咨询次数，再从咨询包扣减', '月額プランの相談回数を先に使い、使い切ってから消費'),
+        ],
+      ),
+    ],
+    note=T('월 이용권은 이용 시작일부터 30일 동안 쓸 수 있어요. 1회 이용권과 상담팩은 구매일로부터 30일 안에 써야 하고, 기간이 지난 남은 횟수는 소멸해요. 횟수를 모두 쓰거나 기간이 끝나면 새 상담은 제한되지만 이전 상담 기록은 계속 볼 수 있어요. 자동결제(정기결제)는 준비 중이에요. 금액은 부가세 포함이며, 환불은 앱의 환불정책에서 확인할 수 있어요.', 'A monthly plan is usable for 30 days from its start date. The Single pass and Chat pack must be used within 30 days of purchase; anything left after that expires. When you run out or the period ends, new chats and readings pause, but your past conversations stay viewable. Automatic recurring payment is coming soon. Prices include VAT. Refunds are explained in the app’s refund policy.', '月订阅自开始之日起 30 天内可使用。单次券和咨询包须在购买后 30 天内使用，过期后剩余次数作废。次数用完或期限结束后，将无法发起新的咨询和解读，但可继续查看以往的咨询记录。自动定期扣款正在准备中。金额含增值税。退款请参阅应用内的退款政策。', '月額プランは利用開始日から30日間ご利用いただけます。1回券と相談パックは購入日から30日以内にお使いください。期間を過ぎた残り回数は失効します。回数を使い切るか期間が終わると新しい相談・鑑定は制限されますが、過去の相談記録は引き続き閲覧できます。自動の定期決済は準備中です。金額は税込です。返金は、アプリの返金ポリシーをご確認ください。'),
+  ),
+  faq=dict(
+    h=T('자주 묻는 질문', 'FAQ', '常见问题', 'よくある質問'),
+    items=[
+      [
+        T('사주 결과를 그대로 믿어도 되나요?', 'Should I take the result literally?', '可以完全相信结果吗？', '結果をそのまま信じてよい？'),
+        T('사주는 정해진 결말이 아니라 흐름을 읽는 참고 도구예요. 주주도사는 ‘운은 날씨’라는 관점으로 대처법과 함께 조언해요. 중요한 결정은 스스로의 판단이 우선이에요.', 'Saju is a tool for reading flow, not a fixed ending. Juju Dosa treats luck like weather and gives ways to cope. Important decisions are still yours.', '八字是解读走势的参考工具，而不是既定结局。主主道士以“运如天气”的观点给出建议和应对方法。重要决定仍以您自己的判断为先。', '四柱推命は決まった結末ではなく、流れを読むための参考です。ジュジュ道士は「運は天気」という視点で対処法とともに助言します。大事な決定は、ご自身の判断が優先です。'),
+      ],
+      [
+        T('무료로 얼마나 쓸 수 있나요?', 'How much can I use for free?', '免费能用多少？', '無料でどこまで使える？'),
+        T('로그인 후 종합 풀이 1회(본인)와 AI 사주 상담 3회, 주간 운세를 쓸 수 있어요. 무료 체험은 일일 운영 예산에 따라 일찍 마감될 수 있어요.', 'After logging in you get 1 full reading (yours), 3 AI Saju chats and a weekly fortune. The free trial may close early on days when the daily operating budget is reached.', '登录后可使用综合解读 1 次（本人）、AI 八字咨询 3 次和每周运势。免费体验可能因当日运营预算用尽而提前结束。', 'ログイン後、総合鑑定1回（ご自身）、AI四柱推命相談3回、週間運勢をご利用いただけます。無料体験は、その日の運営予算に達すると早めに終了することがあります。'),
+      ],
+      [
+        T('이용 횟수를 다 쓰면 어떻게 되나요?', 'What happens when I use up my allowance?', '次数用完了怎么办？', '回数を使い切ったらどうなりますか？'),
+        T('횟수를 다 쓰거나 기간(30일)이 끝나면 새 상담·풀이는 막히지만 이전 상담 기록은 계속 볼 수 있어요. 상담이 더 필요하면 상담팩(77회, 30일)을 추가할 수 있고, 월 이용권의 상담 횟수를 먼저 쓴 뒤 팩에서 차감돼요.', 'When you run out or the 30-day period ends, new chats and readings pause, but your past conversations stay viewable. If you need more chats, add a Chat pack (77 chats, 30 days); your monthly plan’s chats are used first, then the pack.', '次数用完或 30 天期限结束后，将无法发起新的咨询和解读，但可继续查看以往的咨询记录。如需更多咨询，可加购咨询包（77 次，30 天），会先使用月订阅的咨询次数，用完后再从咨询包扣减。', '回数を使い切るか30日の期間が終わると、新しい相談・鑑定は制限されますが、過去の相談記録は引き続き閲覧できます。相談が足りない場合は相談パック（77回・30日）を追加でき、月額プランの相談回数を先に使い、その後パックから消費します。'),
+      ],
+      [
+        T('내 정보는 어떻게 쓰이나요?', 'How is my information used?', '我的信息如何使用？', '入力した情報の扱いは？'),
+        T('상담을 위해 입력한 생년월일 등의 정보가 쓰여요. 자세한 내용은 개인정보처리방침에서 확인해 주세요.', 'The birth details you enter are used for your readings. See the Privacy Policy for details.', '您输入的出生信息等用于咨询。详情请见隐私政策。', '入力した生年月日などは相談のために使われます。詳細はプライバシーポリシーをご確認ください。'),
+      ],
+      [
+        T('결제는 어떻게 하나요?', 'How do I pay?', '如何付款？', 'お支払い方法は？'),
+        T('현재는 계좌이체로 신청하면 입금 확인 후 이용권이 시작돼요. 카드 결제와 자동결제(정기결제)는 준비 중이에요. 환불은 앱의 환불정책에서 확인할 수 있어요.', 'For now you apply by bank transfer, and your pass starts once the deposit is confirmed. Card payment and automatic recurring payment are coming soon. Refunds are explained in the app’s refund policy.', '目前通过银行转账申请，确认到账后开始使用。银行卡支付和自动定期扣款正在准备中。退款请参阅应用内的退款政策。', '現在は銀行振込でお申し込みいただき、入金確認後に利用が始まります。カード決済と自動の定期決済は準備中です。返金は、アプリの返金ポリシーをご確認ください。'),
+      ],
+      [
+        T('MBTI 결과는 정확한가요?', 'Is the MBTI result accurate?', 'MBTI 结果准确吗？', 'MBTIの結果は正確ですか？'),
+        T('주주도사는 MBTI를 직접 검사하지 않아요. 앱 안의 간이 검사는 16문항이라 정확도가 떨어질 수 있으니 참고용으로만 봐주세요. 정확한 결과는 공식 MBTI 검사에서 확인하는 걸 권해요.', 'Juju Dosa doesn’t administer MBTI itself. The in-app quick check has only 16 questions and may be inaccurate, so treat it as a reference. For an accurate result, take the official MBTI test.', '主主道士不直接做 MBTI 测试。应用内的简易测试只有 16 题，准确度可能较低，请仅作参考。想要准确结果，建议做官方 MBTI 测试。', 'ジュジュ道士はMBTIを直接検査しません。アプリ内の簡易チェックは16問のため精度が下がることがあり、参考程度にご覧ください。正確な結果は公式のMBTI検査でご確認ください。'),
+      ],
+      [
+        T('대표와 직원 상성은 어떻게 보나요?', 'How is employer × employee fit read?', '老板与员工的相合度怎么看？', '経営者と従業員の相性はどう見ますか？'),
+        T('대표와 직원 두 사람의 생년월일시로 명식을 함께 읽어요. 잘 맞는 점과 답답해지기 쉬운 점을 업무 장면으로 짚어요. 관계를 단정하지 않고, 풀어갈 방법을 함께 이야기해요.', 'The boss’s and the employee’s birth details are read together, pointing out what works well and what tends to feel frustrating in real work situations. It doesn’t declare the relationship good or bad; it talks through how to handle it.', '把老板和员工两人的出生信息放在一起解读，结合实际工作场景指出合得来的地方和容易憋闷的地方。不对关系下断言，而是一起商量如何化解。', '経営者と従業員、お二人の生年月日時を合わせて読み、うまくいく点と窮屈になりやすい点を実際の業務の場面で示します。関係を断定せず、解く方法を一緒に考えます。'),
+      ],
+    ],
+  ),
+  more=[
+    'mandu',
+    'cardbook',
+  ],
+  cta=dict(
+    h=T('지금 내 명식을 확인해 보세요', 'See your chart today', '现在就查看您的命式', '今すぐ命式を確かめよう'),
+    p=T('무료로 시작해서, 필요할 때 구독을 선택하면 돼요.', 'Start free and choose a plan when you need one.', '先免费开始，需要时再选择订阅。', '無料で始めて、必要になったらプランを選べます。'),
+  ),
+  policy=[
+    [
+      'pricing',
+      'https://jinjjabg-hub.github.io/JUJUDOSA/pricing.html',
+    ],
+    [
+      'refund',
+      'https://jinjjabg-hub.github.io/JUJUDOSA/refund.html',
+    ],
+    [
+      'terms',
+      'https://jinjjabg-hub.github.io/JUJUDOSA/terms.html',
+    ],
+    [
+      'privacy',
+      'https://jinjjabg-hub.github.io/JUJUDOSA/privacy.html',
+    ],
+  ],
 )
 
 # 섹션 제목 라벨, 정책 링크 이름, 기타 공통 문구
