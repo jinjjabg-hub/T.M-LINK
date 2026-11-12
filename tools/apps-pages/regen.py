@@ -3,6 +3,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))   # 저장소 루트
 sys.path.insert(0, HERE)
 import content
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'seo'))
+import seo   # canonical·JSON-LD 도 같이 만든다
 pages, ui = content.build()
 old = open(os.path.join(ROOT, 'apps.js'), encoding='utf-8').read()
 apps_block = old[old.index('var APPS = {'):old.index('\nvar APP_COLORS')]
@@ -20,4 +22,7 @@ for key, body in static.items():
     c0, c1 = colors[key]
     s = s[:m0] + f'<div id="appRoot" data-app="{key}" style="--c:{c0};--ct:{c1}">\n{body}\n' + s[m1:]
     open(p, 'w', encoding='utf-8').write(s)
+    desc = html.unescape(re.search(r'<meta name="description" content="([^"]*)"', s).group(1))
+    seo.patch_page('apps/%s/index.html' % key, 'apps/%s/' % key, seo.app_ld(key, desc, seo.faq_from_page('apps/%s/index.html' % key)))
+seo.write_files()
 print('regen ok')

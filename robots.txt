@@ -1,0 +1,57 @@
+# TM LINK — 검색·AI 크롤러 모두 공개 페이지 접근 허용
+User-agent: *
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+User-agent: CCBot
+Allow: /
+Disallow: /신청폼/
+Disallow: /%EC%8B%A0%EC%B2%AD%ED%8F%BC/
+
+Sitemap: https://tmlink.bizmy.net/sitemap.xml

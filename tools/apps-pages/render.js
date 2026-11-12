@@ -7,7 +7,7 @@ function appBr(s){ return appEsc(s).replace(/\|/g, '<br/>'); }
 function appVisual(key, P, lang){
   var v = P.visual || '';
   if (v.indexOf('img:') === 0) {
-    return '<div class="ap-vis"><img src="../../' + appEsc(v.slice(4)) + '" alt="" width="380" height="470" loading="eager" decoding="async"/></div>';
+    return '<div class="ap-vis"><img src="../../' + appEsc(v.slice(4)) + '" alt="' + appEsc(((APPS[key][lang] || APPS[key].ko).name) + ' — ' + ((APPS[key][lang] || APPS[key].ko).cat || '')) + '" width="380" height="470" loading="eager" decoding="async"/></div>';
   }
   if (v === 'chat') {
     var rows = {
